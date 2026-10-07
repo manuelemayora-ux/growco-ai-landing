@@ -1,0 +1,21 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/AIFILMMAKER",
+      "destination": "/filmmaker"
+    },
+    {
+      "source": "/AIFILMMAKER/:path*",
+      "destination": "/filmmaker/:path*"
+    },
+    {
+      "source": "/SaaSystem",
+      "destination": "https://growcodashboard.vercel.app/SaaSystem"
+    },
+    {
+      "source": "/SaaSystem/:path*",
+      "destination": "https://growcodashboard.vercel.app/SaaSystem/:path*"
+    }
+  ]
+}
