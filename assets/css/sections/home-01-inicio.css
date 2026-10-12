@@ -132,3 +132,10 @@ html.js .hero__h1.is-split:not(.is-on) .hd-i{translate:0 105%}
   .hero__media{scale:1!important;transform:none!important}
   .hero__bg{translate:none!important}
 }
+/* rev3c (client): strip under the centred hero copy read off-centre on phones — centre it too */
+@media (max-width:809px){
+  .hero__strip{justify-items:center;text-align:center}
+  .hero__count-l,.hero__count-n{justify-content:center}
+  .hero__tags{justify-content:center}
+  .hero__proof{align-items:center;justify-self:center;text-align:center}
+}
