@@ -23,7 +23,8 @@
   'use strict';
   const CONFIG = {
     WHATSAPP_NUMBER: '', // e.g. '503XXXXXXXX' — empty keeps every [data-whatsapp] hidden
-    FORM_ENDPOINT: 'https://formsubmit.co/ajax/17702b71fab2c0987274c65cc95a555e',
+    FORM_ENDPOINT: 'https://api.web3forms.com/submit', // Web3Forms (FormSubmit delivered empty emails, 2026-10-12)
+    FORM_KEY: '9cd72757-06b7-4cb0-8bfa-d7b1d658eda4', // Web3Forms access key (public by design; delivers to manuel@growcoai.com)
     EMAIL: 'manuel@growcoai.com',
     TZ: 'America/El_Salvador',
     SERVICES: { pauta: 'Pauta digital', filmmaker: 'AI Filmmaker', automatizacion: 'Automatización', stockly: 'Stockly', nose: 'No estoy seguro' },
@@ -358,19 +359,27 @@
         const data = Object.fromEntries(new FormData(form).entries());
         const svcKey = data.servicio || '';
         const svcName = CONFIG.SERVICES[svcKey] || svcKey;
-        if (data._honey) { form.reset(); show('¡Gracias! Recibimos tu mensaje.'); return; }
-        delete data._next;
-        data._subject = 'Nueva solicitud de propuesta — ' + (form.getAttribute('data-page-name') || pageName);
-        data.servicio = svcName;
-        data.pagina = location.href.split('#')[0];
+        if (data.botcheck) { form.reset(); show('¡Gracias! Recibimos tu mensaje.'); return; }
+        const payload = {
+          access_key: CONFIG.FORM_KEY,
+          subject: 'Nueva solicitud de propuesta — ' + (form.getAttribute('data-page-name') || pageName),
+          from_name: 'Growco · growcoai.com',
+          replyto: data.email || '',
+          Nombre: data.nombre || '',
+          Correo: data.email || '',
+          Empresa: data.empresa || '—',
+          Servicio: svcName || '—',
+          Mensaje: data.mensaje || '—',
+          'Página': location.href.split('#')[0],
+          Origen: data.origen || '',
+        };
         setBusy(true);
         show('Enviando tu solicitud…');
         try {
           const res = await fetch(CONFIG.FORM_ENDPOINT, {
             method: 'POST',
-            // form-encoded, not JSON: FormSubmit ignored JSON bodies on the alias endpoint (empty emails, default subject)
-            headers: { Accept: 'application/json' },
-            body: new URLSearchParams(data),
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
           });
           let out = {};
           try { out = await res.json(); } catch (_) { /* non-JSON */ }
