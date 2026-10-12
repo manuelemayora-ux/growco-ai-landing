@@ -303,7 +303,7 @@
       });
       if (qs.get('enviado') === '1' && status) {
         status.className = status.className.replace(/\bis-err\b/, '').trim();
-        status.textContent = '¡Gracias! Recibimos tu mensaje. Te responderemos con una propuesta.';
+        status.textContent = '¡Gracias! Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis.';
       }
       const fields = {
         nombre: $('[name="nombre"]', form),
@@ -388,7 +388,7 @@
           form.reset();
           tried = false;
           form.classList.add('is-sent');
-          show('<strong>¡Listo' + (name ? ', ' + escapeHtml(name) : '') + '!</strong> Recibimos tu mensaje. Te responderemos con una propuesta para tu marca.');
+          show('<strong>¡Listo' + (name ? ', ' + escapeHtml(name) : '') + '!</strong> Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis; con eso preparamos tu propuesta.');
           if (status) { status.tabIndex = -1; status.focus({ preventScroll: true }); }
           trackLead(formId, svcKey || 'general');
         } catch (err) {
