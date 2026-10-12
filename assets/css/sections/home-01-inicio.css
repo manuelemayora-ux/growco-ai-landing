@@ -111,11 +111,13 @@ html.js .hero__h1.is-split:not(.is-on) .hd-i{translate:0 105%}
   .hero__in{position:relative;inset:auto;flex:1;place-items:start center;padding:86px 16px 36px}
   .hero__copy{gap:18px;width:100%}
   .hero__sub{font-size:16px}
-  .hero__btns{flex-direction:column;align-items:stretch;width:100%}
-  .hero__btns .btn{width:100%}
+  /* rev3b (client): compact pills, not full width — side by side when they fit, centred */
+  .hero__btns{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:10px;width:100%}
+  .hero__btns .btn{width:auto}
   /* rev3 (client): full-width pills read off-centre with the label left and the chip mid-way — centre label + chip, slimmer */
-  .hero__btns .btn{min-height:52px}
-  .hero__btns .btn__face{justify-content:center;padding:0 8px 0 22px}
+  .hero__btns .btn{min-height:46px;font-size:14px}
+  .hero__btns .btn__face{padding:0 6px 0 18px;gap:10px}
+  .hero__btns .btn__arr{width:32px;height:32px}
   .hero__strip{position:relative;grid-template-columns:1fr;gap:16px;padding:0 16px 28px}
   .hero__tags{display:flex;flex-wrap:wrap}
   .hero__proof{align-items:flex-start;justify-self:start;text-align:left}
