@@ -368,8 +368,9 @@
         try {
           const res = await fetch(CONFIG.FORM_ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify(data),
+            // form-encoded, not JSON: FormSubmit ignored JSON bodies on the alias endpoint (empty emails, default subject)
+            headers: { Accept: 'application/json' },
+            body: new URLSearchParams(data),
           });
           let out = {};
           try { out = await res.json(); } catch (_) { /* non-JSON */ }
