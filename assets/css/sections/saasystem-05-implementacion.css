@@ -1,0 +1,86 @@
+/* 05 · IMPLEMENTACIÓN (#implementacion) — reference rwab-dark (56_rwab.css): pinned horizontal "signal" timeline. Prefix s-ab. */
+#implementacion.s-ab{z-index:1;margin-top:-32px;border-radius:32px 32px 0 0;padding-bottom:clamp(96px,10vw,160px)}
+#implementacion .s-ab__stage{display:flex;flex-direction:column}
+#implementacion .s-ab__sh{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;padding-top:clamp(96px,11vh,130px)}
+#implementacion .s-ab__shl{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+#implementacion .s-ab__lead{max-width:440px}
+#implementacion .s-ab__read{display:flex;flex-direction:column;align-items:flex-end;gap:6px;margin:0;font-family:var(--font-m);font-size:11px;letter-spacing:.14em;color:var(--mut);text-align:right}
+#implementacion .s-ab__ry{font-family:var(--font-d);font-size:clamp(44px,4vw,64px);line-height:.9;letter-spacing:-.05em;font-weight:700;color:var(--accent)}
+
+/* the dot (shared by both lists) */
+#implementacion .s-ab__dot{position:absolute;display:block;width:16px;height:16px;border-radius:50%;background:var(--night);box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--white) 40%,transparent);transition:background .4s,box-shadow .4s}
+#implementacion .s-ab__dot i{position:absolute;inset:-2px;border-radius:50%;box-shadow:0 0 0 2px var(--accent);opacity:0}
+#implementacion .is-hit>.s-ab__dot{background:var(--accent);box-shadow:0 0 0 4px var(--night)}
+#implementacion .is-hit>.s-ab__dot i{animation:s-ab-hit 1.4s var(--ease-ping) 2}
+@keyframes s-ab-hit{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(5)}}
+#implementacion .s-ab__tx b{display:block;margin-bottom:4px;font-family:var(--font-d);font-size:22px;line-height:1.1;letter-spacing:-.03em;font-weight:700}
+
+/* ---- pinned horizontal track (desktop + motion, .is-pin set by JS) ---- */
+#implementacion .s-ab__track,#implementacion .s-ab__hint,#implementacion .s-ab__read{display:none}
+#implementacion.is-pin .s-ab__pin{height:220vh;height:220svh}
+#implementacion.is-pin .s-ab__stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#implementacion.is-pin .s-ab__read{display:flex}
+#implementacion.is-pin .s-ab__hint{display:flex}
+#implementacion.is-pin .s-ab__vwrap{display:none}
+#implementacion.is-pin .s-ab__track{display:block;position:relative;flex:1;min-height:320px;transform:translate3d(var(--tx,0px),0,0);will-change:transform}
+#implementacion .s-ab__tr{position:absolute;left:0;top:50%;margin-top:-50px;display:block;max-width:none;overflow:visible}
+#implementacion .s-ab__tr path{fill:none;stroke-linejoin:round;stroke-linecap:round}
+#implementacion .s-ab__tr-o path{stroke:color-mix(in srgb,var(--white) 22%,transparent);stroke-width:1.5;stroke-dasharray:3 6}
+#implementacion .s-ab__lit{position:absolute;left:0;top:0;bottom:0;width:var(--hx,0px);overflow:hidden}
+#implementacion .s-ab__tr-l path{stroke:var(--accent);stroke-width:2.5;filter:drop-shadow(0 0 8px color-mix(in srgb,var(--accent) 80%,transparent))}
+#implementacion .s-ab__head{position:absolute;left:var(--hx,0px);top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 25%,transparent),0 0 40px 10px color-mix(in srgb,var(--accent) 45%,transparent)}
+#implementacion .s-ab__head i{position:absolute;inset:-10px;border-radius:50%;box-shadow:0 0 0 1.5px var(--accent);animation:s-ab-wave 1.9s var(--ease-ping) infinite}
+#implementacion .s-ab__head i+i{animation-delay:.95s}
+@keyframes s-ab-wave{0%{opacity:.8;transform:scale(.4)}100%{opacity:0;transform:scale(3.4)}}
+#implementacion .s-ab__ms{list-style:none;margin:0;padding:0;position:absolute;inset:0}
+#implementacion .s-ab__m{position:absolute;top:0;bottom:0;width:0}
+#implementacion .s-ab__m .s-ab__yr{position:absolute;bottom:calc(50% + 50px);left:0;translate:-50% 0;font-family:var(--font-d);font-size:clamp(64px,6.4vw,104px);line-height:.85;letter-spacing:-.06em;font-weight:700;white-space:nowrap;color:transparent;-webkit-text-stroke:1.2px color-mix(in srgb,var(--white) 36%,transparent);transition:color .6s,-webkit-text-stroke-color .6s,translate .8s var(--ease-out)}
+#implementacion .s-ab__m.is-hit .s-ab__yr{color:var(--white);-webkit-text-stroke-color:transparent;translate:-50% -8px}
+#implementacion .s-ab__m.is-last.is-hit .s-ab__yr{color:var(--accent)}
+#implementacion .s-ab__m .s-ab__dot{left:-8px;top:calc(50% - 8px)}
+#implementacion .s-ab__m .s-ab__tx{position:absolute;top:calc(50% + 44px);left:0;translate:-50% 12px;width:min(290px,26vw);margin:0;text-align:center;font-size:17px;line-height:1.4;color:color-mix(in srgb,var(--white) 48%,transparent);transition:color .6s,translate .8s var(--ease-out)}
+#implementacion .s-ab__m.is-hit .s-ab__tx{color:var(--white);translate:-50% 0}
+#implementacion .s-ab__hint{align-items:center;justify-content:center;gap:10px;margin:0 0 32px;font-family:var(--font-m);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+#implementacion .s-ab__hint i{width:22px;height:2px;border-radius:2px;background:var(--accent)}
+
+/* ---- vertical list (narrow screens, reduced motion, no JS) ---- */
+#implementacion .s-ab__vl{position:relative;list-style:none;margin:clamp(48px,5vw,72px) 0 0;padding:0 0 0 44px;display:flex;flex-direction:column;gap:42px;--fv:1}
+#implementacion .s-ab__vl::before,#implementacion .s-ab__vl::after{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;border-radius:2px;background:color-mix(in srgb,var(--white) 16%,transparent)}
+#implementacion .s-ab__vl::after{background:var(--accent);transform-origin:top;transform:scaleY(var(--fv));box-shadow:0 0 12px color-mix(in srgb,var(--accent) 70%,transparent)}
+#implementacion .s-ab__vm{position:relative;display:flex;flex-direction:column;gap:10px}
+#implementacion .s-ab__vm .s-ab__dot{left:-44px;top:10px;z-index:1}
+#implementacion .s-ab__vm .s-ab__yr{font-family:var(--font-d);font-size:clamp(48px,6vw,72px);line-height:.9;letter-spacing:-.055em;font-weight:700;color:var(--white);transition:color .6s,-webkit-text-stroke-color .6s}
+#implementacion .s-ab__vm.is-last .s-ab__yr{color:var(--accent)}
+#implementacion .s-ab__vm .s-ab__tx{margin:0;max-width:34ch;font-size:17px;line-height:1.45;color:var(--white);transition:color .6s}
+/* JS + narrow: items wait for the rail */
+html.js #implementacion.is-vl .s-ab__vm:not(.is-hit) .s-ab__yr{color:transparent;-webkit-text-stroke:1.2px color-mix(in srgb,var(--white) 36%,transparent)}
+html.js #implementacion.is-vl .s-ab__vm:not(.is-hit) .s-ab__tx{color:color-mix(in srgb,var(--white) 50%,transparent)}
+/* wide screens without the pin (reduced motion / no JS): a 4-column grid of milestones */
+@media (min-width:810px){
+  #implementacion:not(.is-pin) .s-ab__vl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:56px 32px;padding-left:0}
+  #implementacion:not(.is-pin) .s-ab__vl::before,#implementacion:not(.is-pin) .s-ab__vl::after{display:none}
+  #implementacion:not(.is-pin) .s-ab__vm{padding-top:26px;border-top:1px solid color-mix(in srgb,var(--white) 16%,transparent)}
+  #implementacion:not(.is-pin) .s-ab__vm .s-ab__dot{left:0;top:-9px;background:var(--accent);box-shadow:0 0 0 4px var(--night)}
+}
+
+/* closing row */
+#implementacion .s-ab__end{display:flex;align-items:center;justify-content:space-between;gap:20px 40px;flex-wrap:wrap;margin-top:clamp(56px,6vw,96px);padding-top:28px;border-top:1px solid color-mix(in srgb,var(--white) 14%,transparent)}
+#implementacion.is-pin .s-ab__end{margin-top:0}
+#implementacion .s-ab__end p{margin:0;max-width:56ch;font-size:18px;line-height:1.5;color:var(--mut)}
+#implementacion .s-ab__end p b{color:var(--white);font-weight:600}
+#implementacion .s-ab__end .btn{--ring-bg:var(--night)}
+
+@media (max-width:1099px){
+  #implementacion .s-ab__sh{flex-direction:column;align-items:flex-start}
+  #implementacion:not(.is-pin) .s-ab__vl{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:809px){
+  #implementacion.s-ab{border-radius:24px 24px 0 0;margin-top:-24px;padding-bottom:88px}
+  #implementacion .s-ab__sh{padding-top:88px}
+  #implementacion .s-ab__end .btn{width:100%}
+  #implementacion .s-ab__end .btn__face{justify-content:space-between}
+  #implementacion .s-ab__end p{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  #implementacion .s-ab__head i,#implementacion .s-ab__dot i{animation:none!important}
+}

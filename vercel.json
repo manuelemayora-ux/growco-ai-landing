@@ -1,21 +1,41 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "redirects": [
+    { "source": "/SaaSystem/", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/saasystem", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/saasystem/", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/saasystem/:path(.+)", "destination": "/SaaSystem/:path", "permanent": true },
+    { "source": "/Saasystem", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/SAASYSTEM", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/stockly", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/stockly/", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/Stockly", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/STOCKLY", "destination": "/SaaSystem", "permanent": true },
+    { "source": "/SaaSystem/login", "destination": "/SaaSystem/dashboard", "permanent": false },
+    { "source": "/SaaSystem/signup", "destination": "/SaaSystem?servicio=stockly", "permanent": false }
+  ],
+  "headers": [
     {
-      "source": "/AIFILMMAKER",
-      "destination": "/filmmaker"
+      "source": "/assets/(css|js)/(.*)",
+      "has": [{ "type": "query", "key": "v" }],
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
-      "source": "/AIFILMMAKER/:path*",
-      "destination": "/filmmaker/:path*"
+      "source": "/assets/fonts/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     },
     {
-      "source": "/SaaSystem",
-      "destination": "https://growcodashboard.vercel.app/SaaSystem"
+      "source": "/assets/(img|videos|brand)/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
     },
     {
-      "source": "/SaaSystem/:path*",
-      "destination": "https://growcodashboard.vercel.app/SaaSystem/:path*"
+      "source": "/SaaSystem/:path(.+)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
     }
+  ],
+  "rewrites": [
+    { "source": "/AIFILMMAKER", "destination": "/filmmaker" },
+    { "source": "/AIFILMMAKER/:path*", "destination": "/filmmaker/:path*" },
+    { "source": "/SaaSystem/:path(.+)", "destination": "https://growcodashboard.vercel.app/SaaSystem/:path" }
   ]
 }

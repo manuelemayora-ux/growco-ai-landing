@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://growcoai.com/sitemap.xml

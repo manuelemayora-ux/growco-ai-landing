@@ -1,0 +1,354 @@
+/* 05 · TRABAJO (#trabajo) — reference 20_rwwk "Results you can count" (night → navy), measured at 1440×900:
+   section 130/144 · head 1.3fr/1fr (gap 40, mb clamp(40,4.4vw,64)) · tabs 56 tall (gap 8, mb 12) · viewer 16/8
+   radius 24 (max 78svh) · info 1.15fr/1fr (gap 4vw, mt clamp(24,2.6vw,36)).
+   Real client cases (v3: client-supplied account figures; 2K photos in the viewer, UGC reel wall for Academia Europea). 4 tabs instead of the reference's 6 → 4 columns; the
+   reference's 40 px round avatar becomes a 40 px white logo chip (client logos need a light ground).
+   Component breakpoints (reference ResizeObserver): tablet ≤1099 (head 1 col, tabs 2 cols, viewer 4/3),
+   phone ≤809 (tab strip with edge bleed, viewer 4/5 radius 20, numerals small). Colours: DECISIONS §1
+   (lime → --accent, pink pings → --accent-2, pine → --pine). */
+#trabajo.wk{padding:clamp(88px,9vw,150px) 0 clamp(96px,10vw,160px);overflow-x:clip}
+
+/* head --------------------------------------------------------------------------------------- */
+#trabajo .wk-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);align-items:end;gap:40px;margin-bottom:clamp(40px,4.4vw,64px)}
+#trabajo .wk-hl{display:flex;flex-direction:column;align-items:flex-start;gap:26px;min-width:0}
+#trabajo .wk-hr{display:flex;flex-direction:column;align-items:flex-start;gap:24px;justify-self:end;max-width:400px;min-width:0}
+#trabajo .wk-sub{margin:0;font-size:17px;line-height:1.5;color:var(--mut);text-wrap:pretty}
+
+/* tabs ----------------------------------------------------------------------------------------- */
+#trabajo .wk-tabs{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-bottom:12px}
+#trabajo .wk-tab{position:relative;display:flex;align-items:center;gap:11px;min-width:0;margin:0;padding:8px 12px 8px 8px;border:0;border-radius:999px;cursor:pointer;color:var(--white);background:color-mix(in srgb,var(--white) 6%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 12%,transparent);overflow:hidden;text-align:left;font-family:var(--font-b);font-size:12px;line-height:normal;transition:background .35s,box-shadow .35s,color .35s}
+/* logo chip (reference: 40 px avatar, greyscale until hover / select) */
+#trabajo .wk-chip{flex:none;display:flex;align-items:center;justify-content:center;gap:5px;height:40px;min-width:40px;padding:0 11px;border-radius:999px;background:var(--white);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 0%,transparent);transition:box-shadow .35s}
+#trabajo .wk-chip--3{gap:6px;padding:0 10px}
+#trabajo .wk-chip img{display:block;width:auto;max-width:72px;object-fit:contain;filter:grayscale(1) contrast(.9) opacity(.72);transition:filter .5s}
+#trabajo .wk-tab-t{display:flex;flex-direction:column;gap:3px;min-width:0}
+#trabajo .wk-tab-t b{font-size:13.5px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#trabajo .wk-tab-t small{font-family:var(--font-m);font-size:10.5px;letter-spacing:.02em;color:color-mix(in srgb,var(--white) 66%,transparent);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .35s}
+#trabajo .wk-tab:hover{background:color-mix(in srgb,var(--white) 11%,transparent)}
+#trabajo .wk-tab:hover .wk-chip img{filter:none}
+#trabajo .wk-tab.is-active{background:var(--white);color:var(--ink);box-shadow:none}
+#trabajo .wk-tab.is-active .wk-chip{box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 14%,transparent)}
+#trabajo .wk-tab.is-active .wk-chip img{filter:none}
+#trabajo .wk-tab.is-active small{color:color-mix(in srgb,var(--ink) 70%,transparent)}
+/* 7 s progress (motion.js writes --tp 0→1 on the active tab while auto-rotating) */
+#trabajo .wk-prog{position:absolute;left:16px;right:16px;bottom:0;height:3px;border-radius:3px;background:var(--accent);box-shadow:0 0 0 .5px var(--ink);transform:scaleX(var(--tp,0));transform-origin:left;pointer-events:none}
+#trabajo .wk-tab:not(.is-active) .wk-prog{opacity:0}
+
+/* deck: one grid cell, panels stacked (JS) / listed (no JS) ------------------------------------- */
+#trabajo .wk-deck{display:grid}
+#trabajo .wk-panel{min-width:0}
+html:not(.js) #trabajo .wk-panel+.wk-panel{margin-top:72px}
+html.js #trabajo .wk-panel{grid-area:1/1;visibility:hidden;pointer-events:none}
+html.js #trabajo .wk-panel.is-active{z-index:1;visibility:visible;pointer-events:auto}
+html.js #trabajo .wk-panel.is-out{z-index:2;visibility:visible;pointer-events:none}
+/* outgoing case: only its media cross-fades (reference .rwwk-case.is-out); chrome + info swap at once */
+html.js #trabajo .wk-panel.is-out .wk-view{background:transparent;box-shadow:none}
+html.js #trabajo .wk-panel.is-out :is(.wk-top,.wk-div,.wk-handle,.wk-cur,.wk-info,.wk-reels){visibility:hidden}
+html.js #trabajo .wk-panel.is-out .wk-case{animation:wk-out .8s ease both}
+html.js #trabajo .wk-panel.is-active .wk-case{animation:wk-in .8s ease both}
+@keyframes wk-in{from{opacity:0}}
+@keyframes wk-out{to{opacity:0}}
+
+/* viewer --------------------------------------------------------------------------------------- */
+#trabajo .wk-view{--dv:.15;--dt:1;position:relative;width:100%;aspect-ratio:16/8;max-height:78svh;border-radius:24px;overflow:hidden;background:var(--pine);isolation:isolate;container-type:inline-size;-webkit-user-select:none;user-select:none}
+#trabajo .wk-view--ab{touch-action:pan-y;cursor:ew-resize}
+#trabajo .wk-case{position:absolute;inset:0}
+#trabajo .wk-lay{position:absolute;inset:0;overflow:hidden}
+/* photo layer (2K photos cover the 16:8 frame; <picture> swaps in a 4:5 crop on phones) */
+#trabajo .wk-ph,#trabajo .wk-vid{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;pointer-events:none}
+#trabajo .wk-after :is(.wk-ph,.wk-vid){scale:calc(1.08 - var(--dt)*.08)}
+#trabajo .wk-vid{opacity:0;transition:opacity .6s ease}
+#trabajo .wk-vid.is-on{opacity:1}
+/* before layer clipped at --dv; the same piece greyscale + darkened (reference .rwwk-before) */
+#trabajo .wk-before{clip-path:inset(0 calc((1 - var(--dv))*100%) 0 0)}
+#trabajo .wk-before :is(.wk-ph,.wk-vid){filter:grayscale(1) brightness(.46) contrast(1.08)}
+#trabajo .wk-scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,color-mix(in srgb,var(--night) 46%,transparent),transparent 26%,transparent 46%,color-mix(in srgb,var(--night) 76%,transparent))}
+#trabajo .wk-before .wk-scrim{background:linear-gradient(180deg,color-mix(in srgb,var(--night) 44%,transparent),transparent 30%,color-mix(in srgb,var(--night) 60%,transparent))}
+
+/* chart: OSMO real monthly cost-per-new-account path (normalised shape, no values) over the dashed March level; grows with the drag */
+#trabajo .wk-ch{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%;overflow:visible;pointer-events:none}
+#trabajo .wk-ch-a{transform-origin:50% 100%;transform:scaleY(calc(.14 + var(--dt)*.86))}
+#trabajo .wk-ln{fill:none;stroke:var(--accent);stroke-width:3;stroke-linejoin:round;stroke-linecap:round;filter:drop-shadow(0 0 10px color-mix(in srgb,var(--accent) 70%,transparent))}
+#trabajo .wk-fl{fill:none;stroke:color-mix(in srgb,var(--white) 55%,transparent);stroke-width:2;stroke-dasharray:6 7}
+
+/* numerals (reference slots: big green = after / headline figure, outlined ghost = before / second figure) */
+#trabajo .wk-num{position:absolute;z-index:2;bottom:clamp(22px,3vw,40px);display:flex;flex-direction:column;gap:12px;pointer-events:none}
+#trabajo .wk-num-a{right:clamp(22px,3vw,44px);align-items:flex-end;text-align:right}
+#trabajo .wk-num-b{left:clamp(22px,3vw,44px);bottom:clamp(76px,8vw,118px);align-items:flex-start}
+#trabajo .wk-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-family:var(--font-m);font-size:11px;letter-spacing:.14em;line-height:normal;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb,var(--white) 86%,transparent);background:color-mix(in srgb,var(--night) 30%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 34%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+#trabajo .wk-pill.is-a{color:var(--ink);background:var(--accent);box-shadow:none}
+#trabajo .wk-pill.is-a i{width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
+#trabajo .wk-big{font-family:var(--font-d);font-size:clamp(84px,10.4vw,176px);font-weight:600;line-height:.84;letter-spacing:-.06em;color:var(--accent);font-variant-numeric:tabular-nums;white-space:nowrap;text-shadow:0 6px 50px rgba(0,0,0,.35)}
+/* rolling digits: full 1em cells, line box kept at .84em; shadow as a filter so the digit masks don't clip it */
+#trabajo .wk-big .odo{margin:-.08em 0;text-shadow:none;filter:drop-shadow(0 6px 26px rgba(0,0,0,.3))}
+#trabajo .wk-ghost{font-family:var(--font-d);font-size:clamp(44px,4.8vw,80px);font-weight:600;line-height:.9;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.4px color-mix(in srgb,var(--white) 74%,transparent);font-variant-numeric:tabular-nums;white-space:nowrap}
+/* top row: white client pill + glass label */
+#trabajo .wk-top{position:absolute;z-index:4;left:clamp(16px,2vw,26px);right:clamp(16px,2vw,26px);top:clamp(16px,2vw,24px);display:flex;justify-content:space-between;gap:12px;pointer-events:none;font-family:var(--font-m);font-size:11.5px;letter-spacing:.06em;line-height:normal}
+#trabajo .wk-cl{display:inline-flex;align-items:center;gap:9px;min-width:0;padding:8px 14px 8px 12px;border-radius:999px;background:var(--white);color:var(--ink);white-space:nowrap}
+#trabajo .wk-port{flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent-2);animation:gc-blink 1.4s ease-in-out infinite}
+#trabajo .wk-ml{display:inline-flex;align-items:center;min-width:0;padding:8px 14px;border-radius:999px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--white);background:color-mix(in srgb,var(--night) 40%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 22%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+
+/* drag divider + handle (positions on the compositor: 100cqw = viewer width) */
+#trabajo .wk-div{position:absolute;z-index:3;top:0;bottom:0;left:0;width:0;translate:calc(var(--dv)*100cqw) 0;pointer-events:none}
+#trabajo .wk-div i{position:absolute;top:0;bottom:0;left:-1px;width:2px;background:var(--white);box-shadow:0 0 0 1px rgba(0,0,0,.12),0 0 24px 2px color-mix(in srgb,var(--accent) 55%,transparent)}
+#trabajo .wk-handle{position:absolute;z-index:5;top:50%;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;color:var(--white);background:color-mix(in srgb,var(--night) 55%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:inset 0 0 0 2px var(--accent),0 12px 30px -8px rgba(0,0,0,.6);transition:scale .5s var(--ease-pop),background .3s,color .3s}
+#trabajo .wk-handle{left:0;translate:calc(var(--dv)*100cqw - 50%) -50%;cursor:ew-resize;touch-action:none}
+#trabajo .wk-handle::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 2px var(--accent);animation:wk-hp 2.2s var(--ease-ping) infinite;pointer-events:none}
+@keyframes wk-hp{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(1.75)}}
+#trabajo .wk-handle svg{width:24px;height:24px}
+#trabajo .wk-view:hover .wk-handle,#trabajo .wk-view.is-drag .wk-handle,#trabajo .wk-handle:focus-visible{scale:1.22;background:var(--accent);color:var(--ink)}
+html:not(.js) #trabajo .wk-handle{display:none}
+/* cursor tag ("Arrastra" / "Ver video" over a reel), follows the mouse (lerp .22) */
+#trabajo .wk-cur{position:absolute;z-index:6;left:0;top:0;pointer-events:none;opacity:0;transition:opacity .25s}
+#trabajo .wk-cur b{display:block;translate:18px 18px;padding:7px 12px;border-radius:999px;background:var(--white);color:var(--ink);font-family:var(--font-m);font-size:10.5px;font-weight:500;letter-spacing:.14em;line-height:normal;text-transform:uppercase;white-space:nowrap;box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+@media (hover:hover) and (pointer:fine){#trabajo .wk-view.is-hov .wk-cur{opacity:1}}
+
+/* photo cases (Valderrama, DLC · RoadMarket · ICEE): 2K image + honest count motifs over it */
+#trabajo .wk-photo .wk-ph{object-position:50% 50%}
+#trabajo .wk-photo--val .wk-ph{object-position:62% 50%}
+#trabajo .wk-photo--dlc .wk-ph{object-position:60% 50%}
+html.js #trabajo .wk-panel.is-active .wk-view--photo .wk-ph{animation:wk-settle 1.7s var(--ease-out) both}
+@keyframes wk-settle{from{scale:1.08}}
+/* Valderrama: the left half darkens so the week rows read over the photo */
+#trabajo .wk-photo--val .wk-scrim{background:linear-gradient(90deg,color-mix(in srgb,var(--night) 78%,transparent),color-mix(in srgb,var(--night) 40%,transparent) 42%,transparent 64%),linear-gradient(180deg,color-mix(in srgb,var(--night) 40%,transparent),transparent 26%,transparent 50%,color-mix(in srgb,var(--night) 74%,transparent))}
+#trabajo .wk-photo--dlc .wk-scrim{background:linear-gradient(180deg,color-mix(in srgb,var(--night) 44%,transparent),transparent 28%,transparent 46%,color-mix(in srgb,var(--night) 78%,transparent))}
+/* "clientes por semana": 1 dot = 1 client, the ring = top of the range (3–4 → 6–7) */
+#trabajo .wk-week{position:absolute;z-index:2;left:clamp(22px,3vw,44px);top:clamp(84px,10cqw,140px);display:flex;flex-direction:column;gap:max(10px,1.1cqw)}
+#trabajo .wk-wr{display:flex;align-items:center;gap:max(6px,.75cqw)}
+#trabajo .wk-wr span{flex:none;width:clamp(92px,8.6cqw,118px);font-family:var(--font-m);font-size:11px;letter-spacing:.12em;line-height:1.2;text-transform:uppercase;color:color-mix(in srgb,var(--white) 80%,transparent)}
+#trabajo .wk-wr i{flex:none;width:clamp(16px,2.1cqw,28px);aspect-ratio:1;border-radius:50%;background:color-mix(in srgb,var(--white) 78%,transparent)}
+#trabajo .wk-wr.is-a span{color:var(--accent)}
+#trabajo .wk-wr.is-a i{background:var(--accent);box-shadow:0 0 14px -2px color-mix(in srgb,var(--accent) 70%,transparent)}
+#trabajo .wk-wr i.is-r{background:transparent;box-shadow:inset 0 0 0 2px color-mix(in srgb,var(--white) 78%,transparent)}
+#trabajo .wk-wr.is-a i.is-r{background:transparent;box-shadow:inset 0 0 0 2px var(--accent)}
+#trabajo .wk-wr i.is-e{background:transparent;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 22%,transparent)}
+html.js #trabajo .wk-panel.is-active .wk-wr i{animation:wk-dot .5s var(--ease-pop) calc(var(--i,0)*70ms + .3s) both}
+html.js #trabajo .wk-panel.is-active .wk-wr.is-a i{animation-delay:calc(var(--i,0)*70ms + .75s)}
+@keyframes wk-dot{from{opacity:0;scale:.4}}
+#trabajo .wk-fcap{margin:4px 0 0;font-family:var(--font-m);font-size:10.5px;letter-spacing:.1em;line-height:1.4;text-transform:uppercase;color:color-mix(in srgb,var(--white) 70%,transparent)}
+#trabajo .wk-fcap b{font-weight:500;color:var(--white)}
+/* DLC · RoadMarket · ICEE: reach rings over the store */
+#trabajo .wk-rings{position:absolute;left:60%;top:44%;width:0;height:0;pointer-events:none}
+#trabajo .wk-rings i{position:absolute;left:0;top:0;width:min(64cqw,840px);aspect-ratio:1;border-radius:50%;translate:-50% -50%;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--accent) 70%,transparent);opacity:0}
+html.js #trabajo .wk-panel.is-active .wk-rings i{animation:wk-ring 4.2s var(--ease-ping) infinite}
+#trabajo .wk-rings i:nth-child(2){animation-delay:1.4s!important}
+#trabajo .wk-rings i:nth-child(3){animation-delay:2.8s!important}
+@keyframes wk-ring{0%{opacity:.9;scale:.18}100%{opacity:0;scale:1}}
+html:not(.js) #trabajo .wk-rings i{opacity:.35;scale:.5}
+#trabajo.is-off .wk-rings i,#trabajo.is-off .wk-port{animation-play-state:paused}
+
+/* Academia Europea: wall of 6 AI UGC reels (muted previews: max 2, JS) — a click opens the shared player */
+#trabajo .wk-ugc{background:radial-gradient(70% 90% at 22% 34%,color-mix(in srgb,var(--accent-2-dark) 20%,transparent),transparent 70%),radial-gradient(60% 80% at 86% 92%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 70%),var(--pine)}
+#trabajo .wk-ugc::before{content:"";position:absolute;inset:0;background:radial-gradient(circle,color-mix(in srgb,var(--white) 14%,transparent) 1px,transparent 1.4px) 0 0/24px 24px;-webkit-mask:linear-gradient(180deg,#000,transparent 85%);mask:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
+/* rev1 (client review): the figures get their own column and the reels a 3 × 2 grid sized from the viewer height
+   (--vh = the viewer's real height: 16:8 capped at 78svh; 4:3 on tablet), capped at 46 % of the width, so a reel can
+   never cover a figure at any desktop / tablet size. */
+#trabajo .wk-ugc{--px:clamp(22px,3vw,44px);--t:clamp(66px,6.6cqw,88px);--b:clamp(22px,3vw,40px);--g:max(8px,.9cqw);--vh:min(50cqw,78svh);--rh:min(calc((var(--vh) - var(--t) - var(--b) - var(--g))/2),calc((46cqw - var(--g)*2)/3*16/9));--rw:calc(var(--rh)*9/16*3 + var(--g)*2)}
+#trabajo .wk-reels{position:absolute;z-index:3;right:var(--px);top:var(--t);display:grid;grid-template-columns:repeat(3,calc(var(--rh)*9/16));grid-auto-rows:var(--rh);gap:var(--g);margin:0;padding:0;list-style:none}
+#trabajo .wk-reels li{min-width:0}
+#trabajo .wk-reel{position:relative;display:block;height:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;background:var(--ink-2);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 14%,transparent),0 24px 44px -26px rgba(0,0,0,.85);transition:translate .6s var(--ease-out),box-shadow .4s}
+#trabajo .wk-reel img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;transition:scale 1.2s var(--ease-out)}
+#trabajo .wk-reel .wk-vid{z-index:1}
+#trabajo .wk-reel::after{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 14%,transparent);pointer-events:none;transition:box-shadow .4s}
+#trabajo .wk-rp{position:absolute;z-index:3;right:10px;bottom:10px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;color:var(--white);background:color-mix(in srgb,var(--night) 50%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background .3s,color .3s,scale .5s var(--ease-pop)}
+#trabajo .wk-rp svg{width:13px;height:13px;margin-left:2px}
+#trabajo .wk-reel:is(:hover,:focus-visible){translate:0 -6px}
+#trabajo .wk-reel:is(:hover,:focus-visible)::after{box-shadow:inset 0 0 0 2px var(--accent)}
+#trabajo .wk-reel:is(:hover,:focus-visible) img{scale:1.05}
+#trabajo .wk-reel:is(:hover,:focus-visible) .wk-rp{background:var(--accent);color:var(--ink);scale:1.1}
+#trabajo .wk-reel:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+html.js #trabajo .wk-panel.is-active .wk-reels li{animation:wk-rise .9s var(--ease-out) calc(var(--i,0)*70ms + .08s) both}
+@keyframes wk-rise{from{opacity:0;translate:0 18px}}
+/* figures column: a line on top, "+50" and the big figure at the bottom (reference numeral slot), all on plain ground */
+#trabajo .wk-ugc-f{position:absolute;z-index:2;left:var(--px);top:var(--t);bottom:var(--b);right:calc(var(--px) + var(--rw) + clamp(24px,3cqw,48px));display:flex;flex-direction:column;justify-content:space-between;gap:20px;min-width:0;pointer-events:none}
+#trabajo .wk-ugc-q{margin:0;max-width:15ch;font-family:var(--font-d);font-size:clamp(24px,2.5cqw,38px);font-weight:600;line-height:1.06;letter-spacing:-.035em;color:var(--white);text-wrap:balance}
+#trabajo .wk-ugc-s{display:flex;flex-direction:column;gap:clamp(18px,2.2cqw,30px)}
+#trabajo .wk-ugc-r{display:flex;flex-wrap:wrap;gap:18px clamp(24px,3.2cqw,52px)}
+#trabajo .wk-ugc-x{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-width:0}
+#trabajo .wk-ugc-n{font-family:var(--font-d);font-size:clamp(40px,4.8cqw,76px);font-weight:600;line-height:.9;letter-spacing:-.05em;color:var(--white);font-variant-numeric:tabular-nums;white-space:nowrap}
+#trabajo .wk-view--ugc .wk-big{font-size:clamp(72px,11cqw,176px);text-shadow:none}
+
+/* info row ---------------------------------------------------------------------------------- */
+#trabajo .wk-info{margin-top:clamp(24px,2.6vw,36px)}
+#trabajo .wk-info-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(28px,4vw,72px);align-items:start}
+html.js #trabajo .wk-panel.is-active .wk-info-in{animation:wk-info .8s var(--ease-out) both}
+@keyframes wk-info{from{opacity:0;translate:0 12px}}
+#trabajo .wk-meta{display:block;margin:0 0 14px;font-family:var(--font-m);font-size:11px;letter-spacing:.12em;line-height:1.5;text-transform:uppercase;color:var(--mut)}
+#trabajo .wk-meta span+span::before{content:"·";margin:0 10px}
+#trabajo .wk-title{margin:0;font-family:var(--font-d);font-size:clamp(28px,2.6vw,40px);font-weight:600;line-height:1.04;letter-spacing:-.04em;text-wrap:balance;color:var(--white)}
+/* reference: the title link's accent underline grows from the left on hover (.6s) */
+#trabajo .wk-title a{color:inherit;text-decoration:none;background:linear-gradient(var(--accent),var(--accent)) 0 100%/0 2px no-repeat;transition:background-size .6s var(--ease-out)}
+#trabajo .wk-title a:hover,#trabajo .wk-title a:focus-visible{background-size:100% 2px}
+/* results strip: every figure from the deck, verbatim */
+#trabajo .wk-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:26px 0 0;padding:0;max-width:640px}
+#trabajo .wk-kpis>div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px;min-width:0;padding:14px 18px 0 0;border-top:1px solid var(--line)}
+#trabajo .wk-kpis>div+div{padding-left:18px;box-shadow:inset 1px 0 0 var(--line)}
+#trabajo .wk-kpis dd{margin:0;font-family:var(--font-d);font-size:clamp(26px,2.3vw,34px);font-weight:600;line-height:1;letter-spacing:-.04em;color:var(--white);font-variant-numeric:tabular-nums;white-space:nowrap}
+#trabajo .wk-kpis dt{font-family:var(--font-m);font-size:10.5px;letter-spacing:.08em;line-height:1.45;text-transform:uppercase;color:var(--mut)}
+#trabajo .wk-sum{margin:0 0 20px;max-width:46ch;font-size:17px;line-height:1.5;color:color-mix(in srgb,var(--white) 82%,transparent)}
+#trabajo .wk-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+#trabajo .wk-svs{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+#trabajo .wk-svs li{padding:6px 12px;border-radius:999px;font-family:var(--font-m);font-size:11px;letter-spacing:.06em;line-height:normal;color:var(--white);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 26%,transparent)}
+#trabajo .wk-acts{display:flex;flex-wrap:wrap;gap:6px}
+#trabajo .wk-read{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;background:var(--accent);color:var(--ink);font-family:var(--font-m);font-size:12px;letter-spacing:.08em;line-height:normal;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:gap .4s var(--ease-pop),background .3s,color .3s,box-shadow .3s}
+#trabajo .wk-read:hover{gap:16px}
+#trabajo .wk-read svg{width:13px;height:13px}
+#trabajo .wk-read--o{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 34%,transparent)}
+#trabajo .wk-read--o:hover{background:var(--white);color:var(--ink);box-shadow:none}
+
+/* OSMO (richest case) — percentages / relative changes only (client rule) ------------------------ */
+/* glass card on the "after" layer: new accounts a month as an index (Mar = 100); the drag covers it like the after figure */
+#trabajo .wk-bars{margin:0}
+#trabajo .wk-bars--v{position:absolute;z-index:2;right:clamp(22px,3vw,44px);top:clamp(66px,6.4cqw,90px);width:clamp(292px,24cqw,340px);padding:14px 16px 12px;border-radius:18px;background:color-mix(in srgb,var(--night) 44%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 18%,transparent),0 18px 40px -24px rgba(0,0,0,.7);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+#trabajo .wk-bars-h{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;font-family:var(--font-m);font-size:10.5px;letter-spacing:.12em;line-height:1.3;text-transform:uppercase;color:var(--white)}
+#trabajo .wk-bars-h b{font-weight:500}
+#trabajo .wk-bars-h span{font-family:var(--font-d);font-size:24px;font-weight:600;letter-spacing:-.04em;line-height:1;text-transform:none;color:var(--accent)}
+#trabajo .wk-bars-c{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;height:96px;margin:0;padding:0;list-style:none}
+#trabajo .wk-bars-c li{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:5px;min-width:0}
+#trabajo .wk-bars-c span{font-family:var(--font-m);font-size:10px;letter-spacing:.02em;line-height:1;color:color-mix(in srgb,var(--white) 62%,transparent);font-variant-numeric:tabular-nums}
+#trabajo .wk-bars-c i{display:block;flex:none;width:100%;height:calc(var(--h,1)*62px);border-radius:4px 4px 1px 1px;background:color-mix(in srgb,var(--accent) 20%,transparent);box-shadow:inset 0 2px 0 var(--accent);transform-origin:50% 100%}
+#trabajo .wk-bars-c em{font-style:normal;font-family:var(--font-m);font-size:9.5px;letter-spacing:.08em;line-height:1;text-transform:uppercase;color:color-mix(in srgb,var(--white) 56%,transparent)}
+#trabajo .wk-bars-c .is-0 i{background:color-mix(in srgb,var(--white) 14%,transparent);box-shadow:inset 0 2px 0 color-mix(in srgb,var(--white) 72%,transparent)}
+#trabajo .wk-bars-c .is-n i{background:var(--accent);box-shadow:0 0 18px -4px color-mix(in srgb,var(--accent) 80%,transparent)}
+#trabajo .wk-bars-c :is(.is-0,.is-n) :is(span,em){color:var(--white)}
+#trabajo .wk-bars-c .is-n span{color:var(--accent)}
+#trabajo .wk-bars-s{margin:10px 0 0;font-family:var(--font-m);font-size:9.5px;letter-spacing:.1em;line-height:1.3;text-transform:uppercase;color:color-mix(in srgb,var(--white) 56%,transparent)}
+html.js #trabajo .wk-panel.is-active .is-on .wk-bars-c i{animation:wk-bar .9s var(--ease-out) calc(var(--i,0)*70ms + .35s) both}
+html.js #trabajo .wk-panel.is-active .is-on .wk-bars-c span{animation:wk-fade .5s ease calc(var(--i,0)*70ms + .8s) both}
+@keyframes wk-bar{from{scale:1 0}}
+@keyframes wk-fade{from{opacity:0}}
+/* six relative KPIs in two rows of three: value · label · basis */
+#trabajo .wk-kpis--6{max-width:660px;row-gap:22px}
+#trabajo .wk-kpis--6>div{flex-direction:column;justify-content:flex-start;gap:7px}
+#trabajo .wk-kpis--6>div:nth-child(3n+1){padding-left:0;box-shadow:none}
+#trabajo .wk-kpis--6 dd{order:-1}
+#trabajo .wk-kpis--6 dd.wk-kd{order:2;font-family:var(--font-m);font-size:11px;font-weight:400;letter-spacing:.02em;line-height:1.4;white-space:normal;color:color-mix(in srgb,var(--white) 58%,transparent)}
+#trabajo .wk-src{margin:18px 0 0;max-width:640px;font-size:12.5px;line-height:1.55;color:var(--mut);text-wrap:pretty}
+/* "Qué hicimos" */
+#trabajo .wk-did{max-width:540px;margin:0 0 24px}
+#trabajo .wk-did-h{margin:0 0 6px;font-family:var(--font-m);font-size:11px;letter-spacing:.12em;line-height:1.5;text-transform:uppercase;color:var(--mut)}
+#trabajo .wk-did ol{margin:0;padding:0;list-style:none;counter-reset:wkd}
+#trabajo .wk-did li{position:relative;padding:9px 0 9px 34px;border-top:1px solid var(--line);font-size:15px;line-height:1.4;color:color-mix(in srgb,var(--white) 88%,transparent);counter-increment:wkd;text-wrap:pretty}
+#trabajo .wk-did li::before{content:counter(wkd,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--font-m);font-size:11px;letter-spacing:.06em;line-height:1.4;color:var(--accent)}
+#trabajo .wk-did small{display:block;margin-top:3px;font-family:var(--font-m);font-size:10.5px;letter-spacing:.03em;line-height:1.5;color:var(--mut)}
+#trabajo .wk-did-k{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:999px;background:var(--accent);color:var(--ink);font-family:var(--font-m);font-size:10.5px;letter-spacing:.06em;line-height:1.4;vertical-align:1px;white-space:nowrap}
+
+/* brands that trust Growco (quiet closing row) ----------------------------------------------- */
+#trabajo .wk-brands{display:grid;grid-template-columns:minmax(0,200px) minmax(0,1fr);align-items:center;gap:24px 40px;margin-top:clamp(64px,7vw,104px);padding-top:28px;border-top:1px solid var(--line)}
+#trabajo .wk-brands-l{margin:0;font-family:var(--font-m);font-size:11px;letter-spacing:.12em;line-height:1.5;text-transform:uppercase;color:var(--mut)}
+#trabajo .wk-brands-r{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+#trabajo .wk-brands-r li{display:grid;place-items:center;height:64px;padding:0 10px;border-radius:16px;background:var(--bone)}
+#trabajo .wk-brands-r img{display:block;width:auto;max-width:100%;object-fit:contain}
+
+/* laptop (≤1279) */
+@media (max-width:1279px){
+  #trabajo .wk-brands{grid-template-columns:1fr}
+}
+
+/* tablet (reference is-tab: 810–1099) ---------------------------------------------------------- */
+@media (max-width:1099px){
+  #trabajo .wk-head{grid-template-columns:1fr;align-items:start}
+  #trabajo .wk-hr{justify-self:start;max-width:560px}
+  #trabajo .wk-sub{max-width:400px}
+  #trabajo .wk-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #trabajo .wk-view{aspect-ratio:4/3}
+  #trabajo .wk-info-in{grid-template-columns:1fr;gap:18px}
+  #trabajo .wk-photo--val .wk-ph{object-position:68% 50%}
+  #trabajo .wk-photo--dlc .wk-ph{object-position:64% 50%}
+  #trabajo .wk-week{top:clamp(76px,10cqw,110px)}
+  #trabajo .wk-wr i{width:clamp(16px,2.6cqw,26px)}
+  #trabajo .wk-ugc{--vh:min(75cqw,78svh)}
+  #trabajo .wk-brands-r{grid-template-columns:repeat(5,minmax(0,1fr))}
+  /* OSMO: summary | "Qué hicimos" side by side, the foot under both */
+  #trabajo .wk-info-in--rich .wk-ir{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 clamp(24px,4vw,40px);align-items:start}
+  #trabajo .wk-info-in--rich .wk-foot{grid-column:1/-1}
+  /* OSMO's six KPIs on one row here, so its info stays close to the other cases' height */
+  #trabajo .wk-kpis--6{grid-template-columns:repeat(6,minmax(0,1fr));max-width:none}
+  #trabajo .wk-kpis--6>div:nth-child(n){padding-left:14px;padding-right:10px;box-shadow:inset 1px 0 0 var(--line)}
+  #trabajo .wk-kpis--6>div:first-child{padding-left:0;box-shadow:none}
+  #trabajo .wk-kpis--6 dd{font-size:clamp(24px,2.8vw,30px)}
+}
+
+/* phone (reference is-ph: ≤809) ---------------------------------------------------------------- */
+@media (max-width:809px){
+  #trabajo.wk{padding:80px 0 88px}
+  #trabajo .wk-head{gap:24px;margin-bottom:32px}
+  #trabajo .wk-hr{justify-self:stretch;max-width:none}
+  #trabajo .wk-sub{font-size:16px;max-width:none}
+  #trabajo .wk-tabs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:-4px calc(var(--pad,20px)*-1) 8px;padding:6px var(--pad,20px);scroll-padding:0 var(--pad,20px);overscroll-behavior-x:contain}
+  #trabajo .wk-tabs::-webkit-scrollbar{display:none}
+  #trabajo .wk-tab{flex:none;width:auto;max-width:300px;scroll-snap-align:start}
+  #trabajo .wk-view{aspect-ratio:4/5;max-height:none;border-radius:20px}
+  #trabajo .wk-ch{height:46%}
+  /* pills sit over the playing piece here: no backdrop blur (re-computed every frame), a denser tint instead */
+  #trabajo .wk-pill:not(.is-a){-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--night) 52%,transparent)}
+  #trabajo .wk-big{font-size:clamp(56px,17vw,76px)}
+  #trabajo .wk-ghost{font-size:32px;-webkit-text-stroke-width:1.1px}
+  #trabajo .wk-num{bottom:18px;gap:8px}
+  #trabajo .wk-num-a{right:16px}
+  #trabajo .wk-num-b{left:16px;bottom:auto;top:66px}
+  #trabajo .wk-ml{display:none}
+  #trabajo .wk-handle{width:54px;height:54px}
+  /* photo cases: 4:5 crops (<picture>); Valderrama rows on top, both figures on the bottom line */
+  #trabajo .wk-photo--val .wk-ph,#trabajo .wk-photo--dlc .wk-ph{object-position:50% 50%}
+  #trabajo .wk-photo--val .wk-scrim{background:linear-gradient(180deg,color-mix(in srgb,var(--night) 74%,transparent),color-mix(in srgb,var(--night) 30%,transparent) 44%,transparent 56%,color-mix(in srgb,var(--night) 78%,transparent))}
+  #trabajo .wk-week{left:16px;right:16px;top:62px;gap:10px}
+  #trabajo .wk-wr{gap:6px}
+  #trabajo .wk-wr span{width:86px;font-size:10px}
+  #trabajo .wk-wr i{width:min(5.4cqw,22px)}
+  #trabajo .wk-fcap{font-size:9.5px}
+  #trabajo .wk-view--photo .wk-photo--val .wk-num-b{top:auto;bottom:18px}
+  /* reel wall → edge-to-edge snap strip on top (2.8 reels in view); the figures get their own band below it */
+  #trabajo .wk-reels{display:flex;left:0;right:0;top:60px;gap:10px;padding:0 16px 4px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x pan-y}
+  #trabajo .wk-reels::-webkit-scrollbar{display:none}
+  #trabajo .wk-reels li{flex:0 0 35cqw;scroll-snap-align:start}
+  #trabajo .wk-reel{height:auto;border-radius:12px}
+  #trabajo .wk-rp{right:8px;bottom:8px;width:28px;height:28px;-webkit-backdrop-filter:none;backdrop-filter:none;background:color-mix(in srgb,var(--night) 66%,transparent)}
+  #trabajo .wk-ugc-f{left:16px;right:16px;top:auto;bottom:18px}
+  #trabajo .wk-ugc-q{display:none}
+  #trabajo .wk-ugc-s{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);align-items:end;gap:14px;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--white) 16%,transparent)}
+  #trabajo .wk-ugc-r{display:contents}
+  #trabajo .wk-ugc-x--d{display:none}
+  #trabajo .wk-ugc-x{flex-direction:column-reverse;gap:8px}
+  #trabajo .wk-ugc-x.is-a{order:-1}
+  #trabajo .wk-ugc-x .wk-pill{padding:0;background:none;box-shadow:none;color:color-mix(in srgb,var(--white) 76%,transparent);font-size:9.5px;letter-spacing:.1em;white-space:normal;line-height:1.35}
+  #trabajo .wk-ugc-x .wk-pill.is-a{color:var(--accent)}
+  #trabajo .wk-ugc-x .wk-pill.is-a i{display:none}
+  #trabajo .wk-ugc-n{font-size:clamp(34px,10vw,42px)}
+  #trabajo .wk-view--ugc .wk-big{font-size:clamp(52px,16cqw,68px)}
+  #trabajo .wk-rings{top:50%}
+  #trabajo .wk-rings i{width:130cqw}
+  #trabajo .wk-info-in{grid-template-columns:1fr;gap:16px}
+  #trabajo .wk-title{font-size:28px}
+  #trabajo .wk-sum{font-size:16px}
+  #trabajo .wk-kpis>div{padding-right:10px}
+  #trabajo .wk-kpis>div+div{padding-left:10px}
+  #trabajo .wk-kpis dd{font-size:24px}
+  #trabajo .wk-kpis dt{font-size:9.5px;letter-spacing:.06em}
+  #trabajo .wk-brands-r{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #trabajo .wk-brands-r li{height:56px}
+  /* OSMO: the index card leaves the 4:5 crop (it would cover the face). rev1: it no longer moves under the title — the
+     "Cuentas nuevas al mes ×2" KPI carries it — so OSMO's info stays close to the other cases' height; KPIs 2 × 3 */
+  #trabajo .wk-bars--v{display:none}
+  #trabajo .wk-kpis--6{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:16px}
+  #trabajo .wk-kpis--6>div:nth-child(n){padding-left:10px;padding-right:6px;box-shadow:inset 1px 0 0 var(--line)}
+  #trabajo .wk-kpis--6>div:nth-child(3n+1){padding-left:0;box-shadow:none}
+  #trabajo .wk-kpis--6 dd{font-size:22px}
+  #trabajo .wk-kpis--6 dd.wk-kd{font-size:10px;letter-spacing:0}
+  #trabajo .wk-did li{font-size:14.5px}
+  #trabajo .wk-did small{display:none}
+  #trabajo .wk-info-in--rich .wk-ir{display:block}
+}
+
+/* reduced motion: final states, no loops (site.css §19 already kills durations) -------------------- */
+@media (prefers-reduced-motion:reduce){
+  #trabajo .wk-case,#trabajo .wk-info-in,#trabajo .wk-wr i,#trabajo .wk-reels li,#trabajo .wk-bars-c :is(i,span),#trabajo .wk-lay :is(.wk-ph,.wk-vid){animation:none!important}
+  #trabajo .wk-reel,#trabajo .wk-reel img{transition:box-shadow .3s}
+  #trabajo .wk-reel:is(:hover,:focus-visible){translate:none}
+  #trabajo .wk-reel:is(:hover,:focus-visible) img{scale:1}
+  #trabajo .wk-port,#trabajo .wk-handle::after{animation:none!important}
+  #trabajo .wk-rings i{animation:none!important;opacity:.35;scale:.5}
+  #trabajo .wk-rings i:nth-child(2){scale:.75;opacity:.22}
+  #trabajo .wk-rings i:nth-child(3){scale:1;opacity:.12}
+  #trabajo .wk-prog{display:none}
+}

@@ -1,0 +1,122 @@
+/* 10 · AUTOMATIZACIÓN (#automatizacion) — reference 35_rwrv (bone ground, tinted panel + phone lock screen)
+   Panel: radius 32, padding clamp(40px,5vw,80px), grid minmax(0,1fr) | minmax(0,480px), gap 48 / clamp(40px,6vw,120px),
+   fog 62% on bone + 1px ink 6% ring. Left: eyebrow (ring dot pulsing), score (big numeral + glyph row + mono caption),
+   channel pills, H2 (+10px), sub, ghost button — column gap 26. Right: navy lock screen (radius 52, 6px bezel),
+   notifications stacked by --r (written by home-10-automatizacion.js; inline in the HTML = final state):
+     y = min(r,2)·gap + i·12px · scale 1 − i·.045 · opacity (1 − i·.28) (0 when i = 3), i = clamp(0, r − 2, 3);
+     not-yet-shown notes wait at −70px, scale .9, opacity 0. Transform .95s soft spring, opacity .55s.
+   Tiers follow the reference component: tablet ≤1099 (is-tab), phone ≤809 (is-ph).
+   Standalone spacing: the reference block continues the (omitted) team section, so it takes the team rhythm
+   (clamp(96px,10vw,160px) both ends). */
+#automatizacion{--au-gap:168px;--au-nh:156px;padding:clamp(96px,10vw,160px) 0}
+
+/* panel --------------------------------------------------------------------------------------------------- */
+#automatizacion .au-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:48px clamp(40px,6vw,120px);align-items:center;padding:clamp(40px,5vw,80px);border-radius:32px;background:color-mix(in srgb,var(--fog) 62%,var(--bone));box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 6%,transparent)}
+#automatizacion .au-left{display:flex;flex-direction:column;align-items:flex-start;gap:26px;min-width:0}
+
+/* eyebrow: ink-ringed dot with a soft pulse (reference rwrv-eb) */
+#automatizacion .eb>i{border:1px solid var(--ink);animation:au-eb 1.8s var(--ease-ping) infinite}
+@keyframes au-eb{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--ink) 35%,transparent)}100%{box-shadow:0 0 0 8px transparent}}
+
+/* score block (reference 4.9 + stars + count) → channel count + glyphs + caption */
+#automatizacion .au-score{display:flex;align-items:flex-end;gap:22px}
+#automatizacion .au-big{margin:0;font-family:var(--font-d);font-size:clamp(96px,9vw,132px);font-weight:600;line-height:.8;letter-spacing:-.06em;color:var(--ink);font-variant-numeric:tabular-nums}
+#automatizacion .au-of{display:flex;flex-direction:column;gap:10px;padding-bottom:4px}
+#automatizacion .au-glyphs{display:inline-flex;gap:5px;color:var(--ink)}
+#automatizacion .au-glyphs svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#automatizacion .au-cnt{margin:0;font-family:var(--font-m);font-size:12px;font-weight:400;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+
+/* channel pills (reference platform badges) */
+#automatizacion .au-chan{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none;font-family:var(--font-m);font-size:11.5px;font-weight:400;line-height:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+#automatizacion .au-chan li{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:var(--bone);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 14%,transparent)}
+#automatizacion .au-chan i{flex:none;width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--ink)}
+
+#automatizacion .au-title{margin-top:10px}
+/* reference .rwrv .rw-it: word padding .08em, box inset .12em from the line top and .04em from the line bottom
+   (the shared mask adds .12em below the line, hence .16em here) */
+#automatizacion .au-title .hd-i.is-acc{padding:0 .08em;margin:0 -.02em}
+#automatizacion .au-title .hd-w.is-accw::before{left:.04em;right:.04em;top:.12em;bottom:.16em}
+#automatizacion .au-title:not(.is-split) mark::before{top:.12em;bottom:.04em}
+/* reference rwrv: both boxes wipe at a fixed .8s after the reveal, not at word delay + offset */
+#automatizacion .au-title .hd-w.is-accw::before{transition-delay:.8s}
+#automatizacion .au-sub{margin:0;max-width:440px;font-size:17px;line-height:1.55;color:var(--mut)}
+#automatizacion .au-act{display:flex}
+
+/* lock screen ------------------------------------------------------------------------------------------- */
+#automatizacion .au-lock{position:relative;display:flex;flex-direction:column;width:100%;max-width:480px;justify-self:end;padding:14px 18px 16px;border-radius:52px;background:var(--night);color:var(--white);box-shadow:0 0 0 6px color-mix(in srgb,var(--ink) 88%,var(--stone)),0 50px 90px -40px color-mix(in srgb,var(--ink) 60%,transparent);overflow:hidden;isolation:isolate}
+#automatizacion .au-lock::before{content:"";position:absolute;z-index:-1;left:-20%;right:-20%;bottom:-30%;height:70%;background:radial-gradient(50% 50% at 50% 50%,color-mix(in srgb,var(--accent) 30%,transparent),transparent 70%);filter:blur(10px);pointer-events:none}
+#automatizacion .au-glow{position:absolute;z-index:-1;left:50%;top:150px;width:0;height:0;pointer-events:none}
+#automatizacion .au-glow i{position:absolute;left:0;top:0;width:560px;height:560px;margin:-280px 0 0 -280px;border-radius:50%;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 7%,transparent)}
+#automatizacion .au-glow i:nth-child(2){scale:.66}
+#automatizacion .au-glow i:nth-child(3){scale:1.4}
+#automatizacion .au-status{display:flex;align-items:center;justify-content:space-between;padding:6px 12px 0;font-family:var(--font-m);font-size:13px;font-weight:600;line-height:1.2}
+#automatizacion .au-isl{width:96px;height:28px;border-radius:999px;background:#03060F}
+#automatizacion .au-bat{position:relative;width:24px;height:12px;border-radius:4px;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--white) 60%,transparent)}
+#automatizacion .au-bat i{position:absolute;left:3px;top:3px;bottom:3px;width:62%;border-radius:2px;background:var(--accent)}
+#automatizacion .au-time{display:flex;flex-direction:column;align-items:center;padding:18px 0 6px;text-align:center}
+#automatizacion .au-lk{width:16px;height:16px;opacity:.85}
+#automatizacion .au-date{margin:8px 0 0;font-family:var(--font-m);font-size:13px;font-weight:400;line-height:1.3;letter-spacing:.04em;color:color-mix(in srgb,var(--white) 80%,transparent)}
+#automatizacion .au-clock{margin:2px 0 0;font-family:var(--font-d);font-size:clamp(76px,7vw,96px);font-weight:600;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+#automatizacion .au-new{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 4px 10px;font-family:var(--font-m);font-size:11px;font-weight:400;line-height:20px;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 70%,transparent)}
+#automatizacion .au-new-c{display:inline-flex;align-items:center;gap:6px;min-width:0}
+#automatizacion .au-new b{display:grid;place-items:center;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--accent-2-dark);color:var(--white);font-weight:600;letter-spacing:0;font-variant-numeric:tabular-nums}
+
+/* the stack */
+#automatizacion .au-stack{position:relative;height:calc(var(--au-gap)*2 + 30px + var(--au-nh));margin:0;padding:0;list-style:none}
+#automatizacion .au-note{--i:clamp(0,calc(var(--r,0) - 2),3);position:absolute;left:0;right:0;top:0;z-index:calc(20 - var(--r,0));display:flex;flex-direction:column;gap:10px;min-height:150px;padding:14px 16px 15px;border-radius:24px;background:color-mix(in srgb,var(--white) 90%,transparent);color:var(--ink);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);box-shadow:0 18px 40px -22px rgba(0,0,0,.7);transform-origin:50% 0;
+  transform:translate3d(0,calc(min(var(--r,0),2)*var(--au-gap) + var(--i)*12px),0) scale(calc(1 - var(--i)*.045));
+  opacity:calc((1 - var(--i)*.28)*(1 - max(0,var(--i) - 2)));
+  transition:transform .95s var(--ease-soft),opacity .55s ease,box-shadow .4s,background .3s;outline:none}
+#automatizacion .au-note:not(.is-in){z-index:20;transform:translate3d(0,-70px,0) scale(.9);opacity:0;pointer-events:none}
+#automatizacion .au-app{display:flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:10.5px;font-weight:400;line-height:20px;letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--ink) 62%,transparent)}
+#automatizacion .au-ico{display:grid;place-items:center;flex:none;width:20px;height:20px;border-radius:6px;background:var(--accent);color:var(--ink)}
+#automatizacion .au-ico svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#automatizacion .au-when{margin-left:auto;letter-spacing:.04em;text-transform:none}
+#automatizacion .au-who{display:flex;align-items:center;gap:10px}
+#automatizacion .au-av{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:50%;background:var(--ink);color:var(--accent)}
+#automatizacion .au-av svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+#automatizacion .au-nm{display:flex;flex-direction:column;flex:1;min-width:0;margin:0;font-size:12.5px;line-height:1.3;color:var(--mut)}
+#automatizacion .au-nm b{font-family:var(--font-d);font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.01em;color:var(--ink)}
+#automatizacion .au-res{flex:none;padding:5px 10px;border-radius:999px;background:var(--accent);color:var(--ink);font-family:var(--font-m);font-size:11px;font-weight:400;line-height:14px;letter-spacing:.02em;white-space:nowrap}
+#automatizacion .au-q{margin:0;font-size:14.5px;line-height:1.42;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+#automatizacion .au-note.is-new .au-ico{animation:au-ping 1.2s var(--ease-ping) .5s}
+@keyframes au-ping{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 90%,transparent)}100%{box-shadow:0 0 0 12px transparent}}
+#automatizacion .au-note:is(:hover,:focus-visible){z-index:40;background:var(--white);box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 2px var(--accent)}
+#automatizacion .au-note:focus-visible{box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 3px var(--accent),0 0 0 5px var(--night)}
+#automatizacion .au-note:is(:hover,:focus-visible) .au-q{-webkit-line-clamp:12;line-clamp:12}
+
+#automatizacion .au-foot{display:flex;align-items:center;justify-content:space-between;padding:18px 18px 4px}
+#automatizacion .au-foot i{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:color-mix(in srgb,var(--white) 12%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+#automatizacion .au-foot svg{width:20px;height:20px}
+#automatizacion .au-home{align-self:flex-end;width:130px;height:5px;border-radius:999px;background:color-mix(in srgb,var(--white) 80%,transparent)}
+
+/* tablet (reference is-tab: 810–1099) --------------------------------------------------------------------- */
+@media (max-width:1099px){
+  #automatizacion .au-panel{grid-template-columns:1fr;padding:48px 40px}
+  #automatizacion .au-lock{justify-self:center}
+}
+/* phone (reference is-ph: ≤809) ----------------------------------------------------------------------------- */
+@media (max-width:809px){
+  #automatizacion{--au-gap:158px;--au-nh:150px;padding:72px 0 80px}
+  #automatizacion .wrap{--pad:12px}
+  #automatizacion .au-panel{padding:40px 16px 16px;border-radius:26px;gap:40px}
+  #automatizacion .au-left{padding:0 6px}
+  #automatizacion .au-big{font-size:96px}
+  #automatizacion .au-sub{font-size:16px}
+  #automatizacion .au-lock{padding:12px 12px 14px;border-radius:40px;box-shadow:0 0 0 5px color-mix(in srgb,var(--ink) 88%,var(--stone)),0 40px 70px -40px color-mix(in srgb,var(--ink) 60%,transparent)}
+  #automatizacion .au-clock{font-size:78px}
+  #automatizacion .au-note{padding:13px 13px 14px;border-radius:22px}
+  #automatizacion .au-res{font-size:10.5px;padding:4px 8px}
+  #automatizacion .au-q{font-size:14px}
+  /* Spanish titles are longer than the reference names: on phones the status pill moves up into the app row
+     (replacing the relative time) so every title stays on one line and the notes keep the 150px rhythm */
+  #automatizacion .au-res{position:absolute;top:12px;right:13px;line-height:14px}
+  #automatizacion .au-when{display:none}
+  #automatizacion .au-nm b{font-size:14px}
+}
+
+/* reduced motion: final stack, no pulses/pings (site.css already zeroes durations) ------------------------------ */
+@media (prefers-reduced-motion:reduce){
+  #automatizacion .au-note{transition:none}
+  #automatizacion .eb>i,#automatizacion .au-note.is-new .au-ico{animation:none}
+}

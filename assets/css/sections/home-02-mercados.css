@@ -1,0 +1,120 @@
+/* 02 · MERCADOS (#mercados) — reference 11_rwcl (clients radar, bone ground)
+   Grid 5fr / 7fr centred: copy (eyebrow · H2 with 3 green boxes · line · mono meta) | 500px radar (right-aligned).
+   Radar layers: dotted grid (masked circle) > SVG rings / cross / 72 ticks > degree + ring labels > green conic sweep
+   (rotated by JS) > core (El Salvador, BASE) > market blips (dot + name + blue tag on hit).
+   States: .is-park (no JS / reduced motion: sweep parked at 40°, static rings) · .is-mv (live sweep, JS) ·
+   .is-on (revealed by motion.js) · .mk-blip.is-hit (lit by the sweep or hovered).
+   Tablet ≤1099 (reference .is-tab: 1fr / 1.05fr) · phone ≤809 (reference .is-ph: one column, 350px radar). */
+#mercados{padding:clamp(56px,4.8vw,80px) 0;overflow-x:clip}
+#mercados .mk-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:center;gap:clamp(32px,4vw,72px)}
+
+/* copy --------------------------------------------------------------------------------------------- */
+#mercados .mk-copy{display:flex;flex-direction:column;align-items:flex-start;gap:22px;max-width:520px;min-width:0}
+/* reference rwcl H2 keeps the base tracking (-.042em); each authored line stays on one line on desktop/tablet */
+#mercados .mk-hd{letter-spacing:-.042em;white-space:nowrap}
+/* reference box geometry (.rw-it): the payoff word carries .06em inner padding and the box hugs it, so boxed words
+   sit one full space apart and the box starts on the word's flow position (shared default: box = mask ± .04em) */
+#mercados .mk-hd .hd-i.is-acc{padding:0 .06em}
+#mercados .mk-hd .hd-w.is-accw::before{left:.04em;right:.04em;top:-.045em}
+/* no-JS (unsplit) marks: same box as the split state instead of an inline background that bleeds into line 1 */
+#mercados .mk-hd:not(.is-split) mark{position:relative;display:inline-block;isolation:isolate;padding:0 .06em;border-radius:0;background:none;color:var(--ink);line-height:inherit;vertical-align:top}
+#mercados .mk-hd:not(.is-split) mark::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:-.045em;bottom:-.11em;border-radius:.16em;background:var(--accent)}
+#mercados .mk-line{margin:0;max-width:440px;font-size:17px;line-height:1.5;color:var(--mut)}
+#mercados .mk-meta{display:flex;flex-direction:column;gap:10px;width:100%;max-width:440px;padding-top:18px;border-top:1px solid var(--line-2);font-family:var(--font-m);font-weight:400}
+#mercados .mk-meta p{display:flex;align-items:center;gap:10px;min-width:0;margin:0;font-size:12px;line-height:normal;letter-spacing:.08em;text-transform:uppercase}
+#mercados .mk-rate{min-height:17px;color:var(--ink)}
+/* 50/50 split glyph (replaces the reference's star row): navy half SV · green half GT */
+/* rev1: globe glyph ("cualquier país · cualquier idioma") replaces the old SV/GT 50-50 split bar */
+#mercados .mk-globe{flex:none;width:16px;height:16px;fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}
+#mercados .mk-read{color:var(--mut)}
+#mercados .mk-read-l{flex:none}
+#mercados .mk-read-v{min-width:0;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mercados .mk-live{position:relative;flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 35%,transparent)}
+#mercados .mk-live::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 1.5px var(--accent);animation:mk-p 1.8s var(--ease-ping) infinite}
+
+/* radar scope ---------------------------------------------------------------------------------------- */
+#mercados .mk-stage{display:flex;justify-content:flex-end;min-width:0}
+#mercados .mk-scope{--nm:14px;position:relative;flex:none;width:min(500px,100%);aspect-ratio:1;border-radius:50%}
+#mercados .mk-grid{position:absolute;inset:4%;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%,color-mix(in srgb,var(--white) 70%,transparent),color-mix(in srgb,var(--white) 20%,transparent) 70%),
+             radial-gradient(color-mix(in srgb,var(--ink) 16%,transparent) 1px,transparent 1.3px) 0 0/14px 14px;
+  -webkit-mask:radial-gradient(circle,#000 62%,transparent 71%);mask:radial-gradient(circle,#000 62%,transparent 71%)}
+#mercados .mk-svg{position:absolute;inset:0;width:100%;height:100%;max-width:none;overflow:visible}
+#mercados .mk-ring{fill:none;stroke:color-mix(in srgb,var(--ink) 16%,transparent);stroke-width:.35}
+#mercados .mk-ring--o{stroke:color-mix(in srgb,var(--ink) 38%,transparent);stroke-width:.5}
+#mercados .mk-cross{fill:none;stroke:color-mix(in srgb,var(--ink) 14%,transparent);stroke-width:.3}
+#mercados .mk-diag{stroke-dasharray:1 2.2}
+#mercados .mk-tick{stroke:color-mix(in srgb,var(--ink) 30%,transparent);stroke-width:.3}
+#mercados .mk-tick--l{stroke:color-mix(in srgb,var(--ink) 60%,transparent);stroke-width:.45}
+#mercados .mk-deg{position:absolute;font-family:var(--font-m);font-size:10px;font-weight:400;line-height:normal;letter-spacing:.1em;color:var(--mut);white-space:nowrap}
+#mercados .mk-deg--0{left:50%;top:-4px;translate:-50% -100%}
+#mercados .mk-deg--1{right:-6px;top:50%;translate:100% -50%}
+#mercados .mk-deg--2{left:50%;bottom:-4px;translate:-50% 100%}
+#mercados .mk-deg--3{left:-6px;top:50%;translate:-100% -50%}
+#mercados .mk-rl{position:absolute;translate:5px -50%;padding:1px 3px;border-radius:3px;background:color-mix(in srgb,var(--bone) 80%,transparent);font-family:var(--font-m);font-size:9.5px;font-weight:400;line-height:normal;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb,var(--ink) 42%,transparent);pointer-events:none}
+
+/* sweep: green wedge trailing a navy edge line; JS writes transform:rotate() (parked at 40° in the markup) */
+#mercados .mk-sweep{position:absolute;inset:4%;border-radius:50%;pointer-events:none;will-change:transform;
+  background:conic-gradient(from 285deg,transparent 0deg,color-mix(in srgb,var(--accent) 8%,transparent) 30deg,color-mix(in srgb,var(--accent) 58%,transparent) 68deg,color-mix(in srgb,var(--accent) 90%,transparent) 75deg,transparent 75.2deg);
+  opacity:1;transition:opacity 1.2s ease .3s}
+html.js #mercados:not(.is-on):not(.is-park) .mk-sweep{opacity:0}
+#mercados .mk-edge{position:absolute;left:50%;top:0;width:1.5px;height:50%;translate:-50% 0;background:linear-gradient(0deg,color-mix(in srgb,var(--ink) 10%,transparent),var(--ink))}
+
+/* core = El Salvador (home): navy dot, green ring, slow pulse; name on the left, BASE chip above */
+#mercados .mk-core{position:absolute;z-index:2;left:50%;top:50%;width:14px;height:14px;translate:-50% -50%;border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--accent),0 0 0 5px color-mix(in srgb,var(--ink) 30%,transparent)}
+#mercados .mk-core i{position:absolute;inset:-4px;border-radius:50%;box-shadow:0 0 0 1.5px var(--ink);animation:mk-p 2.4s var(--ease-ping) infinite}
+#mercados .mk-home{position:absolute;z-index:3;left:50%;top:50%;width:0;height:0}
+#mercados .mk-home .mk-nm{left:auto;right:17px;color:var(--ink);font-family:var(--font-d);font-weight:600;letter-spacing:-.02em;font-size:calc(var(--nm)*1.12)}
+@keyframes mk-p{0%{opacity:.9;transform:scale(1)}100%{opacity:0;transform:scale(3.2)}}
+
+/* blips ------------------------------------------------------------------------------------------------ */
+#mercados .mk-blip{position:absolute;z-index:2;width:0;height:0}
+#mercados .mk-dot{position:absolute;left:-4px;top:-4px;width:8px;height:8px;border-radius:50%;background:color-mix(in srgb,var(--ink) 45%,transparent);transition:background .5s,scale .5s var(--ease-pop)}
+#mercados .mk-dot::after{content:"";position:absolute;inset:-3px;border-radius:50%;box-shadow:0 0 0 2px var(--accent),0 0 14px 2px color-mix(in srgb,var(--accent) 70%,transparent);opacity:0}
+#mercados .mk-nm{position:absolute;left:12px;top:0;translate:0 -50%;white-space:nowrap;font-size:var(--nm);line-height:1;color:color-mix(in srgb,var(--ink) 40%,transparent);transition:color 1.4s ease,translate .6s var(--ease-out);cursor:default}
+#mercados .mk-blip--l .mk-nm{left:auto;right:12px}
+/* four "type treatments" (reference logo-wall texture; proper nouns keep their capitals) */
+#mercados .mk-blip--grot .mk-nm{font-family:var(--font-b);font-weight:400;letter-spacing:-.04em;font-size:calc(var(--nm)*1.08)}
+#mercados .mk-blip--round .mk-nm{font-family:var(--font-d);font-weight:600;letter-spacing:-.02em;font-size:calc(var(--nm)*1.12)}
+#mercados .mk-blip--cond .mk-nm{font-family:var(--font-b);font-weight:400;text-transform:uppercase;letter-spacing:.02em;font-size:calc(var(--nm)*.92);transform:scaleX(.84);transform-origin:left center}
+#mercados .mk-blip--cond.mk-blip--l .mk-nm{transform-origin:right center}
+#mercados .mk-blip--mono .mk-nm{font-family:var(--font-m);font-weight:400;text-transform:uppercase;letter-spacing:.14em;font-size:calc(var(--nm)*.8)}
+/* market tag (reference pink metric badge → Growco blue, words instead of numbers) */
+#mercados .mk-bdg{position:absolute;left:0;top:-14px;translate:-50% -100%;padding:4px 8px;border-radius:999px;background:var(--accent-2);color:var(--white);font-family:var(--font-m);font-size:11px;font-weight:400;line-height:normal;letter-spacing:.02em;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 0 2.5px var(--bone),0 10px 20px -10px rgba(0,0,0,.5);scale:.3;opacity:0;transform-origin:50% 100%;transition:scale .5s var(--ease-pop),opacity .4s,translate .5s var(--ease-out);pointer-events:none}
+#mercados .mk-blip:hover,#mercados .mk-blip.is-hit{z-index:4}
+#mercados .mk-blip:hover .mk-nm,#mercados .mk-blip.is-hit .mk-nm{color:var(--ink);transition-duration:.25s}
+#mercados .mk-blip:hover .mk-dot,#mercados .mk-blip.is-hit .mk-dot{background:var(--ink);scale:1.25;transition-duration:.2s}
+#mercados .mk-blip:hover .mk-dot::after,#mercados .mk-blip.is-hit .mk-dot::after{animation:mk-ping 1.5s var(--ease-ping) both}
+#mercados .mk-blip:hover .mk-bdg,#mercados .mk-blip.is-hit .mk-bdg{scale:1;opacity:1;translate:-50% calc(-100% - 4px);transition-duration:.5s,.2s,.5s}
+#mercados.is-park .mk-blip.is-hit .mk-dot::after{animation:none;opacity:.9;transform:scale(1.6)}
+@keyframes mk-ping{0%{opacity:1;transform:scale(.6)}100%{opacity:0;transform:scale(4.2)}}
+/* BASE chip: navy (home, always on) — pops in once the radar has faded up */
+#mercados .mk-bdg--home{top:-17px;background:var(--ink);scale:1;opacity:1;translate:-50% -100%;transition:scale .5s var(--ease-pop) 1.1s,opacity .4s ease 1.1s}
+html.js #mercados:not(.is-on) .mk-bdg--home{scale:.3;opacity:0}
+
+/* tablet (reference .is-tab) ---------------------------------------------------------------------------- */
+@media (max-width:1099px) and (min-width:810px){
+  #mercados .mk-in{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px}
+  #mercados .mk-scope{--nm:12px}
+  #mercados .mk-line{font-size:16px}
+}
+/* phone (reference .is-ph): radar full width under the copy -------------------------------------------- */
+@media (max-width:809px){
+  #mercados{padding:64px 0 56px}
+  #mercados .mk-in{grid-template-columns:minmax(0,1fr);gap:40px}
+  #mercados .mk-copy{max-width:none;gap:18px}
+  #mercados .mk-hd{white-space:normal}
+  #mercados .mk-line{font-size:16px}
+  #mercados .mk-stage{justify-content:center}
+  #mercados .mk-scope{width:min(350px,100%);--nm:11px}
+  #mercados .mk-grid{background-size:auto,11px 11px}
+  #mercados .mk-deg{display:none}
+  #mercados .mk-rl{font-size:8.5px}
+  #mercados .mk-bdg{font-size:10px;padding:3px 7px}
+}
+
+/* reduced motion: parked radar, no loops (site.css §19 also zeroes durations) ---------------------------- */
+@media (prefers-reduced-motion:reduce){
+  #mercados .mk-live::after,#mercados .mk-core i{animation:none;opacity:0}
+  #mercados .mk-sweep{transition:none}
+}

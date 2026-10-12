@@ -1,0 +1,101 @@
+/* 12 · FAQ (#faq) — reference 41_rwfq (bone, id="faq")
+   Grid 5fr / 7fr. Left: sticky column (top 110px) with eyebrow, H2 and the ink help card.
+   Right: single-open accordion (shared data-accordion) with a 2px progress rail filled green by scaleY(--f) and a
+   12px node per row that lights when the rail head passes it (--f / [data-hit] written by home-12-faq.js).
+   Layout modes follow the reference component: tablet 810–1099 (1 column, card as a 2-column row, not sticky),
+   phone ≤809 (number above the question, category pill hidden, full-width button). */
+
+#faq{--fq-rail:var(--fog)}
+#faq .fq-in{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,110px);align-items:start}
+
+/* left column -------------------------------------------------------------------------------- */
+#faq .fq-side{align-self:stretch;min-width:0}
+#faq .fq-stick{position:sticky;top:110px;display:flex;flex-direction:column;align-items:flex-start;gap:24px}
+#faq .fq-title{letter-spacing:-.042em}
+
+/* help card (reference .rwfq-card: ink, radius 24, padding 28) */
+#faq .fq-card{width:100%;max-width:440px;margin-top:22px;padding:28px;border-radius:24px;background:var(--ink);color:var(--white);box-shadow:0 30px 60px -30px rgba(0,0,0,.45)}
+#faq .fq-card__l{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--font-m);font-size:11px;font-weight:400;line-height:normal;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 70%,transparent)}
+#faq .fq-ring{position:relative;flex:none;width:12px;height:12px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--accent)}
+#faq .fq-ring::after{content:"";position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 1.5px var(--accent);animation:fq-ping 1.8s var(--ease-ping) infinite}
+@keyframes fq-ping{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(2.8)}}
+#faq .fq-card__t{margin:14px 0 0;font-family:var(--font-d);font-weight:700;font-size:clamp(24px,2vw,30px);line-height:1.05;letter-spacing:-.035em;color:var(--white);text-wrap:balance}
+#faq .fq-card__b{margin:10px 0 0;font-size:15px;line-height:1.5;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#faq .fq-btn{margin-top:22px;--chipfg2:var(--accent)}
+#faq .fq-card__m{margin:18px 0 0;font-size:15px;line-height:normal;color:color-mix(in srgb,var(--white) 70%,transparent)}
+#faq .fq-card__m a{color:var(--white);text-decoration:none;background:linear-gradient(var(--accent),var(--accent)) 0 100%/100% 1.5px no-repeat;padding-bottom:2px;transition:color .35s,background-size .4s var(--ease-snap)}
+#faq .fq-card__m a:hover{color:var(--ink);background-size:100% 100%}
+#faq .fq-card__r{display:flex;align-items:center;gap:9px;margin:10px 0 0;font-family:var(--font-m);font-size:11px;font-weight:400;line-height:normal;letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 60%,transparent)}
+
+/* list + progress rail ------------------------------------------------------------------------- */
+#faq .fq-list{--f:1;position:relative;min-width:0;padding-left:34px;border-top:1px solid var(--fq-rail)}
+html.js #faq:not(.is-set) .fq-list{--f:0}
+#faq .fq-rail{position:absolute;left:0;top:0;bottom:0;width:2px;border-radius:2px;background:var(--fq-rail);pointer-events:none}
+#faq .fq-rail b{position:absolute;inset:0;border-radius:inherit;background:var(--accent);transform-origin:top;transform:scaleY(var(--f));box-shadow:0 0 12px color-mix(in srgb,var(--accent) 80%,transparent)}
+#faq .fq-rail b::after{content:"";position:absolute;left:50%;bottom:0;width:10px;height:10px;border-radius:50%;background:var(--accent);translate:-50% 50%;transform:scaleY(calc(1 / max(var(--f),.01)));box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 30%,transparent)}
+
+/* rows */
+#faq .fq-row{position:relative;border-bottom:1px solid var(--fq-rail)}
+#faq .fq-row::before{content:"";position:absolute;left:-34px;right:0;top:0;bottom:0;border-radius:14px;background:color-mix(in srgb,var(--ink) 4%,transparent);opacity:0;transition:opacity .35s;pointer-events:none}
+#faq .fq-dot{position:absolute;z-index:1;left:-39px;top:31px;width:12px;height:12px;border-radius:50%;background:var(--bone);box-shadow:inset 0 0 0 2px var(--fq-rail);transition:background .4s,box-shadow .4s,scale .5s var(--ease-pop)}
+#faq .fq-row[data-hit] .fq-dot,#faq.is-set .fq-dot,html:not(.js) #faq .fq-dot{background:var(--accent);box-shadow:inset 0 0 0 2px var(--ink);scale:1.15}
+
+#faq .fq-q{margin:0;font:inherit}
+#faq .fq-q button{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;align-items:center;gap:18px;width:100%;margin:0;padding:24px 4px 24px 0;border:0;border-radius:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}
+#faq .fq-no{font-family:var(--font-m);font-size:12px;line-height:1.3;letter-spacing:.1em;color:var(--mut)}
+#faq .fq-qt{font-family:var(--font-d);font-weight:700;font-size:clamp(20px,1.7vw,25px);line-height:1.15;letter-spacing:-.03em;color:var(--fg);transition:translate .5s var(--ease-out)}
+#faq .fq-g{padding:5px 10px;border-radius:999px;font-family:var(--font-m);font-size:10.5px;line-height:1.3;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;box-shadow:inset 0 0 0 1px var(--fq-rail);color:var(--mut)}
+#faq .fq-pl{position:relative;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:var(--ink);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 22%,transparent);transition:background .4s,rotate .5s var(--ease-snap),box-shadow .4s}
+#faq .fq-pl i{position:absolute;width:14px;height:1.8px;border-radius:2px;background:currentColor}
+#faq .fq-pl i+i{rotate:90deg}
+#faq .fq-row.is-open .fq-pl{rotate:135deg;background:var(--accent);box-shadow:none}
+@media (hover:hover){
+  #faq .fq-row:hover::before{opacity:1}
+  #faq .fq-row:hover .fq-qt{translate:6px 0}
+  #faq .fq-row:not(.is-open):hover .fq-pl{box-shadow:inset 0 0 0 1px var(--ink)}
+}
+#faq .fq-q button:focus-visible{outline-offset:3px;border-radius:12px}
+/* without JS the triggers do nothing and every answer is shown: hide the non-functional +/× toggles */
+html:not(.js) #faq .fq-pl{visibility:hidden}
+
+/* answers (grid-rows 0fr → 1fr from the shared accordion, .55s snap) */
+#faq .fq-a>div{min-height:0;overflow:hidden}
+#faq .fq-a p{margin:0;padding:0 70px 28px 44px;max-width:720px;font-size:17px;line-height:1.55;color:color-mix(in srgb,var(--ink) 76%,var(--bone));opacity:0;translate:0 -6px;transition:opacity .4s,translate .5s}
+#faq .fq-row.is-open .fq-a p,html:not(.js) #faq .fq-a p{opacity:1;translate:0 0}
+#faq .fq-row.is-open .fq-a p{transition-delay:.12s}
+#faq .fq-a a{color:var(--ink);text-decoration:none;background:linear-gradient(var(--accent),var(--accent)) 0 100%/100% 1.5px no-repeat;padding-bottom:1px}
+#faq .fq-a a:hover{background-size:100% 100%}
+
+/* tablet 810–1099 (reference is-tab) ------------------------------------------------------------- */
+@media (max-width:1099px){
+  #faq .fq-in{grid-template-columns:minmax(0,1fr);gap:48px}
+  #faq .fq-stick{position:relative;top:auto}
+  #faq .fq-card{max-width:none;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;align-items:center}
+  #faq .fq-card>*{grid-column:1}
+  #faq .fq-card .fq-btn{grid-column:2;grid-row:1/span 3;margin:0}
+}
+
+/* phone ≤809 (reference is-ph) --------------------------------------------------------------------- */
+@media (max-width:809px){
+  #faq .fq-in{gap:40px}
+  #faq .fq-card{display:block;padding:22px}
+  #faq .fq-card .fq-btn{display:flex;width:100%;margin-top:22px}
+  #faq .fq-card .fq-btn .btn__face{justify-content:space-between}
+  #faq .fq-list{padding-left:24px}
+  #faq .fq-dot{left:-29px;top:25px}
+  #faq .fq-row::before{left:-24px}
+  #faq .fq-q button{grid-template-columns:minmax(0,1fr) auto;gap:10px 14px;padding:18px 0}
+  #faq .fq-no{grid-column:1;grid-row:1}
+  #faq .fq-g{display:none}
+  #faq .fq-qt{grid-column:1;grid-row:2;font-size:19px}
+  #faq .fq-pl{grid-column:2;grid-row:1/span 2;width:36px;height:36px}
+  #faq .fq-a p{padding:0 8px 22px 0;font-size:16px}
+}
+
+/* reduced motion: rail full, nodes lit, no ping loop ---------------------------------------------- */
+@media (prefers-reduced-motion:reduce){
+  #faq .fq-ring::after{animation:none!important;opacity:0}
+  #faq .fq-list{--f:1!important}
+  #faq .fq-dot{background:var(--accent)!important;box-shadow:inset 0 0 0 2px var(--ink)!important}
+  #faq .fq-row:hover .fq-qt{translate:none}
+}

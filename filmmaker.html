@@ -1,34 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-smooth>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Growco AI Filmmaker — Producción de video UGC con inteligencia artificial para performance marketing. Contenido creativo escalable, rápido y de alto impacto.">
-  <meta property="og:title" content="Growco AI Filmmaker — Performance Content">
-  <meta property="og:description" content="Producción de video UGC con inteligencia artificial. Escala tu contenido creativo con avatares AI hiperrealistas.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/growco-3d-logo.png">
-  <meta property="og:url" content="https://growco.ai/filmmaker">
-  <meta property="og:locale" content="es_ES">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Growco AI Filmmaker — Performance Content">
-  <meta name="twitter:description" content="Producción de video UGC con inteligencia artificial para performance marketing.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Videos con IA para anuncios: UGC y comerciales | Growco</title>
+  <meta name="description" content="Videos con IA que venden: UGC, comerciales y visuales de marca en 9:16, 1:1 y 16:9, listos para Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite. Sin set ni rodaje.">
+  <link rel="canonical" href="https://growcoai.com/filmmaker">
+  <meta name="theme-color" content="#0B1331">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Growco">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:url" content="https://growcoai.com/filmmaker">
+  <meta property="og:title" content="AI Filmmaker · Anuncios en video con IA, sin rodaje | Growco">
+  <meta property="og:description" content="Comerciales y UGC creados con IA, sin set ni rodaje. Tú apruebas cada escena y recibes cada formato listo para Meta, Google, TikTok, DV360 y más.">
+  <meta property="og:image" content="https://growcoai.com/assets/img/og-filmmaker.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Filmmaker de Growco: un fotograma de comercial 16:9 y tres reels verticales de UGC hechos con IA (fintech y educación)">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Filmmaker · Anuncios en video con IA, sin rodaje | Growco">
+  <meta name="twitter:description" content="Comerciales y UGC creados con IA, sin set ni rodaje, listos para todas tus plataformas de pauta.">
+  <meta name="twitter:image" content="https://growcoai.com/assets/img/og-filmmaker.jpg">
+  <meta name="twitter:image:alt" content="AI Filmmaker de Growco: un fotograma de comercial 16:9 y tres reels verticales de UGC hechos con IA (fintech y educación)">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+
+  <!-- JS flag first: hide-before-reveal styles only apply under html.js. Fail-safe: drop it if motion.js has not run
+       by DOMContentLoaded (deferred scripts run before it, so it failed) or after 4 s (slow network); motion.js
+       puts html.js back if it initialises later. -->
+  <script>(function(d){var h=d.documentElement,off=function(){if(!h.classList.contains('gc-ready'))h.classList.remove('js')};h.classList.add('js');setTimeout(off,4000);d.addEventListener('DOMContentLoaded',function(){setTimeout(off,0)})})(document)</script>
+
+  <!-- Fonts: Funnel Display / Funnel Sans / Geist Mono (one request) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&amp;family=Funnel+Sans:ital,wght@0,400..700;1,400..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap">
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- LCP: the H1 or the first frame of the sticky stage (ae-1 poster, 540×960 WebP) -->
+  <link rel="preload" as="image" href="/assets/videos/web/ae-1-poster.webp" type="image/webp" fetchpriority="high">
 
-  <title>Growco AI Filmmaker — Performance Content</title>
-  
+  <link rel="stylesheet" href="/assets/css/site.css?v=e3b0513d">
+  <link rel="stylesheet" href="/assets/css/filmmaker.css?v=1571b8c4">
+
+  <script src="/assets/js/motion.js?v=8047e1a0" defer></script>
+  <script src="/assets/js/site.js?v=1ac7d933" defer></script>
+  <script src="/assets/js/filmmaker.js?v=151275de" defer></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-EGNSF9X7R0');
   </script>
 
@@ -45,714 +73,554 @@
     fbq('init', '1351342940194752');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1351342940194752&ev=PageView&noscript=1"
-  /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <!-- JSON-LD: page graph (WebPage + Service + BreadcrumbList); the Organization node repeats the home's @id
+       (https://growcoai.com/#organization). No FAQPage: the v2 service page has no FAQ block. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://growcoai.com/filmmaker#webpage",
+        "url": "https://growcoai.com/filmmaker",
+        "name": "Videos con IA para anuncios: UGC y comerciales | Growco",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@id": "https://growcoai.com/#website"
+        },
+        "about": {
+          "@id": "https://growcoai.com/filmmaker#service"
+        },
+        "breadcrumb": {
+          "@id": "https://growcoai.com/filmmaker#breadcrumb"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://growcoai.com/filmmaker#service",
+        "name": "AI Filmmaker",
+        "serviceType": "Producción de video con inteligencia artificial",
+        "description": "Videos con IA para anuncios y redes: UGC, comerciales y visuales de marca en 9:16, 1:1 y 16:9, listos para Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite, sin set ni rodaje.",
+        "provider": {
+          "@id": "https://growcoai.com/#organization"
+        },
+        "areaServed": [
+          "El Salvador",
+          "Guatemala",
+          "México",
+          "Estados Unidos",
+          "Colombia",
+          "Europa",
+          "Reino Unido"
+        ],
+        "availableLanguage": [
+          "es"
+        ],
+        "url": "https://growcoai.com/filmmaker",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Formatos de AI Filmmaker",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Videos UGC con IA"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Comerciales con IA"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Product shots con IA"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Visuales de marca con IA"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://growcoai.com/filmmaker#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://growcoai.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "AI Filmmaker",
+            "item": "https://growcoai.com/filmmaker"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://growcoai.com/#organization",
+        "name": "Growco",
+        "url": "https://growcoai.com/",
+        "email": "agente@growcoai.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SV"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body data-page="filmmaker" data-page-name="AI Filmmaker">
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1351342940194752&amp;ev=PageView&amp;noscript=1"></noscript>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
-  <!-- ========== NAVIGATION ========== -->
-  <header>
-    <nav id="navbar" aria-label="Navegación principal">
-      <a href="/" class="nav-logo" aria-label="Growco — Ir al inicio">
-        <img src="assets/growco-logo.png" alt="Growco" class="nav-logo-img">
-      </a>
-
-      <button class="nav-hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-pills" role="list">
-        <a href="/" class="nav-pill">← Inicio</a>
-        <a href="#showcase" class="nav-pill active" aria-current="page">UGC AI Reference</a>
-        <a href="#metricas" class="nav-pill">Resultados</a>
-        <a href="#contacto" class="nav-pill">Contacto</a>
-      </div>
+<!-- PARTIAL:header -->
+<header class="nav" id="site-header">
+  <div class="nav__bar">
+    <a class="nav__logo nav__in" href="/" aria-label="Growco, ir al inicio" style="--d:60ms"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+    <nav class="nav__nav nav__in" aria-label="Principal" style="--d:140ms">
+      <ul class="nav__lk">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/filmmaker" aria-current="page">AI Filmmaker</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="/SaaSystem">Stockly</a></li>
+        <li><a href="/#faq">Preguntas</a></li>
+      </ul>
     </nav>
-  </header>
-
-  <main>
-
-    <!-- ========== HERO SECTION ========== -->
-    <section id="hero" aria-label="Sección principal">
-      <div class="hero-container">
-        <div class="hero-text">
-          <div class="badge badge-cyan mb-16">AI-Native Performance Content</div>
-          <div class="hero-title-wrapper">
-            <h1 class="hero-title">
-              AI FILMMAKER<br>
-              <span class="performance">PERFORMANCE</span><br>
-              CONTENT
-            </h1>
-            <div class="hero-mobile-logo">
-              <img
-                src="assets/growco-3d-logo.png"
-                alt="Growco 3D Logo"
-                class="animate-float"
-              >
-            </div>
-          </div>
-          <p class="hero-description">
-            Producción de video AI-Native diseñada para performance marketing.
-            Escala tu contenido creativo con avatares hiperrealistas, guiones optimizados
-            por datos y entrega en menos de 24 horas — sin sets, sin crew, sin límites.
-          </p>
-          <div class="hero-actions">
-            <a href="#contacto" class="btn-accent" aria-label="Agendar una demo de Growco AI Filmmaker">
-              Agendar Demo
-            </a>
-          </div>
-        </div>
-        <div class="hero-graphic">
-          <img
-            src="assets/growco-3d-logo.png"
-            alt="Growco 3D Logo"
-            class="animate-float hero-logo-3d"
-          >
-          <div class="floating-badge badge-1 animate-float-slow">⚡ CPA Reduction -47%</div>
-          <div class="floating-badge badge-2 animate-float-mid">🎬 Entrega &lt;24h</div>
-          <div class="floating-badge badge-3 animate-float-fast">🤖 Avatares AI</div>
-        </div>
-      </div>
-    </section>
-
-                    <!-- ========== VIDEO SHOWCASE (UGC AI REFERENCE) ========== -->
-    <section id="showcase" aria-label="Galería de videos creativos">
-      <div class="fade-up">
-        <h2 class="section-title">
-          UGC AI <span class="highlight">REFERENCE</span>
-        </h2>
-        <p class="section-subtitle text-center mx-auto max-w-medium mb-32">
-          Personaliza a tu influencer ideal según la edad, género y rasgos físicos de tu audiencia. Ubícalos en cualquier escenario: desde una locación exótica hasta el interior de tu propia tienda o restaurante. Nuestros avatares están especialmente entrenados con ganchos visuales (hooks) y narrativas de venta validadas para maximizar el engagement. Todo lo que ves es generado digitalmente, 100% virtual y con consistencia de personajes garantizada, manteniendo el foco real en tu producto.
-        </p>
-      </div>
-
-      <div class="video-marquee-wrapper fade-up">
-        <div class="video-marquee">
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco1_1.mp4"
-                data-full-src="assets/videos/growco1_1.mp4"
-                poster="assets/videos/posters/growco1_1.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Growco Performance"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco Performance</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco Performance</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco1_2.mp4"
-                data-full-src="assets/videos/growco1_2.mp4"
-                poster="assets/videos/posters/growco1_2.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Growco Brand"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco Brand</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco Brand</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco2_2.mp4"
-                data-full-src="assets/videos/growco2_2.mp4"
-                poster="assets/videos/posters/growco2_2.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Growco UGC"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco UGC</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video_project_24.mp4"
-                data-full-src="assets/videos/video_project_24.mp4"
-                poster="assets/videos/posters/video_project_24.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Video Project 24"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Video Project 24</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Video Project 24</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video1.mp4"
-                data-full-src="assets/videos/video1.mp4"
-                poster="assets/videos/posters/video1.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Bitcoiners GT"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Bitcoiners GT</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Bitcoiners GT</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video2.mp4"
-                data-full-src="assets/videos/video2.mp4"
-                poster="assets/videos/posters/video2.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo OSMO UGC"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">OSMO UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">OSMO UGC</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video5.mp4"
-                data-full-src="assets/videos/video5.mp4"
-                poster="assets/videos/posters/video5.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Seedance AI"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Seedance AI</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Seedance AI</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video6.mp4"
-                data-full-src="assets/videos/video6.mp4"
-                poster="assets/videos/posters/video6.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo osmoBitcoin"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">osmoBitcoin</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">osmoBitcoin</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video7.mp4"
-                data-full-src="assets/videos/video7.mp4"
-                poster="assets/videos/posters/video7.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo AI Actor"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">AI Actor</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">AI Actor</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video8.mp4"
-                data-full-src="assets/videos/video8.mp4"
-                poster="assets/videos/posters/video8.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo UGC Showcase"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">UGC Showcase</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">UGC Showcase</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video9.mp4"
-                data-full-src="assets/videos/video9.mp4"
-                poster="assets/videos/posters/video9.jpg"
-                loop
-                playsinline
-                preload="none"
-                
-                 aria-label="Video creativo Tribe UGC"
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Tribe UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Tribe UGC</span>
-          </div>
-
-          <!-- Duplicated set for infinite scroll -->
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco1_1.mp4"
-                data-full-src="assets/videos/growco1_1.mp4"
-                poster="assets/videos/posters/growco1_1.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco Performance</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco Performance</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco1_2.mp4"
-                data-full-src="assets/videos/growco1_2.mp4"
-                poster="assets/videos/posters/growco1_2.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco Brand</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco Brand</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/growco2_2.mp4"
-                data-full-src="assets/videos/growco2_2.mp4"
-                poster="assets/videos/posters/growco2_2.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Growco UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Growco UGC</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video_project_24.mp4"
-                data-full-src="assets/videos/video_project_24.mp4"
-                poster="assets/videos/posters/video_project_24.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Video Project 24</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Video Project 24</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video1.mp4"
-                data-full-src="assets/videos/video1.mp4"
-                poster="assets/videos/posters/video1.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Bitcoiners GT</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Bitcoiners GT</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video2.mp4"
-                data-full-src="assets/videos/video2.mp4"
-                poster="assets/videos/posters/video2.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">OSMO UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">OSMO UGC</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video5.mp4"
-                data-full-src="assets/videos/video5.mp4"
-                poster="assets/videos/posters/video5.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Seedance AI</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Seedance AI</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video6.mp4"
-                data-full-src="assets/videos/video6.mp4"
-                poster="assets/videos/posters/video6.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">osmoBitcoin</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">osmoBitcoin</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video7.mp4"
-                data-full-src="assets/videos/video7.mp4"
-                poster="assets/videos/posters/video7.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">AI Actor</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">AI Actor</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video8.mp4"
-                data-full-src="assets/videos/video8.mp4"
-                poster="assets/videos/posters/video8.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">UGC Showcase</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">UGC Showcase</span>
-          </div>
-
-          <div style="display: flex; flex-direction: column; align-items: center;" aria-hidden="true">
-            <div class="video-card">
-              <video
-                src="assets/videos/previews/video9.mp4"
-                data-full-src="assets/videos/video9.mp4"
-                poster="assets/videos/posters/video9.jpg"
-                loop
-                playsinline
-                preload="none"
-                 tabindex="-1"
-                
-              ></video>
-              <div class="video-overlay">
-                <span class="video-overlay-title">Tribe UGC</span>
-                <span class="video-overlay-sub">UGC Video</span>
-              </div>
-            </div>
-            <span class="video-label">Tribe UGC</span>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== METRICS ========== -->
-    <section id="metricas" aria-label="Resultados y métricas de rendimiento">
-      <h2 class="section-title fade-up">
-        RESULTADOS QUE <span class="highlight">HABLAN</span>
-      </h2>
-
-      <div class="metrics-grid">
-
-        <article class="metric-card bento-dark fade-up" aria-label="Reducción de CPA menos 47 por ciento">
-          <div class="metric-card__icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4L4 36H36L20 4Z" stroke="#00C853" stroke-width="2" fill="none"/>
-              <path d="M20 28V16" stroke="#00C853" stroke-width="2" stroke-linecap="round"/>
-              <path d="M16 24L20 28L24 24" stroke="#00C853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <span class="metric-label">CPA Reduction</span>
-          <span class="metric-value">-47%</span>
-          <span class="metric-sub">Promedio vs. producción tradicional</span>
-        </article>
-
-        <article class="metric-card bento-cyan fade-up" aria-label="Videos generados más de 2500">
-          <div class="metric-card__icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M17 16L27 20L17 24V16Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <span class="metric-label">Videos Generados</span>
-          <span class="metric-value">2,500+</span>
-          <span class="metric-sub">Creativos entregados a clientes</span>
-        </article>
-
-        <article class="metric-card bento-dark fade-up" aria-label="Tiempo de producción menos de 24 horas">
-          <div class="metric-card__icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="16" stroke="#00E5FF" stroke-width="2" fill="none"/>
-              <path d="M20 10V20L26 26" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <span class="metric-label">Tiempo Producción</span>
-          <span class="metric-value">&lt;24hrs</span>
-          <span class="metric-sub">De brief a entrega final</span>
-        </article>
-
-        <article class="metric-card bento-cyan fade-up" aria-label="Más de 45 clientes activos">
-          <div class="metric-card__icon" aria-hidden="true">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-              <circle cx="26" cy="14" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M2 34C2 27.37 7.37 22 14 22" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M26 22C32.63 22 38 27.37 38 34" stroke="currentColor" stroke-width="2" fill="none"/>
-              <path d="M14 22C14 22 20 24 26 22" stroke="currentColor" stroke-width="2" fill="none"/>
-            </svg>
-          </div>
-          <span class="metric-label">Clientes Activos</span>
-          <span class="metric-value">45+</span>
-          <span class="metric-sub">Marcas confían en Growco AI</span>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section id="contacto" aria-label="Formulario de contacto para agendar demo">
-      <div class="contact-wrapper">
-
-        <div class="contact-info fade-up">
-          <h2 class="section-title">
-            AGENDA TU <span class="highlight">DEMO</span>
-          </h2>
-          <p class="section-subtitle">
-            Descubre cómo Growco AI Filmmaker puede transformar tu estrategia de contenido.
-            En 30 minutos te mostramos el poder de la producción AI-Native aplicada
-            a tu vertical y objetivos de negocio.
-          </p>
-          <ul class="contact-bullets" aria-label="Qué incluye la demo">
-            <li>Análisis personalizado de tu estrategia de contenido actual</li>
-            <li>Demo en vivo con avatares AI adaptados a tu marca</li>
-            <li>Propuesta de pricing y roadmap de implementación</li>
-          </ul>
-        </div>
-
-        <div class="contact-form fade-up">
-          <form id="contact-form" aria-label="Formulario para agendar demo">
-            <div class="form-group">
-              <label for="contact-nombre" class="form-label">Nombre</label>
-              <input
-                type="text"
-                id="contact-nombre"
-                name="nombre"
-                class="form-input"
-                placeholder="Tu nombre completo"
-                required
-                autocomplete="name"
-                aria-required="true"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="contact-email" class="form-label">Email</label>
-              <input
-                type="email"
-                id="contact-email"
-                name="email"
-                class="form-input"
-                placeholder="tu@empresa.com"
-                required
-                autocomplete="email"
-                aria-required="true"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="contact-empresa" class="form-label">Empresa</label>
-              <input
-                type="text"
-                id="contact-empresa"
-                name="empresa"
-                class="form-input"
-                placeholder="Nombre de tu empresa"
-                autocomplete="organization"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="contact-mensaje" class="form-label">Mensaje</label>
-              <textarea
-                id="contact-mensaje"
-                name="mensaje"
-                class="form-textarea"
-                placeholder="Cuéntanos sobre tu proyecto y objetivos..."
-                rows="4"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-accent" style="width: 100%; justify-content: center;" aria-label="Enviar formulario para agendar demo">
-              Agendar Demo
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ========== FOOTER ========== -->
-  <footer aria-label="Pie de página">
-    <div class="footer-content">
-      <a href="/" class="footer-brand" aria-label="Growco — Ir al inicio">
-        <img src="assets/growco-logo.png" alt="Growco" class="footer-logo-img">
-      </a>
-
-      <nav class="footer-links" aria-label="Navegación del pie de página">
-        <a href="#showcase">UGC AI Reference</a>
-        <a href="#metricas">Resultados</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2025 Growco. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- ========== VIDEO MODAL ========== -->
-  <div id="video-modal" class="video-modal" role="dialog" aria-modal="true" aria-label="Reproductor de video de alta definición">
-    <button class="modal-close" type="button" aria-label="Cerrar reproductor de video">&times;</button>
-    <div class="modal-video">
-      <video controls playsinline aria-label="Video en reproducción"></video>
+    <div class="nav__act nav__in" style="--d:220ms">
+      <a class="btn btn--quiet nav__cta" href="#contacto" data-track="cta_click" data-track-loc="nav" data-service="filmmaker"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Hablemos</span><span class="btn__l2" aria-hidden="true">Hablemos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menú"><span class="nav__bl" aria-hidden="true"><i></i><i></i></span><span class="nav__bt" aria-hidden="true">Menú</span></button>
     </div>
   </div>
+</header>
+<div class="drw" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="drw__rw" aria-hidden="true"><span class="drw__rings"><i></i><i></i><i></i><i></i><b></b><b></b></span></div>
+  <div class="drw__in">
+    <nav aria-label="Menú principal">
+      <ol class="drw__list" role="list">
+        <li style="--i:0"><a href="/#servicios"><span class="drw__n" aria-hidden="true">01</span><span class="drw__m"><span class="drw__t">Servicios</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:1"><a href="/filmmaker" aria-current="page"><span class="drw__n" aria-hidden="true">02</span><span class="drw__m"><span class="drw__t">AI Filmmaker</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:2"><a href="#resultados"><span class="drw__n" aria-hidden="true">03</span><span class="drw__m"><span class="drw__t">Resultados</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:3"><a href="/SaaSystem"><span class="drw__n" aria-hidden="true">04</span><span class="drw__m"><span class="drw__t">Stockly</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:4"><a href="/#faq"><span class="drw__n" aria-hidden="true">05</span><span class="drw__m"><span class="drw__t">Preguntas</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:5"><a href="#contacto"><span class="drw__n" aria-hidden="true">06</span><span class="drw__m"><span class="drw__t">Contacto</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+      </ol>
+    </nav>
+    <div class="drw__ft">
+      <a class="btn btn--accent btn--block drw__cta" href="#contacto" data-track="cta_click" data-track-loc="drawer" data-service="filmmaker"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <div class="drw__info">
+        <div><p class="drw__k">Escríbenos</p><a href="mailto:agente@growcoai.com">agente@growcoai.com</a><a href="#" data-whatsapp hidden>WhatsApp</a></div>
+        <div><p class="drw__k">Base</p><p>El Salvador</p></div>
+        <div class="js-only"><p class="drw__k">Hora local</p><p class="drw__time"><i class="dot dot--live" aria-hidden="true"></i><span data-clock="hm"></span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /PARTIAL:header -->
 
-  <script src="app.js"></script>
+  <main id="main" tabindex="-1">
+<!-- SECTION:inicio -->
+<!-- 01 · INICIO (#inicio) — reference 52_rwsd (service detail, bone ground), v2 2026-10-11.
+     Top grid 1fr / 1.02fr: copy (crumb, eyebrow, H1, lead, body, buy row, buttons) | STICKY live stage, then "Qué incluye"
+     steps whose progress line, dots and ticks advance with the scroll. Each step re-keys the stage:
+       0/01 guion sobre el teléfono (script card over a real Academia Europea reel, ae-1) · 02 escena generada con IA
+       (the phone switches to a real OSMO UGC reel, osmo-ugc-1) · 03 versiones A/B (two real reels of the same OSMO UGC
+       campaign, osmo-ugc-2 vs osmo-ugc-3) · 04 entrega 9:16 · 1:1 · 16:9 (comercial-aventura, frame morph).
+     rev1 (2026-10-11, client review): no piece with pixelated products anywhere; no sample or placeholder labels; platforms =
+     Meta, Google, TikTok, DV360 y más. Brand end cards are cut from every file (OSMO authorised, no closing cards).
+     Grid children: copy (col 1) · side (col 2, rows 1–2, sticky) · steps (col 1, row 2) — same picture as the reference
+     (steps inside the copy column) and, in one column, the stage sits after the offer like the reference phone layout.
+     JS: /assets/js/sections/filmmaker-01-inicio.js. No JS: every step on, phone + script card with posters, no autoplay.
+     Reduced motion: every step on, line full, stage on step 04 (posters only). -->
+<section class="sec f-sd" id="inicio" data-theme="light" aria-labelledby="f-sd-title">
+  <div class="wrap f-sd__grid">
 
+    <div class="f-sd__copy" data-reveal-group="100">
+      <nav class="f-sd__crumb" aria-label="Ruta de navegación" data-reveal data-reveal-y="14">
+        <a href="/#servicios">Servicios</a><i aria-hidden="true">/</i><span aria-current="page">AI Filmmaker</span>
+      </nav>
+      <p class="eb eb--ping" data-reveal data-reveal-delay="60" data-reveal-y="14"><i aria-hidden="true"></i>Servicio 02</p>
+      <h1 class="hd f-sd__h1" id="f-sd-title" data-words data-words-delay="100" data-words-step="70">AI<br>Filmmaker</h1>
+      <p class="f-sd__lead" data-reveal data-reveal-delay="320" data-reveal-y="14">Anuncios que detienen el scroll.</p>
+      <p class="f-sd__body" data-reveal data-reveal-delay="400" data-reveal-y="14">Escenas con IA, edición y versiones A/B pensadas para bajar tu costo de adquisición en Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite. Sin set ni rodaje.</p>
+      <div class="f-sd__buy" data-reveal data-reveal-delay="480" data-reveal-y="14">
+        <p class="f-sd__pr"><small>Proyecto</small><span>A la medida</span></p>
+        <span class="f-sd__stat"><i aria-hidden="true"></i>Meta · Google · TikTok · DV360 y más</span>
+      </div>
+      <div class="f-sd__btns" data-reveal data-reveal-delay="560" data-reveal-y="14">
+        <a class="btn btn--solid" href="#contacto" data-service="filmmaker" data-track="cta_click" data-track-loc="filmmaker_hero"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        <a class="btn btn--ghost" href="#resultados" data-track="cta_click" data-track-loc="filmmaker_hero_resultados"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver resultados</span><span class="btn__l2" aria-hidden="true">Ver resultados</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </div>
+
+    <!-- sticky live stage: decorative preview of real pieces (the same information is in the steps list) -->
+    <div class="f-sd__side" data-reveal data-reveal-y="0" data-reveal-delay="200">
+      <div class="f-sd__obj">
+        <div class="f-sd__stage" data-step="1" aria-hidden="true">
+
+          <!-- 0/01–02 · phone playing real vertical pieces: 01 ae-1 (Academia Europea UGC) · 02 osmo-ugc-1 (OSMO UGC) -->
+          <div class="f-sd__ui f-sd__ui--ph is-on">
+            <div class="f-sd__phone">
+              <div class="f-sd__ph-h"><i class="f-sd__av"></i><span>@tumarca</span><b>···</b></div>
+              <div class="f-sd__scr">
+                <div class="f-sd__clip" data-clip="1">
+                  <img class="f-sd__poster" src="/assets/videos/web/ae-1-poster.webp" width="540" height="960" alt="" decoding="async" fetchpriority="high">
+                  <video class="f-sd__vid" data-vid="ae-1" muted playsinline loop preload="none" width="540" height="960" tabindex="-1" disablepictureinpicture>
+                    <source src="/assets/videos/web/ae-1-preview.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="f-sd__clip" data-clip="2">
+                  <img class="f-sd__poster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/videos/web/osmo-ugc-1-poster.webp" width="540" height="960" alt="" decoding="async">
+                  <video class="f-sd__vid" data-vid="osmo-ugc-1" muted playsinline loop preload="none" width="540" height="960" tabindex="-1" disablepictureinpicture>
+                    <source src="/assets/videos/web/osmo-ugc-1-preview.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <span class="f-sd__gen"><i></i>Escena generada con IA</span>
+                <span class="f-sd__fmt">9:16</span>
+              </div>
+              <div class="f-sd__pb">
+                <span class="f-sd__hrt"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5S3.5 15.4 3.5 9.4A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8.5 2.1c0 6-8.5 11.1-8.5 11.1z"/></svg><i></i></span>
+                <svg class="f-sd__ic" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.3 6.5L4 20l1.2-3.6A8 8 0 0 1 4 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                <svg class="f-sd__ic" viewBox="0 0 24 24"><path d="M21 4 10 14M21 4l-7 17-4-7-7-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              </div>
+              <p class="f-sd__pt"><span data-clip-t="1">UGC · Educación</span><span data-clip-t="2">UGC · Fintech</span></p>
+              <p class="f-sd__pcap" data-c1="Guion: gancho, beneficio y cierre" data-c2="Escenas generadas con IA"><b>tumarca</b> <span>Guion: gancho, beneficio y cierre</span></p>
+            </div>
+            <!-- 01 · the script card floats over the phone (structure of a script: no copy, no metrics) -->
+            <div class="f-sd__card">
+              <span class="f-sd__kick">Guion</span>
+              <p class="f-sd__type">Escena por escena<i></i></p>
+              <ol class="f-sd__rows">
+                <li class="f-sd__row"><b>01 · Gancho</b><small>0–3 s</small><em></em></li>
+                <li class="f-sd__row"><b>02 · Beneficio</b><small>3–9 s</small><em></em></li>
+                <li class="f-sd__row"><b>03 · Llamado a la acción</b><small>9–12 s</small><em></em></li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- 03 · versiones A/B: two real reels of the same OSMO UGC campaign (osmo-ugc-2 / osmo-ugc-3) -->
+          <div class="f-sd__ui f-sd__ui--ab">
+            <div class="f-sd__abs">
+              <div class="f-sd__mph is-sel">
+                <div class="f-sd__mscr">
+                  <img class="f-sd__poster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/videos/web/osmo-ugc-2-poster.webp" width="540" height="960" alt="" decoding="async">
+                  <video class="f-sd__vid" data-vid="osmo-ugc-2" muted playsinline loop preload="none" width="540" height="960" tabindex="-1" disablepictureinpicture>
+                    <source src="/assets/videos/web/osmo-ugc-2-preview.mp4" type="video/mp4">
+                  </video>
+                  <b class="f-sd__abk">A</b>
+                </div>
+                <span class="f-sd__abl">Versión A</span>
+              </div>
+              <div class="f-sd__mph">
+                <div class="f-sd__mscr">
+                  <img class="f-sd__poster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/videos/web/osmo-ugc-3-poster.webp" width="540" height="960" alt="" decoding="async">
+                  <video class="f-sd__vid" data-vid="osmo-ugc-3" muted playsinline loop preload="none" width="540" height="960" tabindex="-1" disablepictureinpicture>
+                    <source src="/assets/videos/web/osmo-ugc-3-preview.mp4" type="video/mp4">
+                  </video>
+                  <b class="f-sd__abk">B</b>
+                </div>
+                <span class="f-sd__abl">Versión B</span>
+              </div>
+            </div>
+            <span class="f-sd__abt"><i></i>Prueba A/B · UGC · Fintech</span>
+          </div>
+
+          <!-- 04 · entrega: a real 16:9 commercial (comercial-aventura) reframed 16:9 → 1:1 → 9:16 -->
+          <div class="f-sd__ui f-sd__ui--wd">
+            <div class="f-sd__mon" data-f="0">
+              <img class="f-sd__poster" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/videos/web/comercial-aventura-poster.webp" width="1280" height="720" alt="" decoding="async">
+              <video class="f-sd__vid" data-vid="comercial-aventura" muted playsinline loop preload="none" width="1280" height="720" tabindex="-1" disablepictureinpicture>
+                <source src="/assets/videos/web/comercial-aventura-preview.mp4" type="video/mp4">
+              </video>
+              </div>
+            <div class="f-sd__fchips"><span class="f-sd__fl">Comercial · Educación</span><span class="f-sd__ratios"><b class="is-sel">16:9</b><b>1:1</b><b>9:16</b></span></div>
+          </div>
+
+          <span class="f-sd__live"><i></i>Vista previa<em>AI Filmmaker</em></span>
+          <span class="f-sd__no">02 / 04</span>
+          <span class="f-sd__ptoast" data-k1="Guion y concepto · listo" data-k2="Escenas con IA · listo" data-k3="Edición y versiones A/B · listo" data-k4="Entrega 9:16 · 1:1 · 16:9 · listo"><b><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></b><span>Guion y concepto · listo</span></span>
+        </div>
+        <div class="f-sd__pcap2" aria-hidden="true">
+          <span>Paso <b>01</b> / 04</span>
+          <span class="f-sd__seg"><i></i><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-sd__inc">
+      <p class="f-sd__il" data-reveal data-reveal-y="14"><i aria-hidden="true"></i>Qué incluye</p>
+      <h2 class="hd f-sd__h2" data-words data-words-delay="200">Lo que recibes<br><mark>en</mark> <mark>cada</mark> <mark>proyecto.</mark></h2>
+      <ol class="f-sd__steps" role="list">
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 01</span><span class="f-sd__st">Guion y concepto</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 02</span><span class="f-sd__st">Escenas generadas con IA</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 03</span><span class="f-sd__st">Edición y versiones A/B</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 04</span><span class="f-sd__st">Entrega en 9:16, 1:1 y 16:9</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+<!-- /SECTION:inicio -->
+<!-- SECTION:resultados -->
+<!-- 02 · RESULTADOS (#resultados) — reference 52_rwsd .rwsd-band (dark proof band, radius 36 top), v3 2026-10-11.
+     Head (eyebrow + H2 | sub) · 2 case cards (n-2: greyscale image → colour on hover, title, mono meta, before struck →
+     after big figure in green, sparkline draw, "Ver comercial" opens the player) · THE ONE ADDITION (client decision):
+     "Más trabajo" gallery of our pieces (3 commercials 16:9 + 9 vertical 9:16: 3 OSMO UGC reels, 4 Academia Europea UGC
+     reels, 2 OSMO fintech pieces; hover / in-view muted preview, max 2 playing page-wide, click opens the player) ·
+     "Otros servicios" pill row (with a one-line descriptor each).
+     rev1 (client review 2026-10-11): pieces with pixelated products are gone from the page; video6 (third-party cap logo)
+     and video8 (third-party brand names on screen) stay out; every OSMO file ends before its end card.
+     Facts on the cards come ONLY from the client: OSMO = its Meta Ads account, Mar 1 – Oct 11 2026 (cost per new account
+     with AI UGC creatives 16 % below traditional creatives; Guatemala, Costa Rica y México — client rule 2026-10-11:
+     OSMO shows ONLY percentages / relative changes, never dollar amounts, counts or raw rates); Academia
+     Europea = 1.4M views on one Instagram reel, +50 AI UGC pieces a month, 4 commercials, 6+ countries (no before/after). Images: OSMO = person
+     showing the OSMO app (Growco's Magnific "OSMO" project, 2K); Academia Europea = 3 frames of our UGC reels. Both brands
+     are authorised by the client; brand end cards are removed from every video file.
+     JS: /assets/js/sections/filmmaker-02-resultados.js. No JS: posters (greyscale), links open the MP4 files. -->
+<section class="sec f-bd" id="resultados" data-theme="dark" aria-labelledby="f-bd-title">
+  <div class="wrap">
+
+    <header class="f-bd__bh" data-reveal-group>
+      <div>
+        <p class="eb" data-reveal><i aria-hidden="true"></i>Resultados</p>
+        <h2 class="hd f-bd__h2" id="f-bd-title" data-words data-words-delay="80">Resultados con<br><mark>video</mark> <mark>IA.</mark></h2>
+      </div>
+      <p data-reveal data-reveal-delay="280">Marcas reales, campañas reales y resultados que se miden.</p>
+    </header>
+
+    <div class="f-bd__proof n-2" data-reveal-group>
+      <article class="f-bd__case" data-reveal data-reveal-delay="300">
+        <div class="f-bd__cimg">
+          <img src="/assets/img/casos/osmo-app-1280.webp" srcset="/assets/img/casos/osmo-app-1280.webp 1280w, /assets/img/casos/osmo-app-2048.webp 2048w" sizes="(max-width:809px) 100vw, 50vw" width="1280" height="720" alt="" loading="lazy" decoding="async">
+          <em>OSMO · Fintech</em>
+          <em class="f-bd__geo">Guatemala · Costa Rica · México</em>
+        </div>
+        <div class="f-bd__ctx">
+          <h3 class="f-bd__ct">Cada cuenta nueva cuesta menos con UGC hecho con IA</h3>
+          <span class="f-bd__cm">UGC con IA · Meta Ads · mar–oct 2026</span>
+          <span class="f-bd__ba f-bd__ba--plain">
+            <strong>−16%</strong>
+            <span class="f-bd__dur">CAC con UGC IA vs. creativos tradicionales</span>
+            <span class="f-bd__dl">Costo por cuenta nueva · <b>Meta Ads</b></span>
+          </span>
+          <svg class="f-bd__spark" viewBox="0 0 600 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 6C150 6 300 11 420 22S560 36 597 38" pathLength="1"/></svg>
+          <a class="f-bd__go" href="/assets/videos/web/comercial-petalos-720.mp4" data-play="comercial-petalos" data-aspect="16:9" data-play-title="OSMO · Comercial con IA" data-track="video_play" data-track-loc="filmmaker_resultados">Ver comercial<span class="sr"> de OSMO (47 segundos)</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        </div>
+      </article>
+      <article class="f-bd__case" data-reveal data-reveal-delay="420">
+        <div class="f-bd__cimg">
+          <img src="/assets/img/casos/ae-ugc-1280.webp" width="1280" height="800" alt="" loading="lazy" decoding="async">
+          <em>Academia Europea · Educación</em>
+          <em class="f-bd__geo">Más de 6 países</em>
+        </div>
+        <div class="f-bd__ctx">
+          <h3 class="f-bd__ct">Un reel viral y contenido constante para más de 6 países</h3>
+          <span class="f-bd__cm">UGC y comerciales con IA · Instagram</span>
+          <span class="f-bd__ba f-bd__ba--plain">
+            <strong>1.4M</strong>
+            <span class="f-bd__dur">vistas en un reel de Instagram</span>
+            <span class="f-bd__dl"><b>+50</b> contenidos al mes · <b>4</b> comerciales · <b>+6</b> países</span>
+          </span>
+          <svg class="f-bd__spark f-bd__spark--tl" viewBox="0 0 600 44" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M3 22H190" pathLength="1"/><path d="M207 22H394" pathLength="1"/><path d="M411 22H597" pathLength="1"/></svg>
+          <a class="f-bd__go" href="/assets/videos/web/ae-1-720.mp4" data-play="ae-1" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="filmmaker_resultados">Ver contenido UGC<span class="sr"> de Academia Europea (14 segundos)</span><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- the one addition: our pieces (labels = format · industry) -->
+    <div class="f-bd__gal" role="group" aria-labelledby="f-bd-gl" data-reveal data-reveal-delay="200">
+      <div class="f-bd__gh">
+        <p class="f-bd__gl" id="f-bd-gl"><i aria-hidden="true"></i>Más trabajo</p>
+        <p class="f-bd__gn">12 piezas · 16:9 y 9:16 · Fintech y Educación</p>
+      </div>
+      <ul class="f-bd__row f-bd__row--h" role="list" data-native-scroll>
+        <li><a class="f-bd__it" href="/assets/videos/web/comercial-petalos-720.mp4" data-play="comercial-petalos" data-aspect="16:9" data-play-title="Comercial · Fintech" data-preview="comercial-petalos" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: Comercial · Fintech, 16:9, 47 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/comercial-petalos-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>Comercial · Fintech</b><small>16:9 · 0:47</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/comercial-lobo-720.mp4" data-play="comercial-lobo" data-aspect="16:9" data-play-title="Comercial · Educación" data-preview="comercial-lobo" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: Comercial · Educación, 16:9, 54 segundos">
+          <span class="f-bd__im f-bd__im--lb"><img src="/assets/videos/web/comercial-lobo-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>Comercial · Educación</b><small>16:9 · 0:54</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/comercial-aventura-720.mp4" data-play="comercial-aventura" data-aspect="16:9" data-play-title="Comercial · Educación" data-preview="comercial-aventura" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: Comercial · Educación, 16:9, 45 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/comercial-aventura-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>Comercial · Educación</b><small>16:9 · 0:45</small></span></a></li>
+      </ul>
+      <ul class="f-bd__row f-bd__row--v" role="list" data-native-scroll>
+        <li><a class="f-bd__it" href="/assets/videos/web/osmo-ugc-1-720.mp4" data-play="osmo-ugc-1" data-play-title="UGC · Fintech" data-preview="osmo-ugc-1" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Fintech, 9:16, 14 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/osmo-ugc-1-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Fintech</b><small>9:16 · 0:14</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/ae-2-720.mp4" data-play="ae-2" data-play-title="UGC · Educación" data-preview="ae-2" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Educación, 9:16, 14 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/ae-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Educación</b><small>9:16 · 0:14</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/osmo-ugc-2-720.mp4" data-play="osmo-ugc-2" data-play-title="UGC · Fintech" data-preview="osmo-ugc-2" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Fintech, 9:16, 13 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/osmo-ugc-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Fintech</b><small>9:16 · 0:13</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/ae-4-720.mp4" data-play="ae-4" data-play-title="UGC · Educación" data-preview="ae-4" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Educación, 9:16, 12 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/ae-4-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Educación</b><small>9:16 · 0:12</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/osmo-ugc-3-720.mp4" data-play="osmo-ugc-3" data-play-title="UGC · Fintech" data-preview="osmo-ugc-3" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Fintech, 9:16, 15 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/osmo-ugc-3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Fintech</b><small>9:16 · 0:15</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/ae-5-720.mp4" data-play="ae-5" data-play-title="UGC · Educación" data-preview="ae-5" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Educación, 9:16, 15 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/ae-5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Educación</b><small>9:16 · 0:15</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/video5-720.mp4" data-play="video5" data-play-title="Demo · Fintech" data-preview="video5" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: Demo · Fintech, 9:16, 14 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/video5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>Demo · Fintech</b><small>9:16 · 0:14</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/ae-6-720.mp4" data-play="ae-6" data-play-title="UGC · Educación" data-preview="ae-6" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Educación, 9:16, 14 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/ae-6-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Educación</b><small>9:16 · 0:14</small></span></a></li>
+        <li><a class="f-bd__it" href="/assets/videos/web/video2-720.mp4" data-play="video2" data-play-title="UGC · Fintech · Pódcast" data-preview="video2" data-track="video_play" data-track-loc="filmmaker_galeria" aria-label="Ver pieza: UGC · Fintech, formato pódcast, 9:16, 20 segundos">
+          <span class="f-bd__im"><img src="/assets/videos/web/video2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></span>
+          <span class="f-bd__ix"><b>UGC · Fintech</b><small>9:16 · 0:20</small></span></a></li>
+      </ul>
+    </div>
+
+    <nav class="f-bd__oth" aria-label="Otros servicios" data-reveal data-reveal-delay="420">
+      <p class="f-bd__ol">Otros servicios</p>
+      <ul>
+        <li><a href="/#servicios"><span>01</span><b>Pauta digital<small>Meta, Google, TikTok, DV360 y más</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/#automatizacion"><span>03</span><b>Automatización<small>Chatbots y flujos que atienden por ti</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/SaaSystem"><span>04</span><b>Stockly<small>Inventario y ventas para PyMEs</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+      </ul>
+    </nav>
+
+  </div>
+</section>
+<!-- /SECTION:resultados -->
+<!-- SECTION:contacto -->
+<section class="sec ct" id="contacto" data-theme="dark" data-progress data-rings data-reveal-group aria-labelledby="ct-title">
+  <span class="ct__rings" aria-hidden="true"><i style="--r:0"></i><i style="--r:1"></i><i style="--r:2"></i><b></b></span>
+  <div class="wrap ct__in">
+    <div class="ct__main">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(03) Contacto</p>
+      <h2 class="hd hd--xl ct__h" id="ct-title" data-words data-words-delay="100" data-words-step="70">Tu anuncio,<br><mark>sin rodaje.</mark></h2>
+      <p class="ct__sub" data-reveal data-reveal-delay="420">Cuéntanos qué vendes y qué necesitas. Te respondemos con una propuesta.</p>
+      <form class="ct__form" id="lead-form" data-lead-form="contacto-filmmaker" data-page-name="AI Filmmaker" action="https://formsubmit.co/agente@growcoai.com" method="post" data-reveal data-reveal-delay="540" data-reveal-y="18">
+        <input type="hidden" name="_subject" value="Nueva solicitud de propuesta — AI Filmmaker">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://growcoai.com/filmmaker?enviado=1#contacto">
+        <input type="hidden" name="origen" value="filmmaker">
+        <div class="hp" aria-hidden="true"><label for="ct-honey">No llenar este campo</label><input type="text" id="ct-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <div class="ct__grid">
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-nombre">Nombre</label><span class="fld__err" id="ct-nombre-err"></span></div><input type="text" id="ct-nombre" name="nombre" autocomplete="name" maxlength="120" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-email">Correo</label><span class="fld__err" id="ct-email-err"></span></div><input type="email" id="ct-email" name="email" autocomplete="email" inputmode="email" maxlength="160" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-empresa">Empresa <em>(opcional)</em></label></div><input type="text" id="ct-empresa" name="empresa" autocomplete="organization" maxlength="120"></div>
+          <div class="fld fld--sel"><div class="fld__top"><label class="fld__k" for="ct-servicio">Servicio</label><span class="fld__err" id="ct-servicio-err"></span></div>
+            <select id="ct-servicio" name="servicio" required>
+              <option value="" disabled>Elige un servicio</option>
+              <option value="pauta">Pauta digital</option>
+              <option value="filmmaker" selected>AI Filmmaker</option>
+              <option value="automatizacion">Automatización</option>
+              <option value="stockly">Stockly</option>
+              <option value="nose">No estoy seguro</option>
+            </select><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div class="fld fld--area"><div class="fld__top"><label class="fld__k" for="ct-mensaje">Mensaje <em>(opcional)</em></label></div><textarea id="ct-mensaje" name="mensaje" rows="1" maxlength="1000" data-autogrow placeholder="Qué vendes, a quién y qué te gustaría lograr."></textarea></div>
+        </div>
+        <div class="ct__row">
+          <p class="ct__mail">Usamos tus datos solo para responderte.</p>
+          <button class="btn btn--accent ct__go" type="submit" data-rings-anchor><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></button>
+        </div>
+        <p class="ct__status" aria-live="polite"></p>
+      </form>
+    </div>
+    <aside class="ct__card" aria-label="Contacto directo" data-reveal data-reveal-delay="380" data-reveal-y="30">
+      <p class="ct__cl"><i class="dot dot--port" aria-hidden="true"></i>Contacto directo</p>
+      <p class="ct__ct">¿Prefieres escribirnos?</p>
+      <a class="ct__email" href="mailto:agente@growcoai.com">agente@growcoai.com</a>
+      <ol class="ct__steps" aria-label="Qué pasa después">
+        <li style="--i:0"><span><b>01</b> Nos escribes</span></li>
+        <li style="--i:1"><span><b>02</b> Revisamos</span></li>
+        <li style="--i:2"><span><b>03</b> Tu propuesta</span></li>
+      </ol>
+      <div class="ct__clock js-only"><p><span>Hora en El Salvador</span><b data-clock="hms"></b></p></div>
+      <div class="ct__svc"><span class="ct__av" aria-hidden="true"><i>01</i><i>02</i><i>03</i><i>04</i></span><span class="ct__sn">4 servicios, un mismo equipo</span></div>
+    </aside>
+  </div>
+</section>
+<!-- /SECTION:contacto -->
+  </main>
+
+<!-- PARTIAL:footer -->
+<div class="ft-rev" data-curtain>
+  <div class="ft-rev__in">
+    <footer class="ft" id="site-footer" data-theme="light" data-reveal-group data-reveal-manual>
+      <h2 class="sr">Growco: mapa del sitio y contacto</h2>
+      <div class="wrap">
+        <div class="ft__top">
+          <div class="ft__brand" data-reveal>
+            <a class="ft__logo" href="/" aria-label="Growco, ir al inicio"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+            <p class="ft__blurb">Growth, pauta y video con IA para bajar tu CAC y hacer crecer tu negocio.</p>
+            <p class="ft__ann"><i class="dot dot--port" aria-hidden="true"></i>Agencia de marketing con IA</p>
+            <a class="btn btn--quiet" href="#contacto" data-track="cta_click" data-track-loc="footer"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+          <nav class="ft__cols" aria-label="Pie de página">
+            <div class="ft__col" data-reveal data-reveal-delay="80">
+              <h3 class="ft__ct">Servicios</h3>
+              <ul>
+                <li><a href="/#servicios">Pauta digital</a></li>
+                <li><a href="/filmmaker">AI Filmmaker</a></li>
+                <li><a href="/#automatizacion">Automatización</a></li>
+                <li><a href="/SaaSystem">Stockly</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="150">
+              <h3 class="ft__ct">Empresa</h3>
+              <ul>
+                <li><a href="/#proceso">Cómo trabajamos</a></li>
+                <li><a href="/#faq">Preguntas</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="220">
+              <h3 class="ft__ct">Contacto</h3>
+              <ul>
+                <li><a href="mailto:agente@growcoai.com">agente@growcoai.com</a></li>
+                <li><a href="#" data-whatsapp hidden>WhatsApp</a></li>
+                <li class="ft__city">El Salvador</li>
+              </ul>
+              <!-- DATO REAL: URLs de Instagram, LinkedIn y TikTok para las pastillas sociales del pie -->
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap ft__wmw" aria-hidden="true">
+        <div class="ft__wm" data-spotlight>
+          <svg class="lockup ft__wm-t" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <i class="ft__ring"></i>
+          <svg class="lockup ft__wm-l" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <b class="ft__hint">Pasa el cursor sobre el logo</b>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="ft__legal">
+          <span>© <span data-year>2026</span> Growco</span>
+          <span>Hecho en El Salvador</span>
+          <!-- DATO REAL: enlaces a /privacidad y /terminos cuando existan esas páginas -->
+          <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="ft-rev__sp"></div>
+</div>
+<!-- /PARTIAL:footer -->
 </body>
 </html>

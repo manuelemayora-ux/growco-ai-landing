@@ -1,0 +1,112 @@
+/* 07 · REPORTES (#reportes) — reference 26_rwnm "The numbers" (lime sheet → Growco green #B5F47F)
+   Green sheet overlapping the previous section (margin-top -32px, 32px top corners, z 12), flex head
+   (eyebrow + H2 / intro), navy results card (top bar + 4 tiles: label, odometer, context pill, caption + drawn rule,
+   source line) and the
+   full-width ticker that closes the section (no bottom padding). Breakpoints = the component's: 2×2 tiles at
+   810–1099px (reference is-tab), 1 column ≤809px (is-ph). */
+#reportes{margin-top:-32px;z-index:12;border-radius:32px 32px 0 0;padding:clamp(88px,9vw,136px) 0 0;overflow:hidden}
+
+/* head ------------------------------------------------------------------------------------------------ */
+#reportes .nm__head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:clamp(36px,4vw,56px)}
+#reportes .nm__hl{display:flex;flex-direction:column;align-items:flex-start;gap:24px;min-width:0}
+#reportes .nm__eb>i{animation:nm-pulse 1.8s infinite}
+#reportes .nm__title{letter-spacing:-.045em}
+/* navy underline (reference .rwnm .rw-it::after: left 0, right .02em, bottom .02em of the word, .085em thick) */
+#reportes .nm__title .hd-w.is-accw::after{left:.04em;right:.06em;bottom:.02em}
+#reportes .nm__hr{flex:none}
+#reportes .nm__intro{margin:0;width:36ch;max-width:100%;font-size:17px;line-height:1.5;color:color-mix(in srgb,var(--ink) 78%,transparent)}
+
+/* report card --------------------------------------------------------------------------------------------- */
+#reportes .nm__dash{border-radius:24px;background:var(--ink);color:var(--white);box-shadow:0 40px 80px -40px color-mix(in srgb,var(--ink) 60%,transparent);overflow:hidden}
+#reportes .nm__top{display:flex;min-height:68px;align-items:center;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid color-mix(in srgb,var(--white) 12%,transparent);font-family:var(--font-m);font-size:11.5px;font-weight:400;letter-spacing:.1em;line-height:normal;text-transform:uppercase}
+#reportes .nm__rep{display:inline-flex;align-items:center;gap:10px;margin:0;white-space:nowrap}
+#reportes .nm__rep b{font-weight:500;padding:4px 9px;border-radius:999px;background:color-mix(in srgb,var(--accent-2-dark) 22%,transparent);color:#A9C1FF}
+/* functional tabs: shown once the section script has wired them (independent of the html.js fail-safe) */
+#reportes:not(.nm--ready) .nm__tabs{display:none}
+#reportes .nm__panel{border-radius:0 0 24px 24px}
+#reportes .nm__src{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:0;padding:14px 22px 16px;border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent);font-family:var(--font-m);font-size:11px;font-weight:400;letter-spacing:.08em;line-height:1.4;text-transform:uppercase;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#reportes .nm__src-k{padding:3px 8px;border-radius:999px;background:color-mix(in srgb,var(--white) 10%,transparent);color:var(--white)}
+#reportes .nm__panel:focus-visible{outline:2px solid var(--white);outline-offset:-4px;box-shadow:none}
+#reportes .nm__live{display:block;flex:none;width:8px;height:8px;border-radius:50%;background:var(--accent-2-dark);animation:gc-blink 1.4s ease-in-out infinite}
+#reportes .nm__tabs{display:flex;gap:4px;padding:4px;border-radius:999px;background:color-mix(in srgb,var(--white) 7%,transparent)}
+#reportes .nm__tab{margin:0;padding:6px 12px;border:0;border-radius:999px;background:none;color:color-mix(in srgb,var(--white) 60%,transparent);font:inherit;letter-spacing:inherit;text-transform:inherit;line-height:normal;white-space:nowrap;cursor:pointer;transition:background .35s var(--ease-out),color .35s}
+#reportes .nm__tab:hover{color:var(--white)}
+#reportes .nm__tab.is-active{background:var(--accent);color:var(--ink)}
+#reportes .nm__tab:focus-visible{outline:2px solid var(--white);outline-offset:2px;box-shadow:none}
+#reportes .nm__range{margin:0;white-space:nowrap;color:color-mix(in srgb,var(--white) 70%,transparent)}
+
+/* tiles */
+#reportes .nm__grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+#reportes .nm__tile{position:relative;display:flex;flex-direction:column;gap:14px;min-width:0;padding:clamp(22px,2.2vw,34px);border-left:1px solid color-mix(in srgb,var(--white) 12%,transparent);transition:background .4s}
+#reportes .nm__tile:first-child{border-left:0}
+#reportes .nm__tile:hover{background:color-mix(in srgb,var(--white) 4%,transparent)}
+#reportes .nm__lab{display:flex;align-items:center;gap:10px;margin:0;min-height:2.6em;font-family:var(--font-m);font-size:11.5px;font-weight:400;letter-spacing:.1em;line-height:normal;text-transform:uppercase;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#reportes .nm__lab>span:first-child{flex:none;color:var(--accent)}
+#reportes .nm__num{margin:6px 0 0;font-family:var(--font-d);font-weight:600;font-size:clamp(56px,5.6vw,96px);line-height:.88;letter-spacing:-.055em;font-variant-numeric:tabular-nums;white-space:nowrap;min-height:1em}
+#reportes .nm__odo{display:inline-flex;align-items:flex-start}
+#reportes .nm__odo .odo__d{clip-path:inset(0)}
+/* Spanish unit words ("mil", "M") after the figure: smaller, sitting on the digits' baseline (no-JS markup + odometer) */
+#reportes .nm__u{font-size:.42em;letter-spacing:-.02em}
+#reportes .nm__odo .nm__u{align-self:flex-end;margin-bottom:.16em;line-height:1;white-space:pre}
+#reportes .nm__delta{display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:100%;margin:0;padding:5px 10px 5px 6px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);font-family:var(--font-m);font-size:11px;font-weight:400;letter-spacing:.08em;line-height:normal;text-transform:uppercase}
+#reportes .nm__delta b{display:grid;place-items:center;flex:none;width:18px;height:18px;border-radius:50%;background:var(--accent);color:var(--ink);font-size:8px;font-weight:600;line-height:1}
+#reportes .nm__sp{position:relative;margin-top:auto;padding-top:18px}
+/* rev1: caption + scroll-drawn rule (the case data has no monthly series, so no sparkline) */
+#reportes .nm__cap{margin:0 0 12px;font-size:14px;line-height:1.4;color:color-mix(in srgb,var(--white) 70%,transparent);text-wrap:pretty}
+#reportes .nm__rule{display:block;width:100%;height:4px;overflow:visible}
+#reportes .nm__ln{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0}
+/* scroll-linked draw-in (reference: (sp − .2 − i·.035)·3.4 for the line, (sp − .3 − i·.035)·4 for the area) */
+#reportes.nm--live .nm__ln{stroke-dashoffset:calc(1 - clamp(0, (var(--p,0) - .2 - var(--i) * .035) * 3.4, 1))}
+/* tab switch: redraw from 0 to the current scroll-linked state */
+#reportes .nm__tile.is-draw .nm__ln{animation:nm-draw .9s var(--ease-snap) calc(var(--i) * 60ms) both}
+#reportes :is(.nm__lab-t,.nm__delta,.nm__cap,.nm__range,.nm__src>span+span){transition:opacity .18s ease}
+#reportes.nm--swap :is(.nm__lab-t,.nm__delta,.nm__cap,.nm__range,.nm__src>span+span){opacity:0}
+
+/* ticker (closes the sheet) -------------------------------------------------------------------------------- */
+#reportes .nm__tick{margin-top:clamp(36px,4vw,56px);border-top:1px solid color-mix(in srgb,var(--ink) 18%,transparent);padding:18px 0 20px;font-family:var(--font-m);font-size:12px;font-weight:400;letter-spacing:.08em;line-height:normal;text-transform:uppercase;color:var(--ink)}
+#reportes .nm__tick li>i{display:block;flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 2px var(--ink)}
+
+@keyframes nm-pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 80%,transparent)}100%{box-shadow:0 0 0 8px transparent}}
+@keyframes nm-draw{from{stroke-dashoffset:1}}
+
+/* tablet (reference is-tab: 810–1099) ------------------------------------------------------------------------ */
+@media (min-width:810px) and (max-width:1099px){
+  #reportes .nm__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #reportes .nm__tile:nth-child(odd){border-left:0}
+  #reportes .nm__tile:nth-child(n+3){border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+}
+/* narrow tablets: the (functional) tabs move to their own row under label + range, hugging their four tabs
+   (a zero-height full-width pseudo item forces the break) */
+@media (max-width:1023px){
+  #reportes .nm__top{flex-wrap:wrap;row-gap:0}
+  #reportes .nm__top::after{content:"";order:2;flex:0 0 100%;height:0}
+  #reportes .nm__range{order:1}
+  #reportes .nm__tabs{order:3;flex:0 1 auto;max-width:100%;margin-top:12px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  #reportes .nm__tabs::-webkit-scrollbar{display:none}
+  #reportes .nm__tab{flex:none;scroll-snap-align:start}
+}
+
+/* phone (reference is-ph: ≤809) ---------------------------------------------------------------------------------- */
+@media (max-width:809px){
+  #reportes{padding-top:72px;border-radius:24px 24px 0 0;margin-top:-24px}
+  #reportes .nm__head{flex-direction:column;align-items:flex-start;gap:20px}
+  #reportes .nm__br{display:none}
+  #reportes .nm__grid{grid-template-columns:1fr}
+  #reportes .nm__tile{border-left:0;padding:22px 20px}
+  #reportes .nm__tile+.nm__tile{border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+  #reportes .nm__num{font-size:64px}
+  #reportes .nm__lab{min-height:0}
+  #reportes .nm__top{padding:14px 18px}
+  #reportes .nm__title{font-size:clamp(40px,4.6vw,68px)} /* reference rwnm keeps its H2 clamp on phones (40px at 390) */
+  #reportes .nm__rep-x{display:none} /* "Clientes · Datos reales" fits one line like the reference bar */
+  #reportes .nm__rep{flex-wrap:wrap;row-gap:8px}
+  #reportes .nm__range{display:none}
+  /* Growco: the tabs are functional, so they stay on phones (own row, all four fit at 390; scroll strip below) — the reference hides them */
+  #reportes .nm__tabs{flex:1 0 100%;justify-content:space-between;gap:2px}
+  #reportes .nm__tab{padding:6px 9px;font-size:10.5px;letter-spacing:.06em}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #reportes .nm__ln{stroke-dashoffset:0!important;animation:none!important}
+  #reportes .nm__eb>i,#reportes .nm__live{animation:none!important}
+}

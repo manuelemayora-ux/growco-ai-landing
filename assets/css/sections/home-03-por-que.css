@@ -1,0 +1,98 @@
+/* 03 · POR QUÉ (#por-que) — reference 14_rwin (bone ground, navy crowd panel)
+   Top grid 7.4fr / 4.6fr aligned to the bottom (lead: eyebrow + H2 · side: sub, ghost button, facts row), then the
+   crowd panel (radius 24, height clamp(420px,36vw,540px), radial pine→ink, 1px inner ring) holding the canvas
+   (.wy-cv, drawn by home-03-por-que.js), the left statement + live status over an ink fade, the cluster labels (opacity driven
+   by --p, the panel's sort progress) and the "Segmentación con datos" chip.
+   Tiers follow the reference component: tablet ≤1099 (is-tab), phone ≤809 (is-ph). */
+#por-que{--wy-pi:clamp(22px,2.6vw,40px);--wy-lo:clamp(52px,4.6vw,64px);padding:clamp(96px,9vw,150px) 0 clamp(88px,8vw,132px);overflow-x:clip}
+
+/* top grid ----------------------------------------------------------------------------------------------- */
+#por-que .wy-top{display:grid;grid-template-columns:minmax(0,7.4fr) minmax(0,4.6fr);gap:clamp(32px,5vw,96px);align-items:end;margin-bottom:clamp(44px,4.6vw,72px)}
+#por-que .wy-lead{display:flex;flex-direction:column;align-items:flex-start;gap:26px;min-width:0}
+#por-que .wy-title{font-size:clamp(40px,5vw,76px);line-height:.95;letter-spacing:-.042em}
+/* 2-line build at every desktop width, as in the reference: "Hallamos a tus clientes." is ~10.25em and the 7.4fr column
+   is 10.45–11.5em wide, so the H2 may borrow up to .3em of the column gap (≥55px) to absorb rounding near 1100px */
+@media (min-width:1100px){#por-que .wy-title{margin-inline-end:-.3em}}
+#por-que .wy-side{display:flex;flex-direction:column;align-items:flex-start;gap:24px;min-width:0;padding-bottom:6px}
+#por-que .wy-sub{margin:0;max-width:460px;font-size:18px;line-height:1.5;color:var(--mut)}
+#por-que .wy-act{display:flex}
+#por-que .wy-facts{display:flex;flex-wrap:wrap;gap:6px 18px;width:100%;margin:0;padding:18px 0 0;list-style:none;border-top:1px solid var(--line-2);font-family:var(--font-m);font-size:11.5px;font-weight:400;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)}
+#por-que .wy-facts li{display:inline-flex;align-items:center;gap:8px}
+#por-que .wy-facts li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--ink);opacity:.35}
+
+/* crowd panel -------------------------------------------------------------------------------------------- */
+#por-que .wy-panel{--p:1;position:relative;height:clamp(420px,36vw,540px);border-radius:24px;overflow:hidden;isolation:isolate;color:var(--white);background:radial-gradient(120% 90% at 60% 50%,var(--pine),var(--ink) 70%)}
+#por-que .wy-panel::after{content:"";position:absolute;z-index:5;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 10%,transparent);pointer-events:none}
+#por-que .wy-field{position:absolute;inset:0}
+#por-que .wy-cv{position:absolute;inset:0;width:100%;height:100%;max-width:none;display:block;touch-action:pan-y}
+
+/* left statement over the ink fade (rev1: qualitative headline + live status, no counts) */
+#por-que .wy-ratio{position:absolute;z-index:2;left:var(--wy-pi);top:var(--wy-pi);bottom:var(--wy-pi);width:min(300px,26%);display:flex;flex-direction:column;justify-content:flex-end;gap:6px;pointer-events:none}
+#por-que .wy-ratio::before{content:"";position:absolute;z-index:-1;left:calc(var(--wy-pi)*-1);top:calc(var(--wy-pi)*-1);bottom:calc(var(--wy-pi)*-1);width:calc(100% + 140px);background:linear-gradient(90deg,var(--ink) 30%,transparent)}
+#por-que .wy-ratio-k{display:flex;align-items:center;gap:9px;margin:0 0 auto;font-family:var(--font-m);font-size:11px;font-weight:400;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb,var(--white) 70%,transparent)}
+#por-que .wy-ratio-n{margin:0;font-family:var(--font-d);font-size:clamp(34px,3.1vw,50px);font-weight:600;line-height:.98;letter-spacing:-.045em;text-wrap:balance}
+#por-que .wy-ratio-v{color:var(--accent)}
+#por-que .wy-ratio-t{margin:10px 0 0;font-family:var(--font-b);font-size:15px;font-weight:400;line-height:1.45;letter-spacing:0;color:color-mix(in srgb,var(--white) 72%,transparent);text-wrap:pretty}
+
+/* panel chip ("Segmentación con datos") */
+#por-que .wy-note{position:absolute;z-index:4;top:calc(var(--wy-pi) - 6px);right:var(--wy-pi);display:inline-flex;align-items:center;margin:0;padding:5px 11px;border-radius:999px;font-family:var(--font-m);font-size:10.5px;font-weight:400;line-height:14px;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:color-mix(in srgb,var(--white) 78%,transparent);background:color-mix(in srgb,var(--ink) 55%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 20%,transparent);pointer-events:none}
+
+/* cluster labels: tag pill + mono descriptor; fade in with the sort (reference: opacity clamp((p − .45)·3)) */
+#por-que .wy-lab{--x:.42;--y:.52;position:absolute;z-index:3;left:calc(var(--x)*100%);top:calc(var(--y)*100%);display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin-top:var(--wy-lo);translate:-50% 0;opacity:clamp(0,calc((var(--p) - .45)*3),1);pointer-events:none}
+#por-que .wy-lab--1{--x:.63;--y:.38;margin-top:0;translate:-50% calc(-100% - var(--wy-lo))}
+#por-que .wy-lab--2{--x:.84;--y:.58}
+#por-que .wy-tag{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--accent);color:var(--ink);font-family:var(--font-m);font-size:11px;font-weight:400;line-height:14px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
+#por-que .wy-cnt{font-family:var(--font-m);font-size:12px;font-weight:400;line-height:16px;letter-spacing:.02em;white-space:nowrap;color:color-mix(in srgb,var(--white) 82%,transparent)}
+
+/* static fallback (no JS / no canvas): dotted crowd + three green halos with the final labels */
+#por-que .wy-halo{--x:.42;--y:.52;--d:98px;position:absolute;z-index:1;left:calc(var(--x)*100%);top:calc(var(--y)*100%);display:none;width:var(--d);height:var(--d);translate:-50% -50%;border-radius:50%;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 55%,transparent);background:radial-gradient(circle,var(--accent) 0 2.2px,transparent 2.8px) 50% 50%/13px 13px,color-mix(in srgb,var(--accent) 6%,transparent)}
+#por-que .wy-halo--1{--x:.63;--y:.38;--d:104px}
+#por-que .wy-halo--2{--x:.84;--y:.58;--d:90px}
+#por-que .wy-panel:not(.is-live) .wy-halo{display:block}
+#por-que .wy-panel:not(.is-live) .wy-field{background:
+  radial-gradient(circle,color-mix(in srgb,var(--white) 30%,transparent) 0 1.3px,transparent 1.9px) 0 0/37px 29px,
+  radial-gradient(circle,color-mix(in srgb,var(--white) 22%,transparent) 0 1.2px,transparent 1.8px) 11px 17px/53px 41px,
+  radial-gradient(circle,color-mix(in srgb,var(--white) 16%,transparent) 0 1.1px,transparent 1.7px) 29px 7px/61px 47px}
+#por-que .wy-panel.is-live{--p:0}
+
+/* tablet (reference is-tab: 810–1099) ---------------------------------------------------------------------- */
+@media (max-width:1099px){
+  #por-que .wy-top{grid-template-columns:1fr;gap:28px;align-items:start}
+  #por-que .wy-panel{height:440px}
+  #por-que .wy-ratio{width:34%}
+  #por-que .wy-ratio-n{font-size:36px}
+  #por-que .wy-lab--0,#por-que .wy-halo--0{--x:.36;--y:.52}
+  #por-que .wy-lab--1,#por-que .wy-halo--1{--x:.6;--y:.4}
+  #por-que .wy-lab--2,#por-que .wy-halo--2{--x:.84;--y:.56}
+  #por-que .wy-halo{--d:84px}
+}
+
+/* phone (reference is-ph: ≤809): counter on top, a 360px field below, clusters stacked on the left with labels
+   to their right --------------------------------------------------------------------------------------------- */
+@media (max-width:809px){
+  #por-que{padding:72px 0}
+  #por-que .wy-top{gap:26px;margin-bottom:36px}
+  #por-que .wy-lead{gap:18px}
+  /* reference: 11.4vw (44.5px @390) → 4 lines ("Todos son / multitud. / Hallamos a tus / clientes.") */
+  #por-que .wy-title{font-size:clamp(38px,11.4vw,54px)}
+  #por-que .wy-sub{font-size:16px}
+  #por-que .wy-facts{gap:8px 14px}
+  #por-que .wy-panel{display:flex;flex-direction:column;height:auto}
+  #por-que .wy-field{position:relative;inset:auto;flex:none;height:360px}
+  #por-que .wy-ratio{position:relative;inset:auto;width:auto;gap:4px;padding:22px 20px 4px}
+  #por-que .wy-ratio::before{display:none}
+  #por-que .wy-ratio-k{margin:0 0 10px}
+  #por-que .wy-ratio-n{font-size:34px}
+  #por-que .wy-ratio-t{font-size:15px;margin-top:8px}
+  #por-que .wy-note{top:auto;right:16px;bottom:14px;font-size:10px}
+  #por-que .wy-lab{width:calc(78% - 64px);margin:0 0 0 54px;translate:0 -50%}
+  #por-que .wy-lab--0,#por-que .wy-halo--0{--x:.22;--y:.2}
+  #por-que .wy-lab--1,#por-que .wy-halo--1{--x:.22;--y:.5}
+  #por-que .wy-lab--2,#por-que .wy-halo--2{--x:.22;--y:.8}
+  #por-que .wy-cnt{white-space:normal;line-height:1.35}
+  #por-que .wy-halo{--d:68px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  #por-que .wy-lab{opacity:1}
+}

@@ -1,26 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-smooth>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Growco — El ecosistema de ejecución comercial AI-First. Media, Studios y Tech para escalar resultados de negocio con inteligencia artificial.">
-  <meta property="og:title" content="Growco — El Motor de Crecimiento AI-First">
-  <meta property="og:description" content="No somos una agencia creativa tradicional; somos un ecosistema de ejecución comercial que utiliza inteligencia artificial para escalar resultados.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/growco-3d-logo.png">
-  <meta property="og:url" content="https://growco.ai">
-  <meta property="og:locale" content="es_ES">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Growco — El Motor de Crecimiento AI-First">
-  <meta name="twitter:description" content="Ecosistema de ejecución comercial AI-First para escalar resultados de negocio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Growco | Agencia de marketing con IA en El Salvador</title>
+  <meta name="description" content="Agencia de growth marketing con IA en El Salvador: estrategia, pauta en Meta, Google, TikTok y DV360, video con IA y automatización para bajar tu CAC y hacer crecer tus RGU y tu ARPU.">
+  <link rel="canonical" href="https://growcoai.com/">
+  <meta name="theme-color" content="#0B1331">
+  <meta name="robots" content="index, follow, max-image-preview:large">
 
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Growco">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:url" content="https://growcoai.com/">
+  <meta property="og:title" content="Growco | Agencia de marketing con IA en El Salvador">
+  <meta property="og:description" content="Growth, pauta y video con IA de la mano de tu área financiera: bajamos tu CAC y hacemos crecer tus RGU y tu ARPU en Meta, Google, TikTok, DV360 y más.">
+  <meta property="og:image" content="https://growcoai.com/assets/img/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Multitud vista desde arriba con un anillo verde que destaca a las personas correctas, y el logo de Growco">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Growco | Agencia de marketing con IA en El Salvador">
+  <meta name="twitter:description" content="Growth, pauta y video con IA para bajar tu CAC y hacer crecer tus RGU y tu ARPU.">
+  <meta name="twitter:image" content="https://growcoai.com/assets/img/og-home.jpg">
+  <meta name="twitter:image:alt" content="Multitud vista desde arriba con un anillo verde que destaca a las personas correctas, y el logo de Growco">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+
+  <!-- JS flag first: hide-before-reveal styles only apply under html.js. Fail-safe: drop it if motion.js has not run
+       by DOMContentLoaded (deferred scripts run before it, so it failed) or after 4 s (slow network); motion.js
+       puts html.js back if it initialises later. -->
+  <script>(function(d){var h=d.documentElement,off=function(){if(!h.classList.contains('gc-ready'))h.classList.remove('js')};h.classList.add('js');setTimeout(off,4000);d.addEventListener('DOMContentLoaded',function(){setTimeout(off,0)})})(document)</script>
+
+  <!-- Fonts: Funnel Display / Funnel Sans / Geist Mono (one request) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&amp;family=Funnel+Sans:ital,wght@0,400..700;1,400..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap">
 
-  <link rel="stylesheet" href="styles.css">
+  <!-- LCP: hero crowd photo (same candidates as the <picture> in #inicio) -->
+  <link rel="preload" as="image" href="/assets/img/hero-crowd-1600.webp" type="image/webp" media="(max-width: 809px)" fetchpriority="high">
+  <link rel="preload" as="image" imagesrcset="/assets/img/hero-crowd-960.webp 960w, /assets/img/hero-crowd-1600.webp 1600w, /assets/img/hero-crowd-2400.webp 2400w" imagesizes="(max-aspect-ratio: 16/9) 177vh, 100vw" type="image/webp" media="(min-width: 810px)" fetchpriority="high">
 
-  <title>Growco — El Motor de Crecimiento AI-First</title>
+  <link rel="stylesheet" href="/assets/css/site.css?v=e3b0513d">
+  <link rel="stylesheet" href="/assets/css/home.css?v=aa820038">
+
+  <script src="/assets/js/motion.js?v=8047e1a0" defer></script>
+  <script src="/assets/js/site.js?v=1ac7d933" defer></script>
+  <script src="/assets/js/home.js?v=7c91d2a4" defer></script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
@@ -44,310 +74,1527 @@
     fbq('init', '1351342940194752');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1351342940194752&ev=PageView&noscript=1"
-  /></noscript>
   <!-- End Meta Pixel Code -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://growcoai.com/#organization",
+        "name": "Growco",
+        "url": "https://growcoai.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://growcoai.com/assets/img/growco-lockup-navy.png",
+          "width": 1200,
+          "height": 300
+        },
+        "image": "https://growcoai.com/assets/img/og-home.jpg",
+        "description": "Agencia de growth marketing con IA en El Salvador: estrategia de la mano del área financiera para bajar el CAC y hacer crecer RGU y ARPU, con pauta digital en Meta, Google, TikTok, DV360 y las plataformas que cada estrategia necesite, video con IA (AI Filmmaker), automatización y Stockly, sistema de inventario y ventas para PyMEs.",
+        "email": "agente@growcoai.com",
+        "address": { "@type": "PostalAddress", "addressCountry": "SV" },
+        "areaServed": [
+          { "@type": "Country", "name": "El Salvador", "identifier": "SV" },
+          { "@type": "Country", "name": "Guatemala", "identifier": "GT" },
+          { "@type": "Country", "name": "México", "identifier": "MX" },
+          { "@type": "Country", "name": "Estados Unidos", "identifier": "US" },
+          { "@type": "Country", "name": "Colombia", "identifier": "CO" },
+          { "@type": "Country", "name": "Costa Rica", "identifier": "CR" },
+          { "@type": "Place", "name": "Europa" },
+          { "@type": "Country", "name": "Reino Unido", "identifier": "GB" }
+        ],
+        "knowsAbout": ["Pauta digital", "Publicidad en Meta", "Google Ads", "TikTok Ads", "Display & Video 360", "Video con inteligencia artificial", "Automatización de marketing", "Chatbots"],
+        "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "email": "agente@growcoai.com", "availableLanguage": ["es"] }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://growcoai.com/#website",
+        "url": "https://growcoai.com/",
+        "name": "Growco",
+        "inLanguage": "es",
+        "publisher": { "@id": "https://growcoai.com/#organization" }
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body data-page="home" data-page-name="Inicio">
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1351342940194752&amp;ev=PageView&amp;noscript=1"></noscript>
+  <a class="skip" href="#main">Saltar al contenido</a>
 
-  <!-- ========== NAVIGATION ========== -->
-  <header>
-    <nav id="navbar" aria-label="Navegación principal">
-      <a href="/" class="nav-logo" aria-label="Growco — Ir al inicio">
-        <img src="assets/growco-logo.png" alt="Growco" class="nav-logo-img">
-      </a>
-
-      <button class="nav-hamburger" aria-label="Abrir menú de navegación" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="nav-pills" role="list">
-        <a href="#ecosistema" class="nav-pill active" aria-current="page">Ecosistema</a>
-        <a href="#como-funciona" class="nav-pill">Cómo Funciona</a>
-        <a href="/filmmaker" class="nav-pill">AI Filmmaker</a>
-        <a href="/SaaSystem" class="nav-pill">SaaSystem</a>
-        <a href="#contacto" class="nav-pill">Contacto</a>
-      </div>
+<!-- PARTIAL:header -->
+<header class="nav" id="site-header">
+  <div class="nav__bar">
+    <a class="nav__logo nav__in" href="/" aria-label="Growco, ir al inicio" style="--d:60ms"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+    <nav class="nav__nav nav__in" aria-label="Principal" style="--d:140ms">
+      <ul class="nav__lk">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#trabajo">Trabajo</a></li>
+        <li><a href="/filmmaker">AI Filmmaker</a></li>
+        <li><a href="/SaaSystem">Stockly</a></li>
+        <li><a href="/#faq">Preguntas</a></li>
+      </ul>
     </nav>
-  </header>
+    <div class="nav__act nav__in" style="--d:220ms">
+      <a class="btn btn--quiet nav__cta" href="/#contacto" data-track="cta_click" data-track-loc="nav"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Hablemos</span><span class="btn__l2" aria-hidden="true">Hablemos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menú"><span class="nav__bl" aria-hidden="true"><i></i><i></i></span><span class="nav__bt" aria-hidden="true">Menú</span></button>
+    </div>
+  </div>
+</header>
+<div class="drw" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="drw__rw" aria-hidden="true"><span class="drw__rings"><i></i><i></i><i></i><i></i><b></b><b></b></span></div>
+  <div class="drw__in">
+    <nav aria-label="Menú principal">
+      <ol class="drw__list" role="list">
+        <li style="--i:0"><a href="/#servicios"><span class="drw__n" aria-hidden="true">01</span><span class="drw__m"><span class="drw__t">Servicios</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:1"><a href="/#trabajo"><span class="drw__n" aria-hidden="true">02</span><span class="drw__m"><span class="drw__t">Trabajo</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:2"><a href="/filmmaker"><span class="drw__n" aria-hidden="true">03</span><span class="drw__m"><span class="drw__t">AI Filmmaker</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:3"><a href="/SaaSystem"><span class="drw__n" aria-hidden="true">04</span><span class="drw__m"><span class="drw__t">Stockly</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:4"><a href="/#faq"><span class="drw__n" aria-hidden="true">05</span><span class="drw__m"><span class="drw__t">Preguntas</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:5"><a href="/#contacto"><span class="drw__n" aria-hidden="true">06</span><span class="drw__m"><span class="drw__t">Contacto</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+      </ol>
+    </nav>
+    <div class="drw__ft">
+      <a class="btn btn--accent btn--block drw__cta" href="/#contacto" data-track="cta_click" data-track-loc="drawer"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <div class="drw__info">
+        <div><p class="drw__k">Escríbenos</p><a href="mailto:agente@growcoai.com">agente@growcoai.com</a><a href="#" data-whatsapp hidden>WhatsApp</a></div>
+        <div><p class="drw__k">Base</p><p>El Salvador</p></div>
+        <div class="js-only"><p class="drw__k">Hora local</p><p class="drw__time"><i class="dot dot--live" aria-hidden="true"></i><span data-clock="hm"></span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /PARTIAL:header -->
 
-  <main>
+  <main id="main" tabindex="-1">
+<!-- SECTION:inicio -->
+<!-- 01 · HERO (#inicio) — reference 08_rwh. Crowd photo: greyscale base + colour revealed by the cursor spotlight
+     and the "campaign" waves (canvas, /assets/js/sections/home-01-inicio.js). Touch: colour photo + waves (rims only).
+     Reduced motion / no JS: colour photo, still green lens ring, three static example chips. -->
+<section class="sec hero" id="inicio" data-theme="dark" aria-labelledby="hero-title" data-reveal-group>
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__media">
+      <picture>
+        <source media="(max-width: 809px)" srcset="/assets/img/hero-crowd-1600.webp" type="image/webp">
+        <img class="hero__img" src="/assets/img/hero-crowd-1600.webp" srcset="/assets/img/hero-crowd-960.webp 960w, /assets/img/hero-crowd-1600.webp 1600w, /assets/img/hero-crowd-2400.webp 2400w" sizes="(max-aspect-ratio: 16/9) 177vh, 100vw" width="1600" height="904" alt="" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <i class="hero__shade"></i>
+    <i class="hero__still"></i>
+    <div class="hero__fx">
+      <span class="hero__chip hero__chip--s hero__chip--s1"><b class="hero__chip-i"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></b>nuevo lead<i class="hero__chip-p"></i></span>
+      <span class="hero__chip hero__chip--s hero__chip--s2"><b class="hero__chip-i"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></b>anuncio aprobado<i class="hero__chip-p"></i></span>
+      <span class="hero__chip hero__chip--s hero__chip--s3"><b class="hero__chip-i"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></b>video listo para publicar<i class="hero__chip-p"></i></span>
+    </div>
+  </div>
 
-    <!-- ========== HERO SECTION (DARK) ========== -->
-    <section id="hero" aria-label="Sección principal">
-      <div class="hero-container">
-        <div class="hero-text">
-          <div class="badge badge-cyan mb-16">AI-First Growth Engine</div>
-          <div class="hero-title-wrapper">
-            <h1 class="hero-title">
-              EL MOTOR DE<br>
-              <span class="performance">CRECIMIENTO</span><br>
-              AI-FIRST
-            </h1>
-            <div class="hero-mobile-logo">
-              <img
-                src="assets/growco-3d-logo.png"
-                alt="Growco 3D Logo"
-                class="animate-float"
-              >
+  <p class="hero__hint" aria-hidden="true" data-reveal data-reveal-delay="450" data-reveal-y="8"><i class="hero__hint-r"></i><span class="hero__hint-m">Mueve el cursor · clic para lanzar una campaña</span><span class="hero__hint-t">Toca para lanzar una campaña</span></p>
+
+  <div class="hero__in">
+    <div class="hero__copy">
+      <p class="hero__ann" data-reveal data-reveal-delay="90" data-reveal-y="12"><i class="dot dot--port" aria-hidden="true"></i>Agencia de marketing con IA · El Salvador</p>
+      <h1 class="t-hero hd--boxed hero__h1" id="hero-title" data-words data-words-delay="260" data-words-step="70">Que te vea<br>la <mark>gente</mark> <mark>correcta.</mark></h1>
+      <p class="hero__sub" data-reveal data-reveal-delay="320" data-reveal-y="16">Growth, pauta y video con IA de la mano de tu área financiera: bajamos tu CAC y hacemos crecer tus RGU y tu ARPU en Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite.</p>
+      <div class="hero__btns" data-reveal data-reveal-delay="380" data-reveal-y="16">
+        <a class="btn btn--ink" href="/#contacto" data-track="cta_click" data-track-loc="hero"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        <a class="btn btn--ghost" href="/#trabajo" data-track="cta_click" data-track-loc="hero_trabajo"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver nuestro trabajo</span><span class="btn__l2" aria-hidden="true">Ver nuestro trabajo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__strip" data-reveal data-reveal-delay="450" data-reveal-y="14">
+    <div class="hero__count">
+      <!-- Cifra mensual confirmada por el cliente (deck GROWCO CREDENCIALES 2026: +$150K inversión gestionada). -->
+      <p class="hero__count-l"><i class="dot dot--live" aria-hidden="true"></i>Pauta gestionada</p>
+      <p class="hero__count-n"><span class="hero__odo" data-hero-odo>+$150K</span> al mes</p>
+    </div>
+    <ul class="hero__tags" aria-label="Servicios">
+      <li><a href="/#servicios"><span>01</span>Pauta digital</a></li>
+      <li><a href="/filmmaker"><span>02</span>AI Filmmaker</a></li>
+      <li><a href="/#automatizacion"><span>03</span>Automatización</a></li>
+      <li><a href="/SaaSystem"><span>04</span>Stockly</a></li>
+    </ul>
+    <p class="hero__proof">
+      <!-- ROI +150% en pauta: cifra propia de Growco (datos internos, revisión rev1). Las certificaciones son personales del fundador: no se atribuyen a la agencia. -->
+      <span class="hero__cert"><svg class="hero__ck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><b>ROI +150%</b> en pauta</span>
+      <span class="hero__dim">Campañas en cualquier mercado</span>
+    </p>
+  </div>
+</section>
+<!-- /SECTION:inicio -->
+<!-- SECTION:mercados -->
+<!-- 02 · MERCADOS (#mercados) — reference 11_rwcl (clients radar, bone ground).
+     Radar of markets where Growco runs campaigns TODAY (examples, not a closed list — rev1: the client does not want a
+     fixed count; headline "Un solo equipo, todos tus mercados."), placed by distance from the base (rings, centre outward:
+     El Salvador · Centroamérica · América · Global): El Salvador = centre (BASE); Guatemala, Costa Rica on ring 2;
+     México, Estados Unidos, Colombia on ring 3; Europa, Reino Unido on ring 4. Every market tag reads "Activo".
+     Ring = distance from the base; the angles are only spread for legibility (not bearings). No metrics anywhere.
+     Motion (home-02-mercados.js): the sweep scrubs 540° across the section pass + turns 9°/s on its own; when it
+     crosses a market, the market lights for 1.5 s, pops its blue tag and updates "Último ping".
+     No JS / reduced motion: parked at 40°, the three markets nearest BEHIND the edge (inside the trailing wedge) lit, as
+     in the reference: Reino Unido, Estados Unidos, México (classes below are that parked state). -->
+<section class="sec mk-sec is-park" id="mercados" data-theme="light" aria-labelledby="mk-title" data-reveal-group>
+  <div class="wrap mk-in">
+    <div class="mk-copy">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(00) Mercados</p>
+      <h2 class="hd mk-hd" id="mk-title" data-words>Un solo equipo,<br><mark>todos</mark> <mark>tus</mark> <mark>mercados.</mark></h2>
+      <p class="mk-line" data-reveal data-reveal-delay="380" data-reveal-y="14">Operamos desde El Salvador con una infraestructura pensada para dar servicio a marcas en cualquier país: un solo equipo para la estrategia, la pauta, el contenido y los reportes de todos tus mercados, en cualquier idioma.</p>
+      <div class="mk-meta" data-reveal data-reveal-delay="480" data-reveal-y="12">
+        <p class="mk-rate"><svg class="mk-globe" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5s1.1-6.1 3.5-8.5z"/></svg>Cualquier país · cualquier idioma</p>
+        <p class="mk-read" aria-live="off"><i class="mk-live" aria-hidden="true"></i><span class="mk-read-l">Último ping</span><span class="mk-read-v" data-mk-read>Reino Unido · Activo</span></p>
+      </div>
+    </div>
+
+    <div class="mk-stage" data-reveal data-reveal-delay="200" data-reveal-y="20">
+      <div class="mk-scope" role="img" aria-label="Radar de mercados. Base: El Salvador. Campañas activas hoy en Guatemala, Costa Rica, México, Estados Unidos, Colombia, Europa y Reino Unido, entre otros.">
+        <div class="mk-grid" aria-hidden="true"></div>
+        <svg class="mk-svg" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <circle class="mk-ring" cx="100" cy="100" r="23"/><circle class="mk-ring" cx="100" cy="100" r="46"/><circle class="mk-ring" cx="100" cy="100" r="69"/><circle class="mk-ring mk-ring--o" cx="100" cy="100" r="92"/>
+          <path class="mk-cross" d="M100 6V194M6 100H194"/>
+          <path class="mk-cross mk-diag" d="M34.9 34.9L165.1 165.1M165.1 34.9L34.9 165.1"/>
+          <g><line class="mk-tick mk-tick--l" x1="100" y1="8" x2="100" y2="3"/><line class="mk-tick" x1="108.02" y1="8.35" x2="108.24" y2="5.86"/><line class="mk-tick" x1="115.98" y1="9.4" x2="116.41" y2="6.94"/><line class="mk-tick" x1="123.81" y1="11.13" x2="124.46" y2="8.72"/><line class="mk-tick" x1="131.47" y1="13.55" x2="132.32" y2="11.2"/><line class="mk-tick" x1="138.88" y1="16.62" x2="139.94" y2="14.35"/><line class="mk-tick mk-tick--l" x1="146" y1="20.33" x2="148.5" y2="16"/><line class="mk-tick" x1="152.77" y1="24.64" x2="154.2" y2="22.59"/><line class="mk-tick" x1="159.14" y1="29.52" x2="160.74" y2="27.61"/><line class="mk-tick" x1="165.05" y1="34.95" x2="166.82" y2="33.18"/><line class="mk-tick" x1="170.48" y1="40.86" x2="172.39" y2="39.26"/><line class="mk-tick" x1="175.36" y1="47.23" x2="177.41" y2="45.8"/><line class="mk-tick mk-tick--l" x1="179.67" y1="54" x2="184" y2="51.5"/><line class="mk-tick" x1="183.38" y1="61.12" x2="185.65" y2="60.06"/><line class="mk-tick" x1="186.45" y1="68.53" x2="188.8" y2="67.68"/><line class="mk-tick" x1="188.87" y1="76.19" x2="191.28" y2="75.54"/><line class="mk-tick" x1="190.6" y1="84.02" x2="193.06" y2="83.59"/><line class="mk-tick" x1="191.65" y1="91.98" x2="194.14" y2="91.76"/><line class="mk-tick mk-tick--l" x1="192" y1="100" x2="197" y2="100"/><line class="mk-tick" x1="191.65" y1="108.02" x2="194.14" y2="108.24"/><line class="mk-tick" x1="190.6" y1="115.98" x2="193.06" y2="116.41"/><line class="mk-tick" x1="188.87" y1="123.81" x2="191.28" y2="124.46"/><line class="mk-tick" x1="186.45" y1="131.47" x2="188.8" y2="132.32"/><line class="mk-tick" x1="183.38" y1="138.88" x2="185.65" y2="139.94"/><line class="mk-tick mk-tick--l" x1="179.67" y1="146" x2="184" y2="148.5"/><line class="mk-tick" x1="175.36" y1="152.77" x2="177.41" y2="154.2"/><line class="mk-tick" x1="170.48" y1="159.14" x2="172.39" y2="160.74"/><line class="mk-tick" x1="165.05" y1="165.05" x2="166.82" y2="166.82"/><line class="mk-tick" x1="159.14" y1="170.48" x2="160.74" y2="172.39"/><line class="mk-tick" x1="152.77" y1="175.36" x2="154.2" y2="177.41"/><line class="mk-tick mk-tick--l" x1="146" y1="179.67" x2="148.5" y2="184"/><line class="mk-tick" x1="138.88" y1="183.38" x2="139.94" y2="185.65"/><line class="mk-tick" x1="131.47" y1="186.45" x2="132.32" y2="188.8"/><line class="mk-tick" x1="123.81" y1="188.87" x2="124.46" y2="191.28"/><line class="mk-tick" x1="115.98" y1="190.6" x2="116.41" y2="193.06"/><line class="mk-tick" x1="108.02" y1="191.65" x2="108.24" y2="194.14"/><line class="mk-tick mk-tick--l" x1="100" y1="192" x2="100" y2="197"/><line class="mk-tick" x1="91.98" y1="191.65" x2="91.76" y2="194.14"/><line class="mk-tick" x1="84.02" y1="190.6" x2="83.59" y2="193.06"/><line class="mk-tick" x1="76.19" y1="188.87" x2="75.54" y2="191.28"/><line class="mk-tick" x1="68.53" y1="186.45" x2="67.68" y2="188.8"/><line class="mk-tick" x1="61.12" y1="183.38" x2="60.06" y2="185.65"/><line class="mk-tick mk-tick--l" x1="54" y1="179.67" x2="51.5" y2="184"/><line class="mk-tick" x1="47.23" y1="175.36" x2="45.8" y2="177.41"/><line class="mk-tick" x1="40.86" y1="170.48" x2="39.26" y2="172.39"/><line class="mk-tick" x1="34.95" y1="165.05" x2="33.18" y2="166.82"/><line class="mk-tick" x1="29.52" y1="159.14" x2="27.61" y2="160.74"/><line class="mk-tick" x1="24.64" y1="152.77" x2="22.59" y2="154.2"/><line class="mk-tick mk-tick--l" x1="20.33" y1="146" x2="16" y2="148.5"/><line class="mk-tick" x1="16.62" y1="138.88" x2="14.35" y2="139.94"/><line class="mk-tick" x1="13.55" y1="131.47" x2="11.2" y2="132.32"/><line class="mk-tick" x1="11.13" y1="123.81" x2="8.72" y2="124.46"/><line class="mk-tick" x1="9.4" y1="115.98" x2="6.94" y2="116.41"/><line class="mk-tick" x1="8.35" y1="108.02" x2="5.86" y2="108.24"/><line class="mk-tick mk-tick--l" x1="8" y1="100" x2="3" y2="100"/><line class="mk-tick" x1="8.35" y1="91.98" x2="5.86" y2="91.76"/><line class="mk-tick" x1="9.4" y1="84.02" x2="6.94" y2="83.59"/><line class="mk-tick" x1="11.13" y1="76.19" x2="8.72" y2="75.54"/><line class="mk-tick" x1="13.55" y1="68.53" x2="11.2" y2="67.68"/><line class="mk-tick" x1="16.62" y1="61.12" x2="14.35" y2="60.06"/><line class="mk-tick mk-tick--l" x1="20.33" y1="54" x2="16" y2="51.5"/><line class="mk-tick" x1="24.64" y1="47.23" x2="22.59" y2="45.8"/><line class="mk-tick" x1="29.52" y1="40.86" x2="27.61" y2="39.26"/><line class="mk-tick" x1="34.95" y1="34.95" x2="33.18" y2="33.18"/><line class="mk-tick" x1="40.86" y1="29.52" x2="39.26" y2="27.61"/><line class="mk-tick" x1="47.23" y1="24.64" x2="45.8" y2="22.59"/><line class="mk-tick mk-tick--l" x1="54" y1="20.33" x2="51.5" y2="16"/><line class="mk-tick" x1="61.12" y1="16.62" x2="60.06" y2="14.35"/><line class="mk-tick" x1="68.53" y1="13.55" x2="67.68" y2="11.2"/><line class="mk-tick" x1="76.19" y1="11.13" x2="75.54" y2="8.72"/><line class="mk-tick" x1="84.02" y1="9.4" x2="83.59" y2="6.94"/><line class="mk-tick" x1="91.98" y1="8.35" x2="91.76" y2="5.86"/></g>
+        </svg>
+        <span class="mk-deg mk-deg--0" aria-hidden="true">000°</span>
+        <span class="mk-deg mk-deg--1" aria-hidden="true">090°</span>
+        <span class="mk-deg mk-deg--2" aria-hidden="true">180°</span>
+        <span class="mk-deg mk-deg--3" aria-hidden="true">270°</span>
+        <span class="mk-rl" style="left:57.39%;top:41.19%" aria-hidden="true">El Salvador</span>
+        <span class="mk-rl" style="left:64.78%;top:32.38%" aria-hidden="true">Centroamérica</span>
+        <span class="mk-rl" style="left:72.17%;top:23.57%" aria-hidden="true">América</span>
+        <span class="mk-rl" style="left:79.56%;top:14.76%" aria-hidden="true">Global</span>
+        <div class="mk-sweep" style="transform:rotate(40deg)" aria-hidden="true"><i class="mk-edge"></i></div>
+        <span class="mk-core" aria-hidden="true"><i></i></span>
+        <div class="mk-home" aria-hidden="true"><span class="mk-nm">El Salvador</span><b class="mk-bdg mk-bdg--home">Base</b></div>
+        <div class="mk-blip mk-blip--round mk-blip--l is-hit" data-a="27" style="left:69.42%;top:11.88%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Reino Unido</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--grot mk-blip--l" data-a="84" style="left:92.55%;top:45.53%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Europa</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--mono mk-blip--l" data-a="140" style="left:71.88%;top:76.08%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Colombia</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--round mk-blip--l" data-a="165" style="left:55.95%;top:72.22%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Costa Rica</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--grot" data-a="235" style="left:31.16%;top:63.19%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Guatemala</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--round is-hit" data-a="295" style="left:19.99%;top:36%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">México</span><b class="mk-bdg">Activo</b></div>
+        <div class="mk-blip mk-blip--cond is-hit" data-a="330" style="left:32.06%;top:18.93%" aria-hidden="true"><i class="mk-dot"></i><span class="mk-nm">Estados Unidos</span><b class="mk-bdg">Activo</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:mercados -->
+<!-- SECTION:por-que -->
+<!-- 03 · POR QUÉ (#por-que) — reference 14_rwin (bone). Top grid 7.4fr / 4.6fr (eyebrow + H2 | sub, ghost button,
+     facts row), then the navy crowd panel: a canvas of 1,200 dots (900 tablet / 600 phone) that sorts itself while the
+     panel scrolls through the viewport — the "buyer" dots travel into three clusters (Búsqueda, Feeds, Audiencias)
+     while a status line follows the sort (/assets/js/sections/home-03-por-que.js).
+     rev2 (client, 2026-10-12): headline + sub sum up audience planning and strategy (growth focus: CAC, RGU, ARPU).
+     rev1 (client): no counts and no "1 de N" ratio inside the panel — it read as "few clients". The panel conveys
+     PRECISION ("Le hablamos solo a quien sí compra") with qualitative cluster labels; no figures, no example label.
+     Without JS / if the canvas cannot start: static dotted field, three green halos and the final labels.
+     Reduced motion: final frame, no idle jitter. -->
+<section class="sec wy" id="por-que" data-theme="light" aria-labelledby="wy-title" data-reveal-group>
+  <div class="wrap">
+    <div class="wy-top">
+      <div class="wy-lead">
+        <p class="eb" data-reveal><i aria-hidden="true"></i>(01) Por qué Growco</p>
+        <h2 class="hd wy-title" id="wy-title" data-words>Estrategia antes que pauta.<br><mark>Cada</mark> <mark>dólar</mark> <mark>con</mark> <mark>destino.</mark></h2>
+      </div>
+      <div class="wy-side">
+        <p class="wy-sub" data-reveal data-reveal-delay="420" data-reveal-y="14">Antes de invertir un dólar hacemos audience planning: definimos a quién le vendes, dónde está y cuánto vale para tu negocio. Así cada campaña se mide por lo que deja en CAC, RGU y ARPU, no por cuántos la vieron.</p>
+        <div class="wy-act" data-reveal data-reveal-delay="520" data-reveal-y="14">
+          <a class="btn btn--ghost" href="/#proceso" data-track="cta_click" data-track-loc="por_que"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Conoce cómo trabajamos</span><span class="btn__l2" aria-hidden="true">Conoce cómo trabajamos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        </div>
+        <ul class="wy-facts" role="list" data-reveal data-reveal-delay="600" data-reveal-y="10">
+          <li>Audience planning</li>
+          <li>Métricas de negocio</li>
+          <li>Cualquier mercado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wy-panel" data-reveal data-reveal-delay="200" data-reveal-y="30">
+      <p class="wy-note">Audience planning</p>
+      <div class="wy-ratio">
+        <p class="wy-ratio-k"><i class="dot dot--live" aria-hidden="true"></i><span data-wy-status>Compradores identificados</span></p>
+        <p class="wy-ratio-n">Le hablamos solo a <span class="wy-ratio-v">quien sí compra.</span></p>
+        <p class="wy-ratio-t">Tu inversión llega a la gente con intención real, no a toda la multitud.</p>
+      </div>
+      <div class="wy-field">
+        <canvas class="wy-cv" role="img" aria-label="Una multitud se ordena sola: las personas con intención de compra se separan y se agrupan en Búsqueda, Feeds y Audiencias."></canvas>
+        <i class="wy-halo wy-halo--0" aria-hidden="true"></i>
+        <i class="wy-halo wy-halo--1" aria-hidden="true"></i>
+        <i class="wy-halo wy-halo--2" aria-hidden="true"></i>
+        <div class="wy-lab wy-lab--0"><b class="wy-tag">Búsqueda</b><span class="wy-cnt">Intención de compra</span></div>
+        <div class="wy-lab wy-lab--1"><b class="wy-tag">Feeds</b><span class="wy-cnt">Interés activo</span></div>
+        <div class="wy-lab wy-lab--2"><b class="wy-tag">Audiencias</b><span class="wy-cnt">Perfiles como tus clientes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:por-que -->
+<!-- SECTION:servicios -->
+<!-- 04 · SERVICIOS (#servicios) — reference 17_rwsv (bone). Horizontal accordion (≥1240px) that switches panel as it
+     travels through the viewport (rail "0N / 04"), hover-intent 140 ms, click / arrows / Home / End; vertical accordion
+     with a fixed open slot below 1240px (still scroll-switches). Panel grounds = reference fog · ink · cloud · lime
+     (DECISIONS §1). Mini-UIs run only while their panel is open (/assets/js/sections/home-04-servicios.js).
+     No JS (or until the section script adds .is-ready): all four panels stacked open. Reduced motion: no scroll switching, mini-UIs in their final frame. -->
+<section class="sec sv" id="servicios" data-theme="light" aria-labelledby="sv-title" data-reveal-group="80">
+  <div class="wrap">
+    <header class="sec-head sv__head">
+      <div class="sec-head__lead">
+        <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(02) Servicios</p>
+        <h2 class="hd sv__title" id="sv-title" data-words>Cuatro frentes.<br><mark>Un</mark> <mark>solo</mark> <mark>plan.</mark></h2>
+      </div>
+      <div class="sec-head__side sv__side" data-reveal data-reveal-delay="300" data-reveal-y="14">
+        <p class="lead">Pauta, video con IA, automatización e inventario con un mismo equipo, medidos con las métricas de tu negocio.</p>
+        <a class="btn btn--ghost" href="/#contacto" data-track="cta_click" data-track-loc="servicios_head"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </header>
+
+    <div class="sv__acc" data-reveal data-reveal-delay="380" data-reveal-y="28">
+
+      <!-- 01 · Pauta digital (fog) — mock: ad preview (Meta ↔ Google toggle; chip "+ TikTok · DV360" = more platforms) + segmentation chips + A/B test. rev1: no sample-data chip, no metrics. -->
+      <div class="sv__p sv__p--fog is-open" data-sv="ads">
+        <h3 class="sv__hd">
+          <button class="sv__sp" type="button" id="sv-b1" aria-expanded="true" aria-controls="sv-c1">
+            <span class="sv__num">01</span>
+            <span class="sv__vt">Pauta digital</span>
+            <span class="sv__plus" aria-hidden="true"><i></i><i></i></span>
+          </button>
+        </h3>
+        <div class="sv__pc" id="sv-c1" role="region" aria-labelledby="sv-b1">
+          <div class="sv__pin">
+            <div class="sv__stage">
+              <div class="sv-ui sv-ads" aria-hidden="true">
+                <div class="sv-ads__top">
+                  <span class="sv-plat"><b class="is-on">Meta</b><b>Google</b><i></i></span>
+                  <span class="sv-ex">+ TikTok · DV360</span>
+                </div>
+                <div class="sv-ads__pv">
+                  <div class="sv-ad sv-ad--meta is-on">
+                    <span class="sv-ad__spon"><i class="sv-av"></i>Tu marca · Patrocinado</span>
+                    <b class="sv-ad__hl">Nueva colección, ya disponible en línea</b>
+                    <span class="sv-ad__img"><i></i></span>
+                    <span class="sv-ad__btn">Comprar ahora</span>
+                  </div>
+                  <div class="sv-ad sv-ad--g">
+                    <span class="sv-ad__spon"><b>Patrocinado</b> tumarca.com</span>
+                    <b class="sv-ad__hl">Tu marca | Nueva colección en línea</b>
+                    <em></em><em class="sv-ad__l2"></em>
+                    <span class="sv-ad__links"><i>Catálogo</i><i>Tiendas</i><i>Contacto</i></span>
+                  </div>
+                </div>
+                <div class="sv-card sv-seg">
+                  <p class="sv-k">Segmentación</p>
+                  <ul class="sv-seg__c">
+                    <li class="sv-a">25–44 años</li>
+                    <li class="sv-a">San Salvador + 20 km</li>
+                    <li class="sv-a">Intereses: moda</li>
+                    <li class="sv-a">Visitó tu web</li>
+                    <li class="sv-a">Audiencia similar</li>
+                    <li class="sv-a">Guatemala</li>
+                  </ul>
+                </div>
+                <div class="sv-card sv-ab">
+                  <p class="sv-k">Prueba A/B <span>En curso</span></p>
+                  <div class="sv-ab__v">
+                    <span class="sv-ab__c"><i class="sv-ab__t sv-ab__t--a"></i><b>Variación A</b><em class="sv-a"></em></span>
+                    <span class="sv-ab__c"><i class="sv-ab__t sv-ab__t--b"></i><b>Variación B</b><em class="sv-a"></em></span>
+                  </div>
+                </div>
+                <p class="sv-toast sv-a"><i></i>Anuncio aprobado</p>
+              </div>
+            </div>
+            <div class="sv__tx">
+              <p class="sv__tt" aria-hidden="true">Pauta digital</p>
+              <p class="sv__body">Campañas en Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite: llegan a quien sí compra, se prueban cada semana y se miden en CAC, clientes nuevos e ingresos, no solo en clics.</p>
+              <div class="sv__inc">
+                <p class="sv__il">Qué incluye</p>
+                <ul role="list">
+                  <li>Estrategia y campañas en Meta, Google, TikTok y DV360</li>
+                  <li>Segmentación y audiencias personalizadas</li>
+                  <li>Creatividades y pruebas A/B</li>
+                  <li>Píxel, conversiones y seguimiento de leads</li>
+                  <li>Reporte mensual de CAC, RGU y ARPU</li>
+                </ul>
+              </div>
+              <div class="sv__foot">
+                <span class="sv__stat"><i aria-hidden="true"></i>ROI +150%</span>
+                <a class="btn btn--solid" href="/#contacto" data-service="Pauta digital" data-track="cta_click" data-track-loc="servicios_pauta" aria-label="Solicitar propuesta de Pauta digital"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicitar propuesta</span><span class="btn__l2" aria-hidden="true">Solicitar propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+              </div>
             </div>
           </div>
-          <p class="hero-description">
-            No somos una agencia creativa tradicional; somos un ecosistema de ejecución comercial que utiliza inteligencia artificial para escalar resultados. Transformamos cuellos de botella operativos en ventajas competitivas medibles.
-          </p>
-          <div class="hero-actions">
-            <a href="#ecosistema" class="btn-accent" aria-label="Conocer más sobre nuestro ecosistema">
-              Conocer Más
-            </a>
-          </div>
-        </div>
-        <div class="hero-graphic">
-          <img
-            src="assets/growco-3d-logo.png"
-            alt="Growco 3D Logo"
-            class="animate-float hero-logo-3d"
-          >
-          <div class="floating-badge badge-1 animate-float-slow">🚀 ROI Predecible</div>
-          <div class="floating-badge badge-2 animate-float-mid">🤖 AI-First</div>
-          <div class="floating-badge badge-3 animate-float-fast">📈 Escalable</div>
         </div>
       </div>
-    </section>
 
-    <!-- ========== ECOSISTEMA — 3 PILARES (LIGHT CLAY BACKGROUND WITH ASYMMETRIC BENTO GRID) ========== -->
-    <section id="ecosistema" class="corp-section">
-      <div class="corp-section-inner">
-        <div class="section-header fade-up">
-          <div class="badge badge-cyan mb-16">Nuestro Ecosistema</div>
-          <h2 class="section-title">
-            TRES PILARES.<br>
-            <span class="highlight">UN MOTOR.</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 640px; margin-top: 16px;">
-            Cada pilar opera de forma independiente, pero juntos conforman un sistema integrado que cubre todo el ciclo de crecimiento comercial.
-          </p>
-        </div>
-
-        <div class="pillar-grid fade-up">
-          <!-- PILLAR 1: GROWCO MEDIA (Featured, dark bento card, highly distinguished) -->
-          <div class="pillar-card pillar-card--featured" style="display: flex; flex-direction: column;">
-            <div class="pillar-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="48" height="48" rx="12" fill="rgba(0,209,255,0.08)"/>
-                <path d="M14 18L24 12L34 18V30L24 36L14 30V18Z" stroke="#00D1FF" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M24 12V24" stroke="#00D1FF" stroke-width="2"/>
-                <path d="M24 24L34 18" stroke="#00D1FF" stroke-width="2"/>
-                <path d="M24 24L14 18" stroke="#00D1FF" stroke-width="2"/>
-              </svg>
+      <!-- 02 · AI Filmmaker (ink / dark) — mock: phone playing a real Growco piece (Academia Europea UGC reel ae-3, brand authorised; label "UGC · Educación"). rev1: the early UGC pieces with a pixelated product are never used. -->
+      <div class="sv__p sv__p--ink ctx-dark" data-sv="film">
+        <h3 class="sv__hd">
+          <button class="sv__sp" type="button" id="sv-b2" aria-expanded="false" aria-controls="sv-c2">
+            <span class="sv__num">02</span>
+            <span class="sv__vt">AI Filmmaker</span>
+            <span class="sv__plus" aria-hidden="true"><i></i><i></i></span>
+          </button>
+        </h3>
+        <div class="sv__pc" id="sv-c2" role="region" aria-labelledby="sv-b2">
+          <div class="sv__pin">
+            <div class="sv__stage">
+              <div class="sv-ui sv-film">
+                <div class="sv-phone">
+                  <div class="sv-phone__h" aria-hidden="true"><i class="sv-av"></i><span>@tumarca</span><b>···</b></div>
+                  <div class="sv-phone__v">
+                    <img class="sv-phone__poster" src="/assets/videos/web/ae-3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async">
+                    <video class="sv-phone__vid" muted playsinline loop preload="none" width="540" height="960" aria-hidden="true" tabindex="-1" disablepictureinpicture>
+                      <source src="/assets/videos/web/ae-3-preview.mp4" type="video/mp4">
+                    </video>
+                    <button class="sv-phone__play" type="button" data-play="ae-3" data-play-title="UGC · Educación" data-track-loc="servicios_filmmaker" aria-label="Ver video: UGC · Educación"><span><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></span></button>
+                    <span class="sv-float" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <p class="sv-toast sv-toast--s sv-a" aria-hidden="true"><i></i>Listo para publicar</p>
+                    <span class="sv-phone__fmt" aria-hidden="true">9:16</span>
+                  </div>
+                  <div class="sv-phone__pb" aria-hidden="true">
+                    <span class="sv-hrt sv-a"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.5S3.5 15.4 3.5 9.4A4.4 4.4 0 0 1 12 7.3a4.4 4.4 0 0 1 8.5 2.1c0 6-8.5 11.1-8.5 11.1z"/></svg><i></i></span>
+                    <svg class="sv-ic" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.3 6.5L4 20l1.2-3.6A8 8 0 0 1 4 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    <svg class="sv-ic" viewBox="0 0 24 24"><path d="M21 4 10 14M21 4l-7 17-4-7-7-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                  </div>
+                  <p class="sv-phone__t" aria-hidden="true">UGC · Educación</p>
+                  <p class="sv-phone__cap" aria-hidden="true"><b>tumarca</b> Tu próximo idioma empieza hoy · hecho con IA</p>
+                </div>
+              </div>
             </div>
-            <h3 class="pillar-title">Growco Media</h3>
-            <p class="pillar-subtitle">Crecimiento y Performance de Alta Precisión</p>
-            <p style="font-size: 14px; line-height: 1.6; color: rgba(255,255,255,0.7); margin-bottom: 20px;">
-              <strong>Orientado a:</strong> Empresas que exigen resultados financieros claros, no métricas de vanidad.
-            </p>
-            <p class="pillar-description">
-              Compra de medios inteligente basada en datos, optimización de Funnels de Conversión y análisis profundo de CAC (Costo de Adquisición de Clientes) y LTV (Lifetime Value). Diseñamos estrategias donde cada dólar invertido en pauta tiene una trazabilidad absoluta hacia el retorno de inversión (ROI) y el incremento de ingresos netos.
-            </p>
-            <div class="pillar-promise">
-              <span class="pillar-promise-label">Promesa</span>
-              <p>Convertir su inversión publicitaria en un sistema de generación de ingresos rentable y constante.</p>
+            <div class="sv__tx">
+              <p class="sv__tt" aria-hidden="true">AI Filmmaker</p>
+              <p class="sv__body">Videos con IA para anuncios y redes: UGC con avatares, comerciales y product shots que bajan el costo de cada cliente nuevo.</p>
+              <div class="sv__inc">
+                <p class="sv__il">Qué incluye</p>
+                <ul role="list">
+                  <li>Guion y concepto</li>
+                  <li>UGC con avatares de IA</li>
+                  <li>Comerciales y product shots</li>
+                  <li>Formatos 9:16, 1:1 y 16:9</li>
+                  <li>Variaciones para pruebas A/B</li>
+                </ul>
+              </div>
+              <div class="sv__foot">
+                <span class="sv__stat"><i aria-hidden="true"></i>Sin set ni rodaje</span>
+                <a class="btn btn--solid" href="/filmmaker" data-track="cta_click" data-track-loc="servicios_filmmaker"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver AI Filmmaker</span><span class="btn__l2" aria-hidden="true">Ver AI Filmmaker</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+              </div>
             </div>
-          </div>
-
-          <!-- PILLAR 2: GROWCO STUDIOS (Light card) -->
-          <div class="pillar-card" style="display: flex; flex-direction: column;">
-            <div class="pillar-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="48" height="48" rx="12" fill="rgba(0,51,255,0.08)"/>
-                <rect x="12" y="14" width="24" height="20" rx="3" stroke="#0033FF" stroke-width="2"/>
-                <path d="M20 20L28 24L20 28V20Z" fill="#0033FF"/>
-              </svg>
-            </div>
-            <h3 class="pillar-title" style="color: var(--text-primary);">Growco Studios</h3>
-            <p class="pillar-subtitle" style="color: var(--blue-deep);">Producción Creativa AI-Native</p>
-            <p class="pillar-description" style="color: var(--text-secondary);">
-              Producción de contenido de video UGC optimizada con avatares de IA hiperrealistas, guiones estructurados para conversión y entrega rápida de activos de pauta que detienen el scroll.
-            </p>
-            <a href="/filmmaker" class="pillar-link" aria-label="Explorar Growco AI Filmmaker">
-              Explorar AI Filmmaker
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-
-          <!-- PILLAR 3: GROWCO TECH / LABS (Light card) -->
-          <div class="pillar-card" style="display: flex; flex-direction: column;">
-            <div class="pillar-icon">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="48" height="48" rx="12" fill="rgba(204,255,0,0.08)"/>
-                <path d="M16 20L24 16L32 20V28L24 32L16 28V20Z" stroke="#CCFF00" stroke-width="2" stroke-linejoin="round"/>
-                <circle cx="24" cy="24" r="3" stroke="#CCFF00" stroke-width="2"/>
-              </svg>
-            </div>
-            <h3 class="pillar-title" style="color: var(--text-primary);">Growco Tech / Labs</h3>
-            <p class="pillar-subtitle" style="color: var(--blue-deep);">Infraestructura Tecnológica Personalizada</p>
-            <p class="pillar-description" style="color: var(--text-secondary);">
-              Automatizaciones avanzadas con n8n/Make, dashboards de BI en tiempo real y desarrollo de herramientas SaaS adaptadas a la operación de tu equipo.
-            </p>
-            <a href="/SaaSystem" class="pillar-link" aria-label="Explorar Growco SaaSystem">
-              Explorar SaaSystem
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ========== CÓMO FUNCIONA — TIMELINE (LIGHT) ========== -->
-    <section id="como-funciona" class="corp-section corp-section--subtle">
-      <div class="corp-section-inner">
-        <div class="section-header fade-up">
-          <div class="badge badge-cyan mb-16">Manual de CEO</div>
-          <h2 class="section-title" style="color: var(--text-primary);">
-            CICLO DE <span class="highlight">VALOR</span>
-          </h2>
-          <p class="section-subtitle" style="max-width: 640px; margin-top: 16px; color: var(--text-secondary);">
-            La estrategia de cada Pilar sigue un ciclo claro de 3 fases para institucionalizar el crecimiento.
-          </p>
-        </div>
-
-        <div class="timeline fade-up">
-          <!-- STEP 1 -->
-          <div class="timeline-step">
-            <div class="timeline-number">01</div>
-            <h3 class="timeline-title">Detectar el Dolor</h3>
-            <p class="timeline-desc">
-              Identificamos y conectamos con el problema real de tu operación comercial. Abordamos cuellos de botella de adquisición, contenido o tecnología fragmentada.
-            </p>
-          </div>
-
-          <div class="timeline-connector"></div>
-
-          <!-- STEP 2 -->
-          <div class="timeline-step">
-            <div class="timeline-number">02</div>
-            <h3 class="timeline-title">Demostrar Capacidad</h3>
-            <p class="timeline-desc">
-              Lanzamos un piloto rápido en un plazo de 2 a 4 semanas. Validamos la efectividad estratégica con datos tangibles antes de escalar el volumen.
-            </p>
-          </div>
-
-          <div class="timeline-connector"></div>
-
-          <!-- STEP 3 -->
-          <div class="timeline-step">
-            <div class="timeline-number">03</div>
-            <h3 class="timeline-title">Institucionalizar</h3>
-            <p class="timeline-desc">
-              Integramos y escalamos la solución validada directamente en tu operación. El sistema pasa a ser una infraestructura propia y permanente de tu negocio.
-            </p>
+      <!-- 03 · Automatización (cloud) — mock: WhatsApp-style conversation handled by a bot (product illustration, no metrics) -->
+      <div class="sv__p sv__p--cloud" data-sv="chat">
+        <h3 class="sv__hd">
+          <button class="sv__sp" type="button" id="sv-b3" aria-expanded="false" aria-controls="sv-c3">
+            <span class="sv__num">03</span>
+            <span class="sv__vt">Automatización</span>
+            <span class="sv__plus" aria-hidden="true"><i></i><i></i></span>
+          </button>
+        </h3>
+        <div class="sv__pc" id="sv-c3" role="region" aria-labelledby="sv-b3">
+          <div class="sv__pin">
+            <div class="sv__stage">
+              <div class="sv-ui sv-chat" aria-hidden="true">
+                <div class="sv-chat__w">
+                  <div class="sv-chat__h">
+                    <i class="sv-chat__av"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></i>
+                    <span class="sv-chat__n"><b>Tu negocio</b><small><i class="dot"></i>Asistente automático</small></span>
+                    <span class="sv-ex">24/7</span>
+                  </div>
+                  <div class="sv-chat__log">
+                    <p class="sv-day">Hoy</p>
+                    <p class="sv-msg sv-msg--in sv-a">Hola, ¿tienen espacio mañana?</p>
+                    <p class="sv-msg sv-msg--out sv-a">¡Hola! Sí, mañana a las 10:00 o a las 15:00. ¿Cuál prefieres?</p>
+                    <p class="sv-qr sv-a"><span class="sv-qr__on">10:00</span><span>15:00</span></p>
+                    <p class="sv-msg sv-msg--in sv-a">10:00, por favor.</p>
+                    <p class="sv-msg sv-msg--out sv-a">Listo, tu cita quedó agendada. Te enviaremos un recordatorio.</p>
+                    <p class="sv-typing"><i></i><i></i><i></i></p>
+                  </div>
+                  <div class="sv-chat__in"><span>Escribe un mensaje</span><i><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></i></div>
+                </div>
+                <p class="sv-toast sv-a"><i></i>Cita agendada · recordatorio activo</p>
+              </div>
+            </div>
+            <div class="sv__tx">
+              <p class="sv__tt" aria-hidden="true">Automatización</p>
+              <p class="sv__body">Chatbots y flujos que atienden, califican y agendan por ti en WhatsApp, Instagram y tu web, incluso fuera de horario: ningún lead que pagaste se queda sin respuesta.</p>
+              <div class="sv__inc">
+                <p class="sv__il">Qué incluye</p>
+                <ul role="list">
+                  <li>Chatbots para WhatsApp, Instagram y web</li>
+                  <li>Calificación y seguimiento de leads</li>
+                  <li>Agendamiento y recordatorios</li>
+                  <li>Integraciones con tu CRM y herramientas</li>
+                  <li>Atención 24/7</li>
+                </ul>
+              </div>
+              <div class="sv__foot">
+                <span class="sv__stat"><i aria-hidden="true"></i>40% de tiempo ahorrado</span>
+                <a class="btn btn--solid" href="/#contacto" data-service="Automatización" data-track="cta_click" data-track-loc="servicios_automatizacion" aria-label="Solicitar propuesta de Automatización"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicitar propuesta</span><span class="btn__l2" aria-hidden="true">Solicitar propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- ========== CONTACTO ========== -->
-    <section id="contacto" class="fade-up" style="padding: 100px 40px; background: #FFFFFF;">
-      <div class="contact-wrapper">
-        <div class="contact-info">
-          <div class="badge badge-cyan mb-16">Contacto</div>
-          <h2 class="section-title" style="color: var(--text-primary); text-align: left;">Hablemos de<br>ejecución.</h2>
-          <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.65; margin: 16px 0 32px 0;">
-            Agenda una llamada rápida para evaluar tus canales comerciales y proponer una estrategia de piloto personalizada.
-          </p>
-          <ul class="contact-bullets">
-            <li style="color: var(--text-secondary);">Análisis de funnels y canales de adquisición activos.</li>
-            <li style="color: var(--text-secondary);">Definición preliminar de arquitectura e integración de IA.</li>
-            <li style="color: var(--text-secondary);">Definición de KPI de piloto en 2-4 semanas.</li>
-          </ul>
-        </div>
-
-        <div class="contact-form">
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="corp-nombre" class="form-label" style="color: var(--text-secondary);">Nombre Completo</label>
-              <input
-                type="text"
-                id="corp-nombre"
-                name="nombre"
-                class="form-input"
-                required
-                autocomplete="name"
-                aria-required="true"
-                style="background: #FAFAFC; color: #1D1D1F; border-color: rgba(0,0,0,0.1);"
-              >
+      <!-- 04 · Stockly (lime) — mock: Stockly's own inventory screen (product UI; stock units are interface content, not result claims). rev1: no sample-data label. -->
+      <div class="sv__p sv__p--lime" data-sv="inv">
+        <h3 class="sv__hd">
+          <button class="sv__sp" type="button" id="sv-b4" aria-expanded="false" aria-controls="sv-c4">
+            <span class="sv__num">04</span>
+            <span class="sv__vt">Stockly</span>
+            <span class="sv__plus" aria-hidden="true"><i></i><i></i></span>
+          </button>
+        </h3>
+        <div class="sv__pc" id="sv-c4" role="region" aria-labelledby="sv-b4">
+          <div class="sv__pin">
+            <div class="sv__stage">
+              <div class="sv-ui sv-inv" aria-hidden="true">
+                <div class="sv-inv__w">
+                  <div class="sv-inv__h">
+                    <span class="sv-inv__b"><i></i>Stockly · Inventario</span>
+                    <span class="sv-ex sv-ex--solid">PC · Celular</span>
+                  </div>
+                  <div class="sv-inv__k">
+                    <span><small>Productos</small><b data-sv-n="248">248</b></span>
+                    <span><small>Stock bajo</small><b data-sv-n="12">12</b></span>
+                    <span><small>Agotados</small><b data-sv-n="3">3</b></span>
+                  </div>
+                  <p class="sv-k sv-inv__th"><span>Producto</span><span>Existencias</span></p>
+                  <ul class="sv-inv__t">
+                    <li class="sv-inv__r sv-inv__r--hit" style="--v:.56"><span><b>Lentes de sol</b><small>Óptica</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u" data-sv-u="14" data-sv-u2="13">13</b><s class="sv-st">OK</s></li>
+                    <li class="sv-inv__r sv-inv__r--lo" style="--v:.16"><span><b>Martillo 16 oz</b><small>Ferretería</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u">4</b><s class="sv-st sv-st--lo">Bajo</s></li>
+                    <li class="sv-inv__r" style="--v:.82"><span><b>Café molido 1 lb</b><small>Distribuidora</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u">41</b><s class="sv-st">OK</s></li>
+                    <li class="sv-inv__r" style="--v:0"><span><b>Camisa de lino</b><small>Boutique</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u">0</b><s class="sv-st sv-st--out">Agotado</s></li>
+                    <li class="sv-inv__r" style="--v:.48"><span><b>Audífonos</b><small>Electrónica</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u">22</b><s class="sv-st">OK</s></li>
+                    <li class="sv-inv__r sv-inv__r--lo" style="--v:.2"><span><b>Filtro de agua</b><small>Hogar</small></span><i class="sv-bar"><em class="sv-a"></em></i><b class="sv-inv__u">7</b><s class="sv-st sv-st--lo">Bajo</s></li>
+                  </ul>
+                </div>
+                <p class="sv-toast sv-a"><i></i>Venta registrada · stock actualizado</p>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="corp-email" class="form-label" style="color: var(--text-secondary);">Email Corporativo</label>
-              <input
-                type="email"
-                id="corp-email"
-                name="email"
-                class="form-input"
-                required
-                autocomplete="email"
-                aria-required="true"
-                style="background: #FAFAFC; color: #1D1D1F; border-color: rgba(0,0,0,0.1);"
-              >
+            <div class="sv__tx">
+              <p class="sv__tt" aria-hidden="true">Stockly</p>
+              <p class="sv__body">Sistema web de inventario y ventas para PyMEs, implementado por Growco con tus datos. Úsalo desde la PC o el celular.</p>
+              <div class="sv__inc">
+                <p class="sv__il">Qué incluye</p>
+                <ul role="list">
+                  <li>Inventario con alertas de stock bajo</li>
+                  <li>Ventas en efectivo, tarjeta o transferencia</li>
+                  <li>Clientes, proveedores y órdenes de compra</li>
+                  <li>Reportes de margen y más vendidos</li>
+                  <li>Importación de tus productos desde Excel</li>
+                </ul>
+              </div>
+              <div class="sv__foot">
+                <span class="sv__stat"><i aria-hidden="true"></i>Hecho para PyMEs</span>
+                <a class="btn btn--solid" href="/SaaSystem" data-track="cta_click" data-track-loc="servicios_stockly"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver Stockly</span><span class="btn__l2" aria-hidden="true">Ver Stockly</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="corp-empresa" class="form-label" style="color: var(--text-secondary);">Empresa</label>
-              <input
-                type="text"
-                id="corp-empresa"
-                name="empresa"
-                class="form-input"
-                autocomplete="organization"
-                style="background: #FAFAFC; color: #1D1D1F; border-color: rgba(0,0,0,0.1);"
-              >
-            </div>
-
-            <div class="form-group">
-              <label for="corp-mensaje" class="form-label" style="color: var(--text-secondary);">Descripción del Reto Comercial</label>
-              <textarea
-                id="corp-mensaje"
-                name="mensaje"
-                class="form-input form-textarea"
-                rows="4"
-                style="background: #FAFAFC; color: #1D1D1F; border-color: rgba(0,0,0,0.1);"
-              ></textarea>
-            </div>
-
-            <button type="submit" class="btn-accent" style="width: 100%; justify-content: center;">
-              Solicitar Diagnóstico
-            </button>
-          </form>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
+    <div class="sv__rail" aria-hidden="true" data-reveal data-reveal-delay="520" data-reveal-y="10">
+      <span class="sv__seg"><i class="is-on"></i><i></i><i></i><i></i></span>
+      <span class="sv__now"><b>01 / 04</b><span>Pauta digital</span></span>
+      <span class="sv__hint"><i></i>Desliza para cambiar de servicio, o elige uno</span>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:servicios -->
+<!-- SECTION:trabajo -->
+<!-- 05 · TRABAJO (#trabajo) — reference 20_rwwk "Results you can count" (night → navy). Real client cases, v3 (2026-10-11):
+     figures supplied by the client (Growco's owner) from each account — nothing derived. The client authorised showing
+     these brands. Head (eyebrow, H2, sub + ghost button) · 4 client tabs (logo chip + name + headline figure) with the 7 s
+     auto-rotation (motion.js data-tabs + data-autorotate, progress = --tp) · the 16:8 viewer · info row.
+     Imagery: OSMO = photo from Growco's Magnific "OSMO" project (person showing the OSMO app, 2K); Dra. Valderrama and
+     DLC · RoadMarket · ICEE = 2K images generated with Magnific as atmosphere (no caption label, at the client's request; never
+     captioned as the client's premises); Academia Europea = our real AI UGC reels (brand end card trimmed).
+     Copy rev1 (2026-10-11, client review): selling copy for every case (tú, benefit-first, figures untouched); every case
+     carries meta · title · KPIs · source line | summary · "Qué hicimos" (4) · foot, so the four panels share one height.
+     Paid media wording never limits Growco to two platforms; tags list only the platforms used in each case.
+     Viewer per case:
+       01 OSMO — the richest case (strategy + results over time, since Oct 2025). Percentages / relative changes ONLY
+          (client rule). Reference before/after drag on the photo: cost per new account, March 2026 (index 100, greyscale)
+          vs September 2026 (colour, big −43 %); real Mar → Sep cost curve as a normalised shape; glass card = new accounts
+          a month as an index (Mar = 100). Info row: 6 relative KPIs (2 × 3), source line, "Qué hicimos" list.
+       02 Dra. Valderrama — photo + "clientes por semana" rows: before 3–4 (3 dots + 1 ring = range) vs 6–7 (6 + 1 ring).
+       03 DLC · RoadMarket · ICEE — photo + reach rings · 411M impresiones / 8.6M personas (DLC Corporativo account, Oct 2024 – Oct 2026).
+       04 Academia Europea — figures column (line + "+50" + big 1.4M) beside a 3 × 2 grid of 6 AI UGC reels sized from
+          the viewer height, so no reel ever covers a figure (phone: reel strip on top, figures band below). Muted previews,
+          max 2 playing, click opens the player; the two AI commercials stay one click away in the info row.
+     Behaviour: /assets/js/sections/home-05-trabajo.js. No JS: tabs hidden, the four cases stacked, final numbers.
+     Reduced motion: no previews/loops, slider parked at its final state, numbers final. -->
+<section class="sec wk" id="trabajo" data-theme="dark" aria-labelledby="wk-title" data-reveal-group>
+  <div class="wrap">
+    <header class="wk-head">
+      <div class="wk-hl">
+        <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(03) Trabajo</p>
+        <h2 class="hd wk-h2" id="wk-title" data-words>Casos de<br><mark>éxito.</mark></h2>
+      </div>
+      <div class="wk-hr" data-reveal data-reveal-delay="300" data-reveal-y="14">
+        <p class="wk-sub">Cifras reales de marcas reales, medidas en lo que mueve el negocio: clientes nuevos, costo de adquisición e ingresos, en Meta, Google, TikTok, DV360 y las plataformas que pida cada estrategia.</p>
+        <a class="btn btn--ghost" href="/filmmaker" data-track="cta_click" data-track-loc="trabajo_head"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver AI Filmmaker</span><span class="btn__l2" aria-hidden="true">Ver AI Filmmaker</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </header>
+
+    <div class="wk-main" data-tabs data-tabs-keep data-autorotate="7000">
+      <div class="wk-tabs js-only" role="tablist" aria-label="Casos de clientes" data-reveal data-reveal-delay="360" data-reveal-y="16">
+        <button class="wk-tab is-active" type="button" data-tab aria-selected="true">
+          <span class="wk-chip"><img src="/assets/img/clientes/osmo.webp" width="327" height="105" style="height:15px" alt="" loading="lazy" decoding="async"></span>
+          <span class="wk-tab-t"><b>OSMO</b><small>Cuentas nuevas ×2 · CAC −43%</small></span>
+          <i class="wk-prog" aria-hidden="true"></i>
+        </button>
+        <button class="wk-tab" type="button" data-tab aria-selected="false" tabindex="-1">
+          <span class="wk-chip"><img src="/assets/img/clientes/valderrama.webp" width="366" height="129" style="height:25px" alt="" loading="lazy" decoding="async"></span>
+          <span class="wk-tab-t"><b>Dra. Valderrama</b><small>3–4 <span aria-hidden="true">→</span><span class="sr">a</span> 6–7 clientes/semana</small></span>
+          <i class="wk-prog" aria-hidden="true"></i>
+        </button>
+        <button class="wk-tab" type="button" data-tab aria-selected="false" tabindex="-1">
+          <span class="wk-chip wk-chip--3"><img src="/assets/img/clientes/dlc.webp" width="303" height="163" style="height:16px" alt="" loading="lazy" decoding="async"><img src="/assets/img/clientes/roadmarket.webp" width="381" height="116" style="height:11px" alt="" loading="lazy" decoding="async"><img src="/assets/img/clientes/icee.webp" width="237" height="192" style="height:21px" alt="" loading="lazy" decoding="async"></span>
+          <span class="wk-tab-t"><b>DLC · RoadMarket · ICEE</b><small>411M impresiones</small></span>
+          <i class="wk-prog" aria-hidden="true"></i>
+        </button>
+        <button class="wk-tab" type="button" data-tab aria-selected="false" tabindex="-1">
+          <span class="wk-chip"><img src="/assets/img/clientes/academia-europea.webp" width="215" height="215" style="height:32px" alt="" loading="lazy" decoding="async"></span>
+          <span class="wk-tab-t"><b>Academia Europea</b><small>1.4M vistas en un reel</small></span>
+          <i class="wk-prog" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="wk-deck">
+
+        <!-- 01 · OSMO · Fintech — the richest case: paid-media strategy + results over time (Growco runs acquisition since
+             Oct 2025). CLIENT RULE (2026-10-11): OSMO publishes ONLY percentages / relative changes — no dollar amounts,
+             counts or raw rates anywhere (copy, charts, aria, comments). Sources: OSMO's Meta Ads account (6 months before
+             Growco, Apr–Sep 2025, vs 12 months with Growco, Oct 2025 – Sep 2026: CTR ×3.2, cost per click −46 %, app
+             installs a month +22 %; new accounts tracked since Mar 2026: Mar → Sep 2026 ×2 (+98 %), cost per new account
+             −43 %; AI UGC creatives vs the others, Mar–Oct 2026: −16 %) and OSMO's internal BI (blended CAC per active
+             user, Jun → Sep 2026: −37 %, labelled "datos internos de OSMO").
+             Viewer: the reference drag compare on the Magnific OSMO photo (greyscale "before" = March 2026, index 100;
+             colour "after" = September 2026, index 57 → big −43 %). Bottom curve = the real monthly cost-per-new-account
+             path Mar → Sep (normalised shape, zero-based, no values). Card = new accounts a month as an index (Mar = 100). -->
+        <div class="wk-panel is-active" data-tab-panel data-kind="ab">
+          <div class="wk-view wk-view--ab" data-reveal data-reveal-delay="420" data-reveal-y="30">
+            <div class="wk-case">
+              <div class="wk-lay wk-after">
+                <picture>
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v-960.webp" width="960" height="1200">
+                  <img class="wk-ph" src="/assets/img/casos/osmo-app-1280.webp" srcset="/assets/img/casos/osmo-app-1280.webp 1280w, /assets/img/casos/osmo-app-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="720" alt="Un hombre en una terraza con vegetación tropical muestra en su teléfono la app de OSMO" loading="lazy" decoding="async">
+                </picture>
+                <i class="wk-scrim"></i>
+                <svg class="wk-ch wk-ch-a" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                  <defs><linearGradient id="wk-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B5F47F" stop-opacity=".34"/><stop offset="1" stop-color="#B5F47F" stop-opacity="0"/></linearGradient></defs>
+                  <path class="wk-ar" d="M0 301.3C55.6 317.1 111.1 348.6 166.7 348.6C222.2 348.6 277.8 293.9 333.3 293.9C388.9 293.9 444.4 290 500 294.3C555.6 298.6 611.1 313.5 666.7 319.7C722.2 325.8 777.8 327 833.3 331.1C888.9 335.2 944.4 339.7 1000 344V400H0Z" fill="url(#wk-grad)"/>
+                  <path class="wk-ln" d="M0 301.3C55.6 317.1 111.1 348.6 166.7 348.6C222.2 348.6 277.8 293.9 333.3 293.9C388.9 293.9 444.4 290 500 294.3C555.6 298.6 611.1 313.5 666.7 319.7C722.2 325.8 777.8 327 833.3 331.1C888.9 335.2 944.4 339.7 1000 344" vector-effect="non-scaling-stroke"/>
+                </svg>
+                <figure class="wk-bars wk-bars--v" role="img" aria-label="Cuentas nuevas al mes en Meta Ads, índice con marzo de 2026 igual a 100: marzo 100, abril 195, mayo 105, junio 85, julio 105, agosto 168, septiembre 198.">
+                  <figcaption class="wk-bars-h" aria-hidden="true"><b>Cuentas nuevas al mes</b><span>×2</span></figcaption>
+                  <ol class="wk-bars-c" aria-hidden="true">
+                    <li class="is-0" style="--h:.505;--i:0"><span>100</span><i></i><em>Mar</em></li>
+                    <li style="--h:.985;--i:1"><span>195</span><i></i><em>Abr</em></li>
+                    <li style="--h:.528;--i:2"><span>105</span><i></i><em>May</em></li>
+                    <li style="--h:.432;--i:3"><span>85</span><i></i><em>Jun</em></li>
+                    <li style="--h:.531;--i:4"><span>105</span><i></i><em>Jul</em></li>
+                    <li style="--h:.847;--i:5"><span>168</span><i></i><em>Ago</em></li>
+                    <li class="is-n" style="--h:1;--i:6"><span>198</span><i></i><em>Sep</em></li>
+                  </ol>
+                  <p class="wk-bars-s" aria-hidden="true">Meta Ads · mar–sep 2026 · índice</p>
+                </figure>
+                <div class="wk-num wk-num-a" aria-hidden="true"><span class="wk-pill is-a"><i></i>Sep 2026 · índice 57</span><span class="wk-big" data-wk-from="0" data-wk-to="-43" data-wk-suf="%">−43%</span></div>
+              </div>
+              <div class="wk-lay wk-before">
+                <picture>
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v-960.webp" width="960" height="1200">
+                  <img class="wk-ph" src="/assets/img/casos/osmo-app-1280.webp" srcset="/assets/img/casos/osmo-app-1280.webp 1280w, /assets/img/casos/osmo-app-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="720" alt="" loading="lazy" decoding="async">
+                </picture>
+                <i class="wk-scrim"></i>
+                <svg class="wk-ch wk-ch-b" viewBox="0 0 1000 400" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="wk-fl" d="M0 301.3H1000" vector-effect="non-scaling-stroke"/></svg>
+                <div class="wk-num wk-num-b" aria-hidden="true"><span class="wk-pill">Mar 2026 · índice</span><span class="wk-ghost">100</span></div>
+              </div>
+            </div>
+            <div class="wk-top"><span class="wk-cl"><i class="wk-port" aria-hidden="true"></i>OSMO · desde oct. 2025</span><span class="wk-ml">Costo por cuenta nueva · Meta Ads</span></div>
+            <div class="wk-div" aria-hidden="true"><i></i></div>
+            <div class="wk-handle" role="slider" tabindex="0" aria-label="Comparar el costo por cuenta nueva de OSMO: marzo frente a septiembre de 2026" aria-valuemin="0" aria-valuemax="100" aria-valuenow="15" aria-valuetext="85 % septiembre de 2026: el costo por cuenta nueva es 43 % menor que en marzo" data-vt=" % septiembre de 2026: el costo por cuenta nueva es 43 % menor que en marzo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 7-5 5 5 5"/><path d="m15 7 5 5-5 5"/></svg>
+            </div>
+            <div class="wk-cur" aria-hidden="true"><b>Arrastra</b></div>
+          </div>
+          <div class="wk-info" data-reveal data-reveal-delay="480" data-reveal-y="18">
+            <div class="wk-info-in wk-info-in--rich">
+              <div class="wk-il">
+                <p class="wk-meta"><span>Fintech</span><span>Guatemala, Costa Rica y México</span><span>Desde oct. 2025</span></p>
+                <h3 class="wk-title">El doble de cuentas nuevas, cada una 43% más barata</h3>
+                <dl class="wk-kpis wk-kpis--6">
+                  <div><dt>CTR</dt><dd>×3.2</dd><dd class="wk-kd">vs. los 6 meses previos</dd></div>
+                  <div><dt>Costo por clic</dt><dd>−46%</dd><dd class="wk-kd">vs. los 6 meses previos</dd></div>
+                  <div><dt>Instalaciones al mes</dt><dd>+22%</dd><dd class="wk-kd">vs. los 6 meses previos</dd></div>
+                  <div><dt>Cuentas nuevas al mes</dt><dd>×2</dd><dd class="wk-kd">mar <span aria-hidden="true">→</span><span class="sr">a</span> sep 2026</dd></div>
+                  <div><dt>CAC con UGC con IA</dt><dd>−16%</dd><dd class="wk-kd">vs. el resto de creativos</dd></div>
+                  <div><dt>CAC por usuario activo</dt><dd>−37%</dd><dd class="wk-kd">datos internos de OSMO</dd></div>
+                </dl>
+                <p class="wk-src">Meta Ads de OSMO: 6 meses previos a Growco (abr–sep 2025) frente a 12 meses con Growco (oct 2025 – sep 2026). Cuentas nuevas: mar → sep 2026. UGC con IA: mar–oct 2026. CAC por usuario activo: jun → sep 2026, datos internos de OSMO (todos los canales).</p>
+              </div>
+              <div class="wk-ir">
+                <p class="wk-sum">Desde octubre de 2025 dirigimos la adquisición de OSMO. Rehicimos su estrategia de performance desde cero y la escalamos a 3 países y 3 plataformas de pauta. Frente a los 6 meses previos, su CTR se multiplicó por 3.2 y cada clic cuesta 46% menos.</p>
+                <div class="wk-did">
+                  <p class="wk-did-h" id="wk-did-osmo">Qué hicimos</p>
+                  <ol aria-labelledby="wk-did-osmo">
+                    <li>Campañas por producto, país y sistema operativo<small>Bitcoiners · Remesas · Money Senders · Money Receivers · Tarjeta</small></li>
+                    <li>Pauta en Meta Ads, Google Ads y X, con atribución en Adjust y topes automáticos de presupuesto</li>
+                    <li>Creativos UGC con IA producidos por Growco <span class="wk-did-k">−16% CAC</span></li>
+                    <li>Expansión a Costa Rica y México</li>
+                  </ol>
+                </div>
+                <div class="wk-foot">
+                  <ul class="wk-svs" aria-label="Plataformas y servicios"><li>Meta Ads</li><li>Google Ads</li><li>X Ads</li><li>UGC con IA</li></ul>
+                  <div class="wk-acts"><a class="wk-read" href="/assets/videos/web/comercial-petalos-720.mp4" data-play="comercial-petalos" data-aspect="16:9" data-play-title="OSMO · Comercial con IA" data-track-loc="trabajo" aria-label="Ver el comercial con IA de OSMO">Ver comercial<svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 · Dra. Valderrama · Medicina Estética. Client testimony (Growco's owner) + account data: from boosted Instagram
+             posts to Click-to-WhatsApp on Meta Ads (since end of July 2026) · 3–4 → 6–7 clients a week, better qualified ·
+             1,982 WhatsApp conversations · ≈$1.06 average, $0.86 main campaign in September · +59 % conversations a month
+             (≈535/mes jun–jul → ≈850/mes ago–sep). Rows: one dot per client a week, the ring = the top of the range. -->
+        <div class="wk-panel" data-tab-panel data-kind="photo">
+          <div class="wk-view wk-view--photo" data-reveal data-reveal-delay="420" data-reveal-y="30">
+            <div class="wk-case">
+              <div class="wk-lay wk-photo wk-photo--val">
+                <picture>
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/valderrama-v-960.webp" width="960" height="1200">
+                  <img class="wk-ph" src="/assets/img/casos/valderrama-1280.webp" srcset="/assets/img/casos/valderrama-1280.webp 1280w, /assets/img/casos/valderrama-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="714" alt="Una paciente sonríe en un sillón de tratamiento mientras conversa con una médica en una sala de consulta luminosa" loading="lazy" decoding="async">
+                </picture>
+                <i class="wk-scrim"></i>
+                <div class="wk-week" aria-hidden="true">
+                  <div class="wk-wr"><span>Antes</span><i></i><i></i><i></i><i class="is-r"></i><i class="is-e"></i><i class="is-e"></i><i class="is-e"></i></div>
+                  <div class="wk-wr is-a"><span>Con Growco</span><i></i><i></i><i></i><i></i><i></i><i></i><i class="is-r"></i></div>
+                  <p class="wk-fcap"><b>Clientes por semana</b> · 1 punto = 1 cliente · ○ = rango</p>
+                </div>
+                <div class="wk-num wk-num-b"><span class="wk-pill">Antes</span><span class="wk-ghost">3–4</span></div>
+                <div class="wk-num wk-num-a"><span class="wk-pill is-a"><i aria-hidden="true"></i>Con Growco</span><span class="wk-big" data-wk-odo="6–7">6–7</span></div>
+              </div>
+            </div>
+            <div class="wk-top"><span class="wk-cl"><i class="wk-port" aria-hidden="true"></i>Dra. Valderrama · desde jul. 2026</span><span class="wk-ml">Clientes por semana · Click-to-WhatsApp</span></div>
+          </div>
+          <div class="wk-info" data-reveal data-reveal-delay="480" data-reveal-y="18">
+            <div class="wk-info-in wk-info-in--rich">
+              <div class="wk-il">
+                <p class="wk-meta"><span>Medicina estética</span><span>San Salvador</span><span>Desde jul. 2026</span></p>
+                <h3 class="wk-title">El doble de clientes por semana, directo a WhatsApp</h3>
+                <dl class="wk-kpis">
+                  <div><dt>Conversaciones al mes</dt><dd>+59%</dd></div>
+                  <div><dt>Costo por conversación · sept.</dt><dd>$0.86</dd></div>
+                  <div><dt>Conversaciones por WhatsApp</dt><dd>1,982</dd></div>
+                </dl>
+                <p class="wk-src">Cuenta de Meta Ads de la Dra. Valderrama, desde finales de julio de 2026. Conversaciones al mes: ago–sep frente a jun–jul 2026. Costo por conversación: campaña principal, septiembre de 2026.</p>
+              </div>
+              <div class="wk-ir">
+                <p class="wk-sum">La Dra. Valderrama solo impulsaba publicaciones en Instagram. Convertimos su pauta en un canal directo a WhatsApp: hoy recibe 6–7 clientes por semana en lugar de 3–4, y llegan mejor calificados.</p>
+                <div class="wk-did">
+                  <p class="wk-did-h" id="wk-did-val">Qué hicimos</p>
+                  <ol aria-labelledby="wk-did-val">
+                    <li>Campañas Click-to-WhatsApp en Meta Ads en lugar de publicaciones impulsadas</li>
+                    <li>Mensajes con lenguaje clínico y editorial, pensados para cumplir las políticas de anuncios de salud</li>
+                    <li>Segmentación premium en San Salvador</li>
+                    <li>Optimización diaria del costo y de la calidad de cada conversación</li>
+                  </ol>
+                </div>
+                <div class="wk-foot">
+                  <ul class="wk-svs" aria-label="Plataformas y servicios"><li>Meta Ads</li><li>Click-to-WhatsApp</li><li>Calidad de leads</li></ul>
+                  <div class="wk-acts"><a class="wk-read" href="/#contacto" data-service="Pauta digital" data-track="cta_click" data-track-loc="trabajo_valderrama" aria-label="Solicita tu propuesta de Pauta digital">Solicita tu propuesta<svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 · DLC · RoadMarket · ICEE. "DLC Corporativo" Meta Ads account (DLC, RoadMarket tiendas, ICEE, Empleos DLC),
+             last 24 months (Oct 2024 – Oct 2026), managed by Growco for 2+ years: 411M impresiones · 8.6M personas · 1.63M clics
+             · CPM $0.32 · CPC $0.08 (spend not published). Generic roadside store at dusk (generated, unbranded) + reach rings. -->
+        <div class="wk-panel" data-tab-panel data-kind="photo">
+          <div class="wk-view wk-view--photo" data-reveal data-reveal-delay="420" data-reveal-y="30">
+            <div class="wk-case">
+              <div class="wk-lay wk-photo wk-photo--dlc">
+                <picture>
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/dlc-v-960.webp" width="960" height="1200">
+                  <img class="wk-ph" src="/assets/img/casos/dlc-1280.webp" srcset="/assets/img/casos/dlc-1280.webp 1280w, /assets/img/casos/dlc-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="714" alt="Tienda de conveniencia de una gasolinera al anochecer, con una máquina de granizados y un estante de aceites para motor" loading="lazy" decoding="async">
+                </picture>
+                <i class="wk-scrim"></i>
+                <div class="wk-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+                <div class="wk-num wk-num-b"><span class="wk-pill">Personas alcanzadas</span><span class="wk-ghost">8.6M</span></div>
+                <div class="wk-num wk-num-a"><span class="wk-pill is-a"><i aria-hidden="true"></i>Impresiones · 24 meses</span><span class="wk-big" data-wk-odo="411M">411M</span></div>
+              </div>
+            </div>
+            <div class="wk-top"><span class="wk-cl"><i class="wk-port" aria-hidden="true"></i>DLC · RoadMarket · ICEE · 24 meses</span><span class="wk-ml">Meta Ads · 3 marcas a la vez</span></div>
+          </div>
+          <div class="wk-info" data-reveal data-reveal-delay="480" data-reveal-y="18">
+            <div class="wk-info-in wk-info-in--rich">
+              <div class="wk-il">
+                <p class="wk-meta"><span>3 marcas</span><span>Reclutamiento</span><span>Más de 2 años</span></p>
+                <h3 class="wk-title">411M impresiones para 3 marcas, con clics a $0.08</h3>
+                <dl class="wk-kpis">
+                  <div><dt>Personas alcanzadas</dt><dd>8.6M</dd></div>
+                  <div><dt>Clics</dt><dd>1.63M</dd></div>
+                  <div><dt>CPM</dt><dd>$0.32</dd></div>
+                </dl>
+                <p class="wk-src">Cuenta DLC Corporativo en Meta Ads (DLC, RoadMarket, ICEE y Empleos DLC), últimos 24 meses: oct 2024 – oct 2026.</p>
+              </div>
+              <div class="wk-ir">
+                <p class="wk-sum">Desde hace más de 2 años manejamos la pauta de DLC, RoadMarket e ICEE. Mantenemos a las tres marcas presentes todo el año, impulsamos la conversión en cada temporada y cubrimos el reclutamiento de Empleos DLC, con un costo por clic de $0.08.</p>
+                <div class="wk-did">
+                  <p class="wk-did-h" id="wk-did-dlc">Qué hicimos</p>
+                  <ol aria-labelledby="wk-did-dlc">
+                    <li>Campañas de alcance sostenido para DLC, RoadMarket e ICEE</li>
+                    <li>Tácticas de conversión por temporada para cada marca</li>
+                    <li>Campañas de reclutamiento para Empleos DLC</li>
+                    <li>Las tres marcas y el reclutamiento coordinados en una sola cuenta</li>
+                  </ol>
+                </div>
+                <div class="wk-foot">
+                  <ul class="wk-svs" aria-label="Plataformas y servicios"><li>Meta Ads</li><li>Alcance</li><li>Conversión</li><li>Reclutamiento</li></ul>
+                  <div class="wk-acts"><a class="wk-read" href="/#contacto" data-service="Pauta digital" data-track="cta_click" data-track-loc="trabajo_dlc" aria-label="Solicita tu propuesta de Pauta digital">Solicita tu propuesta<svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 · Academia Europea · Educación — AI UGC (client facts: much more reach and views than their traditional
+             content, 6+ countries, different versions per country in record time, much lower cost than traditional
+             production, 50+ pieces a month in AI Filmmaker production, 4 commercials a month; Instagram views: 1.4M on one
+             reel, 2.3M across 9 — source below). Viewer: figures column + 3 × 2 grid of 6 of our UGC reels (blue end card
+             trimmed); the 2 commercials in the info row. -->
+
+        <div class="wk-panel" data-tab-panel data-kind="ugc">
+          <div class="wk-view wk-view--ugc" data-reveal data-reveal-delay="420" data-reveal-y="30">
+            <div class="wk-case">
+              <div class="wk-lay wk-ugc">
+                <ul class="wk-reels" role="list" aria-label="Videos UGC con IA para Academia Europea">
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-1-720.mp4" data-play="ae-1" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 1 de 6 para Academia Europea, 14 segundos"><img src="/assets/videos/web/ae-1-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-1-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-2-720.mp4" data-play="ae-2" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 2 de 6 para Academia Europea, 14 segundos"><img src="/assets/videos/web/ae-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-2-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-3-720.mp4" data-play="ae-3" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 3 de 6 para Academia Europea, 13 segundos"><img src="/assets/videos/web/ae-3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-3-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-4-720.mp4" data-play="ae-4" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 4 de 6 para Academia Europea, 12 segundos"><img src="/assets/videos/web/ae-4-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-4-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-5-720.mp4" data-play="ae-5" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 5 de 6 para Academia Europea, 15 segundos"><img src="/assets/videos/web/ae-5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-5-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                  <li><a class="wk-reel" href="/assets/videos/web/ae-6-720.mp4" data-play="ae-6" data-play-title="Academia Europea · UGC con IA" data-track="video_play" data-track-loc="trabajo_ae" aria-label="Ver video UGC con IA 6 de 6 para Academia Europea, 14 segundos"><img src="/assets/videos/web/ae-6-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="wk-vid" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1" data-src="/assets/videos/web/ae-6-preview.mp4"></video><i class="wk-rp" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></i></a></li>
+                </ul>
+                <div class="wk-ugc-f" aria-hidden="true">
+                  <p class="wk-ugc-q">Una versión para cada mercado, en tiempo récord.</p>
+                  <div class="wk-ugc-s">
+                    <div class="wk-ugc-r">
+                      <div class="wk-ugc-x"><span class="wk-pill">Contenidos UGC al mes</span><span class="wk-ugc-n">+50</span></div>
+                      <div class="wk-ugc-x wk-ugc-x--d"><span class="wk-pill">Vistas en 9 reels</span><span class="wk-ugc-n">2.3M</span></div>
+                    </div>
+                    <div class="wk-ugc-x is-a"><span class="wk-pill is-a"><i></i>Vistas en un solo reel</span><span class="wk-big" data-wk-odo="1.4M">1.4M</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="wk-top"><span class="wk-cl"><i class="wk-port" aria-hidden="true"></i>Academia Europea · UGC con IA</span><span class="wk-ml">Vista previa sin sonido</span></div>
+            <div class="wk-cur" aria-hidden="true"><b>Ver video</b></div>
+          </div>
+          <div class="wk-info" data-reveal data-reveal-delay="480" data-reveal-y="18">
+            <div class="wk-info-in wk-info-in--rich">
+              <div class="wk-il">
+                <p class="wk-meta"><span>Educación</span><span>Más de 6 países</span><span>AI Filmmaker</span></p>
+                <h3 class="wk-title">Más vistas que su contenido tradicional, a un costo mucho menor</h3>
+                <dl class="wk-kpis">
+                  <div><dt>Vistas en 9 reels de Instagram</dt><dd>2.3M</dd></div>
+                  <div><dt>Contenidos UGC al mes</dt><dd>+50</dd></div>
+                  <div><dt>Comerciales al mes</dt><dd>4</dd></div>
+                </dl>
+                <p class="wk-src">Instagram de Academia Europea (pestaña Reels), octubre de 2026: 1.4M vistas en el reel más visto y 2.3M en 9 reels.</p>
+              </div>
+              <div class="wk-ir">
+                <p class="wk-sum">Producimos con IA el contenido UGC y los comerciales de Academia Europea para más de 6 países. Su contenido con IA ya alcanza a mucha más gente y suma muchas más vistas que su producción tradicional: un solo reel superó 1.4 millones de vistas.</p>
+                <!-- Fuente: capturas de @academiaeuropea.sv (Instagram, pestaña Reels) compartidas por el cliente el 2026-10-11: 1.4M, 301K, 235K, 157K, 73.5K, 62.6K, 44.9K, 35.5K, 21.8K = 2.33M. -->
+                <div class="wk-did">
+                  <p class="wk-did-h" id="wk-did-ae">Qué hicimos</p>
+                  <ol aria-labelledby="wk-did-ae">
+                    <li>Producción de UGC con IA: más de 50 piezas al mes</li>
+                    <li>Comerciales con IA: 4 al mes</li>
+                    <li>Una versión distinta para cada mercado, en más de 6 países</li>
+                    <li>Entregas en tiempo récord, a un costo mucho menor que una producción tradicional</li>
+                  </ol>
+                </div>
+                <div class="wk-foot">
+                  <ul class="wk-svs" aria-label="Servicios"><li>AI Filmmaker</li><li>UGC con IA</li><li>Comerciales</li></ul>
+                  <div class="wk-acts">
+                    <a class="wk-read" href="/assets/videos/web/comercial-lobo-720.mp4" data-play="comercial-lobo" data-aspect="16:9" data-play-title="Academia Europea · Monstruos en la escuela de idiomas" data-track-loc="trabajo" aria-label="Ver comercial 1 de Academia Europea: Monstruos en la escuela de idiomas">Comercial 1<svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></a>
+                    <a class="wk-read wk-read--o" href="/assets/videos/web/comercial-aventura-720.mp4" data-play="comercial-aventura" data-aspect="16:9" data-play-title="Academia Europea · Aventuras soñadas desde el sofá" data-track-loc="trabajo" aria-label="Ver comercial 2 de Academia Europea: Aventuras soñadas desde el sofá">Comercial 2<svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.8v12.4a.8.8 0 0 0 1.2.7l10-6.2a.8.8 0 0 0 0-1.4l-10-6.2A.8.8 0 0 0 8 5.8z" fill="currentColor" stroke="none"/></svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Marcas que confían en Growco (deck p. 6) — the client authorised showing every brand on the slide. -->
+    <div class="wk-brands" data-reveal data-reveal-delay="200" data-reveal-y="14">
+      <p class="wk-brands-l" id="wk-brands-l">Marcas que confían en Growco</p>
+      <ul class="wk-brands-r" aria-labelledby="wk-brands-l">
+        <li><img src="/assets/img/clientes/dlc.webp" width="303" height="163" style="height:30px" alt="DLC" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/roadmarket.webp" width="381" height="116" style="height:21px" alt="RoadMarket" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/icee.webp" width="237" height="192" style="height:34px" alt="ICEE" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/academia-europea.webp" width="215" height="215" style="height:38px" alt="Academia Europea" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/osmo.webp" width="327" height="105" style="height:19px" alt="OSMO" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/valderrama.webp" width="366" height="129" style="height:27px" alt="Dra. Valderrama · Medicina Estética" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/transeca.webp" width="272" height="139" style="height:30px" alt="Transeca" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/querencia-creativa.webp" width="290" height="121" style="height:30px" alt="Querencia Creativa" loading="lazy" decoding="async"></li>
+        <li><img src="/assets/img/clientes/llanteca.webp" width="350" height="68" style="height:15px" alt="Llanteca" loading="lazy" decoding="async"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:trabajo -->
+<!-- SECTION:proceso -->
+<!-- 06 · CÓMO TRABAJAMOS (#proceso) — reference 23_rwfn (bone). Desktop ≥1200 px (motion.js data-sticky → .is-pinned):
+     a 320svh track with a 100svh sticky stage, grid 5fr / 7fr. Left: eyebrow, H2, intro and the 4 steps; right: a
+     4-band trapezoid funnel whose green fills are driven by the scroll (--pin → CSS), the active step/band follow the
+     fill, each band's figure counts up when it activates, a canvas of particles falls through the bands, hover/focus on a
+     band shows the conversion tip (/assets/js/sections/home-06-proceso.js).
+     data-reveal-manual: the section script reveals the group once the section top is 33 % into the viewport (motion.js
+     derives its threshold from the element height, which the 320svh pin track inflates, delaying the reveal).
+     Tablet / phone / reduced motion / no JS (.is-flat or no class): the same DOM reflows into the reference "flat" cards
+     (2 columns / 1 column): band figures + progress bar + tip on top, the step underneath.
+     rev2 (client, 2026-10-12): the client asked for demo figures with stronger conversion rates instead of the real
+     DLC + Valderrama mix. One coherent chain, NOT attributed to any client (no client names, no "resultados reales"
+     foot line): 2.4 M impresiones → 96 K clics (CTR 4 %) → 12.5 K conversaciones (13 % de los clics) → 1,875 clientes
+     (15 % de las conversaciones). Real client results live in #trabajo / #reportes. -->
+<section class="sec fn" id="proceso" data-theme="light" aria-labelledby="fn-title" data-sticky="(min-width:1200px)" data-reveal-group="120" data-reveal-manual>
+  <div class="fn-pin">
+    <div class="fn-sticky">
+      <div class="wrap fn-grid">
+        <div class="fn-l">
+          <p class="eb" data-reveal><i aria-hidden="true"></i>(04) Cómo trabajamos</p>
+          <h2 class="hd hd--700 fn-title" id="fn-title" data-words data-words-delay="120">De la atención<br><mark>a</mark> <mark>los</mark> <mark>clientes.</mark></h2>
+          <p class="fn-intro" data-reveal data-reveal-delay="300">Cada proyecto sigue los mismos cuatro pasos, con metas de CAC, RGU y ARPU acordadas con tu área financiera.</p>
+          <ol class="fn-steps" data-reveal data-reveal-delay="420">
+            <li class="fn-step" style="--i:0">
+              <span class="fn-step-n" aria-hidden="true">01</span>
+              <div class="fn-step-b">
+                <div class="fn-step-h"><h3>Diagnóstico</h3><span class="fn-step-tag" aria-hidden="true">Paso 1</span></div>
+                <p>Revisamos tus números con tu área financiera: CAC, ARPU, márgenes y metas de crecimiento.</p>
+              </div>
+            </li>
+            <li class="fn-step" style="--i:1">
+              <span class="fn-step-n" aria-hidden="true">02</span>
+              <div class="fn-step-b">
+                <div class="fn-step-h"><h3>Lanzamiento</h3><span class="fn-step-tag" aria-hidden="true">Paso 2</span></div>
+                <p>Audience planning, campañas, contenido y automatizaciones listos en 4 semanas.</p>
+              </div>
+            </li>
+            <li class="fn-step" style="--i:2">
+              <span class="fn-step-n" aria-hidden="true">03</span>
+              <div class="fn-step-b">
+                <div class="fn-step-h"><h3>Optimización</h3><span class="fn-step-tag" aria-hidden="true">Paso 3</span></div>
+                <p>Probamos creatividades, audiencias y mensajes: +40% de mejora promedio.</p>
+              </div>
+            </li>
+            <li class="fn-step" style="--i:3">
+              <span class="fn-step-n" aria-hidden="true">04</span>
+              <div class="fn-step-b">
+                <div class="fn-step-h"><h3>Escala</h3><span class="fn-step-tag" aria-hidden="true">Paso 4</span></div>
+                <p>Más presupuesto detrás de lo que baja tu CAC y sube tu ARPU.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="fn-r" data-reveal data-reveal-delay="240" data-reveal-y="30">
+          <div class="fn-fun">
+            <div class="fn-band" style="--i:0" role="group" aria-label="Impresiones: 2.4 millones, solo a la audiencia que sí compra.">
+              <div class="fn-shape" aria-hidden="true"><i class="fn-fill"></i></div>
+              <div class="fn-band-c" aria-hidden="true">
+                <span class="fn-band-l"><em>01</em>Impresiones</span>
+                <b class="fn-band-v" data-v="2.4" data-dec="1" data-suf="&nbsp;M">2.4&nbsp;M</b>
+              </div>
+              <span class="fn-tip" aria-hidden="true"><i></i>Solo audiencia que sí compra</span>
+            </div>
+            <div class="fn-band" style="--i:1" role="group" aria-label="Clics: 96 mil, un CTR de 4 %.">
+              <div class="fn-shape" aria-hidden="true"><i class="fn-fill"></i></div>
+              <div class="fn-band-c" aria-hidden="true">
+                <span class="fn-band-l"><em>02</em>Clics</span>
+                <b class="fn-band-v" data-v="96" data-suf="&nbsp;K">96&nbsp;K</b>
+              </div>
+              <span class="fn-tip" aria-hidden="true"><i></i>CTR de 4 %</span>
+            </div>
+            <div class="fn-band" style="--i:2" role="group" aria-label="Conversaciones: 12.5 mil, el 13 % de los clics.">
+              <div class="fn-shape" aria-hidden="true"><i class="fn-fill"></i></div>
+              <div class="fn-band-c" aria-hidden="true">
+                <span class="fn-band-l"><em>03</em>Conversaciones</span>
+                <b class="fn-band-v" data-v="12.5" data-dec="1" data-suf="&nbsp;K">12.5&nbsp;K</b>
+              </div>
+              <span class="fn-tip" aria-hidden="true"><i></i>13 % de los clics</span>
+            </div>
+            <div class="fn-band" style="--i:3" role="group" aria-label="Clientes: 1,875, el 15 % de las conversaciones.">
+              <div class="fn-shape" aria-hidden="true"><i class="fn-fill"></i></div>
+              <div class="fn-band-c" aria-hidden="true">
+                <span class="fn-band-l"><em>04</em>Clientes</span>
+                <b class="fn-band-v" data-v="1875">1,875</b>
+              </div>
+              <span class="fn-tip" aria-hidden="true"><i></i>15 % de las conversaciones</span>
+            </div>
+            <canvas class="fn-cv" aria-hidden="true"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:proceso -->
+<!-- SECTION:reportes -->
+<!-- 07 · REPORTES (#reportes) — reference 26_rwnm "The numbers" (lime sheet → Growco green).
+     Green sheet overlapping the previous section (margin -32px, 32px top radius), head (eyebrow + H2 with navy
+     underline marker + intro), navy results card (tabs + 4 KPI tiles with odometers, a context pill, a one-line
+     caption over a scroll-drawn rule) and a capability ticker closing the section.
+     rev2 (client, 2026-10-12): Growco's growth methodology — the report leads with BUSINESS metrics (CAC, RGU, ARPU,
+       LTV, ROAS), not reach and clicks. The client chose DEMO figures (like the #proceso funnel): no client names, no
+       "datos reales" / "fuente" lines. Tabs Adquisición · Ingresos · Eficiencia · Pauta, data in
+       /assets/js/sections/home-07-reportes.js. Real client results stay in #trabajo.
+     No invented trend lines: the old 12-month sparklines (made-up monthly values) became a drawn rule under a caption.
+     Behaviour: /assets/js/sections/home-07-reportes.js -->
+<section class="sec nm" id="reportes" data-theme="accent" aria-labelledby="nm-title" data-reveal-group="120" data-progress>
+  <div class="wrap">
+    <div class="nm__head">
+      <div class="nm__hl">
+        <p class="eb nm__eb" data-reveal><i aria-hidden="true"></i>(05) Reportes</p>
+        <h2 class="hd hd--700 nm__title" id="nm-title" data-words>Lo que vas a ver<br><mark>cada</mark> <mark>mes.</mark></h2>
+      </div>
+      <div class="nm__hr" data-reveal data-reveal-delay="360">
+        <p class="nm__intro">Medimos lo que mueve tu negocio, no solo alcance y clics: CAC, RGU, ARPU y retorno, con tu área financiera.</p>
+      </div>
+    </div>
+
+    <div class="nm__dash ctx-dark" data-reveal data-reveal-delay="200" data-reveal-y="40">
+      <div class="nm__top">
+        <p class="nm__rep"><i class="nm__live" aria-hidden="true"></i><span><span class="nm__rep-x">Reporte de </span>growth</span> <b>Mensual</b></p>
+        <div class="nm__tabs" role="tablist" aria-label="Área del reporte">
+          <button class="nm__tab is-active" type="button" role="tab" id="nm-tab-0" aria-selected="true" aria-controls="nm-panel">Adquisición</button>
+          <button class="nm__tab" type="button" role="tab" id="nm-tab-1" aria-selected="false" aria-controls="nm-panel" tabindex="-1">Ingresos</button>
+          <button class="nm__tab" type="button" role="tab" id="nm-tab-2" aria-selected="false" aria-controls="nm-panel" tabindex="-1">Eficiencia</button>
+          <button class="nm__tab" type="button" role="tab" id="nm-tab-3" aria-selected="false" aria-controls="nm-panel" tabindex="-1">Pauta</button>
+        </div>
+        <p class="nm__range" data-nm-range>Mes vs. mes anterior</p>
+      </div>
+      <div class="nm__panel" id="nm-panel" role="tabpanel" aria-labelledby="nm-tab-0" tabindex="0">
+      <ul class="nm__grid">
+        <li class="nm__tile" style="--i:0">
+          <h3 class="nm__lab"><span aria-hidden="true">01</span> <span class="nm__lab-t">CAC</span></h3>
+          <p class="nm__num">−28%</p>
+          <p class="nm__delta"><b aria-hidden="true">▼</b><span class="nm__dt">vs. mes anterior</span></p>
+          <div class="nm__sp"><p class="nm__cap">Lo que cuesta cada cliente nuevo</p><svg class="nm__rule" viewBox="0 0 300 4" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="nm__ln" d="M0,2 L300,2" pathLength="1" vector-effect="non-scaling-stroke"/></svg></div>
+        </li>
+        <li class="nm__tile" style="--i:1">
+          <h3 class="nm__lab"><span aria-hidden="true">02</span> <span class="nm__lab-t">RGU nuevos</span></h3>
+          <p class="nm__num">+34%</p>
+          <p class="nm__delta"><b aria-hidden="true">▲</b><span class="nm__dt">vs. mes anterior</span></p>
+          <div class="nm__sp"><p class="nm__cap">Clientes nuevos que ya generan ingreso</p><svg class="nm__rule" viewBox="0 0 300 4" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="nm__ln" d="M0,2 L300,2" pathLength="1" vector-effect="non-scaling-stroke"/></svg></div>
+        </li>
+        <li class="nm__tile" style="--i:2">
+          <h3 class="nm__lab"><span aria-hidden="true">03</span> <span class="nm__lab-t">Costo por lead</span></h3>
+          <p class="nm__num">−22%</p>
+          <p class="nm__delta"><b aria-hidden="true">▼</b><span class="nm__dt">vs. mes anterior</span></p>
+          <div class="nm__sp"><p class="nm__cap">Lo que cuesta cada contacto calificado</p><svg class="nm__rule" viewBox="0 0 300 4" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="nm__ln" d="M0,2 L300,2" pathLength="1" vector-effect="non-scaling-stroke"/></svg></div>
+        </li>
+        <li class="nm__tile" style="--i:3">
+          <h3 class="nm__lab"><span aria-hidden="true">04</span> <span class="nm__lab-t">Tasa de conversión</span></h3>
+          <p class="nm__num">6.8%</p>
+          <p class="nm__delta"><b aria-hidden="true">▲</b><span class="nm__dt">+1.4 pts</span></p>
+          <div class="nm__sp"><p class="nm__cap">Leads que se vuelven clientes</p><svg class="nm__rule" viewBox="0 0 300 4" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path class="nm__ln" d="M0,2 L300,2" pathLength="1" vector-effect="non-scaling-stroke"/></svg></div>
+        </li>
+      </ul>
+      <p class="nm__src"><span class="nm__src-k">Enfoque</span><span data-nm-src>Cuánto cuesta crecer: CAC y clientes nuevos que generan ingreso</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker nm__tick" data-ticker>
+    <div class="ticker__track">
+      <ul class="ticker__list" aria-label="Lo que hacemos y medimos">
+        <li><i aria-hidden="true"></i>Reporte mensual de growth</li>
+        <li><i aria-hidden="true"></i>CAC por canal</li>
+        <li><i aria-hidden="true"></i>RGU y ARPU</li>
+        <li><i aria-hidden="true"></i>LTV y recompra</li>
+        <li><i aria-hidden="true"></i>Seguimiento de leads</li>
+        <li><i aria-hidden="true"></i>Pruebas A/B de creatividades</li>
+        <li><i aria-hidden="true"></i>Píxel, conversiones y atribución</li>
+        <li><i aria-hidden="true"></i>Audiencias personalizadas</li>
+        <li><i aria-hidden="true"></i>Respuesta 24/7</li>
+        <li><i aria-hidden="true"></i>Meta · Google · TikTok · DV360</li>
+        <li><i aria-hidden="true"></i>Video con IA para anuncios</li>
+        <li><i aria-hidden="true"></i>Inventario y ventas con Stockly</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:reportes -->
+<!-- SECTION:contenido -->
+<!-- 08 · CONTENIDO (#contenido) — reference 29_rwfd (night → navy). Head 1.25fr/.75fr (eyebrow + word-mask H2 with
+     green payoff words | sub, capability pills, ghost button) and the full-bleed content wall: 5 columns (3 tablet, 2 phone)
+     of real Growco pieces (posters 9:16; the three commercials are 16:9 cards, .fd-media--wide + data-aspect="16:9" for the
+     player), opposite-direction column parallax driven by the section progress (--p from motion.js data-progress) +
+     scroll-velocity skew (--sk), edge fade mask. Cards: hover (fine pointer) plays the muted preview (max 2 at once, only
+     while ≥50 % visible), click / Enter opens the shared player (site.js data-play).
+     Behaviour: /assets/js/sections/home-08-contenido.js. No JS: static centred columns, posters only.
+     Reduced motion: static columns, no skew, no previews. Labels = formato · industria.
+     rev1 (client): the four early UGC pieces with models holding a pixelated product are
+     NEVER used. Wall = 16 unique pieces: Academia Europea UGC reels ae-1…ae-6 (brand authorised), OSMO UGC reels
+     osmo-ugc-1…3, fintech pieces video2/3/4/5 and the commercials lobo · aventura · pétalos; column 5 (visible from
+     1100 px) repeats four of them as decorative cards (aria-hidden). Left out: video6 (NY Yankees cap logo), video8
+     (Apple/Tesla/NVIDIA/broker names on screen), video9 (its poster shows a supplements brand label).
+     Capability pills are short so the three fit on one row from 1366 px, like the reference stat pills. -->
+<!-- DATO REAL: métricas de contenido por pieza (vistas, guardados) — la referencia muestra cifras en las pills; se usan capacidades. Cifras reales disponibles: Academia Europea 1.4 M vistas en un reel, 2.3 M en 9 reels (se muestran en #reportes). -->
+<section class="sec fd" id="contenido" data-theme="dark" aria-labelledby="fd-title" data-reveal-group data-progress>
+  <div class="wrap fd-top">
+    <div class="fd-hl">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(06) Contenido</p>
+      <h2 class="hd fd-h2" id="fd-title" data-words data-words-delay="120">Contenido que<br><mark>detiene</mark> <mark>el</mark> <mark>scroll.</mark></h2>
+    </div>
+    <div class="fd-side" data-reveal data-reveal-delay="360">
+      <p class="fd-sub">Planeamos, generamos con IA y editamos videos para cada plataforma: reels, UGC, comerciales y visuales de marca, pensados para convertir, no solo para gustar.</p>
+      <ul class="fd-stats" aria-label="Capacidades">
+        <li><i aria-hidden="true"></i>9:16 · 1:1 · 16:9</li>
+        <li><i aria-hidden="true"></i>UGC · Comerciales</li>
+        <li><i aria-hidden="true"></i>Sin rodaje</li>
+      </ul>
+      <a class="btn btn--ghost" href="/filmmaker" data-track="cta_click" data-track-loc="contenido_head"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver AI Filmmaker</span><span class="btn__l2" aria-hidden="true">Ver AI Filmmaker</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+    </div>
+  </div>
+
+  <div class="fd-wall" role="group" aria-label="Piezas de video producidas con IA">
+    <div class="fd-col" style="--dir:-1;--spd:1;--o:5%">
+      <button class="fd-card" type="button" data-play="ae-1" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (14 segundos)" style="--d:0ms">
+        <span class="fd-media" data-preview="ae-1"><img src="/assets/videos/web/ae-1-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--g" aria-hidden="true">01</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="video5" data-play-title="Demo de app · Fintech" data-track-loc="contenido" aria-label="Ver pieza: Demo de app · Fintech (14 segundos)" style="--d:40ms">
+        <span class="fd-media" data-preview="video5"><img src="/assets/videos/web/video5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">02</i><span class="fd-hd">Demo de app · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="comercial-lobo" data-play-title="Comercial · Humor" data-aspect="16:9" data-track-loc="contenido" aria-label="Ver pieza: Comercial · Humor (55 segundos)" style="--d:80ms">
+        <span class="fd-media fd-media--wide" data-preview="comercial-lobo"><img src="/assets/videos/web/comercial-lobo-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:55</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--b" aria-hidden="true">03</i><span class="fd-hd">Comercial · Humor</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>16:9</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="osmo-ugc-1" data-play-title="UGC · Fintech" data-track-loc="contenido" aria-label="Ver pieza: UGC · Fintech (14 segundos)" style="--d:120ms">
+        <span class="fd-media" data-preview="osmo-ugc-1"><img src="/assets/videos/web/osmo-ugc-1-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--m" aria-hidden="true">04</i><span class="fd-hd">UGC · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+    </div>
+    <div class="fd-col" style="--dir:1;--spd:0.72;--o:-7.5%">
+      <button class="fd-card" type="button" data-play="video2" data-play-title="Podcast · Fintech" data-track-loc="contenido" aria-label="Ver pieza: Podcast · Fintech (20 segundos)" style="--d:70ms">
+        <span class="fd-media" data-preview="video2"><img src="/assets/videos/web/video2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:20</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--g" aria-hidden="true">05</i><span class="fd-hd">Podcast · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-3" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (13 segundos)" style="--d:110ms">
+        <span class="fd-media" data-preview="ae-3"><img src="/assets/videos/web/ae-3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:13</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">06</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="osmo-ugc-2" data-play-title="UGC · Fintech" data-track-loc="contenido" aria-label="Ver pieza: UGC · Fintech (13 segundos)" style="--d:150ms">
+        <span class="fd-media" data-preview="osmo-ugc-2"><img src="/assets/videos/web/osmo-ugc-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:13</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--b" aria-hidden="true">07</i><span class="fd-hd">UGC · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-5" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (15 segundos)" style="--d:190ms">
+        <span class="fd-media" data-preview="ae-5"><img src="/assets/videos/web/ae-5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:15</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--m" aria-hidden="true">08</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+    </div>
+    <div class="fd-col" style="--dir:-1;--spd:1.12;--o:11%">
+      <button class="fd-card" type="button" data-play="ae-2" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (14 segundos)" style="--d:140ms">
+        <span class="fd-media" data-preview="ae-2"><img src="/assets/videos/web/ae-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--g" aria-hidden="true">09</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="comercial-aventura" data-play-title="Comercial · Aventura" data-aspect="16:9" data-track-loc="contenido" aria-label="Ver pieza: Comercial · Aventura (46 segundos)" style="--d:180ms">
+        <span class="fd-media fd-media--wide" data-preview="comercial-aventura"><img src="/assets/videos/web/comercial-aventura-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:46</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">10</i><span class="fd-hd">Comercial · Aventura</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>16:9</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="video3" data-play-title="UGC · Fintech" data-track-loc="contenido" aria-label="Ver pieza: UGC · Fintech (27 segundos)" style="--d:220ms">
+        <span class="fd-media" data-preview="video3"><img src="/assets/videos/web/video3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:27</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--b" aria-hidden="true">11</i><span class="fd-hd">UGC · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="osmo-ugc-3" data-play-title="UGC · Fintech" data-track-loc="contenido" aria-label="Ver pieza: UGC · Fintech (15 segundos)" style="--d:260ms">
+        <span class="fd-media" data-preview="osmo-ugc-3"><img src="/assets/videos/web/osmo-ugc-3-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:15</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--m" aria-hidden="true">12</i><span class="fd-hd">UGC · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+    </div>
+    <div class="fd-col" style="--dir:1;--spd:0.84;--o:-2.5%">
+      <button class="fd-card" type="button" data-play="video4" data-play-title="Podcast · Fintech" data-track-loc="contenido" aria-label="Ver pieza: Podcast · Fintech (15 segundos)" style="--d:210ms">
+        <span class="fd-media" data-preview="video4"><img src="/assets/videos/web/video4-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:15</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--g" aria-hidden="true">13</i><span class="fd-hd">Podcast · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-4" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (12 segundos)" style="--d:250ms">
+        <span class="fd-media" data-preview="ae-4"><img src="/assets/videos/web/ae-4-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:12</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">14</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="comercial-petalos" data-play-title="Comercial · Marca" data-aspect="16:9" data-track-loc="contenido" aria-label="Ver pieza: Comercial · Marca (47 segundos)" style="--d:290ms">
+        <span class="fd-media fd-media--wide" data-preview="comercial-petalos"><img src="/assets/videos/web/comercial-petalos-poster.webp" width="1280" height="720" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:47</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--b" aria-hidden="true">15</i><span class="fd-hd">Comercial · Marca</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>16:9</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-6" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (14 segundos)" style="--d:330ms">
+        <span class="fd-media" data-preview="ae-6"><img src="/assets/videos/web/ae-6-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--m" aria-hidden="true">16</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+    </div>
+    <div class="fd-col" style="--dir:-1;--spd:0.96;--o:7.5%">
+      <button class="fd-card" type="button" data-play="osmo-ugc-2" data-play-title="UGC · Fintech" data-track-loc="contenido" aria-label="Ver pieza: UGC · Fintech (13 segundos)" tabindex="-1" aria-hidden="true" style="--d:280ms">
+        <span class="fd-media" data-preview="osmo-ugc-2"><img src="/assets/videos/web/osmo-ugc-2-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:13</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--b" aria-hidden="true">07</i><span class="fd-hd">UGC · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-1" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (14 segundos)" tabindex="-1" aria-hidden="true" style="--d:320ms">
+        <span class="fd-media" data-preview="ae-1"><img src="/assets/videos/web/ae-1-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--g" aria-hidden="true">01</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="video5" data-play-title="Demo de app · Fintech" data-track-loc="contenido" aria-label="Ver pieza: Demo de app · Fintech (14 segundos)" tabindex="-1" aria-hidden="true" style="--d:360ms">
+        <span class="fd-media" data-preview="video5"><img src="/assets/videos/web/video5-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:14</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">02</i><span class="fd-hd">Demo de app · Fintech</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+      <button class="fd-card" type="button" data-play="ae-4" data-play-title="UGC · Educación" data-track-loc="contenido" aria-label="Ver pieza: UGC · Educación (12 segundos)" tabindex="-1" aria-hidden="true" style="--d:400ms">
+        <span class="fd-media" data-preview="ae-4"><img src="/assets/videos/web/ae-4-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><span class="fd-reel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>0:12</span></span>
+        <span class="fd-meta"><i class="fd-av fd-av--w" aria-hidden="true">14</i><span class="fd-hd">UGC · Educación</span><span class="fd-like" aria-hidden="true"><span class="fd-heart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg><i class="fd-ring"></i></span><span class="fd-roll"><b>9:16</b><b>Ver</b></span></span></span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:contenido -->
+<!-- OMITTED ref 32_rwtm · Team (HOME-MAP 9) — DATO REAL: equipo (fotos, nombres, roles) para la sección Equipo -->
+<!-- SECTION:automatizacion -->
+<!-- 10 · AUTOMATIZACIÓN (#automatizacion) — reference 35_rwrv (bone). A tinted panel (radius 32, grid 1fr | 480px):
+     left = eyebrow, "channels" score block (big "4" + channel glyphs, in place of the 4.9 rating), channel pills
+     (in place of the platform badges), H2, sub, ghost CTA; right = a phone lock screen where EXAMPLE automation
+     notifications stack in as the phone scrolls up the viewport (same maths/timings as the reference:
+     /assets/js/sections/home-10-automatizacion.js). The notifications are a product illustration of what a Growco
+     automation sends (descriptive, no metrics, no people, no client names); rev1: no sample-data chip.
+     No JS / reduced motion: all six notifications shown in their final stacked positions (inline --r). -->
+<section class="sec au" id="automatizacion" data-theme="light" aria-labelledby="au-title" data-reveal-group>
+  <div class="wrap">
+    <div class="au-panel">
+      <div class="au-left">
+        <p class="eb" data-reveal><i aria-hidden="true"></i>(07) Automatización</p>
+        <div class="au-score" data-reveal data-reveal-delay="120">
+          <p class="au-big" aria-hidden="true">4</p>
+          <div class="au-of">
+            <span class="au-glyphs" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg>
+              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.9" cy="7.1" r=".6" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5s1.1-6.1 3.5-8.5z"/></svg>
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="2.8"/><path d="M4.5 6v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V6M4.5 12v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/></svg>
+            </span>
+            <p class="au-cnt">4 canales · un solo flujo</p>
+          </div>
+        </div>
+        <ul class="au-chan" role="list" aria-label="Canales que conectamos" data-reveal data-reveal-delay="220">
+          <li><i aria-hidden="true"></i>WhatsApp</li>
+          <li><i aria-hidden="true"></i>Instagram</li>
+          <li><i aria-hidden="true"></i>Web</li>
+          <li><i aria-hidden="true"></i>CRM</li>
+        </ul>
+        <h2 class="hd au-title" id="au-title" data-words data-words-delay="260">Tu negocio<br><mark>responde</mark> <mark>24/7.</mark></h2>
+        <p class="au-sub" data-reveal data-reveal-delay="480">Chatbots y flujos que atienden, agendan y dan seguimiento por ti, incluso fuera de horario: ningún lead que pagaste se queda sin respuesta.</p>
+        <div class="au-act" data-reveal data-reveal-delay="560">
+          <a class="btn btn--ghost" href="/#contacto" data-service="Automatización" data-track="cta_click" data-track-loc="automatizacion"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        </div>
+      </div>
+
+      <div class="au-lock" data-reveal data-reveal-delay="200" data-reveal-y="40">
+        <div class="au-glow" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="au-status" aria-hidden="true"><span>23:41</span><span class="au-isl"></span><span class="au-bat"><i></i></span></div>
+        <div class="au-time" aria-hidden="true">
+          <svg class="au-lk" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <p class="au-date">Martes, 29 de septiembre</p>
+          <p class="au-clock">23:41</p>
+        </div>
+        <p class="au-new"><span class="au-new-c" aria-hidden="true"><b data-au-count>6</b> <span data-au-label>notificaciones nuevas</span></span></p>
+        <ol class="au-stack" role="list" aria-label="Notificaciones que envía una automatización de Growco">
+          <li class="au-note is-in" tabindex="0" style="--r:0">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.6"/></svg></i><span>Instagram</span><span class="au-when">ahora</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="3.5"/><path d="M3.5 19.5c.8-3.4 3.3-5.5 6.5-5.5 1.6 0 3 .5 4.1 1.4M18 13v6M15 16h6"/></svg></span>
+              <p class="au-nm"><b>Nuevo lead desde Instagram</b><span>Respondido en segundos</span></p>
+              <span class="au-res">Respondido</span>
+            </div>
+            <p class="au-q">“¿Hacen envíos a Guatemala?” El bot respondió con las opciones y pidió sus datos.</p>
+          </li>
+          <li class="au-note is-in" tabindex="0" style="--r:1">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></svg></i><span>Agenda</span><span class="au-when">hace 2 min</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M9 15l2 2 4-4"/></svg></span>
+              <p class="au-nm"><b>Cita agendada para mañana 10:00</b><span>Confirmada desde el chat</span></p>
+              <span class="au-res">Agendada</span>
+            </div>
+            <p class="au-q">El cliente eligió el horario en el chat y recibió la confirmación con la dirección.</p>
+          </li>
+          <li class="au-note is-in" tabindex="0" style="--r:2">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></i><span>WhatsApp</span><span class="au-when">hace 9 min</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg></span>
+              <p class="au-nm"><b>Recordatorio enviado al cliente</b><span>Un día antes de su cita</span></p>
+              <span class="au-res">Enviado</span>
+            </div>
+            <p class="au-q">“Te esperamos mañana a las 10:00. Responde 1 para confirmar tu cita.”</p>
+          </li>
+          <li class="au-note is-in" tabindex="-1" style="--r:3">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 19.5 7.5v9L12 20.5 4.5 16.5v-9z"/><path d="M4.5 7.5 12 11.5l7.5-4M12 11.5v9"/></svg></i><span>Stockly</span><span class="au-when">hace 26 min</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 19.5 7.5v9L12 20.5 4.5 16.5v-9z"/><path d="M4.5 7.5 12 11.5l7.5-4M12 11.5v9"/></svg></span>
+              <p class="au-nm"><b>Pedido registrado en Stockly</b><span>Inventario actualizado</span></p>
+              <span class="au-res">Registrado</span>
+            </div>
+            <p class="au-q">El pedido que llegó por el chat entró a Stockly y el inventario se descontó solo.</p>
+          </li>
+          <li class="au-note is-in" tabindex="-1" style="--r:4">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="2.8"/><path d="M4.5 6v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V6M4.5 12v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/></svg></i><span>CRM</span><span class="au-when">hace 1 h</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 19 6v5.5c0 4.2-3 7.6-7 9-4-1.4-7-4.8-7-9V6z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span>
+              <p class="au-nm"><b>Lead calificado enviado al CRM</b><span>Listo para tu equipo de ventas</span></p>
+              <span class="au-res">Calificado</span>
+            </div>
+            <p class="au-q">El bot hizo las preguntas clave y pasó el contacto a ventas con todo el contexto.</p>
+          </li>
+          <li class="au-note is-in" tabindex="-1" aria-hidden="true" style="--r:5">
+            <div class="au-app"><i class="au-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.3 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.3-3.5-8.5s1.1-6.1 3.5-8.5z"/></svg></i><span>Web</span><span class="au-when">hace 3 h</span></div>
+            <div class="au-who">
+              <span class="au-av" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1"/><path d="M17.8 3.5v3.6h-3.6M6.2 20.5v-3.6h3.6"/></svg></span>
+              <p class="au-nm"><b>Seguimiento automático enviado</b><span>Contacto sin respuesta</span></p>
+              <span class="au-res">Enviado</span>
+            </div>
+            <p class="au-q">“¿Pudiste revisar la información? Si tienes dudas, te ayudamos por aquí.”</p>
+          </li>
+        </ol>
+        <div class="au-foot" aria-hidden="true">
+          <i><svg viewBox="0 0 24 24"><path d="M9 3h6l-1 6h3l-7 12 1-8H8z" fill="currentColor"/></svg></i>
+          <span class="au-home"></span>
+          <i><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="13.5" r="3.4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 7l1.4-2.5h4.2L15.5 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:automatizacion -->
+<!-- SECTION:faq -->
+<!-- 12 · FAQ (#faq) — reference 41_rwfq (bone). Grid 5fr / 7fr: sticky left column (eyebrow, H2, ink help card) and the
+     single-open accordion with the scroll progress rail (--f written by /assets/js/sections/home-12-faq.js; nodes light up
+     as the rail head passes each row). No JS / reduced motion: rail full, all nodes lit, every answer readable.
+     Answers use only the facts in DECISIONS §5 / HOME-MAP (no prices, no delivery-time promises, no guarantees).
+     rev1: platforms = "Meta, Google, TikTok, DV360 y las que tu estrategia necesite" (new Q02); markets not limited to a count. -->
+<section class="sec sec--pad fq" id="faq" data-theme="light" aria-labelledby="faq-title" data-reveal-group="120">
+  <div class="wrap fq-in">
+    <div class="fq-side">
+      <div class="fq-stick">
+        <p class="eb" data-reveal><i aria-hidden="true"></i>(08) Preguntas</p>
+        <h2 class="hd hd--700 fq-title" id="faq-title" data-words data-words-delay="120" data-marker-delay="525">Preguntas<br><mark>frecuentes.</mark></h2>
+        <div class="fq-card ctx-dark" data-reveal data-reveal-delay="420" data-reveal-y="26">
+          <p class="fq-card__l"><i class="fq-ring" aria-hidden="true"></i>¿Aún con dudas?</p>
+          <p class="fq-card__t">Escríbenos y te respondemos.</p>
+          <p class="fq-card__b">Te contamos qué haríamos con tu marca y cómo empezaríamos.</p>
+          <a class="btn btn--accent fq-btn" href="/#contacto" data-track="cta_click" data-track-loc="faq"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          <p class="fq-card__m">O escribe a <a href="mailto:agente@growcoai.com" data-track="email_click" data-track-loc="faq">agente@growcoai.com</a></p>
+          <p class="fq-card__r"><i class="dot dot--port" aria-hidden="true"></i>Base en El Salvador</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fq-list" data-accordion data-acc-open="0">
+      <i class="fq-rail" aria-hidden="true"><b></b></i>
+
+      <div class="fq-row is-open" data-acc-item data-reveal data-reveal-delay="200" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q1" aria-controls="fq-a1" data-acc-trigger><span class="fq-no" aria-hidden="true">01</span><span class="fq-qt">¿Qué hace Growco?</span><span class="fq-g" aria-hidden="true">General</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a1" role="region" aria-labelledby="fq-q1" data-acc-panel><div><p>Somos una agencia de growth marketing con IA con base en El Salvador. Trabajamos de la mano de tu área financiera para bajar tu CAC y hacer crecer tus RGU y tu ARPU con pauta digital en Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite, video con IA y automatización. También implementamos Stockly.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="230" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q1b" aria-controls="fq-a1b" data-acc-trigger><span class="fq-no" aria-hidden="true">02</span><span class="fq-qt">¿En qué plataformas hacen pauta?</span><span class="fq-g" aria-hidden="true">Servicios</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a1b" role="region" aria-labelledby="fq-q1b" data-acc-panel><div><p>En Meta (Facebook e Instagram), Google, TikTok, DV360 y cualquier otra plataforma digital que tu estrategia necesite. Elegimos la mezcla según dónde está tu cliente y qué quieres lograr.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="260" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q2" aria-controls="fq-a2" data-acc-trigger><span class="fq-no" aria-hidden="true">03</span><span class="fq-qt">¿Con qué tipo de empresas trabajan?</span><span class="fq-g" aria-hidden="true">General</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a2" role="region" aria-labelledby="fq-q2" data-acc-panel><div><p>Con marcas que quieren crecer con números sanos. Hoy trabajamos con marcas de consumo, salud, educación y apps financieras, de PyMEs a empresas con presencia en varios países.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="320" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q3" aria-controls="fq-a3" data-acc-trigger><span class="fq-no" aria-hidden="true">04</span><span class="fq-qt">¿En qué países trabajan?</span><span class="fq-g" aria-hidden="true">General</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a3" role="region" aria-labelledby="fq-q3" data-acc-panel><div><p>Nuestra base está en El Salvador y nuestra infraestructura está pensada para dar servicio a marcas en cualquier país e idioma. Hoy tenemos campañas activas en Centroamérica, México, Estados Unidos, Colombia, Europa y Reino Unido, entre otros.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="380" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q4" aria-controls="fq-a4" data-acc-trigger><span class="fq-no" aria-hidden="true">05</span><span class="fq-qt">¿Qué es AI Filmmaker?</span><span class="fq-g" aria-hidden="true">Servicios</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a4" role="region" aria-labelledby="fq-q4" data-acc-panel><div><p>Es nuestro servicio de video con IA: UGC, comerciales, product shots y visuales de marca, sin set ni rodaje, en 9:16, 1:1 o 16:9.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="440" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q5" aria-controls="fq-a5" data-acc-trigger><span class="fq-no" aria-hidden="true">06</span><span class="fq-qt">¿Qué automatizan?</span><span class="fq-g" aria-hidden="true">Servicios</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a5" role="region" aria-labelledby="fq-q5" data-acc-panel><div><p>Chatbots, flujos e integraciones que atienden, agendan y dan seguimiento por ti en WhatsApp, Instagram y tu web, y envían cada lead a tu CRM.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="500" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q6" aria-controls="fq-a6" data-acc-trigger><span class="fq-no" aria-hidden="true">07</span><span class="fq-qt">¿Qué es Stockly?</span><span class="fq-g" aria-hidden="true">Servicios</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a6" role="region" aria-labelledby="fq-q6" data-acc-panel><div><p>Es un sistema de inventario y ventas para PyMEs. Growco lo implementa y lo deja listo para tu operación.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="560" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q7" aria-controls="fq-a7" data-acc-trigger><span class="fq-no" aria-hidden="true">08</span><span class="fq-qt">¿Cómo empezamos?</span><span class="fq-g" aria-hidden="true">Proceso</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a7" role="region" aria-labelledby="fq-q7" data-acc-panel><div><p>Escríbenos por el <a href="/#contacto">formulario</a> o a <a href="mailto:agente@growcoai.com">agente@growcoai.com</a>. Revisamos tu marca y te enviamos una propuesta a la medida.</p></div></div>
+      </div>
+
+      <div class="fq-row" data-acc-item data-reveal data-reveal-delay="620" data-reveal-y="18">
+        <i class="fq-dot" aria-hidden="true"></i>
+        <h3 class="fq-q"><button type="button" id="fq-q8" aria-controls="fq-a8" data-acc-trigger><span class="fq-no" aria-hidden="true">09</span><span class="fq-qt">¿Cómo miden los resultados?</span><span class="fq-g" aria-hidden="true">Proceso</span><span class="fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="fq-a" id="fq-a8" role="region" aria-labelledby="fq-q8" data-acc-panel><div><p>Con un reporte mensual de negocio: CAC, RGU, ARPU y retorno de la inversión, además de las métricas de pauta. Lo revisamos contigo y con tu área financiera, y configuramos píxel, conversiones y atribución.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Qué hace Growco?", "acceptedAnswer": {"@type": "Answer", "text": "Somos una agencia de growth marketing con IA con base en El Salvador. Trabajamos de la mano de tu área financiera para bajar tu CAC y hacer crecer tus RGU y tu ARPU con pauta digital en Meta, Google, TikTok, DV360 y las plataformas que tu estrategia necesite, video con IA y automatización. También implementamos Stockly."}},
+      {"@type": "Question", "name": "¿En qué plataformas hacen pauta?", "acceptedAnswer": {"@type": "Answer", "text": "En Meta (Facebook e Instagram), Google, TikTok, DV360 y cualquier otra plataforma digital que tu estrategia necesite. Elegimos la mezcla según dónde está tu cliente y qué quieres lograr."}},
+      {"@type": "Question", "name": "¿Con qué tipo de empresas trabajan?", "acceptedAnswer": {"@type": "Answer", "text": "Con marcas que quieren crecer con números sanos. Hoy trabajamos con marcas de consumo, salud, educación y apps financieras, de PyMEs a empresas con presencia en varios países."}},
+      {"@type": "Question", "name": "¿En qué países trabajan?", "acceptedAnswer": {"@type": "Answer", "text": "Nuestra base está en El Salvador y nuestra infraestructura está pensada para dar servicio a marcas en cualquier país e idioma. Hoy tenemos campañas activas en Centroamérica, México, Estados Unidos, Colombia, Europa y Reino Unido, entre otros."}},
+      {"@type": "Question", "name": "¿Qué es AI Filmmaker?", "acceptedAnswer": {"@type": "Answer", "text": "Es nuestro servicio de video con IA: UGC, comerciales, product shots y visuales de marca, sin set ni rodaje, en 9:16, 1:1 o 16:9."}},
+      {"@type": "Question", "name": "¿Qué automatizan?", "acceptedAnswer": {"@type": "Answer", "text": "Chatbots, flujos e integraciones que atienden, agendan y dan seguimiento por ti en WhatsApp, Instagram y tu web, y envían cada lead a tu CRM."}},
+      {"@type": "Question", "name": "¿Qué es Stockly?", "acceptedAnswer": {"@type": "Answer", "text": "Es un sistema de inventario y ventas para PyMEs. Growco lo implementa y lo deja listo para tu operación."}},
+      {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por el formulario o a agente@growcoai.com. Revisamos tu marca y te enviamos una propuesta a la medida."}},
+      {"@type": "Question", "name": "¿Cómo miden los resultados?", "acceptedAnswer": {"@type": "Answer", "text": "Con un reporte mensual de negocio: CAC, RGU, ARPU y retorno de la inversión, además de las métricas de pauta. Lo revisamos contigo y con tu área financiera, y configuramos píxel, conversiones y atribución."}}
+    ]
+  }
+  </script>
+</section>
+<!-- /SECTION:faq -->
+<!-- OMITTED ref 44_rwjr · Journal (HOME-MAP 13) — sin blog -->
+<!-- SECTION:contacto -->
+<section class="sec ct" id="contacto" data-theme="dark" data-progress data-rings data-reveal-group aria-labelledby="ct-title">
+  <span class="ct__rings" aria-hidden="true"><i style="--r:0"></i><i style="--r:1"></i><i style="--r:2"></i><b></b></span>
+  <div class="wrap ct__in">
+    <div class="ct__main">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(09) Contacto</p>
+      <h2 class="hd hd--xl ct__h" id="ct-title" data-words data-words-delay="100" data-words-step="70">Hablemos de<br><mark>tu marca.</mark></h2>
+      <p class="ct__sub" data-reveal data-reveal-delay="420">Cuéntanos qué vendes, qué servicio te interesa y tus metas de crecimiento. Te respondemos con una propuesta.</p>
+      <form class="ct__form" id="lead-form" data-lead-form="contacto-home" data-page-name="Inicio" action="https://formsubmit.co/agente@growcoai.com" method="post" data-reveal data-reveal-delay="540" data-reveal-y="18">
+        <input type="hidden" name="_subject" value="Nueva solicitud de propuesta — Inicio">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://growcoai.com/?enviado=1#contacto">
+        <input type="hidden" name="origen" value="home">
+        <div class="hp" aria-hidden="true"><label for="ct-honey">No llenar este campo</label><input type="text" id="ct-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <div class="ct__grid">
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-nombre">Nombre</label><span class="fld__err" id="ct-nombre-err"></span></div><input type="text" id="ct-nombre" name="nombre" autocomplete="name" maxlength="120" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-email">Correo</label><span class="fld__err" id="ct-email-err"></span></div><input type="email" id="ct-email" name="email" autocomplete="email" inputmode="email" maxlength="160" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-empresa">Empresa <em>(opcional)</em></label></div><input type="text" id="ct-empresa" name="empresa" autocomplete="organization" maxlength="120"></div>
+          <div class="fld fld--sel"><div class="fld__top"><label class="fld__k" for="ct-servicio">Servicio</label><span class="fld__err" id="ct-servicio-err"></span></div>
+            <select id="ct-servicio" name="servicio" required>
+              <option value="" disabled selected>Elige un servicio</option>
+              <option value="pauta">Pauta digital</option>
+              <option value="filmmaker">AI Filmmaker</option>
+              <option value="automatizacion">Automatización</option>
+              <option value="stockly">Stockly</option>
+              <option value="nose">No estoy seguro</option>
+            </select><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div class="fld fld--area"><div class="fld__top"><label class="fld__k" for="ct-mensaje">Mensaje <em>(opcional)</em></label></div><textarea id="ct-mensaje" name="mensaje" rows="1" maxlength="1000" data-autogrow placeholder="Qué vendes, a quién y qué te gustaría lograr."></textarea></div>
+        </div>
+        <div class="ct__row">
+          <p class="ct__mail">Usamos tus datos solo para responderte.</p>
+          <button class="btn btn--accent ct__go" type="submit" data-rings-anchor><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></button>
+        </div>
+        <p class="ct__status" aria-live="polite"></p>
+      </form>
+    </div>
+    <aside class="ct__card" aria-label="Contacto directo" data-reveal data-reveal-delay="380" data-reveal-y="30">
+      <p class="ct__cl"><i class="dot dot--port" aria-hidden="true"></i>Contacto directo</p>
+      <p class="ct__ct">¿Prefieres escribirnos?</p>
+      <a class="ct__email" href="mailto:agente@growcoai.com">agente@growcoai.com</a>
+      <ol class="ct__steps" aria-label="Qué pasa después">
+        <li style="--i:0"><span><b>01</b> Nos escribes</span></li>
+        <li style="--i:1"><span><b>02</b> Revisamos</span></li>
+        <li style="--i:2"><span><b>03</b> Tu propuesta</span></li>
+      </ol>
+      <div class="ct__clock js-only"><p><span>Hora en El Salvador</span><b data-clock="hms"></b></p></div>
+      <div class="ct__svc"><span class="ct__av" aria-hidden="true"><i>01</i><i>02</i><i>03</i><i>04</i></span><span class="ct__sn">4 servicios, un mismo equipo</span></div>
+    </aside>
+  </div>
+</section>
+<!-- /SECTION:contacto -->
   </main>
 
-  <!-- ========== FOOTER ========== -->
-  <footer aria-label="Pie de página">
-    <div class="footer-content">
-      <a href="/" class="footer-brand" aria-label="Growco — Ir al inicio">
-        <img src="assets/growco-logo.png" alt="Growco" class="footer-logo-img">
-      </a>
-
-      <nav class="footer-links" aria-label="Navegación del pie de página">
-        <a href="#ecosistema">Ecosistema</a>
-        <a href="/filmmaker">AI Filmmaker</a>
-        <a href="/SaaSystem">SaaSystem</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2025 Growco. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <script src="app.js"></script>
-
+<!-- PARTIAL:footer -->
+<div class="ft-rev" data-curtain>
+  <div class="ft-rev__in">
+    <footer class="ft" id="site-footer" data-theme="light" data-reveal-group data-reveal-manual>
+      <h2 class="sr">Growco: mapa del sitio y contacto</h2>
+      <div class="wrap">
+        <div class="ft__top">
+          <div class="ft__brand" data-reveal>
+            <a class="ft__logo" href="/" aria-label="Growco, ir al inicio"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+            <p class="ft__blurb">Growth, pauta y video con IA para bajar tu CAC y hacer crecer tu negocio.</p>
+            <p class="ft__ann"><i class="dot dot--port" aria-hidden="true"></i>Agencia de marketing con IA</p>
+            <a class="btn btn--quiet" href="/#contacto" data-track="cta_click" data-track-loc="footer"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+          <nav class="ft__cols" aria-label="Pie de página">
+            <div class="ft__col" data-reveal data-reveal-delay="80">
+              <h3 class="ft__ct">Servicios</h3>
+              <ul>
+                <li><a href="/#servicios">Pauta digital</a></li>
+                <li><a href="/filmmaker">AI Filmmaker</a></li>
+                <li><a href="/#automatizacion">Automatización</a></li>
+                <li><a href="/SaaSystem">Stockly</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="150">
+              <h3 class="ft__ct">Empresa</h3>
+              <ul>
+                <li><a href="/#proceso">Cómo trabajamos</a></li>
+                <li><a href="/#faq">Preguntas</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="220">
+              <h3 class="ft__ct">Contacto</h3>
+              <ul>
+                <li><a href="mailto:agente@growcoai.com">agente@growcoai.com</a></li>
+                <li><a href="#" data-whatsapp hidden>WhatsApp</a></li>
+                <li class="ft__city">El Salvador</li>
+              </ul>
+              <!-- DATO REAL: URLs de Instagram, LinkedIn y TikTok para las pastillas sociales del pie -->
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap ft__wmw" aria-hidden="true">
+        <div class="ft__wm" data-spotlight>
+          <svg class="lockup ft__wm-t" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <i class="ft__ring"></i>
+          <svg class="lockup ft__wm-l" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <b class="ft__hint">Pasa el cursor sobre el logo</b>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="ft__legal">
+          <span>© <span data-year>2026</span> Growco</span>
+          <span>Hecho en El Salvador</span>
+          <!-- DATO REAL: enlaces a /privacidad y /terminos cuando existan esas páginas -->
+          <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="ft-rev__sp"></div>
+</div>
+<!-- /PARTIAL:footer -->
 </body>
 </html>

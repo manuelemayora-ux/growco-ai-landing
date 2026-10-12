@@ -1,0 +1,135 @@
+/* 06 · CÓMO TRABAJAMOS (#proceso) — reference 23_rwfn.
+   Base rules = the "flat" layout (tablet / phone / reduced motion / no JS); #proceso.is-pinned (motion.js data-sticky,
+   ≥1200 px, motion allowed) = the pinned stage. One DOM for both: in flat mode the left/right columns and the lists are
+   display:contents so each funnel band + its step form one reference card in the section grid. */
+
+#proceso{--fn-tint:color-mix(in srgb,var(--ink) 5%,transparent);--fn-done:color-mix(in srgb,var(--accent) 45%,var(--bone))}
+#proceso .fn-title{letter-spacing:-.045em}
+/* live eyebrow dot (reference rwfn-live: a navy 30 % halo growing 0 → 9 px). Done with transform/opacity on a pseudo halo
+   under a pseudo copy of the dot, and paused while the section is off screen (.fn-vis is set by the section JS). */
+#proceso .eb>i::before,#proceso .eb>i::after{content:"";position:absolute;inset:0;border-radius:50%}
+#proceso .eb>i::before{background:color-mix(in srgb,var(--ink) 30%,transparent);animation:fn-live 1.8s linear infinite}
+#proceso .eb>i::after{background:inherit}
+#proceso.fn-live:not(.fn-vis) .eb>i::before{animation-play-state:paused}
+@keyframes fn-live{0%{transform:scale(1);opacity:1}100%{transform:scale(3.57);opacity:0}}
+#proceso .fn-intro{margin:0;max-width:44ch;font-size:17px;line-height:1.5;color:var(--mut)}
+
+/* shared atoms ------------------------------------------------------------------------------------------- */
+#proceso .fn-steps{list-style:none;margin:0;padding:0}
+/* title row: the h3 + its "Paso N" chip as a sibling (aria-hidden, the <ol> already gives the order) so the heading
+   outline reads just "Diagnóstico", "Lanzamiento"… */
+#proceso .fn-step-h{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin:3px 0 6px}
+#proceso .fn-step h3{margin:0;font-family:var(--font-d);font-size:24px;font-weight:600;line-height:1.05;letter-spacing:-.035em;color:var(--fg)}
+#proceso .fn-step-tag{padding:4px 9px;color:var(--fg);border-radius:999px;background:color-mix(in srgb,var(--ink) 7%,transparent);font-family:var(--font-m);font-size:11px;font-weight:400;line-height:1.05;letter-spacing:.12em;text-transform:uppercase}
+#proceso .fn-step p{margin:0;font-size:16px;line-height:1.45;color:var(--mut)}
+#proceso .fn-band-l{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-m);font-size:11.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;line-height:1.3}
+#proceso .fn-band-l em{display:grid;place-items:center;flex:none;font-style:normal;border-radius:999px;background:var(--ink);color:var(--accent);font-size:10px;letter-spacing:inherit}
+#proceso .fn-band-v{font-family:var(--font-d);font-weight:600;line-height:.9;letter-spacing:-.05em;font-variant-numeric:tabular-nums;white-space:nowrap}
+#proceso .fn-tip i{flex:none;border-radius:50%}
+#proceso .fn-foot{display:flex;align-items:center;gap:10px;margin:0;font-family:var(--font-m);font-size:11.5px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;line-height:1.3;color:var(--mut)}
+#proceso .fn-cv{display:none}
+
+/* FLAT (default) -------------------------------------------------------------------------------------------- */
+#proceso .fn-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;padding-top:clamp(80px,10vw,120px);padding-bottom:clamp(80px,10vw,120px)}
+#proceso .fn-l,#proceso .fn-steps,#proceso .fn-r,#proceso .fn-fun{display:contents}
+#proceso .fn-l>.eb{grid-column:1/-1;grid-row:1;justify-self:start}
+#proceso .fn-title{grid-column:1/-1;grid-row:2;margin-top:22px;font-size:clamp(44px,6.4vw,64px)}
+#proceso .fn-intro{grid-column:1/-1;grid-row:3;margin-top:22px}
+/* the "illustrative" label sits above the cards in flat mode so it is read before the figures */
+#proceso .fn-foot{grid-column:1/-1;grid-row:4;margin-top:36px}
+#proceso .fn-band:nth-child(1),#proceso .fn-step:nth-child(1){grid-column:1}
+#proceso .fn-band:nth-child(2),#proceso .fn-step:nth-child(2){grid-column:2}
+#proceso .fn-band:nth-child(3),#proceso .fn-step:nth-child(3){grid-column:1}
+#proceso .fn-band:nth-child(4),#proceso .fn-step:nth-child(4){grid-column:2}
+#proceso .fn-band:nth-child(-n+2){grid-row:5;margin-top:20px}
+#proceso .fn-step:nth-child(-n+2){grid-row:6}
+#proceso .fn-band:nth-child(n+3){grid-row:7;margin-top:16px}
+#proceso .fn-step:nth-child(n+3){grid-row:8}
+/* card top = the band */
+#proceso .fn-band{position:relative;display:flex;flex-direction:column;gap:14px;padding:22px 22px 0;border:1px solid var(--fog);border-bottom:0;border-radius:22px 22px 0 0;background:var(--fn-tint)}
+#proceso .fn-band-c{order:-1;display:flex;align-items:center;gap:10px}
+#proceso .fn-band-l{gap:10px}
+#proceso .fn-band-l em{width:26px;height:24px}
+#proceso .fn-band-v{margin-left:auto;font-size:clamp(32px,8vw,44px)}
+#proceso .fn-shape{position:relative;height:14px;width:calc(100% - var(--i,0) * 12%);border-radius:999px;background:color-mix(in srgb,var(--ink) 8%,transparent);overflow:hidden}
+#proceso .fn-fill{position:absolute;inset:0;border-radius:inherit;background:var(--accent);transform-origin:left;transition:transform 1.3s var(--ease-snap) .15s}
+#proceso.fn-live:not(.is-pinned) .fn-band:not(.is-on) .fn-fill{transform:scaleX(0)}
+#proceso .fn-tip{display:flex;align-items:center;gap:8px;margin:0;font-family:var(--font-m);font-size:11.5px;font-weight:400;letter-spacing:.06em;line-height:1.3;color:var(--mut)}
+#proceso .fn-tip i{width:6px;height:6px;background:var(--accent-2)}
+/* card bottom = the step */
+#proceso .fn-step{position:relative;padding:0 22px 22px;border:1px solid var(--fog);border-top:0;border-radius:0 0 22px 22px;background:var(--fn-tint)}
+#proceso .fn-step-n{display:none}
+#proceso .fn-step-b{margin-top:14px;padding-top:14px;border-top:1px solid var(--fog)}
+
+/* PINNED (≥1200 px, JS, motion allowed) --------------------------------------------------------------------- */
+#proceso.is-pinned .fn-pin{position:relative;height:320vh;height:320svh}
+#proceso.is-pinned .fn-sticky{position:sticky;top:0;height:100vh;height:100svh;display:flex;align-items:center;overflow:clip}
+#proceso.is-pinned .fn-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:clamp(40px,5vw,96px);align-items:center;height:100%;padding-top:6vh;padding-bottom:6vh;padding-top:6svh;padding-bottom:6svh}
+#proceso.is-pinned .fn-l{display:flex;flex-direction:column;align-items:flex-start;gap:22px;min-height:0}
+#proceso.is-pinned .fn-l>*{margin-top:0}
+#proceso.is-pinned .fn-title{font-size:clamp(40px,4.6vw,68px)}
+#proceso.is-pinned .fn-steps{display:flex;flex-direction:column;align-self:stretch;margin-top:14px;border-top:1px solid var(--fog)}
+#proceso.is-pinned .fn-step{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border:0;border-bottom:1px solid var(--fog);border-radius:0;background:none;opacity:.35;transition:opacity .5s}
+#proceso.is-pinned .fn-step::before{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:2px;background:var(--ink);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease-snap)}
+#proceso.is-pinned .fn-step.is-act{opacity:1}
+#proceso.is-pinned .fn-step.is-done{opacity:.6}
+#proceso.is-pinned .fn-step.is-act::before{transform:none}
+#proceso.is-pinned .fn-step-n{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;font-family:var(--font-m);font-size:11.5px;box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 25%,transparent);transition:background .4s,box-shadow .4s}
+#proceso.is-pinned .fn-step.is-act .fn-step-n{background:var(--accent);box-shadow:none}
+#proceso.is-pinned .fn-step-b{margin:0;padding:0;border:0}
+#proceso.is-pinned .fn-r{display:flex;flex-direction:column;gap:16px;height:100%;max-height:760px;min-height:0;justify-content:center}
+#proceso.is-pinned .fn-fun{position:relative;display:flex;flex-direction:column;gap:10px;flex:1;min-height:0;max-height:640px}
+#proceso.is-pinned .fn-cv{display:block;position:absolute;inset:0;z-index:3;width:100%;height:100%;pointer-events:none}
+#proceso.is-pinned .fn-foot{justify-content:center;margin:0}
+/* bands: trapezoids narrowing 7 % per side per step (insets 0 / 7 / 14 / 21 / 27 %) */
+#proceso.is-pinned .fn-band{display:block;flex:1;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:none;outline-offset:4px;cursor:default;
+  --f:clamp(0,((var(--pin,0) - .04) / .86 * 4 - var(--i,0)) * 1.25,1)}
+#proceso.is-pinned .fn-shape{position:absolute;inset:0;width:auto;height:auto;border-radius:0;background:color-mix(in srgb,var(--ink) 6%,transparent);transition:background .5s}
+#proceso.is-pinned .fn-band:nth-child(1) .fn-shape{clip-path:polygon(0 0,100% 0,93% 100%,7% 100%)}
+#proceso.is-pinned .fn-band:nth-child(2) .fn-shape{clip-path:polygon(7% 0,93% 0,86% 100%,14% 100%)}
+#proceso.is-pinned .fn-band:nth-child(3) .fn-shape{clip-path:polygon(14% 0,86% 0,79% 100%,21% 100%)}
+#proceso.is-pinned .fn-band:nth-child(4) .fn-shape{clip-path:polygon(21% 0,79% 0,73% 100%,27% 100%)}
+#proceso.is-pinned .fn-band:hover .fn-shape{background:color-mix(in srgb,var(--ink) 10%,transparent)}
+#proceso.is-pinned .fn-fill{border-radius:0;transform:scaleX(var(--f));transition:background-color .6s}
+#proceso.is-pinned .fn-band.is-on:not(.is-act) .fn-fill{background:var(--fn-done)}
+#proceso.is-pinned .fn-band.is-act .fn-fill{background:linear-gradient(90deg,var(--accent) 0,var(--accent) calc(100% - 3px),var(--ink) calc(100% - 3px))}
+#proceso.is-pinned .fn-band-c{position:relative;z-index:2;flex-direction:column;justify-content:center;gap:6px;height:100%;text-align:center;pointer-events:none}
+#proceso.is-pinned .fn-band-l{gap:8px;padding:5px 11px 5px 6px;border-radius:999px;background:var(--bone)}
+#proceso.is-pinned .fn-band-l em{width:auto;min-width:22px;height:22px}
+#proceso.is-pinned .fn-band-v{margin:0;font-size:clamp(34px,3.4vw,56px)}
+#proceso.is-pinned .fn-tip{position:absolute;z-index:4;top:50%;display:inline-flex;padding:8px 12px;border-radius:999px;background:var(--ink);color:var(--white);letter-spacing:.04em;white-space:nowrap;box-shadow:0 12px 30px -12px rgba(0,0,0,.5);pointer-events:none;opacity:0;translate:0 -30%;transition:opacity .3s,translate .45s var(--ease-pop)}
+#proceso.is-pinned .fn-tip i{width:7px;height:7px;background:var(--accent-2-dark)}
+#proceso.is-pinned .fn-band:nth-child(1) .fn-tip{right:calc(7% + 10px)}
+#proceso.is-pinned .fn-band:nth-child(2) .fn-tip{right:calc(14% + 10px)}
+#proceso.is-pinned .fn-band:nth-child(3) .fn-tip{right:calc(21% + 10px)}
+#proceso.is-pinned .fn-band:nth-child(4) .fn-tip{right:calc(27% + 10px)}
+#proceso.is-pinned .fn-band:is(:hover,:focus-visible) .fn-tip{opacity:1;translate:0 -50%}
+@media (max-height:760px){#proceso.is-pinned .fn-step p,#proceso.is-pinned .fn-intro{display:none}}
+/* Spanish step lines wrap to 2 lines in the narrow 1200–1299 px column: drop the intro on short screens so the column
+   still fits inside the 100svh stage (12 svh padding) instead of running under the header */
+@media (max-width:1299px) and (max-height:820px){#proceso.is-pinned .fn-intro{display:none}}
+
+/* tablet / phone ------------------------------------------------------------------------------------------------ */
+@media (max-width:809px){
+  #proceso .fn-grid{grid-template-columns:minmax(0,1fr)}
+  #proceso .fn-title{font-size:clamp(38px,10.6vw,52px)}
+  #proceso .fn-intro{font-size:16px}
+  #proceso .fn-band:nth-child(n){grid-column:1}
+  #proceso .fn-step:nth-child(n){grid-column:1}
+  #proceso .fn-band:nth-child(1){grid-row:5}
+  #proceso .fn-step:nth-child(1){grid-row:6}
+  #proceso .fn-band:nth-child(2){grid-row:7}
+  #proceso .fn-step:nth-child(2){grid-row:8}
+  #proceso .fn-band:nth-child(3){grid-row:9}
+  #proceso .fn-step:nth-child(3){grid-row:10}
+  #proceso .fn-band:nth-child(4){grid-row:11}
+  #proceso .fn-step:nth-child(4){grid-row:12}
+  #proceso .fn-foot{margin-top:32px}
+  #proceso .fn-band:nth-child(n+2){margin-top:16px}
+}
+
+/* reduced motion: flat cards (data-sticky), final values, no pulse */
+@media (prefers-reduced-motion:reduce){
+  #proceso .eb>i::before{animation:none;opacity:0}
+  #proceso .fn-band .fn-fill{transform:none!important}
+}

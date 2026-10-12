@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="es" data-smooth>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Stockly: inventario y ventas para PyMEs | Growco</title>
+  <meta name="description" content="Sistema web de inventario y ventas para PyMEs, implementado por Growco con tus productos. Alertas de stock, punto de venta y reportes en PC y celular.">
+  <link rel="canonical" href="https://growcoai.com/SaaSystem">
+  <meta name="theme-color" content="#0B1331">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Growco">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:url" content="https://growcoai.com/SaaSystem">
+  <meta property="og:title" content="Stockly · Tu inventario, bajo control">
+  <meta property="og:description" content="Inventario, ventas, compras y reportes en un sistema web que Growco implementa con tus productos. Úsalo en la PC, la tablet o el celular.">
+  <meta property="og:image" content="https://growcoai.com/assets/img/og-stockly.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dos personas revisan un panel de datos en una laptop, resaltado con un anillo verde, y el logo de Growco">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Stockly · Tu inventario, bajo control">
+  <meta name="twitter:description" content="Inventario, ventas, compras y reportes en un sistema web que Growco implementa con tus productos.">
+  <meta name="twitter:image" content="https://growcoai.com/assets/img/og-stockly.jpg">
+  <meta name="twitter:image:alt" content="Dos personas revisan un panel de datos en una laptop, resaltado con un anillo verde, y el logo de Growco">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+
+  <!-- JS flag first: hide-before-reveal styles only apply under html.js. Fail-safe: drop it if motion.js has not run
+       by DOMContentLoaded (deferred scripts run before it, so it failed) or after 4 s (slow network); motion.js
+       puts html.js back if it initialises later. -->
+  <script>(function(d){var h=d.documentElement,off=function(){if(!h.classList.contains('gc-ready'))h.classList.remove('js')};h.classList.add('js');setTimeout(off,4000);d.addEventListener('DOMContentLoaded',function(){setTimeout(off,0)})})(document)</script>
+
+  <!-- Fonts: Funnel Display / Funnel Sans / Geist Mono (one request) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&amp;family=Funnel+Sans:ital,wght@0,400..700;1,400..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap">
+
+  
+  <link rel="stylesheet" href="/assets/css/site.css?v=e3b0513d">
+  <link rel="stylesheet" href="/assets/css/saasystem.css?v=6bbd2e0b">
+
+  <script src="/assets/js/motion.js?v=8047e1a0" defer></script>
+  <script src="/assets/js/site.js?v=1ac7d933" defer></script>
+  <script src="/assets/js/saasystem.js?v=9c46cb18" defer></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-EGNSF9X7R0');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1351342940194752');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- JSON-LD: page graph; the Organization node repeats the home's @id (https://growcoai.com/#organization). The FAQPage
+       block is NOT here: the #faq fragment carries its own FAQPage JSON-LD block (same as the home). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://growcoai.com/SaaSystem#stockly",
+        "name": "Stockly",
+        "url": "https://growcoai.com/SaaSystem",
+        "description": "Sistema web de inventario y ventas para PyMEs, implementado por Growco con los productos de cada negocio.",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Inventario y punto de venta",
+        "operatingSystem": "Web",
+        "inLanguage": "es",
+        "image": "https://growcoai.com/assets/img/og-stockly.jpg",
+        "featureList": [
+          "Inventario por producto y categoría con alertas de stock bajo y agotados",
+          "Historial de entradas y salidas de inventario",
+          "Punto de venta con búsqueda por nombre o código y cobro en efectivo, tarjeta o transferencia",
+          "IVA calculado al cobrar y descuento automático del stock",
+          "Catálogo con costo, precio y margen por producto",
+          "Directorio de clientes y de proveedores",
+          "Órdenes de compra con su estado",
+          "Reportes de valor del inventario, margen promedio, productos estrella y productos sin ventas en 90 días"
+        ],
+        "provider": {
+          "@id": "https://growcoai.com/#organization"
+        },
+        "publisher": {
+          "@id": "https://growcoai.com/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://growcoai.com/#organization",
+        "name": "Growco",
+        "url": "https://growcoai.com/",
+        "email": "agente@growcoai.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "SV"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://growcoai.com/SaaSystem#webpage",
+        "url": "https://growcoai.com/SaaSystem",
+        "name": "Stockly: inventario y ventas para PyMEs | Growco",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@id": "https://growcoai.com/#website"
+        },
+        "about": {
+          "@id": "https://growcoai.com/SaaSystem#stockly"
+        },
+        "breadcrumb": {
+          "@id": "https://growcoai.com/SaaSystem#breadcrumb"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://growcoai.com/SaaSystem#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Growco",
+            "item": "https://growcoai.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Stockly",
+            "item": "https://growcoai.com/SaaSystem"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="saasystem" data-page-name="Stockly">
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1351342940194752&amp;ev=PageView&amp;noscript=1"></noscript>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- PARTIAL:header -->
+<header class="nav" id="site-header">
+  <div class="nav__bar">
+    <a class="nav__logo nav__in" href="/" aria-label="Growco, ir al inicio" style="--d:60ms"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+    <nav class="nav__nav nav__in" aria-label="Principal" style="--d:140ms">
+      <ul class="nav__lk">
+        <li><a href="#modulos">Módulos</a></li>
+        <li><a href="#comparar">Comparar</a></li>
+        <li><a href="#giros">Para tu giro</a></li>
+        <li><a href="#implementacion">Implementación</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
+    <div class="nav__act nav__in" style="--d:220ms">
+      <a class="btn btn--quiet nav__cta" href="#contacto" data-track="cta_click" data-track-loc="nav" data-service="stockly"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Hablemos</span><span class="btn__l2" aria-hidden="true">Hablemos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menú"><span class="nav__bl" aria-hidden="true"><i></i><i></i></span><span class="nav__bt" aria-hidden="true">Menú</span></button>
+    </div>
+  </div>
+</header>
+<div class="drw" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="drw__rw" aria-hidden="true"><span class="drw__rings"><i></i><i></i><i></i><i></i><b></b><b></b></span></div>
+  <div class="drw__in">
+    <nav aria-label="Menú principal">
+      <ol class="drw__list" role="list">
+        <li style="--i:0"><a href="#modulos"><span class="drw__n" aria-hidden="true">01</span><span class="drw__m"><span class="drw__t">Módulos</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:1"><a href="#comparar"><span class="drw__n" aria-hidden="true">02</span><span class="drw__m"><span class="drw__t">Comparar</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:2"><a href="#giros"><span class="drw__n" aria-hidden="true">03</span><span class="drw__m"><span class="drw__t">Para tu giro</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:3;--drw-fs:0.84"><a href="#implementacion"><span class="drw__n" aria-hidden="true">04</span><span class="drw__m"><span class="drw__t">Implementación</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:4"><a href="#faq"><span class="drw__n" aria-hidden="true">05</span><span class="drw__m"><span class="drw__t">Preguntas</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:5"><a href="#contacto"><span class="drw__n" aria-hidden="true">06</span><span class="drw__m"><span class="drw__t">Contacto</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+      </ol>
+    </nav>
+    <div class="drw__ft">
+      <a class="btn btn--accent btn--block drw__cta" href="#contacto" data-track="cta_click" data-track-loc="drawer" data-service="stockly"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <div class="drw__info">
+        <div><p class="drw__k">Escríbenos</p><a href="mailto:agente@growcoai.com">agente@growcoai.com</a><a href="#" data-whatsapp hidden>WhatsApp</a></div>
+        <div><p class="drw__k">Base</p><p>El Salvador</p></div>
+        <div class="js-only"><p class="drw__k">Hora local</p><p class="drw__time"><i class="dot dot--live" aria-hidden="true"></i><span data-clock="hm"></span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /PARTIAL:header -->
+
+  <main id="main" tabindex="-1">
+<!-- SECTION:inicio -->
+<!-- 01 · INICIO (#inicio) — reference rwph (shared page hero of /services, /work, /pricing), dark variant (.is-dk, as on /work),
+     adapted as a PRODUCT hero (ref-subpages.md §2, _reports/_ref/comp/53b_rwph.css). 7fr / 5fr grid aligned to the bottom,
+     dot field behind the object, facts strip + scroll cue under a hairline. The /work KPI chart card becomes a Stockly
+     panel mock built from the verified Dashboard screen (STOCKLY-MAP §2: valor del inventario, meses de inventario por
+     categoría, total de productos, stock bajo, agotados). Figures are generic product-UI values of a
+     fictitious minisúper (no client, no claim): they are not presented as results.
+     Motion (/assets/js/sections/saasystem-01-inicio.js): --ex exit (copy rises + fades, object lifts + scales), pointer tilt
+     (fine pointers), bars grow in order, the low bar pings, the "stock bajo" chip pops.
+     No JS / reduced motion: final frame (all bars and the chip visible), no tilt. -->
+<section class="sec s-ph" id="inicio" data-theme="dark" aria-labelledby="s-ph-title" data-reveal-group>
+  <i class="s-ph__bgf" aria-hidden="true"></i>
+  <div class="wrap s-ph__in">
+    <div class="s-ph__copy">
+      <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(01) Stockly by Growco</p>
+      <h1 class="s-ph__h1" id="s-ph-title" data-words data-words-delay="100" data-words-step="70">Stockly.<br>Tu inventario,<br><mark>bajo</mark> <mark>control.</mark></h1>
+      <p class="s-ph__lead" data-reveal data-reveal-delay="320" data-reveal-y="14">El sistema web de inventario y ventas que Growco implementa con tus productos. Sabes qué se vende, qué está por agotarse y cuánto vale tu inventario, desde la PC o el celular.</p>
+      <div class="s-ph__btns" data-reveal data-reveal-delay="480" data-reveal-y="14">
+        <a class="btn btn--solid" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_hero"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        <a class="btn btn--ghost" href="#modulos" data-track="cta_click" data-track-loc="stockly_hero_modulos"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver módulos</span><span class="btn__l2" aria-hidden="true">Ver módulos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </div>
+
+    <div class="s-ph__objw" data-reveal data-reveal-delay="200" data-reveal-y="30">
+      <div class="s-ph__obj">
+        <figure class="s-ph__card" role="img" aria-label="Vista del panel de Stockly: valor del inventario, meses de inventario por categoría, total de productos, stock bajo, agotados y productos más vendidos">
+          <div class="s-ph__ch" aria-hidden="true">
+            <span>Panel · Inventario</span>
+            <span class="s-ph__livep"><i></i>Stockly</span>
+          </div>
+          <div class="s-ph__kpi" aria-hidden="true">
+            <b class="num">$48,920</b>
+            <span>valor del inventario<br>a precio de costo</span>
+          </div>
+          <div class="s-ph__plot" aria-hidden="true">
+            <p class="s-ph__pl">Meses de inventario por categoría</p>
+            <ol class="s-ph__bars">
+              <li style="--h:.62;--i:0"><em>3.1</em><i></i><small>Bebidas</small></li>
+              <li style="--h:.84;--i:1"><em>4.2</em><i></i><small>Abarrotes</small></li>
+              <li class="is-lo" style="--h:.16;--i:2"><em>0.8</em><i></i><small>Limpieza</small></li>
+              <li style="--h:.48;--i:3"><em>2.4</em><i></i><small>Snacks</small></li>
+              <li style="--h:1;--i:4"><em>5.0</em><i></i><small>Papelería</small></li>
+              <li style="--h:.38;--i:5"><em>1.9</em><i></i><small>Cuidado</small></li>
+            </ol>
+          </div>
+          <div class="s-ph__stats" aria-hidden="true">
+            <div><span>Productos</span><b class="num">1,284</b></div>
+            <div><span>Stock bajo</span><b class="num">23</b></div>
+            <div><span>Agotados</span><b class="num">4</b></div>
+          </div>
+        </figure>
+        <p class="s-ph__pop" aria-hidden="true"><b>4 u.</b>Stock bajo · Cloro 1 L<i class="s-ph__pp"></i></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap s-ph__meta" data-reveal data-reveal-delay="640" data-reveal-y="10">
+    <ul aria-label="Módulos de Stockly">
+      <li><span>01</span>Inventario</li>
+      <li><span>02</span>Punto de venta</li>
+      <li><span>03</span>Productos</li>
+      <li><span>04</span>Clientes</li>
+      <li><span>05</span>Compras</li>
+      <li><span>06</span>Reportes</li>
+    </ul>
+    <p class="s-ph__cue" aria-hidden="true"><i></i>Desliza</p>
+  </div>
+</section>
+<!-- /SECTION:inicio -->
+<!-- SECTION:modulos -->
+<!-- 02 · MÓDULOS (#modulos) — reference rwsg (services grid of /services, ref-subpages.md §2, _ref/comp/53_rwsg.css).
+     Head 1.3fr / 1fr, two offset columns (even cards hang 140px lower), card = white 30px radius with a 380px stage holding
+     a mini-UI, status chip, number; copy: title + green stat pill, short line, body, 3 capability chips with ticks, foot.
+     Theme cycle = reference fog · lime · cloud · ink · fog · lime (fog #DDDEE6 tint · Growco green · paper · navy).
+     The six modules and every capability are verified in the app (STOCKLY-MAP §2). Mini-UIs are mocks of the real screens
+     with generic product / customer / supplier names (fictitious minisúper, same as the hero panel); no claims.
+     Never claimed: order creation or restock on receipt (compras is view-only), export, real-time sync, roles, DTE.
+     Motion (/assets/js/sections/saasystem-02-modulos.js): a card latches .is-hit when its top passes 0.7·vh → ripple rings
+     from the top-left corner, stage blooms from grey to colour, mini-UI plays once, ticks draw; hover on a hit card lifts it
+     and replays the mini-UI at 2× (throttled 2.6 s). No JS / reduced motion: every card in its final, coloured state. -->
+<section class="sec s-sg" id="modulos" data-theme="light" aria-labelledby="s-sg-title" data-reveal-group="80">
+  <div class="wrap">
+    <header class="sec-head s-sg__head">
+      <div class="sec-head__lead">
+        <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(02) Módulos</p>
+        <h2 class="hd hd--700" id="s-sg-title" data-words>Seis módulos.<br><mark>Un</mark> <mark>solo</mark> <mark>sistema.</mark></h2>
+      </div>
+      <div class="sec-head__side" data-reveal data-reveal-delay="300" data-reveal-y="14">
+        <p class="lead">Lo que vendes descuenta stock, cada movimiento queda registrado y los reportes se calculan solos. Todo en el navegador.</p>
+        <a class="btn btn--ghost" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulos_head"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </header>
+
+    <div class="s-sg__grid">
+
+      <!-- 01 · Inventario (fog) -->
+      <article class="s-sg__card t-fog" aria-labelledby="s-sg-t1">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Inventario</em></p>
+          <span class="s-sg__no">01</span>
+          <div class="s-sg__ui s-sg__inv">
+            <div class="s-sg__win">
+              <div class="s-sg__wh"><b>Inventario</b><span class="s-sg__seg"><i class="is-on">Todos</i><i>Bajo</i><i>Agotados</i></span></div>
+              <ul class="s-sg__rows">
+                <li class="s-sg__a" style="--j:0;--v:.72"><span><b>Agua purificada 600 ml</b><small>Bebidas</small></span><i class="s-sg__bar"><em></em></i><b class="num">86</b><s class="s-sg__pill">OK</s></li>
+                <li class="s-sg__a is-lo" style="--j:1;--v:.08"><span><b>Cloro 1 L</b><small>Limpieza</small></span><i class="s-sg__bar"><em></em></i><b class="num">4</b><s class="s-sg__pill s-sg__pill--lo">Bajo</s></li>
+                <li class="s-sg__a" style="--j:2;--v:.5"><span><b>Arroz blanco 1 lb</b><small>Abarrotes</small></span><i class="s-sg__bar"><em></em></i><b class="num">52</b><s class="s-sg__pill">OK</s></li>
+                <li class="s-sg__a" style="--j:3;--v:0"><span><b>Jabón de tocador</b><small>Cuidado personal</small></span><i class="s-sg__bar"><em></em></i><b class="num">0</b><s class="s-sg__pill s-sg__pill--out">Agotado</s></li>
+                <li class="s-sg__a" style="--j:4;--v:.94"><span><b>Lapicero azul</b><small>Papelería</small></span><i class="s-sg__bar"><em></em></i><b class="num">140</b><s class="s-sg__pill">OK</s></li>
+              </ul>
+            </div>
+            <p class="s-sg__toast"><i></i>Stock bajo · Cloro 1 L · 4 u.</p>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t1">Inventario</h3><p class="s-sg__stat"><i></i>Alerta en 10 u. o menos</p></div>
+          <p class="s-sg__short">Sabes qué tienes y qué reponer.</p>
+          <p class="s-sg__body">Existencias por producto y por categoría, alertas de stock bajo y agotados, y el historial de cada entrada y salida.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Stock por categoría</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Alertas de stock bajo</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Entradas y salidas</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Saber qué reponer</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_inventario" aria-label="Pide una demo del módulo Inventario"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 · Punto de venta (lime) -->
+      <article class="s-sg__card t-lime" aria-labelledby="s-sg-t2">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Punto de venta</em></p>
+          <span class="s-sg__no">02</span>
+          <div class="s-sg__ui s-sg__pos">
+            <div class="s-sg__win">
+              <div class="s-sg__q"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span class="s-sg__qt">Buscar por nombre o código…</span><i class="s-sg__caret"></i></div>
+              <ul class="s-sg__cart">
+                <li class="s-sg__a" style="--j:0"><span><b>Cloro 1 L</b><small>LIM-014</small></span><em>× 2</em><b class="num">$3.10</b></li>
+                <li class="s-sg__a" style="--j:1"><span><b>Arroz blanco 1 lb</b><small>ABA-102</small></span><em>× 3</em><b class="num">$2.25</b></li>
+                <li class="s-sg__a" style="--j:2"><span><b>Agua purificada 600 ml</b><small>BEB-031</small></span><em>× 6</em><b class="num">$3.00</b></li>
+              </ul>
+              <dl class="s-sg__tot s-sg__a" style="--j:3">
+                <div><dt>Subtotal</dt><dd class="num">$8.35</dd></div>
+                <div><dt>IVA</dt><dd class="num">$1.09</dd></div>
+                <div class="is-t"><dt>Total</dt><dd class="num">$9.44</dd></div>
+              </dl>
+              <div class="s-sg__pay s-sg__a" style="--j:4"><i>Efectivo</i><i class="is-on">Tarjeta</i><i>Transferencia</i></div>
+            </div>
+            <p class="s-sg__toast"><i></i>Venta registrada · stock actualizado</p>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t2">Punto de venta</h3><p class="s-sg__stat"><i></i>3 formas de pago</p></div>
+          <p class="s-sg__short">Cobras y el stock se descuenta solo.</p>
+          <p class="s-sg__body">Busca por nombre o código, arma el carrito y cobra en efectivo, tarjeta o transferencia. El IVA se calcula al cobrar.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Búsqueda por código</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>IVA calculado</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Stock descontado al cobrar</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Cobrar en caja</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_ventas" aria-label="Pide una demo del módulo Punto de venta"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 · Productos (cloud) -->
+      <article class="s-sg__card t-cloud" aria-labelledby="s-sg-t3">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Productos</em></p>
+          <span class="s-sg__no">03</span>
+          <div class="s-sg__ui s-sg__prd">
+            <div class="s-sg__win">
+              <div class="s-sg__wh"><b>Productos</b><span class="s-sg__seg"><i class="is-on">Todos</i><i>Bajo</i><i>Agotado</i></span></div>
+              <div class="s-sg__th"><span>Producto</span><span>Precio</span><span>Margen</span><span>Estado</span></div>
+              <ul class="s-sg__tbl">
+                <li class="s-sg__a" style="--j:0"><span><b>Agua purificada 600 ml</b><small>BEB-031 · Bebidas</small></span><em><b class="num">$0.50</b><small>costo $0.28</small></em><em class="num">44 %</em><s class="s-sg__pill">OK</s></li>
+                <li class="s-sg__a" style="--j:1"><span><b>Cloro 1 L</b><small>LIM-014 · Limpieza</small></span><em><b class="num">$1.55</b><small>costo $0.95</small></em><em class="num">39 %</em><s class="s-sg__pill s-sg__pill--lo">Bajo</s></li>
+                <li class="s-sg__a" style="--j:2"><span><b>Cuaderno rayado 100 h.</b><small>PAP-210 · Papelería</small></span><em><b class="num">$1.25</b><small>costo $0.70</small></em><em class="num">44 %</em><s class="s-sg__pill">OK</s></li>
+                <li class="s-sg__a" style="--j:3"><span><b>Jabón de tocador</b><small>CUI-008 · Cuidado</small></span><em><b class="num">$0.85</b><small>costo $0.52</small></em><em class="num">39 %</em><s class="s-sg__pill s-sg__pill--out">Agotado</s></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t3">Productos</h3><p class="s-sg__stat"><i></i>Margen por producto</p></div>
+          <p class="s-sg__short">Tu catálogo, con su margen a la vista.</p>
+          <p class="s-sg__body">Cada producto con su SKU, categoría, costo, precio y margen. Agrega, edita o filtra por estado de stock.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>SKU y categoría</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Costo, precio y margen</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Filtro por estado de stock</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Ordenar tu catálogo</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_productos" aria-label="Pide una demo del módulo Productos"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 · Clientes (ink) -->
+      <article class="s-sg__card t-ink" aria-labelledby="s-sg-t4">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Clientes</em></p>
+          <span class="s-sg__no">04</span>
+          <div class="s-sg__ui s-sg__cli">
+            <div class="s-sg__win">
+              <div class="s-sg__wh"><b>Clientes</b><span class="s-sg__add">+ Agregar</span></div>
+              <div class="s-sg__q s-sg__q--sm"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><span>Buscar por nombre o correo…</span></div>
+              <ul class="s-sg__dir">
+                <li class="s-sg__a" style="--j:0"><i class="s-sg__ini">C1</i><span><b>Cliente 01</b><small>cliente01@correo.com</small></span><em><small>Total compras</small><b class="num">$1,240.50</b></em></li>
+                <li class="s-sg__a" style="--j:1"><i class="s-sg__ini">C2</i><span><b>Cliente 02</b><small>cliente02@correo.com</small></span><em><small>Total compras</small><b class="num">$860.00</b></em></li>
+                <li class="s-sg__a" style="--j:2"><i class="s-sg__ini">C3</i><span><b>Cliente 03</b><small>cliente03@correo.com</small></span><em><small>Total compras</small><b class="num">$2,115.75</b></em></li>
+                <li class="s-sg__a" style="--j:3"><i class="s-sg__ini">C4</i><span><b>Cliente 04</b><small>cliente04@correo.com</small></span><em><small>Total compras</small><b class="num">$415.20</b></em></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t4">Clientes</h3><p class="s-sg__stat"><i></i>Total por cliente</p></div>
+          <p class="s-sg__short">Sabes quién te compra y cuánto.</p>
+          <p class="s-sg__body">Un directorio con el nombre, correo, teléfono y dirección de cada cliente, y el total que te ha comprado.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Datos de contacto</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Total de compras</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Búsqueda por nombre o correo</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Conocer a tus clientes</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_clientes" aria-label="Pide una demo del módulo Clientes"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 · Compras y proveedores (fog) -->
+      <article class="s-sg__card t-fog" aria-labelledby="s-sg-t5">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Compras</em></p>
+          <span class="s-sg__no">05</span>
+          <div class="s-sg__ui s-sg__po">
+            <div class="s-sg__win">
+              <div class="s-sg__wh"><b>Órdenes de compra</b><span class="s-sg__seg"><i class="is-on">Todas</i><i>Pendientes</i></span></div>
+              <ul class="s-sg__ord">
+                <li class="s-sg__a" style="--j:0"><span><b>OC-0142</b><small>Proveedor 03</small></span><b class="num">$1,180.00</b><s class="s-sg__pill s-sg__pill--pen">Pendiente</s></li>
+                <li class="s-sg__a" style="--j:1"><span><b>OC-0141</b><small>Proveedor 01</small></span><b class="num">$640.00</b><s class="s-sg__pill s-sg__pill--par">Parcial</s></li>
+                <li class="s-sg__a" style="--j:2"><span><b>OC-0139</b><small>Proveedor 02</small></span><b class="num">$2,410.00</b><s class="s-sg__pill">Recibida</s></li>
+              </ul>
+            </div>
+            <div class="s-sg__sup s-sg__a" style="--j:3">
+              <i class="s-sg__ini">P2</i>
+              <span><b>Proveedor 02</b><small>Contacto: Persona 02 · proveedor02@correo.com</small></span>
+              <em><small>Último pedido</small><b>28 sep.</b></em>
+            </div>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t5">Compras y proveedores</h3><p class="s-sg__stat"><i></i>Estado de cada orden</p></div>
+          <p class="s-sg__short">Tu abasto, en un solo lugar.</p>
+          <p class="s-sg__body">Tus proveedores con su contacto y último pedido, y tus órdenes de compra con su estado: pendiente, parcial o recibida.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Directorio de proveedores</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Órdenes con su estado</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Total por orden</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Seguir tus pedidos</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_compras" aria-label="Pide una demo del módulo Compras y proveedores"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 · Reportes (lime) -->
+      <article class="s-sg__card t-lime" aria-labelledby="s-sg-t6">
+        <i class="s-sg__rip" aria-hidden="true"><b></b><b></b><b class="s-sg__hov"></b></i>
+        <div class="s-sg__stage" aria-hidden="true">
+          <p class="s-sg__st"><i></i>Módulo<em>Reportes</em></p>
+          <span class="s-sg__no">06</span>
+          <div class="s-sg__ui s-sg__rep">
+            <div class="s-sg__kp">
+              <div class="s-sg__a" style="--j:0"><small>Valor del inventario</small><b class="num">$48,920</b></div>
+              <div class="s-sg__a" style="--j:1"><small>Margen promedio</small><b class="num">38 %</b></div>
+            </div>
+            <div class="s-sg__win">
+              <p class="s-sg__k">Productos estrella</p>
+              <ol class="s-sg__star">
+                <li class="s-sg__a" style="--j:2;--v:1"><b>1</b><span>Agua purificada 600 ml</span><i class="s-sg__bar"><em></em></i></li>
+                <li class="s-sg__a" style="--j:3;--v:.74"><b>2</b><span>Arroz blanco 1 lb</span><i class="s-sg__bar"><em></em></i></li>
+                <li class="s-sg__a" style="--j:4;--v:.52"><b>3</b><span>Cuaderno rayado 100 h.</span><i class="s-sg__bar"><em></em></i></li>
+              </ol>
+              <div class="s-sg__sug s-sg__a" style="--j:5"><span><small>Compra sugerida</small><b>Cloro 1 L</b></span><em>Dura: 0.8 meses · Comprar: 36 u.</em></div>
+            </div>
+          </div>
+        </div>
+        <div class="s-sg__tx">
+          <div class="s-sg__tt"><h3 id="s-sg-t6">Reportes</h3><p class="s-sg__stat"><i></i>Se calculan solos</p></div>
+          <p class="s-sg__short">Decides con números, no con corazonadas.</p>
+          <p class="s-sg__body">Valor de tu inventario, margen promedio, productos estrella por categoría y productos sin ventas en más de 90 días.</p>
+          <ul class="s-sg__inc">
+            <li style="--j:0"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Valor del inventario</li>
+            <li style="--j:1"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Productos estrella</li>
+            <li style="--j:2"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="9"/><path pathLength="1" d="M5.2 9.3l2.5 2.4 5-5.2"/></svg>Compra sugerida</li>
+          </ul>
+          <div class="s-sg__foot">
+            <p class="s-sg__pr"><small>Lo usas para</small>Decidir qué comprar</p>
+            <a class="btn btn--ghost btn--sm" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_modulo_reportes" aria-label="Pide una demo del módulo Reportes"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Pide una demo</span><span class="btn__l2" aria-hidden="true">Pide una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <p class="s-sg__hint" data-reveal data-reveal-y="10"><i aria-hidden="true"></i>Los seis módulos trabajan sobre el mismo catálogo</p>
+  </div>
+</section>
+<!-- /SECTION:modulos -->
+<!-- SECTION:comparar -->
+<!-- 03 · COMPARAR (#comparar) — reference rwcm (compare table of /pricing, ref-subpages.md §4, _ref/comp/55_rwcm.css), night.
+     Head 1.3fr / 1fr + note; fixed table: 31% label column (wider here, 2 columns instead of 3: --c0 40%), sticky thead at the
+     header height, 72px rows with hairlines, featured column (Stockly) with green tint, 1.5px green side rules and the
+     breathing glow column behind it; CTA row. Phone (≤809px): the reference's sticky pill tabs + one-column table per side
+     (motion.js data-tabs; without JS both sides are listed one after the other).
+     Content: qualitative only (no figures), every Stockly ✓ is a verified feature (STOCKLY-MAP §2). "Uso desde el celular"
+     = responsive web app (no native app claimed). "Excel" is used descriptively for spreadsheets.
+     Motion (/assets/js/sections/saasystem-03-comparar.js): rows light in order and stay lit once their top is < 0.7·vh
+     (label + dot turn on, ✓ pops with SPRING + tick draws + ring ping, text rises); CTA row from .4 to 1; .is-stuck on the
+     table wrapper while the thead is pinned. No JS / reduced motion: every row lit. -->
+<section class="sec s-cm" id="comparar" data-theme="dark" aria-labelledby="s-cm-title" data-reveal-group="80">
+  <div class="wrap">
+    <header class="sec-head s-cm__head">
+      <div class="sec-head__lead">
+        <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(03) Excel vs. Stockly</p>
+        <h2 class="hd hd--700" id="s-cm-title" data-words>El Excel no avisa.<br><mark>Stockly</mark> <mark>sí.</mark></h2>
+      </div>
+      <p class="s-cm__note" data-reveal data-reveal-delay="300" data-reveal-y="14">Una hoja de cálculo guarda datos. Stockly los mantiene al día con cada venta, te avisa qué reponer y calcula tus márgenes por ti.</p>
+    </header>
+
+    <div class="s-cm__tw" style="--np:2;--fi:1" data-reveal data-reveal-delay="380" data-reveal-y="24">
+      <i class="s-cm__glow" aria-hidden="true"><b></b></i>
+      <table class="s-cm__t">
+        <caption class="sr">Comparación: llevar el inventario en Excel o Google Sheets frente a llevarlo en Stockly</caption>
+        <colgroup><col class="s-cm__c0"><col><col></colgroup>
+        <thead>
+          <tr>
+            <th scope="col" class="s-cm__th0">Lo que necesitas</th>
+            <th scope="col" class="s-cm__ph"><div class="s-cm__phi"><span class="s-cm__pn">Excel o Sheets</span><span class="s-cm__pp">Lo que usas hoy</span></div></th>
+            <th scope="col" class="s-cm__ph is-f"><div class="s-cm__phi"><span class="s-cm__feat"><i aria-hidden="true"></i>Implementado por Growco</span><span class="s-cm__pn">Stockly</span><span class="s-cm__pp">Sistema web de inventario y ventas</span></div></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Stock al día con cada venta</span></th><td><span class="s-cm__tx" style="--k:0">A mano</span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Alertas de stock bajo y agotados</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Ventas con su forma de pago</span></th><td><span class="s-cm__tx" style="--k:0">Si alguien las anota</span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Costo, precio y margen por producto</span></th><td><span class="s-cm__tx" style="--k:0">Con fórmulas</span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Productos sin ventas en 90 días</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Compra sugerida por producto</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td><td class="is-f"><span class="s-cm__yes" style="--k:1"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Uso desde el celular</span></th><td><span class="s-cm__tx" style="--k:0">Incómodo</span></td><td class="is-f"><span class="s-cm__tx" style="--k:1">En el navegador</span></td></tr>
+          <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Implementación y capacitación</span></th><td><span class="s-cm__tx" style="--k:0">Por tu cuenta</span></td><td class="is-f"><span class="s-cm__tx" style="--k:1">Growco</span></td></tr>
+          <tr class="s-cm__fr" data-cmr><th scope="row"><span class="sr">Siguiente paso</span></th><td></td><td class="is-f"><a class="btn btn--accent btn--block" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_comparar"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="s-cm__m" data-tabs data-reveal data-reveal-delay="380" data-reveal-y="24">
+      <div class="s-cm__tabs" role="tablist" aria-label="Elige qué ver">
+        <button type="button" role="tab" data-tab>Excel o Sheets</button>
+        <button type="button" role="tab" class="is-active" data-tab><i aria-hidden="true"></i>Stockly</button>
+      </div>
+      <div class="s-cm__mp" role="tabpanel" data-tab-panel>
+        <div class="s-cm__mh"><span class="s-cm__pn">Excel o Sheets</span><span class="s-cm__pp">Lo que usas hoy</span></div>
+        <table class="s-cm__t1">
+          <caption class="sr">Llevar el inventario en Excel o Google Sheets</caption>
+          <tbody>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Stock al día con cada venta</span></th><td><span class="s-cm__tx" style="--k:0">A mano</span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Alertas de stock bajo y agotados</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Ventas con su forma de pago</span></th><td><span class="s-cm__tx" style="--k:0">Si alguien las anota</span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Costo, precio y margen por producto</span></th><td><span class="s-cm__tx" style="--k:0">Con fórmulas</span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Productos sin ventas en 90 días</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Compra sugerida por producto</span></th><td><span class="s-cm__no"><i aria-hidden="true"></i><span class="sr">No</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Uso desde el celular</span></th><td><span class="s-cm__tx" style="--k:0">Incómodo</span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Implementación y capacitación</span></th><td><span class="s-cm__tx" style="--k:0">Por tu cuenta</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="s-cm__mp" role="tabpanel" data-tab-panel>
+        <div class="s-cm__mh is-f"><span class="s-cm__feat"><i aria-hidden="true"></i>Implementado por Growco</span><span class="s-cm__pn">Stockly</span><span class="s-cm__pp">Sistema web de inventario y ventas</span></div>
+        <table class="s-cm__t1">
+          <caption class="sr">Llevar el inventario en Stockly</caption>
+          <tbody>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Stock al día con cada venta</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Alertas de stock bajo y agotados</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Ventas con su forma de pago</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Costo, precio y margen por producto</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Productos sin ventas en 90 días</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Compra sugerida por producto</span></th><td class="is-f"><span class="s-cm__yes" style="--k:0"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15"/><path pathLength="1" d="M10 16.5l4 4 8-9"/></svg><span class="sr">Sí</span></span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Uso desde el celular</span></th><td class="is-f"><span class="s-cm__tx" style="--k:0">En el navegador</span></td></tr>
+              <tr data-cmr><th scope="row"><span class="s-cm__rl"><i aria-hidden="true"></i>Implementación y capacitación</span></th><td class="is-f"><span class="s-cm__tx" style="--k:0">Growco</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="s-cm__mb"><a class="btn btn--accent btn--block" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_comparar_m"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a></div>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:comparar -->
+<!-- SECTION:giros -->
+<!-- 04 · PARA TU GIRO (#giros) — reference rwwg (work grid of /work, ref-subpages.md §3, _ref/comp/54_rwwg.css), on a LIGHT
+     ground (paper) to keep the page rhythm dark → light → dark → light → dark. Filter bar (label + ping, chips with counts,
+     right-aligned counter), uneven masonry 7fr / 5fr (right column hangs lower; shapes alternate wide / sq and tall / land),
+     card = cover (radius 24) + industry line, title, "Controla" row, module chips (the active filter's chip turns green).
+     Covers are built in HTML/CSS (no stock photos): each giro's glyph, a Stockly inventory window with that giro's typical
+     products (generic names) and one event chip. Business types only: no clients, no results, no figures as claims.
+     Category fit = configuration Growco does at implementation (VERIFICAR: stockly-config).
+     Motion (/assets/js/sections/saasystem-04-giros.js): scroll-linked SCAN per cover (--k): a grey layer (backdrop
+     grayscale) is clipped away from the top as a green scan line sweeps down; "Antes" glass pill fades out, "Con Stockly"
+     green pill fades in; hover zooms the cover 1.05 and underlines the title. Filter = FLIP (760 ms) + new cards rise
+     (700 ms, staggered), counter announced (aria-live), cards re-flow into the two columns.
+     No JS / reduced motion: covers in colour, no scan, all six cards, chips hidden without JS. -->
+<!-- VERIFICAR: stockly-config -->
+<section class="sec s-wg" id="giros" data-theme="light" aria-labelledby="s-wg-title" data-reveal-group="80">
+  <div class="wrap">
+    <header class="sec-head s-wg__head">
+      <div class="sec-head__lead">
+        <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(04) Para tu giro</p>
+        <h2 class="hd hd--700" id="s-wg-title" data-words>Hecho para<br><mark>tu</mark> <mark>giro.</mark></h2>
+      </div>
+      <div class="sec-head__side" data-reveal data-reveal-delay="300" data-reveal-y="14">
+        <p class="lead">Ajustamos categorías y campos a cómo trabaja tu negocio. Estos son algunos giros donde Stockly encaja; filtra por el módulo que más necesitas.</p>
+      </div>
+    </header>
+
+    <div class="s-wg__bar" data-reveal data-reveal-delay="360" data-reveal-y="14">
+      <p class="s-wg__bl js-only" id="s-wg-fl"><i aria-hidden="true"></i>Filtra por módulo</p>
+      <div class="s-wg__chips js-only" role="group" aria-labelledby="s-wg-fl">
+          <button type="button" class="s-wg__chip is-sel" data-f="all" aria-pressed="true">Todos <b>06</b></button>
+          <button type="button" class="s-wg__chip" data-f="inventario" aria-pressed="false">Inventario <b>04</b></button>
+          <button type="button" class="s-wg__chip" data-f="ventas" aria-pressed="false">Punto de venta <b>03</b></button>
+          <button type="button" class="s-wg__chip" data-f="productos" aria-pressed="false">Productos <b>03</b></button>
+          <button type="button" class="s-wg__chip" data-f="compras" aria-pressed="false">Compras <b>03</b></button>
+          <button type="button" class="s-wg__chip" data-f="reportes" aria-pressed="false">Reportes <b>04</b></button>
+          <button type="button" class="s-wg__chip" data-f="clientes" aria-pressed="false">Clientes <b>01</b></button>
+      </div>
+      <p class="s-wg__count" aria-live="polite"><b>06</b> <span>giros</span></p>
+    </div>
+
+    <div class="s-wg__grid">
+      <div class="s-wg__colm">
+        <article class="s-wg__card is-wide" data-i="0" data-svs="inventario productos reportes" data-reveal data-reveal-delay="160" data-reveal-y="30" aria-labelledby="s-wg-t1">
+          <div class="s-wg__cov s-wg__cov--navy" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><circle cx="6.5" cy="14" r="3.5"/><circle cx="17.5" cy="14" r="3.5"/><path d="M10 14h4M3 14l1.5-6.5L7 7M21 14l-1.5-6.5L17 7"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Óptica</span></p>
+                  <ul>
+                    <li class="is-lo"><span><b>Armazón de acetato</b><small>Oftálmico</small></span><em class="num">3</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Lentes de sol polarizados</b><small>Solar</small></span><em class="num">18</em><s class="s-wg__pill">OK</s></li>
+                    <li><span><b>Lentes de lectura +1.5</b><small>Lectura</small></span><em class="num">0</em><s class="s-wg__pill s-wg__pill--out">Agotado</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>3 u.</b>Stock bajo · Armazón de acetato<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Óptica</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Óptica · armazones y lentes</p>
+            <h3 class="s-wg__title" id="s-wg-t1">Armazones y lentes por categoría, con aviso antes de agotarse</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Solar · Oftálmico · Lectura</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="inventario">Inventario</li>
+              <li data-sv="productos">Productos</li>
+              <li data-sv="reportes">Reportes</li>
+            </ul>
+          </div>
+        </article>
+        <article class="s-wg__card is-sq" data-i="2" data-svs="compras inventario reportes" data-reveal data-reveal-delay="340" data-reveal-y="30" aria-labelledby="s-wg-t3">
+          <div class="s-wg__cov s-wg__cov--mist" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Distribuidora</span></p>
+                  <ul>
+                    <li><span><b>Café molido 1 lb · caja de 12</b><small>Abarrotes</small></span><em class="num">40</em><s class="s-wg__pill">OK</s></li>
+                    <li class="is-lo"><span><b>Agua 600 ml · fardo de 24</b><small>Bebidas</small></span><em class="num">6</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Detergente 1 kg · caja de 10</b><small>Limpieza</small></span><em class="num">22</em><s class="s-wg__pill">OK</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>OC-0142</b>Orden pendiente · Proveedor 03<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Distribuidora</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Distribuidora · abarrotes y bebidas</p>
+            <h3 class="s-wg__title" id="s-wg-t3">Pedidos a proveedores y existencias por caja, en un solo lugar</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Abarrotes · Bebidas · Limpieza</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="compras">Compras</li>
+              <li data-sv="inventario">Inventario</li>
+              <li data-sv="reportes">Reportes</li>
+            </ul>
+          </div>
+        </article>
+        <article class="s-wg__card is-wide" data-i="4" data-svs="ventas inventario clientes" data-reveal data-reveal-delay="160" data-reveal-y="30" aria-labelledby="s-wg-t5">
+          <div class="s-wg__cov s-wg__cov--lime" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.8l2-8H6.3"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Minisúper</span></p>
+                  <ul>
+                    <li><span><b>Agua purificada 600 ml</b><small>Bebidas</small></span><em class="num">86</em><s class="s-wg__pill">OK</s></li>
+                    <li class="is-lo"><span><b>Galletas surtidas</b><small>Snacks</small></span><em class="num">3</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Arroz blanco 1 lb</b><small>Abarrotes</small></span><em class="num">52</em><s class="s-wg__pill">OK</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>$9.44</b>Venta registrada · Tarjeta<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Minisúper</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Minisúper · tienda de barrio</p>
+            <h3 class="s-wg__title" id="s-wg-t5">Cobras en caja y ves qué reponer antes de que falte</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Bebidas · Snacks · Abarrotes</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="ventas">Punto de venta</li>
+              <li data-sv="inventario">Inventario</li>
+              <li data-sv="clientes">Clientes</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div class="s-wg__colm">
+        <article class="s-wg__card is-tall" data-i="1" data-svs="inventario ventas compras" data-reveal data-reveal-delay="250" data-reveal-y="30" aria-labelledby="s-wg-t2">
+          <div class="s-wg__cov s-wg__cov--green" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L12 19a2.1 2.1 0 0 1-3-3l7.5-7.5"/><path d="M5 3l3 3-2 2-3-3"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Ferretería</span></p>
+                  <ul>
+                    <li><span><b>Martillo 16 oz</b><small>Herramientas</small></span><em class="num">12</em><s class="s-wg__pill">OK</s></li>
+                    <li class="is-lo"><span><b>Tornillo 1/4 · caja de 100</b><small>Tornillería</small></span><em class="num">5</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Pintura blanca 1 gal</b><small>Pintura</small></span><em class="num">9</em><s class="s-wg__pill">OK</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>5 u.</b>Stock bajo · Tornillo 1/4<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Ferretería</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Ferretería · herramientas y tornillería</p>
+            <h3 class="s-wg__title" id="s-wg-t2">Cada tornillo y cada herramienta con su código, listos para cobrar</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Herramientas · Tornillería · Pintura</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="inventario">Inventario</li>
+              <li data-sv="ventas">Punto de venta</li>
+              <li data-sv="compras">Compras</li>
+            </ul>
+          </div>
+        </article>
+        <article class="s-wg__card is-land" data-i="3" data-svs="productos ventas reportes" data-reveal data-reveal-delay="430" data-reveal-y="30" aria-labelledby="s-wg-t4">
+          <div class="s-wg__cov s-wg__cov--blue" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><path d="M12 6.5a2 2 0 1 0-2-2"/><path d="M12 6.5v1.2L3.5 14a1.3 1.3 0 0 0 .8 2.4h15.4a1.3 1.3 0 0 0 .8-2.4L12 7.7"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Boutique</span></p>
+                  <ul>
+                    <li class="is-lo"><span><b>Camisa de lino · talla M</b><small>Camisas</small></span><em class="num">4</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Vestido midi · talla S</b><small>Vestidos</small></span><em class="num">7</em><s class="s-wg__pill">OK</s></li>
+                    <li><span><b>Cinturón de cuero</b><small>Accesorios</small></span><em class="num">0</em><s class="s-wg__pill s-wg__pill--out">Agotado</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>90 días</b>Sin ventas · Cinturón de cuero<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Boutique</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Boutique · ropa y accesorios</p>
+            <h3 class="s-wg__title" id="s-wg-t4">Cada prenda con su SKU, y lo que no se vende en 90 días a la vista</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Camisas · Vestidos · Accesorios</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="productos">Productos</li>
+              <li data-sv="ventas">Punto de venta</li>
+              <li data-sv="reportes">Reportes</li>
+            </ul>
+          </div>
+        </article>
+        <article class="s-wg__card is-tall" data-i="5" data-svs="productos reportes compras" data-reveal data-reveal-delay="250" data-reveal-y="30" aria-labelledby="s-wg-t6">
+          <div class="s-wg__cov s-wg__cov--pine" aria-hidden="true">
+            <div class="s-wg__zoom">
+              <div class="s-wg__scene">
+                <span class="s-wg__glyph"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 1 6.5 18H20v3H6.5"/></svg></span>
+                <div class="s-wg__win">
+                  <p class="s-wg__wh"><b>Inventario</b><span>Librería y papelería</span></p>
+                  <ul>
+                    <li><span><b>Cuaderno rayado 100 h.</b><small>Cuadernos</small></span><em class="num">120</em><s class="s-wg__pill">OK</s></li>
+                    <li class="is-lo"><span><b>Lápiz de grafito · caja de 12</b><small>Escritura</small></span><em class="num">4</em><s class="s-wg__pill s-wg__pill--lo">Bajo</s></li>
+                    <li><span><b>Libro de lectura de 3.er grado</b><small>Libros</small></span><em class="num">15</em><s class="s-wg__pill">OK</s></li>
+                  </ul>
+                </div>
+                <p class="s-wg__ev"><b>N.º 1</b>Más vendido · Cuaderno rayado<i></i></p>
+              </div>
+            </div>
+            <i class="s-wg__gry"></i>
+            <i class="s-wg__scan"></i>
+            <span class="s-wg__tag"><i></i>Librería y papelería</span>
+            <span class="s-wg__lab"><span class="s-wg__lb">Antes</span><span class="s-wg__la">Con Stockly</span></span>
+          </div>
+          <div class="s-wg__body">
+            <p class="s-wg__ind">Librería y papelería</p>
+            <h3 class="s-wg__title" id="s-wg-t6">Útiles y libros por categoría, con lo más vendido de cada una</h3>
+            <p class="s-wg__res"><span class="s-wg__ml">Controla</span><span class="s-wg__ctl">Cuadernos · Escritura · Libros</span></p>
+            <ul class="s-wg__svs" aria-label="Módulos que más usa">
+              <li data-sv="productos">Productos</li>
+              <li data-sv="reportes">Reportes</li>
+              <li data-sv="compras">Compras</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="s-wg__empty" hidden>No hay giros con ese módulo.</p>
+
+    <div class="s-wg__more" data-reveal data-reveal-y="14">
+      <p><b>¿Tu giro no aparece?</b> Stockly se ajusta a las categorías de tu negocio. Cuéntanos qué vendes.</p>
+      <a class="btn btn--solid" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_giros"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:giros -->
+<!-- SECTION:implementacion -->
+<!-- 05 · IMPLEMENTACIÓN (#implementacion) — reference rwab-dark (the pinned horizontal timeline of /about, ref-subpages.md §5,
+     _ref/comp/56_rwab.css). Night band with a 32px top radius over the light #giros. Desktop (≥1100px, motion allowed):
+     .is-pin → the band pins for 220svh (L = 4 milestones: max(2.2, .36·L + .6) = 2.2) and the track translates left while the
+     green "signal" head travels along a dashed trace with ECG spikes; each milestone number fills when the head reaches it;
+     live readout (step name in green + "0N / 04") top-right; hint at the bottom.
+     Narrow screens / reduced motion / no JS: the vertical list (.s-ab__vl, green rail filling with scroll; 4-column grid of
+     milestones on wide screens under reduced motion / no JS). Only one of the two lists is displayed at a time.
+     Content: the 4 implementation steps Growco performs (STOCKLY-MAP row 6). No durations: Stockly implementation times are
+     not verified (Growco's general "4 semanas" figure is not used here). -->
+<!-- VERIFICAR: stockly-config (paso 03) -->
+<section class="sec s-ab" id="implementacion" data-theme="dark" aria-labelledby="s-ab-title">
+  <div class="s-ab__pin">
+    <div class="s-ab__stage">
+      <div class="wrap s-ab__sh" data-reveal-group="80">
+        <div class="s-ab__shl">
+          <p class="eb eb--ping" data-reveal><i aria-hidden="true"></i>(05) Implementación</p>
+          <h2 class="hd hd--700" id="s-ab-title" data-words>De tu Excel<br><mark>a</mark> <mark>tu</mark> <mark>sistema.</mark></h2>
+          <p class="lead s-ab__lead" data-reveal data-reveal-delay="300" data-reveal-y="14">Growco hace la implementación. Tú revisas, apruebas y empiezas a vender.</p>
+        </div>
+        <p class="s-ab__read" aria-hidden="true"><span class="s-ab__ry">Diagnóstico</span><span class="s-ab__rn">01 / 04</span></p>
+      </div>
+
+      <div class="s-ab__track" aria-hidden="true">
+        <svg class="s-ab__tr s-ab__tr-o" height="100"><path d=""/></svg>
+        <div class="s-ab__lit"><svg class="s-ab__tr s-ab__tr-l" height="100"><path d=""/></svg></div>
+        <span class="s-ab__head"><i></i><i></i></span>
+        <ol class="s-ab__ms">
+          <li class="s-ab__m"><span class="s-ab__yr">01</span><span class="s-ab__dot"><i></i></span><p class="s-ab__tx"><b>Diagnóstico</b>Revisamos cómo llevas hoy tu inventario y qué necesitas ver cada día.</p></li>
+          <li class="s-ab__m"><span class="s-ab__yr">02</span><span class="s-ab__dot"><i></i></span><p class="s-ab__tx"><b>Importación</b>Pasamos tus productos, precios y existencias desde Excel o Google Sheets.</p></li>
+          <li class="s-ab__m"><span class="s-ab__yr">03</span><span class="s-ab__dot"><i></i></span><p class="s-ab__tx"><b>Configuración</b>Activamos tus módulos y cargamos tus categorías.</p></li>
+          <li class="s-ab__m is-last"><span class="s-ab__yr">04</span><span class="s-ab__dot"><i></i></span><p class="s-ab__tx"><b>Capacitación</b>Capacitamos a tu equipo y empiezas a vender con Stockly.</p></li>
+        </ol>
+      </div>
+      <p class="s-ab__hint" aria-hidden="true"><i></i>Desliza para seguir el proceso</p>
+    </div>
+  </div>
+
+  <div class="wrap s-ab__vwrap">
+    <ol class="s-ab__vl">
+      <li class="s-ab__vm"><span class="s-ab__dot"><i></i></span><span class="s-ab__yr" aria-hidden="true">01</span><p class="s-ab__tx"><b>Diagnóstico</b>Revisamos cómo llevas hoy tu inventario y qué necesitas ver cada día.</p></li>
+      <li class="s-ab__vm"><span class="s-ab__dot"><i></i></span><span class="s-ab__yr" aria-hidden="true">02</span><p class="s-ab__tx"><b>Importación</b>Pasamos tus productos, precios y existencias desde Excel o Google Sheets.</p></li>
+      <li class="s-ab__vm"><span class="s-ab__dot"><i></i></span><span class="s-ab__yr" aria-hidden="true">03</span><p class="s-ab__tx"><b>Configuración</b>Activamos tus módulos y cargamos tus categorías.</p></li>
+      <li class="s-ab__vm is-last"><span class="s-ab__dot"><i></i></span><span class="s-ab__yr" aria-hidden="true">04</span><p class="s-ab__tx"><b>Capacitación</b>Capacitamos a tu equipo y empiezas a vender con Stockly.</p></li>
+    </ol>
+  </div>
+
+  <div class="wrap">
+    <div class="s-ab__end" data-reveal data-reveal-y="14">
+      <p><b>Sin instalar nada.</b> Stockly funciona en el navegador de tu PC, tablet o celular.</p>
+      <a class="btn btn--accent" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_implementacion"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+    </div>
+  </div>
+</section>
+<!-- /SECTION:implementacion -->
+<!-- SECTION:faq -->
+<!-- 06 · PREGUNTAS (#faq) — reference 41_rwfq (FAQ pattern, bone → paper; the one block this page shares with the home).
+     Sticky left column (eyebrow, H2, navy help card) + single-open accordion with the scroll progress rail
+     (/assets/js/sections/saasystem-06-faq.js). Answers follow STOCKLY-MAP row 12 and its truth rules; FAQPage JSON-LD below
+     mirrors the visible text word for word. Q04 replaces the v1 question about the demo data (the public demo is not linked, Q8)
+     with the guided demo; Q06 is phrased as "por ahora" (multi-branch exists only as schema, STOCKLY-MAP §2).
+     No prices, no implementation times, no guarantees, no link to /SaaSystem/*. -->
+<!-- DATO REAL: dónde se alojan los datos, respaldos y accesos (pregunta "¿Dónde se guardan mis datos?") — añadir como fila 09 cuando el cliente lo confirme (STOCKLY-MAP Q5) -->
+<section class="sec sec--pad s-fq" id="faq" data-theme="light" aria-labelledby="s-fq-title" data-reveal-group="120">
+  <div class="wrap s-fq-in">
+    <div class="s-fq-side">
+      <div class="s-fq-stick">
+        <p class="eb" data-reveal><i aria-hidden="true"></i>(06) Preguntas</p>
+        <h2 class="hd hd--700 s-fq-title" id="s-fq-title" data-words data-words-delay="120" data-marker-delay="525">Preguntas<br><mark>frecuentes.</mark></h2>
+        <div class="s-fq-card ctx-dark" data-reveal data-reveal-delay="420" data-reveal-y="26">
+          <p class="s-fq-card__l"><i class="s-fq-ring" aria-hidden="true"></i>¿Aún con dudas?</p>
+          <p class="s-fq-card__t">Te mostramos Stockly.</p>
+          <p class="s-fq-card__b">Cuéntanos qué vendes y te enseñamos cómo se vería tu inventario.</p>
+          <a class="btn btn--accent s-fq-btn" href="#contacto" data-service="stockly" data-track="cta_click" data-track-loc="stockly_faq"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita una demo</span><span class="btn__l2" aria-hidden="true">Solicita una demo</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          <p class="s-fq-card__m">O escribe a <a href="mailto:agente@growcoai.com?subject=Stockly" data-track="email_click" data-track-loc="stockly_faq">agente@growcoai.com</a></p>
+          <p class="s-fq-card__r"><i class="dot dot--port" aria-hidden="true"></i>Implementado por Growco</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="s-fq-list" data-accordion data-acc-open="0">
+      <i class="s-fq-rail" aria-hidden="true"><b></b></i>
+
+      <div class="s-fq-row is-open" data-acc-item data-reveal data-reveal-delay="200" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q1" aria-controls="s-fq-a1" data-acc-trigger><span class="s-fq-no" aria-hidden="true">01</span><span class="s-fq-qt">¿Qué es Stockly?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a1" role="region" aria-labelledby="s-fq-q1" data-acc-panel><div><p>Un sistema web de inventario y ventas para PyMEs. Growco lo implementa con tus productos y lo deja listo para tu operación.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="260" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q2" aria-controls="s-fq-a2" data-acc-trigger><span class="s-fq-no" aria-hidden="true">02</span><span class="s-fq-qt">¿Tengo que instalar algo?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a2" role="region" aria-labelledby="s-fq-q2" data-acc-panel><div><p>No. Stockly funciona en el navegador, en la computadora, la tablet o el celular.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="320" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q3" aria-controls="s-fq-a3" data-acc-trigger><span class="s-fq-no" aria-hidden="true">03</span><span class="s-fq-qt">¿Puedo pasar mi inventario desde Excel?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a3" role="region" aria-labelledby="s-fq-q3" data-acc-panel><div><p>Sí. En la implementación importamos tus productos, precios y existencias desde Excel o Google Sheets.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="380" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q4" aria-controls="s-fq-a4" data-acc-trigger><span class="s-fq-no" aria-hidden="true">04</span><span class="s-fq-qt">¿Puedo ver Stockly antes de decidir?</span><span class="s-fq-g" aria-hidden="true">Demo</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a4" role="region" aria-labelledby="s-fq-q4" data-acc-panel><div><p>Sí. Te hacemos una demo guiada de Stockly con ejemplos de tu tipo de negocio y respondemos tus dudas.</p></div></div>
+      </div>
+
+      <!-- VERIFICAR: stockly-dte -->
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="440" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q5" aria-controls="s-fq-a5" data-acc-trigger><span class="s-fq-no" aria-hidden="true">05</span><span class="s-fq-qt">¿Emite facturas electrónicas (DTE)?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a5" role="region" aria-labelledby="s-fq-q5" data-acc-panel><div><p>Hoy no. Stockly registra tus ventas y calcula el IVA al cobrar, pero no emite documentos tributarios electrónicos. Cuéntanos cómo facturas hoy y revisamos tu caso.</p></div></div>
+      </div>
+
+      <!-- VERIFICAR: stockly-multibranch -->
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="500" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q6" aria-controls="s-fq-a6" data-acc-trigger><span class="s-fq-no" aria-hidden="true">06</span><span class="s-fq-qt">¿Funciona con varias tiendas o bodegas?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a6" role="region" aria-labelledby="s-fq-q6" data-acc-panel><div><p>Por ahora, Stockly lleva un solo inventario por negocio. Si tienes varias tiendas o bodegas, cuéntanos cómo trabajas y revisamos la mejor forma de resolverlo.</p></div></div>
+      </div>
+
+      <!-- DATO REAL: modelo de precios y plazo de implementación (STOCKLY-MAP Q1) — la respuesta no da cifras -->
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="560" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q7" aria-controls="s-fq-a7" data-acc-trigger><span class="s-fq-no" aria-hidden="true">07</span><span class="s-fq-qt">¿Cuánto cuesta y cuánto tarda?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a7" role="region" aria-labelledby="s-fq-q7" data-acc-panel><div><p>Depende de tu negocio y del tamaño de tu catálogo. Te enviamos una propuesta con el alcance, el plazo y la inversión antes de empezar.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="620" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="s-fq-q8" aria-controls="s-fq-a8" data-acc-trigger><span class="s-fq-no" aria-hidden="true">08</span><span class="s-fq-qt">¿Quién implementa Stockly?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="s-fq-a8" role="region" aria-labelledby="s-fq-q8" data-acc-panel><div><p>Growco, una agencia de marketing con IA con base en El Salvador. Hacemos la importación, la configuración y la capacitación de tu equipo.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Qué es Stockly?", "acceptedAnswer": {"@type": "Answer", "text": "Un sistema web de inventario y ventas para PyMEs. Growco lo implementa con tus productos y lo deja listo para tu operación."}},
+      {"@type": "Question", "name": "¿Tengo que instalar algo?", "acceptedAnswer": {"@type": "Answer", "text": "No. Stockly funciona en el navegador, en la computadora, la tablet o el celular."}},
+      {"@type": "Question", "name": "¿Puedo pasar mi inventario desde Excel?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. En la implementación importamos tus productos, precios y existencias desde Excel o Google Sheets."}},
+      {"@type": "Question", "name": "¿Puedo ver Stockly antes de decidir?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Te hacemos una demo guiada de Stockly con ejemplos de tu tipo de negocio y respondemos tus dudas."}},
+      {"@type": "Question", "name": "¿Emite facturas electrónicas (DTE)?", "acceptedAnswer": {"@type": "Answer", "text": "Hoy no. Stockly registra tus ventas y calcula el IVA al cobrar, pero no emite documentos tributarios electrónicos. Cuéntanos cómo facturas hoy y revisamos tu caso."}},
+      {"@type": "Question", "name": "¿Funciona con varias tiendas o bodegas?", "acceptedAnswer": {"@type": "Answer", "text": "Por ahora, Stockly lleva un solo inventario por negocio. Si tienes varias tiendas o bodegas, cuéntanos cómo trabajas y revisamos la mejor forma de resolverlo."}},
+      {"@type": "Question", "name": "¿Cuánto cuesta y cuánto tarda?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de tu negocio y del tamaño de tu catálogo. Te enviamos una propuesta con el alcance, el plazo y la inversión antes de empezar."}},
+      {"@type": "Question", "name": "¿Quién implementa Stockly?", "acceptedAnswer": {"@type": "Answer", "text": "Growco, una agencia de marketing con IA con base en El Salvador. Hacemos la importación, la configuración y la capacitación de tu equipo."}}
+    ]
+  }
+  </script>
+</section>
+<!-- /SECTION:faq -->
+<!-- SECTION:contacto -->
+<section class="sec ct" id="contacto" data-theme="dark" data-progress data-rings data-reveal-group aria-labelledby="ct-title">
+  <span class="ct__rings" aria-hidden="true"><i style="--r:0"></i><i style="--r:1"></i><i style="--r:2"></i><b></b></span>
+  <div class="wrap ct__in">
+    <div class="ct__main">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(07) Contacto</p>
+      <h2 class="hd hd--xl ct__h" id="ct-title" data-words data-words-delay="100" data-words-step="70">Hablemos de<br><mark>tu stock.</mark></h2>
+      <p class="ct__sub" data-reveal data-reveal-delay="420">Cuéntanos qué vendes y cómo controlas hoy tu inventario. Te mostramos Stockly y te enviamos una propuesta.</p>
+      <form class="ct__form" id="lead-form" data-lead-form="contacto-saasystem" data-page-name="Stockly" action="https://formsubmit.co/agente@growcoai.com" method="post" data-reveal data-reveal-delay="540" data-reveal-y="18">
+        <input type="hidden" name="_subject" value="Nueva solicitud de propuesta — Stockly">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://growcoai.com/SaaSystem?enviado=1#contacto">
+        <input type="hidden" name="origen" value="saasystem">
+        <div class="hp" aria-hidden="true"><label for="ct-honey">No llenar este campo</label><input type="text" id="ct-honey" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <div class="ct__grid">
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-nombre">Nombre</label><span class="fld__err" id="ct-nombre-err"></span></div><input type="text" id="ct-nombre" name="nombre" autocomplete="name" maxlength="120" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-email">Correo</label><span class="fld__err" id="ct-email-err"></span></div><input type="email" id="ct-email" name="email" autocomplete="email" inputmode="email" maxlength="160" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-empresa">Empresa <em>(opcional)</em></label></div><input type="text" id="ct-empresa" name="empresa" autocomplete="organization" maxlength="120"></div>
+          <div class="fld fld--sel"><div class="fld__top"><label class="fld__k" for="ct-servicio">Servicio</label><span class="fld__err" id="ct-servicio-err"></span></div>
+            <select id="ct-servicio" name="servicio" required>
+              <option value="" disabled>Elige un servicio</option>
+              <option value="pauta">Pauta digital</option>
+              <option value="filmmaker">AI Filmmaker</option>
+              <option value="automatizacion">Automatización</option>
+              <option value="stockly" selected>Stockly</option>
+              <option value="nose">No estoy seguro</option>
+            </select><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div class="fld fld--area"><div class="fld__top"><label class="fld__k" for="ct-mensaje">Mensaje <em>(opcional)</em></label></div><textarea id="ct-mensaje" name="mensaje" rows="1" maxlength="1000" data-autogrow placeholder="Qué vendes, cuántos productos manejas y cómo llevas hoy tu inventario."></textarea></div>
+        </div>
+        <div class="ct__row">
+          <p class="ct__mail">Usamos tus datos solo para responderte.</p>
+          <button class="btn btn--accent ct__go" type="submit" data-rings-anchor><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></button>
+        </div>
+        <p class="ct__status" aria-live="polite"></p>
+      </form>
+    </div>
+    <aside class="ct__card" aria-label="Contacto directo" data-reveal data-reveal-delay="380" data-reveal-y="30">
+      <p class="ct__cl"><i class="dot dot--port" aria-hidden="true"></i>Contacto directo</p>
+      <p class="ct__ct">¿Prefieres escribirnos?</p>
+      <a class="ct__email" href="mailto:agente@growcoai.com">agente@growcoai.com</a>
+      <ol class="ct__steps" aria-label="Qué pasa después">
+        <li style="--i:0"><span><b>01</b> Nos escribes</span></li>
+        <li style="--i:1"><span><b>02</b> Revisamos</span></li>
+        <li style="--i:2"><span><b>03</b> Tu propuesta</span></li>
+      </ol>
+      <div class="ct__clock js-only"><p><span>Hora en El Salvador</span><b data-clock="hms"></b></p></div>
+      <div class="ct__svc"><span class="ct__av" aria-hidden="true"><i>S</i></span><span class="ct__sn">Stockly, implementado por Growco</span></div>
+    </aside>
+  </div>
+</section>
+<!-- /SECTION:contacto -->
+  </main>
+
+<!-- PARTIAL:footer -->
+<div class="ft-rev" data-curtain>
+  <div class="ft-rev__in">
+    <footer class="ft" id="site-footer" data-theme="light" data-reveal-group data-reveal-manual>
+      <h2 class="sr">Growco: mapa del sitio y contacto</h2>
+      <div class="wrap">
+        <div class="ft__top">
+          <div class="ft__brand" data-reveal>
+            <a class="ft__logo" href="/" aria-label="Growco, ir al inicio"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+            <p class="ft__blurb">Growth, pauta y video con IA para bajar tu CAC y hacer crecer tu negocio.</p>
+            <p class="ft__ann"><i class="dot dot--port" aria-hidden="true"></i>Agencia de marketing con IA</p>
+            <a class="btn btn--quiet" href="#contacto" data-track="cta_click" data-track-loc="footer"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+          <nav class="ft__cols" aria-label="Pie de página">
+            <div class="ft__col" data-reveal data-reveal-delay="80">
+              <h3 class="ft__ct">Servicios</h3>
+              <ul>
+                <li><a href="/#servicios">Pauta digital</a></li>
+                <li><a href="/filmmaker">AI Filmmaker</a></li>
+                <li><a href="/#automatizacion">Automatización</a></li>
+                <li><a href="/SaaSystem">Stockly</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="150">
+              <h3 class="ft__ct">Empresa</h3>
+              <ul>
+                <li><a href="/#proceso">Cómo trabajamos</a></li>
+                <li><a href="/#faq">Preguntas</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="220">
+              <h3 class="ft__ct">Contacto</h3>
+              <ul>
+                <li><a href="mailto:agente@growcoai.com">agente@growcoai.com</a></li>
+                <li><a href="#" data-whatsapp hidden>WhatsApp</a></li>
+                <li class="ft__city">El Salvador</li>
+              </ul>
+              <!-- DATO REAL: URLs de Instagram, LinkedIn y TikTok para las pastillas sociales del pie -->
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap ft__wmw" aria-hidden="true">
+        <div class="ft__wm" data-spotlight>
+          <svg class="lockup ft__wm-t" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <i class="ft__ring"></i>
+          <svg class="lockup ft__wm-l" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <b class="ft__hint">Pasa el cursor sobre el logo</b>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="ft__legal">
+          <span>© <span data-year>2026</span> Growco</span>
+          <span>Hecho en El Salvador</span>
+          <!-- DATO REAL: enlaces a /privacidad y /terminos cuando existan esas páginas -->
+          <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="ft-rev__sp"></div>
+</div>
+<!-- /PARTIAL:footer -->
+</body>
+</html>
