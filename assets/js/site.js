@@ -23,8 +23,8 @@
   'use strict';
   const CONFIG = {
     WHATSAPP_NUMBER: '', // e.g. '503XXXXXXXX' — empty keeps every [data-whatsapp] hidden
-    FORM_ENDPOINT: 'https://formsubmit.co/ajax/agente@growcoai.com',
-    EMAIL: 'agente@growcoai.com',
+    FORM_ENDPOINT: 'https://formsubmit.co/ajax/manuel@growcoai.com',
+    EMAIL: 'manuel@growcoai.com',
     TZ: 'America/El_Salvador',
     SERVICES: { pauta: 'Pauta digital', filmmaker: 'AI Filmmaker', automatizacion: 'Automatización', stockly: 'Stockly', nose: 'No estoy seguro' },
   };
