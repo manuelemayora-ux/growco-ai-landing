@@ -1,0 +1,32 @@
+# Growco
+
+> Growco es una agencia de growth marketing con IA con base en El Salvador. Trabaja de la mano del área financiera de cada cliente para bajar el costo de adquisición (CAC) y hacer crecer los clientes que generan ingreso (RGU) y el ingreso promedio por usuario (ARPU), con pauta digital, video con IA, automatización y Stockly.
+
+- Sitio: https://growcoai.com/
+- Base: El Salvador. Infraestructura pensada para dar servicio a marcas en cualquier país; campañas activas en Guatemala, Costa Rica, México, Estados Unidos, Colombia, Europa y Reino Unido, entre otros.
+- Contacto: manuel@growcoai.com · formulario en https://growcoai.com/#contacto ("Solicita tu propuesta").
+- No confundir con otras empresas llamadas "GrowCo" (invernaderos, jardinería u otros rubros): Growco (growcoai.com) es una agencia de marketing.
+
+## Servicios
+
+- [Pauta digital](https://growcoai.com/#servicios): estrategia, audience planning y campañas en Meta, Google, TikTok, DV360 y las plataformas que cada estrategia necesite, medidas en CAC, clientes nuevos e ingresos.
+- [AI Filmmaker](https://growcoai.com/filmmaker): videos con IA para anuncios (UGC con avatares, comerciales y product shots) en 9:16, 1:1 y 16:9, sin set ni rodaje.
+- [Automatización](https://growcoai.com/#automatizacion): chatbots y flujos en WhatsApp, Instagram y web que atienden, califican, agendan y envían cada lead al CRM.
+- [Stockly](https://growcoai.com/SaaSystem): sistema web de inventario y ventas para PyMEs, implementado por Growco (importación desde Excel, punto de venta con IVA, alertas de stock y reportes, desde PC o celular).
+
+## Casos publicados
+
+- OSMO (fintech; Guatemala, Costa Rica y México; desde octubre de 2025): CTR ×3.2 y costo por clic −46% frente a los 6 meses previos; cuentas nuevas al mes ×2 entre marzo y septiembre de 2026; CAC −16% con UGC hecho con IA frente al resto de creativos.
+- Dra. Valderrama (medicina estética, San Salvador; desde julio de 2026): de 3–4 a 6–7 clientes por semana con campañas Click-to-WhatsApp en Meta Ads; +59% conversaciones al mes.
+- DLC · RoadMarket · ICEE (24 meses de pauta en Meta Ads): 411 M impresiones, 8.6 M personas alcanzadas, costo por clic de $0.08.
+- Academia Europea (educación, más de 6 países): UGC y comerciales con IA; un reel superó 1.4 M vistas en Instagram.
+
+## Cómo trabaja
+
+- Cuatro pasos: diagnóstico con el área financiera del cliente → lanzamiento (audience planning, campañas, contenido y automatizaciones) → optimización → escala.
+- Reporte mensual de negocio: CAC, RGU, ARPU y retorno de la inversión, además de las métricas de pauta.
+
+## Preguntas frecuentes
+
+- https://growcoai.com/#faq
+- https://growcoai.com/SaaSystem#faq

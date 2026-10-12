@@ -1,6 +1,22 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.growcoai.com"
+        }
+      ],
+      "destination": "https://growcoai.com/:path*",
+      "permanent": true
+    },
+    { "source": "/AIFILMMAKER", "destination": "/filmmaker", "permanent": true },
+    { "source": "/AIFILMMAKER/:path*", "destination": "/filmmaker", "permanent": true },
+    { "source": "/aifilmmaker", "destination": "/filmmaker", "permanent": true },
+    { "source": "/Filmmaker", "destination": "/filmmaker", "permanent": true },
     { "source": "/SaaSystem/", "destination": "/SaaSystem", "permanent": true },
     { "source": "/saasystem", "destination": "/SaaSystem", "permanent": true },
     { "source": "/saasystem/", "destination": "/SaaSystem", "permanent": true },
@@ -17,25 +33,60 @@
   "headers": [
     {
       "source": "/assets/(css|js)/(.*)",
-      "has": [{ "type": "query", "key": "v" }],
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "has": [
+        {
+          "type": "query",
+          "key": "v"
+        }
+      ],
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/assets/fonts/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
     },
     {
       "source": "/assets/(img|videos|brand)/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
     },
     {
       "source": "/SaaSystem/:path(.+)",
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     }
   ],
   "rewrites": [
-    { "source": "/AIFILMMAKER", "destination": "/filmmaker" },
-    { "source": "/AIFILMMAKER/:path*", "destination": "/filmmaker/:path*" },
-    { "source": "/SaaSystem/:path(.+)", "destination": "https://growcodashboard.vercel.app/SaaSystem/:path" }
+    {
+      "source": "/SaaSystem/:path(.+)",
+      "destination": "https://growcodashboard.vercel.app/SaaSystem/:path"
+    }
   ]
 }
