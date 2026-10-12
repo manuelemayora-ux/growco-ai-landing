@@ -1,0 +1,14 @@
+# Local-only build sources, tools and scratch files
+.ds-reference
+.claude
+shoot2.mjs
+README.md
+
+# Legacy site assets no longer referenced by the redesigned pages
+styles.css
+app.js
+assets/growco-logo.png
+assets/growco-3d-logo.png
+assets/ai-avatars-banner.png
+assets/videos/*
+!assets/videos/web
