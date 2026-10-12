@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/", "has": [{ "type": "host", "value": "www.growcoai.com" }], "destination": "https://growcoai.com/", "permanent": true },
     {
       "source": "/:path*",
       "has": [
