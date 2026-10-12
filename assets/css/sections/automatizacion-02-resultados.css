@@ -1,0 +1,64 @@
+/* 02 · RESULTADOS (#resultados) — /automatizacion. Overrides on top of the shared filmmaker-02-resultados.css (dark band).
+   Stat card (ring drawn to 40 % on .is-on) + capability list card, "Con tu pauta" strip (copy | 4-node flow),
+   then the shared "Otros servicios" row. Desktop ≥1100, tablet 810–1099, phone <810. */
+
+/* stat card: ring visual in place of the case image */
+#resultados .a-bd__viz{position:relative;display:grid;place-items:center;flex:1 1 auto;min-height:clamp(240px,19vw,280px);padding:56px 0 28px;overflow:hidden;background:radial-gradient(90% 120% at 50% 100%,color-mix(in srgb,var(--accent) 22%,var(--ink)),var(--ink) 70%)}
+#resultados .a-bd__viz::before{content:"";position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--white) 14%,transparent) 1px,transparent 1.4px);background-size:18px 18px;-webkit-mask-image:linear-gradient(180deg,#000,transparent 85%);mask-image:linear-gradient(180deg,#000,transparent 85%)}
+#resultados .a-bd__ring{position:relative;width:min(50%,176px);height:auto;rotate:-90deg;overflow:visible}
+#resultados .a-bd__ring circle{fill:none;stroke-width:10}
+#resultados .a-bd__trk{stroke:color-mix(in srgb,var(--white) 12%,transparent)}
+#resultados .a-bd__arc{stroke:var(--accent);stroke-linecap:round;stroke-dasharray:40 100;stroke-dashoffset:40;transition:stroke-dashoffset 1.6s cubic-bezier(.6,0,.2,1) .5s;filter:drop-shadow(0 0 10px color-mix(in srgb,var(--accent) 55%,transparent))}
+#resultados .a-bd__stat.is-on .a-bd__arc,html:not(.js) #resultados .a-bd__arc{stroke-dashoffset:0}
+#resultados .a-bd__rv{position:absolute;left:50%;top:50%;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;translate:-50% -50%;background:color-mix(in srgb,var(--white) 8%,transparent);color:var(--accent)}
+#resultados .a-bd__rv svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#resultados .a-bd__tag{position:absolute;left:14px;top:14px;padding:6px 11px;border-radius:999px;background:var(--white);color:var(--ink);font-family:var(--font-m);font-size:10.5px;font-style:normal;line-height:1.3;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+#resultados .a-bd__note{margin:0;font-size:15.5px;line-height:1.5;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#resultados .a-bd__stat:hover,#resultados .a-bd__stat:focus-within,#resultados .a-bd__chg:hover{transform:none}
+
+/* capability list card */
+#resultados .a-bd__chg .f-bd__ctx{gap:18px;padding:28px}
+#resultados .a-bd__ls{display:flex;flex-direction:column;margin:0;padding:0;list-style:none}
+#resultados .a-bd__ls li{display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;padding:16px 0;border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+#resultados .a-bd__ls li:last-child{padding-bottom:0}
+#resultados .a-bd__ls i{display:grid;place-items:center;width:26px;height:26px;margin-top:1px;border-radius:50%;background:var(--accent);color:var(--ink)}
+#resultados .a-bd__ls i svg{width:13px;height:13px;stroke-width:3}
+#resultados .a-bd__ls span{display:flex;flex-direction:column;gap:4px;min-width:0}
+#resultados .a-bd__ls b{font-family:var(--font-d);font-size:19px;font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--white)}
+#resultados .a-bd__ls small{font-size:14.5px;line-height:1.45;color:color-mix(in srgb,var(--white) 68%,transparent)}
+
+/* "Con tu pauta" strip */
+#resultados .a-bd__ads{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);align-items:center;gap:clamp(28px,4vw,64px);margin-top:18px;padding:clamp(24px,3vw,40px);border-radius:26px;background:color-mix(in srgb,var(--white) 5%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 12%,transparent)}
+#resultados .a-bd__adt{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+#resultados .a-bd__h3{margin:0;font-family:var(--font-d);font-size:clamp(26px,2.4vw,36px);font-weight:600;line-height:1.05;letter-spacing:-.035em;color:var(--white);text-wrap:balance}
+#resultados .a-bd__adt>p:last-child{margin:0;max-width:52ch;font-size:16px;line-height:1.55;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#resultados .a-bd__fl{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+#resultados .a-bd__fl::before{content:"";position:absolute;left:12%;right:12%;top:26px;height:2px;background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--accent) 70%,transparent) 0 6px,transparent 6px 12px)}
+#resultados .a-bd__fl li{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;text-align:center}
+#resultados .a-bd__fl span{display:grid;place-items:center;width:52px;height:52px;margin-bottom:6px;border-radius:50%;background:var(--pine);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--white) 18%,transparent);font-family:var(--font-m);font-size:12px;letter-spacing:.06em;color:var(--accent)}
+#resultados .a-bd__fl li.is-end span{background:var(--accent);color:var(--ink);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 22%,transparent)}
+#resultados .a-bd__fl b{font-family:var(--font-d);font-size:16px;font-weight:600;line-height:1.15;letter-spacing:-.02em;color:var(--white);text-wrap:balance}
+#resultados .a-bd__fl small{font-family:var(--font-m);font-size:10px;line-height:1.35;letter-spacing:.06em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 60%,transparent);text-wrap:balance}
+
+/* ---- tablet (810–1099) ---- */
+@media (max-width:1099px){
+  #resultados .a-bd__ads{grid-template-columns:minmax(0,1fr)}
+}
+/* ---- phone (<810) ---- */
+@media (max-width:809px){
+  #resultados .a-bd__chg .f-bd__ctx{padding:22px}
+  #resultados .a-bd__ls b{font-size:17.5px}
+  #resultados .a-bd__ads{padding:22px}
+  #resultados .a-bd__fl{grid-template-columns:minmax(0,1fr);gap:0}
+  #resultados .a-bd__fl::before{left:25px;right:auto;top:26px;bottom:26px;width:2px;height:auto;background:repeating-linear-gradient(180deg,color-mix(in srgb,var(--accent) 70%,transparent) 0 6px,transparent 6px 12px)}
+  #resultados .a-bd__fl li{display:grid;grid-template-columns:52px minmax(0,1fr);grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:center;padding:6px 0;text-align:left}
+  #resultados .a-bd__fl span{grid-row:1/3;margin:0}
+  #resultados .a-bd__fl b,#resultados .a-bd__fl small{grid-column:2}
+  #resultados .a-bd__fl b{align-self:end}
+  #resultados .a-bd__fl small{align-self:start}
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion:reduce){
+  #resultados .a-bd__arc{stroke-dashoffset:0;transition:none}
+}

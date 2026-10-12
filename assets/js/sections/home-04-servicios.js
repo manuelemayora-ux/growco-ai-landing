@@ -15,6 +15,8 @@
  *   film — real Growco preview (ae-3, Academia Europea UGC) plays only while open AND ≥50 % visible; heart pop, floating hearts, toast.
  *   chat — WhatsApp-style example conversation with typing indicator, quick reply, "Cita agendada" toast.
  *   inv  — demo KPIs count up, stock bars grow, a sale deducts one unit (14 → 13) + toast.
+ *   - phone (≤809px, rev3 2026-10-12): scroll switching is OFF — the open panel is taller than the viewport, so it switched
+ *     before its CTA was seen. Tap a panel to open it; the page then scrolls its header under the nav.
  * Fallback: until this script adds .is-ready (end of init) the CSS keeps all four panels open, as without JS.
  * Reduced motion: .is-fin — no scroll switching, no loops, no autoplay; mini-UIs keep their final frame (markup default).
  */
@@ -30,6 +32,7 @@ if (!N) return;
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const FINE = matchMedia('(hover: hover) and (pointer: fine)');
 const HQ = matchMedia('(min-width: 1240px)');
+const PH = matchMedia('(max-width: 809px)'); // phone: no scroll switching (the tall open panel got cut while scrolling) — tap to open
 const now = () => performance.now();
 const btns = panels.map(p => p.querySelector('.sv__sp'));
 const regions = panels.map(p => p.querySelector('.sv__pc'));
@@ -218,7 +221,15 @@ function open(i) {
 }
 function pick(i, ms = 4000) {
   hold = kbHold ? Infinity : now() + ms;
+  const was = cur;
   open(i);
+  if (PH.matches && i !== was && panels[i]) {
+    // after the height swap, bring the opened panel's header just under the fixed nav
+    setTimeout(() => {
+      const y = panels[i].getBoundingClientRect().top + scrollY - 84;
+      scrollTo({ top: y, behavior: RM ? 'auto' : 'smooth' });
+    }, RM ? 0 : PANEL_MS + 40);
+  }
 }
 
 /* ---------------------------------------------------------------- measuring (--ow / --oh) */
@@ -292,7 +303,7 @@ if (!RM && N > 1 && GC.onFrame) {
       const ap = GC.clamp((vh * 0.72 - top) / (h + vh * 0.54));
       if (Math.abs(ap - lastAp) > 0.002) { lastAp = ap; acc.style.setProperty('--ap', ap.toFixed(3)); }
       const idx = Math.min(N - 1, Math.floor(ap * N));
-      if (idx !== lastIdx) { lastIdx = idx; if (!kbHold && now() > hold) open(idx); }
+      if (idx !== lastIdx) { lastIdx = idx; if (!PH.matches && !kbHold && now() > hold) open(idx); }
       return false;
     },
   }, { el: acc, margin: '20% 0px' });

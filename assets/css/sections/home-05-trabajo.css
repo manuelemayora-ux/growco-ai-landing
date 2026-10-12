@@ -352,3 +352,12 @@ html.js #trabajo .wk-panel.is-active .is-on .wk-bars-c span{animation:wk-fade .5
   #trabajo .wk-rings i:nth-child(3){scale:1;opacity:.12}
   #trabajo .wk-prog{display:none}
 }
+/* rev3 (2026-10-12, client): on phones the stacked panels kept the tallest case's height, leaving a big gap under the
+   shorter cases before "Marcas que confían" — size the stack to the visible case and tighten the brands gap. */
+@media (max-width:809px){
+  html.js #trabajo .wk-panel:not(.is-active):not(.is-out){display:none}
+  #trabajo .wk-info{margin-top:20px}
+  #trabajo .wk-sum{margin-bottom:16px}
+  #trabajo .wk-did{margin-bottom:18px}
+  #trabajo .wk-brands{margin-top:40px;padding-top:22px}
+}

@@ -707,6 +707,8 @@ html.js #mercados:not(.is-on) .mk-bdg--home{scale:.3;opacity:0}
   #servicios .sv-float i,#servicios .sv-typing i,#servicios .sv__hint i{animation:none!important}
   #servicios .sv__p,#servicios .sv__pc,#servicios .sv__pin{transition:none!important}
 }
+#servicios .sv__hint-m{display:none}
+@media (max-width:809px){#servicios .sv__hint-d{display:none}#servicios .sv__hint-m{display:inline}}
 
 /* ==== home-05-trabajo.css ==== */
 /* 05 · TRABAJO (#trabajo) — reference 20_rwwk "Results you can count" (night → navy), measured at 1440×900:
@@ -1063,6 +1065,15 @@ html.js #trabajo .wk-panel.is-active .is-on .wk-bars-c span{animation:wk-fade .5
   #trabajo .wk-rings i:nth-child(3){scale:1;opacity:.12}
   #trabajo .wk-prog{display:none}
 }
+/* rev3 (2026-10-12, client): on phones the stacked panels kept the tallest case's height, leaving a big gap under the
+   shorter cases before "Marcas que confían" — size the stack to the visible case and tighten the brands gap. */
+@media (max-width:809px){
+  html.js #trabajo .wk-panel:not(.is-active):not(.is-out){display:none}
+  #trabajo .wk-info{margin-top:20px}
+  #trabajo .wk-sum{margin-bottom:16px}
+  #trabajo .wk-did{margin-bottom:18px}
+  #trabajo .wk-brands{margin-top:40px;padding-top:22px}
+}
 
 /* ==== home-06-proceso.css ==== */
 /* 06 · CÓMO TRABAJAMOS (#proceso) — reference 23_rwfn.
@@ -1295,10 +1306,19 @@ html.js #trabajo .wk-panel.is-active .is-on .wk-bars-c span{animation:wk-fade .5
   #reportes{padding-top:72px;border-radius:24px 24px 0 0;margin-top:-24px}
   #reportes .nm__head{flex-direction:column;align-items:flex-start;gap:20px}
   #reportes .nm__br{display:none}
-  #reportes .nm__grid{grid-template-columns:1fr}
-  #reportes .nm__tile{border-left:0;padding:22px 20px}
-  #reportes .nm__tile+.nm__tile{border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
-  #reportes .nm__num{font-size:64px}
+  /* rev3 (2026-10-12, client): the 4 stacked full-width tiles were ~1,300px tall on phones — compact 2×2 grid instead */
+  #reportes .nm__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #reportes .nm__tile{border-left:0;padding:18px 14px 16px}
+  #reportes .nm__tile:nth-child(even){border-left:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+  #reportes .nm__tile:nth-child(n+3){border-top:1px solid color-mix(in srgb,var(--white) 12%,transparent)}
+  #reportes .nm__num{font-size:clamp(34px,10vw,44px);margin-top:10px}
+  #reportes .nm__delta{margin-top:10px}
+  #reportes .nm__dt{font-size:9.5px;letter-spacing:.04em}
+  #reportes .nm__sp{margin-top:12px}
+  #reportes .nm__cap{font-size:12.5px;line-height:1.35}
+  #reportes .nm__rule{display:none}
+  #reportes .nm__lab{font-size:10.5px}
+  #reportes .nm__src{display:none}
   #reportes .nm__lab{min-height:0}
   #reportes .nm__top{padding:14px 18px}
   #reportes .nm__title{font-size:clamp(40px,4.6vw,68px)} /* reference rwnm keeps its H2 clamp on phones (40px at 390) */

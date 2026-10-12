@@ -351,3 +351,5 @@
   #servicios .sv-float i,#servicios .sv-typing i,#servicios .sv__hint i{animation:none!important}
   #servicios .sv__p,#servicios .sv__pc,#servicios .sv__pin{transition:none!important}
 }
+#servicios .sv__hint-m{display:none}
+@media (max-width:809px){#servicios .sv__hint-d{display:none}#servicios .sv__hint-m{display:inline}}

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="es" data-smooth>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Automatización y chatbots para WhatsApp, Instagram y web | Growco</title>
+  <meta name="description" content="Chatbots y flujos que atienden, califican y agendan en WhatsApp, Instagram y tu web, y envían cada lead a tu CRM. Ningún lead que pagaste sin respuesta.">
+  <link rel="canonical" href="https://growcoai.com/automatizacion">
+  <meta name="theme-color" content="#0B1331">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Growco">
+  <meta property="og:locale" content="es_LA">
+  <meta property="og:url" content="https://growcoai.com/automatizacion">
+  <meta property="og:title" content="Automatización: ningún lead sin respuesta | Growco">
+  <meta property="og:description" content="Chatbots, flujos e integraciones que atienden, califican y agendan por ti, incluso fuera de horario.">
+  <meta property="og:image" content="https://growcoai.com/assets/img/og-home.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Growco, agencia de growth marketing con IA en El Salvador">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automatización: ningún lead sin respuesta | Growco">
+  <meta name="twitter:description" content="Chatbots, flujos e integraciones que atienden, califican y agendan por ti, incluso fuera de horario.">
+  <meta name="twitter:image" content="https://growcoai.com/assets/img/og-home.jpg">
+  <meta name="twitter:image:alt" content="Growco, agencia de growth marketing con IA en El Salvador">
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
+
+  <!-- JS flag first: hide-before-reveal styles only apply under html.js. Fail-safe: drop it if motion.js has not run
+       by DOMContentLoaded (deferred scripts run before it, so it failed) or after 4 s (slow network); motion.js
+       puts html.js back if it initialises later. -->
+  <script>(function(d){var h=d.documentElement,off=function(){if(!h.classList.contains('gc-ready'))h.classList.remove('js')};h.classList.add('js');setTimeout(off,4000);d.addEventListener('DOMContentLoaded',function(){setTimeout(off,0)})})(document)</script>
+
+  <!-- Fonts: Funnel Display / Funnel Sans / Geist Mono (one request) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400..800&amp;family=Funnel+Sans:ital,wght@0,400..700;1,400..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap">
+
+  <link rel="stylesheet" href="/assets/css/site.css?v=0dcb09e8">
+  <link rel="stylesheet" href="/assets/css/automatizacion.css?v=3e4dd0ef">
+
+  <script src="/assets/js/motion.js?v=d940b3af" defer></script>
+  <script src="/assets/js/site.js?v=049fbe5b" defer></script>
+  <script src="/assets/js/automatizacion.js?v=9ca206e1" defer></script>
+
+  <!-- Google tag (gtag.js) with Consent Mode v2: everything denied until the visitor accepts in the cookie banner
+       (site.js · [data-consent]); a stored "granted" choice is applied before the first hit. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}var g=c==='granted'?'granted':'denied';
+    gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,wait_for_update:500});})();
+    gtag('js', new Date());
+    gtag('config', 'G-EGNSF9X7R0');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}if(c!=='granted')fbq('consent','revoke');})();
+    fbq('init', '1351342940194752');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- JSON-LD: page graph (WebPage + Service + BreadcrumbList); the Organization node repeats the home's @id -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://growcoai.com/automatizacion#webpage",
+        "url": "https://growcoai.com/automatizacion",
+        "name": "Automatización y chatbots para WhatsApp, Instagram y web | Growco",
+        "inLanguage": "es",
+        "isPartOf": {
+          "@id": "https://growcoai.com/#website"
+        },
+        "about": {
+          "@id": "https://growcoai.com/automatizacion#service"
+        },
+        "breadcrumb": {
+          "@id": "https://growcoai.com/automatizacion#breadcrumb"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://growcoai.com/automatizacion#service",
+        "name": "Automatización",
+        "serviceType": "Chatbots y automatización de marketing",
+        "description": "Chatbots, flujos e integraciones que atienden, califican y agendan en WhatsApp, Instagram y la web, y envían cada lead al CRM.",
+        "provider": {
+          "@id": "https://growcoai.com/#organization"
+        },
+        "areaServed": [
+          "El Salvador",
+          "Guatemala",
+          "Costa Rica",
+          "México",
+          "Estados Unidos",
+          "Colombia",
+          "Europa",
+          "Reino Unido"
+        ],
+        "url": "https://growcoai.com/automatizacion"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://growcoai.com/automatizacion#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://growcoai.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Automatización",
+            "item": "https://growcoai.com/automatizacion"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://growcoai.com/#organization",
+        "name": "Growco",
+        "url": "https://growcoai.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://growcoai.com/assets/img/growco-lockup-navy.png",
+          "width": 1200,
+          "height": 300
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/growcoai/",
+          "https://www.instagram.com/growco.ai/",
+          "https://www.facebook.com/profile.php?id=61562995757456",
+          "https://www.google.com/search?kgmid=/g/11nr356dcx"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://growcoai.com/#website",
+        "url": "https://growcoai.com/",
+        "name": "Growco",
+        "inLanguage": "es",
+        "publisher": {
+          "@id": "https://growcoai.com/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-page="automatizacion" data-page-name="Automatización">
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+<!-- PARTIAL:header -->
+<header class="nav" id="site-header">
+  <div class="nav__bar">
+    <a class="nav__logo nav__in" href="/" aria-label="Growco, ir al inicio" style="--d:60ms"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+    <nav class="nav__nav nav__in" aria-label="Principal" style="--d:140ms">
+      <ul class="nav__lk">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/automatizacion" aria-current="page">Automatización</a></li>
+        <li><a href="#resultados">Qué cambia</a></li>
+        <li><a href="/pauta-digital">Pauta digital</a></li>
+        <li><a href="#faq">Preguntas</a></li>
+      </ul>
+    </nav>
+    <div class="nav__act nav__in" style="--d:220ms">
+      <a class="btn btn--quiet nav__cta" href="#contacto" data-track="cta_click" data-track-loc="nav" data-service="automatizacion"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Hablemos</span><span class="btn__l2" aria-hidden="true">Hablemos</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <button class="nav__burger" type="button" aria-expanded="false" aria-controls="nav-drawer" aria-label="Abrir menú"><span class="nav__bl" aria-hidden="true"><i></i><i></i></span><span class="nav__bt" aria-hidden="true">Menú</span></button>
+    </div>
+  </div>
+</header>
+<div class="drw" id="nav-drawer" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="drw__rw" aria-hidden="true"><span class="drw__rings"><i></i><i></i><i></i><i></i><b></b><b></b></span></div>
+  <div class="drw__in">
+    <nav aria-label="Menú principal">
+      <ol class="drw__list" role="list">
+        <li style="--i:0"><a href="/#servicios"><span class="drw__n" aria-hidden="true">01</span><span class="drw__m"><span class="drw__t">Servicios</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:1;--drw-fs:0.84"><a href="/automatizacion" aria-current="page"><span class="drw__n" aria-hidden="true">02</span><span class="drw__m"><span class="drw__t">Automatización</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:2"><a href="#resultados"><span class="drw__n" aria-hidden="true">03</span><span class="drw__m"><span class="drw__t">Qué cambia</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:3"><a href="/pauta-digital"><span class="drw__n" aria-hidden="true">04</span><span class="drw__m"><span class="drw__t">Pauta digital</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:4"><a href="#faq"><span class="drw__n" aria-hidden="true">05</span><span class="drw__m"><span class="drw__t">Preguntas</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+        <li style="--i:5"><a href="#contacto"><span class="drw__n" aria-hidden="true">06</span><span class="drw__m"><span class="drw__t">Contacto</span></span><span class="drw__a" aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></a></li>
+      </ol>
+    </nav>
+    <div class="drw__ft">
+      <a class="btn btn--accent btn--block drw__cta" href="#contacto" data-track="cta_click" data-track-loc="drawer" data-service="automatizacion"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      <div class="drw__info">
+        <div><p class="drw__k">Escríbenos</p><a href="mailto:manuel@growcoai.com">manuel@growcoai.com</a><a href="#" data-whatsapp hidden>WhatsApp</a></div>
+        <div><p class="drw__k">Base</p><p>El Salvador</p></div>
+        <div class="js-only"><p class="drw__k">Hora local</p><p class="drw__time"><i class="dot dot--live" aria-hidden="true"></i><span data-clock="hm"></span></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /PARTIAL:header -->
+
+  <main id="main" tabindex="-1">
+<!-- SECTION:inicio -->
+<!-- 01 · INICIO (#inicio) — /automatizacion, reference 52_rwsd (service detail, bone ground), 2026-10-12.
+     Same rwsd template as /filmmaker: the f-sd__* markup + CSS + scroll JS come from the shared filmmaker-01-inicio files
+     (PAGES.share). The filmmaker script drives the steps (progress line, dots, ticks), the caption, the segment bars, the
+     toast (data-k1..4) and re-keys data-step on the stage. Its own video scenes are absent here; this page brings four
+     HTML/CSS mini-UIs (a-sd__sc, shown by [data-step], CSS in automatizacion-01-inicio.css) and a small script that
+     replays their entrance and cycles the chat channel tabs (automatizacion-01-inicio.js):
+       01 mapeo del proceso (canal → chatbot → calificación → CRM) · 02 chatbot en WhatsApp / Instagram / web (chat that
+       answers and offers times) · 03 calificación y agendamiento (lead card "calificado", cita agendada, recordatorio) ·
+       04 integración con tu CRM y seguimiento (pipeline card + automatic follow-up).
+     The stage is generic product UI ("Tu negocio"): data-nosnippet, aria-hidden, no client data, no metrics, no labels.
+     No JS: every step on, scene 01. Reduced motion: every step on, scene 04 static. -->
+<section class="sec f-sd a-sd" id="inicio" data-theme="light" aria-labelledby="f-sd-title">
+  <div class="wrap f-sd__grid">
+
+    <div class="f-sd__copy" data-reveal-group="100">
+      <nav class="f-sd__crumb" aria-label="Ruta de navegación" data-reveal data-reveal-y="14">
+        <a href="/#servicios">Servicios</a><i aria-hidden="true">/</i><span aria-current="page">Automatización</span>
+      </nav>
+      <p class="eb eb--ping" data-reveal data-reveal-delay="60" data-reveal-y="14"><i aria-hidden="true"></i>Servicio 03</p>
+      <h1 class="hd f-sd__h1 a-sd__h1" id="f-sd-title" data-words data-words-delay="100" data-words-step="70">Automatización</h1>
+      <p class="f-sd__lead" data-reveal data-reveal-delay="320" data-reveal-y="14">Ningún lead sin respuesta.</p>
+      <p class="f-sd__body" data-reveal data-reveal-delay="400" data-reveal-y="14">Chatbots y flujos que atienden, califican y agendan por ti en WhatsApp, Instagram y tu web, y envían cada lead a tu CRM, incluso fuera de horario.</p>
+      <div class="f-sd__buy" data-reveal data-reveal-delay="480" data-reveal-y="14">
+        <p class="f-sd__pr"><small>Implementación</small><span>A la medida</span></p>
+        <span class="f-sd__stat"><i aria-hidden="true"></i>WhatsApp · Instagram · Web · CRM</span>
+      </div>
+      <div class="f-sd__btns" data-reveal data-reveal-delay="560" data-reveal-y="14">
+        <a class="btn btn--solid" href="#contacto" data-service="automatizacion" data-track="cta_click" data-track-loc="automatizacion_hero"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+        <a class="btn btn--ghost" href="#resultados" data-track="cta_click" data-track-loc="automatizacion_hero_resultados"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Qué cambia</span><span class="btn__l2" aria-hidden="true">Qué cambia</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+      </div>
+    </div>
+
+    <!-- sticky live stage: decorative product UI (the same information is in the steps list) -->
+    <div class="f-sd__side" data-reveal data-reveal-y="0" data-reveal-delay="200" data-nosnippet>
+      <div class="f-sd__obj">
+        <div class="f-sd__stage a-sd__stage" data-step="1" aria-hidden="true">
+
+          <!-- 01 · mapeo del proceso: canal → chatbot → calificación → CRM -->
+          <div class="a-sd__sc a-sd__sc--map">
+            <div class="a-sd__flow">
+              <p class="a-sd__fh"><span class="a-sd__kick">Mapeo</span><b>Tu proceso de atención</b></p>
+              <ol class="a-sd__nodes">
+                <li class="a-sd__node"><i class="a-sd__ni"><svg viewBox="0 0 24 24"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></i><span><b>Canal</b><small>WhatsApp · Instagram · Web</small></span><em class="a-sd__nn">01</em></li>
+                <li class="a-sd__node"><i class="a-sd__ni"><svg viewBox="0 0 24 24"><rect x="4.5" y="8" width="15" height="11" rx="3.5"/><path d="M12 8V4.5M9.5 13h.01M14.5 13h.01M2.5 13v2M21.5 13v2"/></svg></i><span><b>Chatbot</b><small>Responde y pregunta lo clave</small></span><em class="a-sd__nn">02</em></li>
+                <li class="a-sd__node"><i class="a-sd__ni"><svg viewBox="0 0 24 24"><path d="M4 5h16l-6 7.5V19l-4-2v-4.5z"/></svg></i><span><b>Calificación</b><small>Interés, necesidad y horario</small></span><em class="a-sd__nn">03</em></li>
+                <li class="a-sd__node a-sd__node--end"><i class="a-sd__ni"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7.5" ry="2.8"/><path d="M4.5 6v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8V6M4.5 12v6c0 1.5 3.4 2.8 7.5 2.8s7.5-1.3 7.5-2.8v-6"/></svg></i><span><b>CRM</b><small>Cada lead con su contexto</small></span><em class="a-sd__nn">04</em></li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- 02 · chatbot en WhatsApp / Instagram / web: answers and offers times -->
+          <div class="a-sd__sc a-sd__sc--chat">
+            <div class="a-sd__ph">
+              <div class="a-sd__chh">
+                <i class="a-sd__av"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 11.5a7.5 7.5 0 0 1-10.9 6.7L4.5 19.5l1.3-4.2A7.5 7.5 0 1 1 20 11.5z"/></svg></i>
+                <span class="a-sd__nm"><b>Tu negocio</b><small><i></i>Asistente automático</small></span>
+                <span class="a-sd__247">24/7</span>
+              </div>
+              <div class="a-sd__tabs"><span class="is-sel">WhatsApp</span><span>Instagram</span><span>Web</span></div>
+              <div class="a-sd__log">
+                <p class="a-sd__day">Hoy · 23:41</p>
+                <p class="a-sd__msg a-sd__msg--in">Hola, vi su anuncio. ¿Tienen espacio mañana?</p>
+                <p class="a-sd__msg a-sd__msg--out">¡Hola! Sí: mañana a las 10:00 o a las 15:00. ¿Cuál prefieres?</p>
+                <p class="a-sd__qr"><span class="is-sel">10:00</span><span>15:00</span></p>
+                <p class="a-sd__typ"><i></i><i></i><i></i></p>
+              </div>
+              <div class="a-sd__in"><span>Escribe un mensaje</span><i><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></i></div>
+            </div>
+          </div>
+
+          <!-- 03 · calificación y agendamiento: lead card, cita agendada, recordatorio -->
+          <div class="a-sd__sc a-sd__sc--lead">
+            <div class="a-sd__lc">
+              <div class="a-sd__lh">
+                <i class="a-sd__lav"><svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.6"/><path d="M5 19.5c.9-3.4 3.6-5.4 7-5.4s6.1 2 7 5.4"/></svg></i>
+                <span class="a-sd__lnm"><b>Nuevo lead</b><small>Desde Instagram · hace 1 min</small></span>
+                <em class="a-sd__lst"><i></i>Calificado</em>
+              </div>
+              <ul class="a-sd__qs">
+                <li><span>Interés</span><b>Servicio principal</b><i><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i></li>
+                <li><span>Necesidad</span><b>Esta semana</b><i><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i></li>
+                <li><span>Contacto</span><b>Datos completos</b><i><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i></li>
+              </ul>
+              <div class="a-sd__appt">
+                <i class="a-sd__ai"><svg viewBox="0 0 24 24"><rect x="4" y="5.5" width="16" height="14.5" rx="3"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M9 15l2 2 4-4"/></svg></i>
+                <span><b>Cita agendada</b><small>Mañana · 10:00</small></span>
+                <em>Confirmada</em>
+              </div>
+            </div>
+            <p class="a-sd__rem"><i><svg viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2.2 2.2 0 0 0 4 0"/></svg></i>Recordatorio · un día antes</p>
+          </div>
+
+          <!-- 04 · integración con tu CRM y seguimiento: pipeline card + automatic follow-up -->
+          <div class="a-sd__sc a-sd__sc--crm">
+            <div class="a-sd__crm">
+              <div class="a-sd__ch"><b>Pipeline de leads</b><span><i></i>CRM conectado</span></div>
+              <div class="a-sd__cols">
+                <div class="a-sd__col">
+                  <p class="a-sd__cl">Nuevo</p>
+                  <span class="a-sd__cd"><i data-ch="wa"></i><b></b><s></s></span>
+                  <span class="a-sd__cd"><i data-ch="web"></i><b></b><s></s></span>
+                </div>
+                <div class="a-sd__col">
+                  <p class="a-sd__cl">Calificado</p>
+                  <span class="a-sd__cd"><i data-ch="wa"></i><b></b><s></s></span>
+                </div>
+                <div class="a-sd__col a-sd__col--on">
+                  <p class="a-sd__cl">Agendado</p>
+                  <span class="a-sd__cd a-sd__cd--mv"><i data-ch="ig"></i><b>Cita 10:00</b><small>Instagram</small></span>
+                  <span class="a-sd__cd"><i data-ch="web"></i><b></b><s></s></span>
+                </div>
+              </div>
+              <div class="a-sd__fu">
+                <i><svg viewBox="0 0 24 24"><path d="M19.5 12a7.5 7.5 0 0 1-13 5.1M4.5 12a7.5 7.5 0 0 1 13-5.1"/><path d="M17.8 3.5v3.6h-3.6M6.2 20.5v-3.6h3.6"/></svg></i>
+                <span><b>Seguimiento automático</b><small>Contacto sin respuesta · enviado</small></span>
+                <em><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></em>
+              </div>
+            </div>
+          </div>
+
+          <span class="f-sd__live"><i></i>Vista previa<em>Automatización</em></span>
+          <span class="f-sd__no">03 / 04</span>
+          <span class="f-sd__ptoast" data-k1="Proceso mapeado · listo" data-k2="Chatbot activo · 24/7" data-k3="Lead calificado · cita agendada" data-k4="Lead en tu CRM · seguimiento activo"><b><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></b><span>Proceso mapeado · listo</span></span>
+        </div>
+        <div class="f-sd__pcap2" aria-hidden="true">
+          <span>Paso <b>01</b> / 04</span>
+          <span class="f-sd__seg"><i></i><i></i><i></i><i></i></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-sd__inc">
+      <p class="f-sd__il" data-reveal data-reveal-y="14"><i aria-hidden="true"></i>Qué incluye</p>
+      <h2 class="hd f-sd__h2" data-words data-words-delay="200">Lo que dejamos<br><mark>funcionando</mark> <mark>por</mark> <mark>ti.</mark></h2>
+      <ol class="f-sd__steps" role="list">
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 01</span><span class="f-sd__st">Mapeo de tu proceso de atención</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 02</span><span class="f-sd__st">Chatbots para WhatsApp, Instagram y web</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 03</span><span class="f-sd__st">Calificación, agendamiento y recordatorios</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+        <li class="f-sd__step"><span class="f-sd__sn">Paso 04</span><span class="f-sd__st">Integración con tu CRM y seguimiento</span><svg class="f-sd__tk" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="21"/><path d="M14 22.5l5.5 5.5L30.5 17" pathLength="1"/></svg></li>
+      </ol>
+    </div>
+
+  </div>
+</section>
+<!-- /SECTION:inicio -->
+<!-- SECTION:resultados -->
+<!-- 02 · RESULTADOS (#resultados) — /automatizacion, reference 52_rwsd .rwsd-band (dark band, radius 36 top), 2026-10-12.
+     Reuses the /filmmaker band (f-bd__* from the shared filmmaker-02-resultados.css; its gallery script finds no
+     previews here and stops). There is NO published automation client case, so the band carries no case card:
+       · stat card with the one confirmed Growco figure (40 % de tiempo ahorrado — Growco's own data, the same figure the
+         home servicios card publishes), drawn as a ring;
+       · "Qué cambia en tu operación": capability list (what the service does, no metrics);
+       · "Con tu pauta": how automation connects with paid media, phrased as intent (no measured result);
+       · "Otros servicios" pill row (/pauta-digital, /filmmaker, /SaaSystem).
+     CSS: automatizacion-02-resultados.css. JS: none (the ring draws on .is-on from motion.js; reduced motion / no JS: drawn). -->
+<section class="sec f-bd a-bd" id="resultados" data-theme="dark" aria-labelledby="a-bd-title">
+  <div class="wrap">
+
+    <header class="f-bd__bh" data-reveal-group>
+      <div>
+        <p class="eb" data-reveal><i aria-hidden="true"></i>Resultados</p>
+        <h2 class="hd f-bd__h2" id="a-bd-title" data-words data-words-delay="80">Nada se queda<br><mark>sin</mark> <mark>respuesta.</mark></h2>
+      </div>
+      <p data-reveal data-reveal-delay="280">Lo que cambia en tu operación cuando cada lead se atiende, se califica y se sigue sin depender de que alguien esté conectado.</p>
+    </header>
+
+    <div class="f-bd__proof n-2 a-bd__proof" data-reveal-group>
+      <article class="f-bd__case a-bd__stat" data-reveal data-reveal-delay="300">
+        <div class="a-bd__viz" aria-hidden="true">
+          <svg class="a-bd__ring" viewBox="0 0 120 120" focusable="false"><circle class="a-bd__trk" cx="60" cy="60" r="50"/><circle class="a-bd__arc" cx="60" cy="60" r="50" pathLength="100"/></svg>
+          <span class="a-bd__rv"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span>
+          <em class="a-bd__tag">Automatización · Growco</em>
+        </div>
+        <div class="f-bd__ctx">
+          <h3 class="f-bd__ct">Menos horas en tareas repetitivas</h3>
+          <span class="f-bd__cm">Dato propio de Growco</span>
+          <span class="f-bd__ba f-bd__ba--plain">
+            <strong>40%</strong>
+            <span class="f-bd__dur">de tiempo ahorrado</span>
+          </span>
+          <p class="a-bd__note">Tu equipo deja de responder lo mismo una y otra vez y dedica ese tiempo a atender y cerrar ventas.</p>
+        </div>
+      </article>
+
+      <article class="f-bd__case a-bd__chg" data-reveal data-reveal-delay="420">
+        <div class="f-bd__ctx">
+          <h3 class="f-bd__ct">Qué cambia en tu operación</h3>
+          <ul class="a-bd__ls" role="list">
+            <li><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span><b>Respuesta 24/7</b><small>WhatsApp, Instagram y tu web atendidos también de noche y en fin de semana.</small></span></li>
+            <li><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span><b>Leads calificados antes de llegar a ventas</b><small>El chatbot pregunta lo clave y tu equipo recibe cada contacto con su contexto.</small></span></li>
+            <li><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span><b>Citas agendadas y recordatorios automáticos</b><small>El cliente elige su horario en el chat y recibe su recordatorio antes de la cita.</small></span></li>
+            <li><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span><b>Cada lead en tu CRM</b><small>Con canal, conversación y estado, sin copiar datos a mano.</small></span></li>
+            <li><i aria-hidden="true"><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i><span><b>Seguimiento sin hojas de cálculo</b><small>Los contactos que no respondieron reciben su seguimiento a tiempo.</small></span></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="a-bd__ads" data-reveal data-reveal-delay="200">
+      <div class="a-bd__adt">
+        <p class="f-bd__gl"><i aria-hidden="true"></i>Con tu pauta</p>
+        <h3 class="a-bd__h3">Cada lead que pagaste, atendido al instante.</h3>
+        <p>Los leads que llegan de tus anuncios reciben respuesta en el momento, se califican y pasan a tu CRM. Así buscamos que más de ellos se conviertan en clientes y que tu costo de adquisición (CAC) baje.</p>
+      </div>
+      <ol class="a-bd__fl" role="list" aria-label="Del anuncio a tu CRM">
+        <li><span>01</span><b>Anuncio</b><small>Meta, Google y más</small></li>
+        <li><span>02</span><b>Respuesta al instante</b><small>WhatsApp, Instagram o web</small></li>
+        <li><span>03</span><b>Lead calificado</b><small>Interés y necesidad</small></li>
+        <li class="is-end"><span>04</span><b>Tu CRM</b><small>Listo para ventas</small></li>
+      </ol>
+    </div>
+
+    <nav class="f-bd__oth" aria-label="Otros servicios" data-reveal data-reveal-delay="420">
+      <p class="f-bd__ol">Otros servicios</p>
+      <ul>
+        <li><a href="/pauta-digital"><span>01</span><b>Pauta digital<small>Meta, Google, TikTok, DV360 y más</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/filmmaker"><span>02</span><b>AI Filmmaker<small>Anuncios en video con IA</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/SaaSystem"><span>04</span><b>Stockly<small>Inventario y ventas para PyMEs</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+      </ul>
+    </nav>
+
+  </div>
+</section>
+<!-- /SECTION:resultados -->
+<!-- SECTION:faq -->
+<!-- 03 · PREGUNTAS (#faq) — /automatizacion, reference 41_rwfq (FAQ pattern, bone → paper), 2026-10-12.
+     Reuses the Stockly FAQ (s-fq-* classes, CSS + rail script from the shared saasystem-06-faq files); own ids (a-fq-*).
+     Sticky left column (eyebrow, H2, navy help card) + single-open accordion with the scroll progress rail.
+     Truth rules: no prices, no durations, no named CRMs, no guarantees; flow = te contactamos → análisis → propuesta.
+     FAQPage JSON-LD below mirrors the visible text word for word. -->
+<section class="sec sec--pad s-fq" id="faq" data-theme="light" aria-labelledby="a-fq-title" data-reveal-group="120">
+  <div class="wrap s-fq-in">
+    <div class="s-fq-side">
+      <div class="s-fq-stick">
+        <p class="eb" data-reveal><i aria-hidden="true"></i>(03) Preguntas</p>
+        <h2 class="hd hd--700 s-fq-title" id="a-fq-title" data-words data-words-delay="120" data-marker-delay="525">Preguntas<br><mark>frecuentes.</mark></h2>
+        <div class="s-fq-card ctx-dark" data-reveal data-reveal-delay="420" data-reveal-y="26">
+          <p class="s-fq-card__l"><i class="s-fq-ring" aria-hidden="true"></i>¿Aún con dudas?</p>
+          <p class="s-fq-card__t">Revisemos tu atención.</p>
+          <p class="s-fq-card__b">Cuéntanos por dónde te escriben tus clientes y qué haces hoy con cada lead.</p>
+          <a class="btn btn--accent s-fq-btn" href="#contacto" data-service="automatizacion" data-track="cta_click" data-track-loc="automatizacion_faq"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          <p class="s-fq-card__m">O escribe a <a href="mailto:manuel@growcoai.com?subject=Automatizaci%C3%B3n" data-track="email_click" data-track-loc="automatizacion_faq">manuel@growcoai.com</a></p>
+          <p class="s-fq-card__r"><i class="dot dot--port" aria-hidden="true"></i>Implementado por Growco</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="s-fq-list" data-accordion data-acc-open="0">
+      <i class="s-fq-rail" aria-hidden="true"><b></b></i>
+
+      <div class="s-fq-row is-open" data-acc-item data-reveal data-reveal-delay="200" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q1" aria-controls="a-fq-a1" data-acc-trigger><span class="s-fq-no" aria-hidden="true">01</span><span class="s-fq-qt">¿Qué canales pueden automatizar?</span><span class="s-fq-g" aria-hidden="true">Canales</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a1" role="region" aria-labelledby="a-fq-q1" data-acc-panel><div><p>WhatsApp, Instagram y el chat de tu web. Cada conversación llega a tu CRM, sin importar por qué canal escribió el cliente.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="260" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q2" aria-controls="a-fq-a2" data-acc-trigger><span class="s-fq-no" aria-hidden="true">02</span><span class="s-fq-qt">¿El chatbot reemplaza a mi equipo?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a2" role="region" aria-labelledby="a-fq-q2" data-acc-panel><div><p>No. Atiende lo repetitivo: responde las preguntas frecuentes, califica y agenda. Cuando un caso necesita a una persona, lo pasa a tu equipo con toda la conversación.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="320" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q3" aria-controls="a-fq-a3" data-acc-trigger><span class="s-fq-no" aria-hidden="true">03</span><span class="s-fq-qt">¿Se conecta con mi CRM?</span><span class="s-fq-g" aria-hidden="true">Integración</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a3" role="region" aria-labelledby="a-fq-q3" data-acc-panel><div><p>Sí. Integramos los flujos con tu CRM y las herramientas que ya usas, para que cada lead llegue con su canal, su conversación y su estado. Si todavía no usas un CRM, lo revisamos contigo en el análisis.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="380" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q4" aria-controls="a-fq-a4" data-acc-trigger><span class="s-fq-no" aria-hidden="true">04</span><span class="s-fq-qt">¿Funciona fuera de horario?</span><span class="s-fq-g" aria-hidden="true">General</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a4" role="region" aria-labelledby="a-fq-q4" data-acc-panel><div><p>Sí. El chatbot atiende 24/7, también de noche y en fin de semana, y deja las citas agendadas para que tu equipo las vea al volver.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="440" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q5" aria-controls="a-fq-a5" data-acc-trigger><span class="s-fq-no" aria-hidden="true">05</span><span class="s-fq-qt">¿Qué pasa con los leads de mis anuncios?</span><span class="s-fq-g" aria-hidden="true">Pauta</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a5" role="region" aria-labelledby="a-fq-q5" data-acc-panel><div><p>Reciben respuesta al instante en el canal donde escribieron, se califican y pasan a tu CRM. Si también llevamos tu pauta digital, conectamos ambas partes para que ningún lead que pagaste se quede sin respuesta.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="500" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q6" aria-controls="a-fq-a6" data-acc-trigger><span class="s-fq-no" aria-hidden="true">06</span><span class="s-fq-qt">¿Cuánto tarda la implementación?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a6" role="region" aria-labelledby="a-fq-q6" data-acc-panel><div><p>Depende de tu proceso, de los canales y de las integraciones que necesites. Lo definimos después del análisis y te lo indicamos en la propuesta.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="560" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q7" aria-controls="a-fq-a7" data-acc-trigger><span class="s-fq-no" aria-hidden="true">07</span><span class="s-fq-qt">¿Cuánto cuesta?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a7" role="region" aria-labelledby="a-fq-q7" data-acc-panel><div><p>Es a la medida, según tu proceso, tus canales y tus integraciones. Te enviamos una propuesta con el alcance y la inversión antes de empezar.</p></div></div>
+      </div>
+
+      <div class="s-fq-row" data-acc-item data-reveal data-reveal-delay="620" data-reveal-y="18">
+        <i class="s-fq-dot" aria-hidden="true"></i>
+        <h3 class="s-fq-q"><button type="button" id="a-fq-q8" aria-controls="a-fq-a8" data-acc-trigger><span class="s-fq-no" aria-hidden="true">08</span><span class="s-fq-qt">¿Cómo empezamos?</span><span class="s-fq-g" aria-hidden="true">Proceso</span><span class="s-fq-pl" aria-hidden="true"><i></i><i></i></span></button></h3>
+        <div class="s-fq-a" id="a-fq-a8" role="region" aria-labelledby="a-fq-q8" data-acc-panel><div><p>Escríbenos por el <a href="#contacto" data-service="automatizacion" data-track="cta_click" data-track-loc="automatizacion_faq_q8">formulario</a> o a <a href="mailto:manuel@growcoai.com?subject=Automatizaci%C3%B3n" data-track="email_click" data-track-loc="automatizacion_faq_q8">manuel@growcoai.com</a>. Te contactamos para conocer tu operación, hacemos el análisis y luego te enviamos una propuesta.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Qué canales pueden automatizar?", "acceptedAnswer": {"@type": "Answer", "text": "WhatsApp, Instagram y el chat de tu web. Cada conversación llega a tu CRM, sin importar por qué canal escribió el cliente."}},
+      {"@type": "Question", "name": "¿El chatbot reemplaza a mi equipo?", "acceptedAnswer": {"@type": "Answer", "text": "No. Atiende lo repetitivo: responde las preguntas frecuentes, califica y agenda. Cuando un caso necesita a una persona, lo pasa a tu equipo con toda la conversación."}},
+      {"@type": "Question", "name": "¿Se conecta con mi CRM?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Integramos los flujos con tu CRM y las herramientas que ya usas, para que cada lead llegue con su canal, su conversación y su estado. Si todavía no usas un CRM, lo revisamos contigo en el análisis."}},
+      {"@type": "Question", "name": "¿Funciona fuera de horario?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El chatbot atiende 24/7, también de noche y en fin de semana, y deja las citas agendadas para que tu equipo las vea al volver."}},
+      {"@type": "Question", "name": "¿Qué pasa con los leads de mis anuncios?", "acceptedAnswer": {"@type": "Answer", "text": "Reciben respuesta al instante en el canal donde escribieron, se califican y pasan a tu CRM. Si también llevamos tu pauta digital, conectamos ambas partes para que ningún lead que pagaste se quede sin respuesta."}},
+      {"@type": "Question", "name": "¿Cuánto tarda la implementación?", "acceptedAnswer": {"@type": "Answer", "text": "Depende de tu proceso, de los canales y de las integraciones que necesites. Lo definimos después del análisis y te lo indicamos en la propuesta."}},
+      {"@type": "Question", "name": "¿Cuánto cuesta?", "acceptedAnswer": {"@type": "Answer", "text": "Es a la medida, según tu proceso, tus canales y tus integraciones. Te enviamos una propuesta con el alcance y la inversión antes de empezar."}},
+      {"@type": "Question", "name": "¿Cómo empezamos?", "acceptedAnswer": {"@type": "Answer", "text": "Escríbenos por el formulario o a manuel@growcoai.com. Te contactamos para conocer tu operación, hacemos el análisis y luego te enviamos una propuesta."}}
+    ]
+  }
+  </script>
+</section>
+<!-- /SECTION:faq -->
+<!-- SECTION:contacto -->
+<section class="sec ct" id="contacto" data-theme="dark" data-progress data-rings data-reveal-group aria-labelledby="ct-title">
+  <span class="ct__rings" aria-hidden="true"><i style="--r:0"></i><i style="--r:1"></i><i style="--r:2"></i><b></b></span>
+  <div class="wrap ct__in">
+    <div class="ct__main">
+      <p class="eb" data-reveal><i aria-hidden="true"></i>(04) Contacto</p>
+      <h2 class="hd hd--xl ct__h" id="ct-title" data-words data-words-delay="100" data-words-step="70">Hablemos de<br><mark>tu atención.</mark></h2>
+      <p class="ct__sub" data-reveal data-reveal-delay="420">Cuéntanos por dónde te escriben tus clientes y qué haces hoy con cada lead. Te contactamos para conocer tu operación, hacer el análisis y luego prepararte una propuesta.</p>
+      <form class="ct__form" id="lead-form" data-lead-form="contacto-automatizacion" data-page-name="Automatización" action="https://api.web3forms.com/submit" method="post" data-reveal data-reveal-delay="540" data-reveal-y="18">
+        <input type="hidden" name="access_key" value="9cd72757-06b7-4cb0-8bfa-d7b1d658eda4">
+        <input type="hidden" name="subject" value="Nueva solicitud de propuesta — Automatización">
+        <input type="hidden" name="from_name" value="Growco · growcoai.com">
+        <input type="hidden" name="redirect" value="https://growcoai.com/automatizacion?enviado=1#contacto">
+        <input type="hidden" name="origen" value="automatizacion">
+        <div class="hp" aria-hidden="true"><label for="ct-honey">No llenar este campo</label><input type="text" id="ct-honey" name="botcheck" tabindex="-1" autocomplete="off"></div>
+        <div class="ct__grid">
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-nombre">Nombre</label><span class="fld__err" id="ct-nombre-err"></span></div><input type="text" id="ct-nombre" name="nombre" autocomplete="name" maxlength="120" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-email">Correo</label><span class="fld__err" id="ct-email-err"></span></div><input type="email" id="ct-email" name="email" autocomplete="email" inputmode="email" maxlength="160" required></div>
+          <div class="fld"><div class="fld__top"><label class="fld__k" for="ct-empresa">Empresa <em>(opcional)</em></label></div><input type="text" id="ct-empresa" name="empresa" autocomplete="organization" maxlength="120"></div>
+          <div class="fld fld--sel"><div class="fld__top"><label class="fld__k" for="ct-servicio">Servicio</label><span class="fld__err" id="ct-servicio-err"></span></div>
+            <select id="ct-servicio" name="servicio" required>
+              <option value="" disabled>Elige un servicio</option>
+              <option value="pauta">Pauta digital</option>
+              <option value="filmmaker">AI Filmmaker</option>
+              <option value="automatizacion" selected>Automatización</option>
+              <option value="stockly">Stockly</option>
+              <option value="nose">No estoy seguro</option>
+            </select><svg class="icn" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></div>
+          <div class="fld fld--area"><div class="fld__top"><label class="fld__k" for="ct-mensaje">Mensaje <em>(opcional)</em></label></div><textarea id="ct-mensaje" name="mensaje" rows="1" maxlength="1000" data-autogrow placeholder="Por qué canales te escriben, cuántos mensajes recibes y qué herramientas usas."></textarea></div>
+        </div>
+        <div class="ct__row">
+          <p class="ct__mail">Usamos tus datos solo para responderte.</p>
+          <button class="btn btn--accent ct__go" type="submit" data-rings-anchor><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 3 10.5 13.5"/><path d="M21 3 14.5 21l-4-7.5L3 9.5z"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></button>
+        </div>
+        <p class="ct__status" aria-live="polite"></p>
+      </form>
+    </div>
+    <aside class="ct__card" aria-label="Contacto directo" data-reveal data-reveal-delay="380" data-reveal-y="30">
+      <p class="ct__cl"><i class="dot dot--port" aria-hidden="true"></i>Contacto directo</p>
+      <p class="ct__ct">¿Prefieres escribirnos?</p>
+      <a class="ct__email" href="mailto:manuel@growcoai.com">manuel@growcoai.com</a>
+      <ol class="ct__steps" aria-label="Qué pasa después">
+        <li style="--i:0"><span><b>01</b> Te contactamos</span></li>
+        <li style="--i:1"><span><b>02</b> Análisis</span></li>
+        <li style="--i:2"><span><b>03</b> Tu propuesta</span></li>
+      </ol>
+      <div class="ct__clock js-only"><p><span>Hora en El Salvador</span><b data-clock="hms"></b></p></div>
+      <div class="ct__svc"><span class="ct__av" aria-hidden="true"><i>01</i><i>02</i><i>03</i><i>04</i></span><span class="ct__sn">4 servicios, un mismo equipo</span></div>
+    </aside>
+  </div>
+</section>
+<!-- /SECTION:contacto -->
+  </main>
+
+<!-- PARTIAL:footer -->
+<div class="ft-rev" data-curtain>
+  <div class="ft-rev__in">
+    <footer class="ft" id="site-footer" data-theme="light" data-reveal-group data-reveal-manual>
+      <h2 class="sr">Growco: mapa del sitio y contacto</h2>
+      <div class="wrap">
+        <div class="ft__top">
+          <div class="ft__brand" data-reveal>
+            <a class="ft__logo" href="/" aria-label="Growco, ir al inicio"><svg class="lockup" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg></a>
+            <p class="ft__blurb">Growth, pauta y video con IA para bajar tu CAC y hacer crecer tu negocio.</p>
+            <p class="ft__ann"><i class="dot dot--port" aria-hidden="true"></i>Agencia de marketing con IA</p>
+            <a class="btn btn--quiet" href="#contacto" data-track="cta_click" data-track-loc="footer"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicita tu propuesta</span><span class="btn__l2" aria-hidden="true">Solicita tu propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+          </div>
+          <nav class="ft__cols" aria-label="Pie de página">
+            <div class="ft__col" data-reveal data-reveal-delay="80">
+              <h3 class="ft__ct">Servicios</h3>
+              <ul>
+                <li><a href="/pauta-digital">Pauta digital</a></li>
+                <li><a href="/filmmaker">AI Filmmaker</a></li>
+                <li><a href="/automatizacion">Automatización</a></li>
+                <li><a href="/SaaSystem">Stockly</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="150">
+              <h3 class="ft__ct">Empresa</h3>
+              <ul>
+                <li><a href="/#proceso">Cómo trabajamos</a></li>
+                <li><a href="/#faq">Preguntas</a></li>
+                <li><a href="/#contacto">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="ft__col" data-reveal data-reveal-delay="220">
+              <h3 class="ft__ct">Contacto</h3>
+              <ul>
+                <li><a href="mailto:manuel@growcoai.com">manuel@growcoai.com</a></li>
+                <li><a href="https://www.linkedin.com/company/growcoai/" target="_blank" rel="me noopener">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/growco.ai/" target="_blank" rel="me noopener">Instagram</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61562995757456" target="_blank" rel="me noopener">Facebook</a></li>
+                <li class="ft__city">El Salvador</li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="wrap ft__wmw" aria-hidden="true">
+        <div class="ft__wm" data-spotlight>
+          <svg class="lockup ft__wm-t" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <i class="ft__ring"></i>
+          <svg class="lockup ft__wm-l" viewBox="89 253 1202 249" width="1202" height="249" fill="#0B1331" aria-hidden="true" focusable="false"><g class="lockup__sym"><polygon points="163.12 327.65 162.91 458.65 89.7 458.62 89.61 327.03 163.35 253.1 317.44 253.03 317.47 327.68 163.12 327.65"></polygon><polygon points="250.22 501.48 249.54 439.08 185.34 438.34 251.98 371.2 317.55 371.1 317.45 434.89 250.22 501.48"></polygon></g><g class="lockup__word"><polygon points="974.11 300.17 1009.18 300.77 965.6 453.19 934.18 453.07 904.2 352.37 874.68 453.09 843.19 453.17 799.46 300.2 834.37 300 860.53 407.14 889.4 300.34 919.26 300.02 948.1 407.77 974.11 300.17"></polygon><path d="M618.44,453.32l-28.94-54.31-23.72-.07v54.29s-32-.16-32-.16l-.05-152.88,68.91.24c27.63,2.65,46.96,22.08,45.73,49.98,1.18,18.97-9.39,35.91-26.92,43.31l32.54,59.31-35.55.29ZM615.5,349.51c-.28-11.85-8.15-22-20.33-22.14l-29.39-.32.02,45.93,30.64-.7c12.37-.28,19.35-10.58,19.06-22.78Z"></path><path d="M790.49,416.11c-11.57,25.68-36.14,38.84-63.12,39.21-33.13.46-60.68-19.71-68.92-52.06-8.59-33.72-1.51-74.06,28.36-93.55,27.22-17.75,64.17-15.15,88.37,6.39,25.26,22.49,29.53,68.4,15.3,100ZM762.87,398.64c4.12-14.51,3.67-29.9-.03-43.67-4.82-17.95-18.99-28.2-36.43-28.19-16.1.02-30.58,10.32-35.42,27.26-4.28,14.98-4.3,31.35.2,46.24,5.23,17.3,19.98,27.02,36.95,26.52,16.04-.48,29.73-10.55,34.72-28.15Z"></path><path d="M1223.55,455.15c-47.76,2.44-76.42-31.18-76.24-78.88.09-24.76,7.57-49.26,28.32-64.4,26.54-19.37,64.11-18.35,89.62,2.57s31.18,66.33,19.07,97.52c-9.87,25.41-32.61,41.74-60.77,43.18ZM1251.2,407.35c8.96-17.92,8.29-39.68,1.7-57.46-6.04-16.31-20.45-23.88-37.56-22.85-14.38.87-26.71,10.4-31.55,24.57-5.73,16.78-5.47,35.51.75,52.28,5.24,14.13,18.56,22.04,32.19,22.77,13.75.74,27.41-5.2,34.47-19.31Z"></path><path d="M491.32,395.74l-31.89-.18.02-24.44,63.08-.02v22.77c-.02,20.75-9.7,41.25-28.31,51.72-26.98,15.17-62.23,13.07-85.75-7.49-32.09-28.04-32.42-94.48.64-122.89,27.46-23.6,69.52-22.8,95.93,1.63,9.29,8.6,13.76,19.01,16.29,32.62l-32.78.37c-3.86-14.53-14.91-21.81-28.82-22.87-19.04-1.46-35.32,10.13-39.82,28.96-3.51,14.67-3.82,30.89,1.03,45.01,6.77,19.72,25.12,28.82,44.78,25.12,14.75-2.77,26.36-12.74,25.61-30.29Z"></path><path d="M1040.01,403.44c6.78,18.22,24.88,26.07,42.64,22.46,13.14-2.67,22.55-11.4,25.29-25.25l32.44.52c-4.84,34.07-33.35,54.49-65.5,54.01-31.47.81-58.47-17.51-67.75-47.65-10.8-35.09-3.47-79.48,29.36-99.22,26.9-16.17,62.95-13.22,86.13,7.8,10.9,9.89,15.88,23.49,17.34,37.54l-32.16.12c-2.24-15.17-13.08-24.56-27.75-26.59-17.91-2.47-34.46,6.99-40.5,24.39-5.7,16.41-5.93,34.71.45,51.86Z"></path></g></svg>
+          <b class="ft__hint">Pasa el cursor sobre el logo</b>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="ft__legal">
+          <span>© <span data-year>2026</span> Growco</span>
+          <span>Hecho en El Salvador</span>
+          <a class="ft__lg" href="/privacidad">Privacidad</a>
+          <a class="ft__lg" href="/privacidad#cookies" data-cookie-settings>Cookies</a>
+          <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="ft-rev__sp"></div>
+</div>
+<!-- /PARTIAL:footer -->
+</body>
+</html>

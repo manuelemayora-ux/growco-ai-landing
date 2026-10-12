@@ -1,0 +1,50 @@
+/* 02 · RESULTADOS (#resultados, /pauta-digital) — overrides on top of the shared filmmaker-02-resultados.css (rwsd band).
+   Three case cards (3 columns ≥1100 · 2 + 1 wide card 810–1099 · 1 column <810), each with a KPI grid (p-bd__kpis)
+   and a source line, then Growco's confirmed paid-media figures (p-bd__nums) and "Otros servicios". */
+
+#resultados .p-bd__proof{grid-template-columns:repeat(3,minmax(0,1fr))}
+#resultados.p-bd .f-bd__ctx{flex:1}
+#resultados.p-bd .f-bd__ct{min-height:2.24em}
+#resultados.p-bd .f-bd__ba strong{font-size:clamp(40px,3.4vw,54px)}
+#resultados.p-bd .f-bd__dur{font-size:14px}
+
+/* KPI grid */
+#resultados .p-bd__kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;margin:2px 0 0;overflow:hidden;border-radius:16px;background:color-mix(in srgb,var(--white) 12%,transparent)}
+#resultados .p-bd__kpis>div{display:flex;flex-direction:column;gap:4px;min-width:0;padding:12px 14px 13px;background:var(--pine)}
+#resultados .p-bd__kpis>div.p-bd__kw{grid-column:1/-1}
+#resultados .p-bd__kpis dt{font-family:var(--font-m);font-size:10px;line-height:1.3;letter-spacing:.1em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 62%,transparent)}
+#resultados .p-bd__kpis dd{margin:0;font-family:var(--font-d);font-size:24px;font-weight:700;line-height:1;letter-spacing:-.04em;color:var(--white);font-variant-numeric:tabular-nums}
+#resultados .p-bd__kpis dd.p-bd__kd{font-family:var(--font-m);font-size:10.5px;font-weight:400;line-height:1.3;letter-spacing:.02em;color:color-mix(in srgb,var(--white) 62%,transparent)}
+#resultados .p-bd__src{margin:auto 0 0;padding-top:4px;font-size:12.5px;line-height:1.45;color:color-mix(in srgb,var(--white) 55%,transparent)}
+
+/* confirmed Growco figures */
+#resultados .p-bd__nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:clamp(40px,4vw,64px) 0 0;padding:0;list-style:none;border-top:1px solid color-mix(in srgb,var(--white) 14%,transparent)}
+#resultados .p-bd__nums li{display:flex;flex-direction:column;gap:8px;min-width:0;padding:26px 22px 26px 0}
+#resultados .p-bd__nums li+li{padding-left:22px;border-left:1px solid color-mix(in srgb,var(--white) 14%,transparent)}
+#resultados .p-bd__nums b{font-family:var(--font-d);font-size:clamp(30px,2.6vw,40px);font-weight:700;line-height:1;letter-spacing:-.045em;color:var(--accent)}
+#resultados .p-bd__nums span{font-family:var(--font-m);font-size:11px;line-height:1.4;letter-spacing:.08em;text-transform:uppercase;color:color-mix(in srgb,var(--white) 72%,transparent)}
+#resultados.p-bd .f-bd__oth{margin-top:clamp(40px,4vw,64px)}
+
+/* ---- tablet (810–1099): 2 cards + the third wide (image | text) ---- */
+@media (max-width:1099px){
+  #resultados .p-bd__proof{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #resultados .p-bd__proof>.f-bd__case:nth-child(3){grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  #resultados .p-bd__proof>.f-bd__case:nth-child(3) .f-bd__cimg{aspect-ratio:auto;min-height:100%}
+  #resultados .p-bd__nums{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #resultados .p-bd__nums li:nth-child(3){padding-left:0;border-left:0}
+  #resultados .p-bd__nums li:nth-child(n+3){border-top:1px solid color-mix(in srgb,var(--white) 14%,transparent)}
+}
+/* ---- phone (<810) ---- */
+@media (max-width:809px){
+  #resultados .p-bd__proof{grid-template-columns:minmax(0,1fr)}
+  #resultados .p-bd__proof>.f-bd__case:nth-child(3){display:flex}
+  #resultados .p-bd__proof>.f-bd__case:nth-child(3) .f-bd__cimg{aspect-ratio:16/10;min-height:0}
+  #resultados.p-bd .f-bd__ct{min-height:0}
+  #resultados .p-bd__kpis>div{padding:11px 12px 12px}
+  #resultados .p-bd__kpis dd{font-size:22px}
+  #resultados .p-bd__nums li{padding:20px 14px 20px 0}
+  #resultados .p-bd__nums li+li{padding-left:14px}
+  #resultados .p-bd__nums li:nth-child(3){padding-left:0}
+  #resultados .p-bd__nums b{font-size:28px}
+  #resultados .p-bd__nums span{font-size:10px}
+}

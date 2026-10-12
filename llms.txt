@@ -11,9 +11,9 @@
 
 ## Servicios
 
-- [Pauta digital](https://growcoai.com/#servicios): estrategia, audience planning y campañas en Meta, Google, TikTok, DV360 y las plataformas que cada estrategia necesite, medidas en CAC, clientes nuevos e ingresos.
+- [Pauta digital](https://growcoai.com/pauta-digital): estrategia, audience planning y campañas en Meta, Google, TikTok, DV360 y las plataformas que cada estrategia necesite, medidas en CAC, clientes nuevos e ingresos.
 - [AI Filmmaker](https://growcoai.com/filmmaker): videos con IA para anuncios (UGC con avatares, comerciales y product shots) en 9:16, 1:1 y 16:9, sin set ni rodaje.
-- [Automatización](https://growcoai.com/#automatizacion): chatbots y flujos en WhatsApp, Instagram y web que atienden, califican, agendan y envían cada lead al CRM.
+- [Automatización](https://growcoai.com/automatizacion): chatbots y flujos en WhatsApp, Instagram y web que atienden, califican, agendan y envían cada lead al CRM.
 - [Stockly](https://growcoai.com/SaaSystem): sistema web de inventario y ventas para PyMEs, implementado por Growco (importación desde Excel, punto de venta con IVA, alertas de stock y reportes, desde PC o celular).
 
 ## Casos publicados
@@ -31,4 +31,10 @@
 ## Preguntas frecuentes
 
 - https://growcoai.com/#faq
+- https://growcoai.com/pauta-digital#faq
+- https://growcoai.com/automatizacion#faq
 - https://growcoai.com/SaaSystem#faq
+
+## Legal
+
+- Política de privacidad y cookies: https://growcoai.com/privacidad

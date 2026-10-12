@@ -44,21 +44,24 @@
   <!-- LCP: the H1 or the first frame of the sticky stage (ae-1 poster, 540×960 WebP) -->
   <link rel="preload" as="image" href="/assets/videos/web/ae-1-poster.webp" type="image/webp" fetchpriority="high">
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=35c6be72">
+  <link rel="stylesheet" href="/assets/css/site.css?v=0dcb09e8">
   <link rel="stylesheet" href="/assets/css/filmmaker.css?v=3c119412">
 
   <script src="/assets/js/motion.js?v=d940b3af" defer></script>
-  <script src="/assets/js/site.js?v=9bca762b" defer></script>
+  <script src="/assets/js/site.js?v=049fbe5b" defer></script>
   <script src="/assets/js/filmmaker.js?v=7e57c247" defer></script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
+  <!-- Google tag (gtag.js) with Consent Mode v2: everything denied until the visitor accepts in the cookie banner
+       (site.js · [data-consent]); a stored "granted" choice is applied before the first hit. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}var g=c==='granted'?'granted':'denied';
+    gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,wait_for_update:500});})();
     gtag('js', new Date());
     gtag('config', 'G-EGNSF9X7R0');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -70,6 +73,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}if(c!=='granted')fbq('consent','revoke');})();
     fbq('init', '1351342940194752');
     fbq('track', 'PageView');
   </script>
@@ -208,7 +212,6 @@
   </script>
 </head>
 <body data-page="filmmaker" data-page-name="AI Filmmaker">
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1351342940194752&amp;ev=PageView&amp;noscript=1"></noscript>
   <a class="skip" href="#main">Saltar al contenido</a>
 
 <!-- PARTIAL:header -->
@@ -515,8 +518,8 @@
     <nav class="f-bd__oth" aria-label="Otros servicios" data-reveal data-reveal-delay="420">
       <p class="f-bd__ol">Otros servicios</p>
       <ul>
-        <li><a href="/#servicios"><span>01</span><b>Pauta digital<small>Meta, Google, TikTok, DV360 y más</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
-        <li><a href="/#automatizacion"><span>03</span><b>Automatización<small>Chatbots y flujos que atienden por ti</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/pauta-digital"><span>01</span><b>Pauta digital<small>Meta, Google, TikTok, DV360 y más</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
+        <li><a href="/automatizacion"><span>03</span><b>Automatización<small>Chatbots y flujos que atienden por ti</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
         <li><a href="/SaaSystem"><span>04</span><b>Stockly<small>Inventario y ventas para PyMEs</small></b><i aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></i></a></li>
       </ul>
     </nav>
@@ -595,9 +598,9 @@
             <div class="ft__col" data-reveal data-reveal-delay="80">
               <h3 class="ft__ct">Servicios</h3>
               <ul>
-                <li><a href="/#servicios">Pauta digital</a></li>
+                <li><a href="/pauta-digital">Pauta digital</a></li>
                 <li><a href="/filmmaker">AI Filmmaker</a></li>
-                <li><a href="/#automatizacion">Automatización</a></li>
+                <li><a href="/automatizacion">Automatización</a></li>
                 <li><a href="/SaaSystem">Stockly</a></li>
               </ul>
             </div>
@@ -634,7 +637,8 @@
         <div class="ft__legal">
           <span>© <span data-year>2026</span> Growco</span>
           <span>Hecho en El Salvador</span>
-          <!-- DATO REAL: enlaces a /privacidad y /terminos cuando existan esas páginas -->
+          <a class="ft__lg" href="/privacidad">Privacidad</a>
+          <a class="ft__lg" href="/privacidad#cookies" data-cookie-settings>Cookies</a>
           <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
         </div>
       </div>

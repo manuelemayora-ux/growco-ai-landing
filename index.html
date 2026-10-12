@@ -45,21 +45,24 @@
   <link rel="preload" as="image" href="/assets/img/hero-crowd-1600.webp" type="image/webp" media="(max-width: 809px)" fetchpriority="high">
   <link rel="preload" as="image" imagesrcset="/assets/img/hero-crowd-960.webp 960w, /assets/img/hero-crowd-1600.webp 1600w, /assets/img/hero-crowd-2400.webp 2400w" imagesizes="(max-aspect-ratio: 16/9) 177vh, 100vw" type="image/webp" media="(min-width: 810px)" fetchpriority="high">
 
-  <link rel="stylesheet" href="/assets/css/site.css?v=35c6be72">
-  <link rel="stylesheet" href="/assets/css/home.css?v=8eea2d7e">
+  <link rel="stylesheet" href="/assets/css/site.css?v=0dcb09e8">
+  <link rel="stylesheet" href="/assets/css/home.css?v=e9c20d06">
 
   <script src="/assets/js/motion.js?v=d940b3af" defer></script>
-  <script src="/assets/js/site.js?v=9bca762b" defer></script>
-  <script src="/assets/js/home.js?v=6dfee88a" defer></script>
+  <script src="/assets/js/site.js?v=049fbe5b" defer></script>
+  <script src="/assets/js/home.js?v=85f00331" defer></script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
+  <!-- Google tag (gtag.js) with Consent Mode v2: everything denied until the visitor accepts in the cookie banner
+       (site.js · [data-consent]); a stored "granted" choice is applied before the first hit. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}var g=c==='granted'?'granted':'denied';
+    gtag('consent','default',{ad_storage:g,ad_user_data:g,ad_personalization:g,analytics_storage:g,wait_for_update:500});})();
     gtag('js', new Date());
     gtag('config', 'G-EGNSF9X7R0');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EGNSF9X7R0"></script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -71,6 +74,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    (function(){var c=null;try{c=localStorage.getItem('gc-consent')}catch(e){}if(c!=='granted')fbq('consent','revoke');})();
     fbq('init', '1351342940194752');
     fbq('track', 'PageView');
   </script>
@@ -241,7 +245,7 @@
           "Europa",
           "Reino Unido"
         ],
-        "url": "https://growcoai.com/#servicios"
+        "url": "https://growcoai.com/pauta-digital"
       },
       {
         "@type": "Service",
@@ -262,14 +266,13 @@
           "Europa",
           "Reino Unido"
         ],
-        "url": "https://growcoai.com/#automatizacion"
+        "url": "https://growcoai.com/automatizacion"
       }
     ]
   }
   </script>
 </head>
 <body data-page="home" data-page-name="Inicio">
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1351342940194752&amp;ev=PageView&amp;noscript=1"></noscript>
   <a class="skip" href="#main">Saltar al contenido</a>
 
 <!-- PARTIAL:header -->
@@ -565,7 +568,7 @@
               </div>
               <div class="sv__foot">
                 <span class="sv__stat"><i aria-hidden="true"></i>ROI +150%</span>
-                <a class="btn btn--solid" href="/#contacto" data-service="Pauta digital" data-track="cta_click" data-track-loc="servicios_pauta" aria-label="Solicitar propuesta de Pauta digital"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicitar propuesta</span><span class="btn__l2" aria-hidden="true">Solicitar propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+                <a class="btn btn--solid" href="/pauta-digital" data-track="cta_click" data-track-loc="servicios_pauta"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver Pauta digital</span><span class="btn__l2" aria-hidden="true">Ver Pauta digital</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
               </div>
             </div>
           </div>
@@ -677,7 +680,7 @@
               </div>
               <div class="sv__foot">
                 <span class="sv__stat"><i aria-hidden="true"></i>40% de tiempo ahorrado</span>
-                <a class="btn btn--solid" href="/#contacto" data-service="Automatización" data-track="cta_click" data-track-loc="servicios_automatizacion" aria-label="Solicitar propuesta de Automatización"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Solicitar propuesta</span><span class="btn__l2" aria-hidden="true">Solicitar propuesta</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
+                <a class="btn btn--solid" href="/automatizacion" data-track="cta_click" data-track-loc="servicios_automatizacion"><span class="btn__face"><span class="btn__fill" aria-hidden="true"></span><span class="btn__lbl"><span class="btn__roll"><span class="btn__l1">Ver Automatización</span><span class="btn__l2" aria-hidden="true">Ver Automatización</span></span></span><span class="btn__arr" aria-hidden="true"><span class="btn__a1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span><span class="btn__a2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span></span></span><span class="btn__ping" aria-hidden="true"><i></i><b><span>1</span><span>+1</span></b></span></a>
               </div>
             </div>
           </div>
@@ -746,7 +749,7 @@
     <div class="sv__rail" aria-hidden="true" data-reveal data-reveal-delay="520" data-reveal-y="10">
       <span class="sv__seg"><i class="is-on"></i><i></i><i></i><i></i></span>
       <span class="sv__now"><b>01 / 04</b><span>Pauta digital</span></span>
-      <span class="sv__hint"><i></i>Desliza para cambiar de servicio, o elige uno</span>
+      <span class="sv__hint"><i></i><span class="sv__hint-d">Desliza para cambiar de servicio, o elige uno</span><span class="sv__hint-m">Toca un servicio para verlo</span></span>
     </div>
   </div>
 </section>
@@ -828,7 +831,7 @@
             <div class="wk-case">
               <div class="wk-lay wk-after">
                 <picture>
-                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v-960.webp" width="960" height="1200">
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v2-960.webp" width="960" height="1200">
                   <img class="wk-ph" src="/assets/img/casos/osmo-app-1280.webp" srcset="/assets/img/casos/osmo-app-1280.webp 1280w, /assets/img/casos/osmo-app-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="720" alt="Un hombre en una terraza con vegetación tropical muestra en su teléfono la app de OSMO" loading="lazy" decoding="async">
                 </picture>
                 <i class="wk-scrim"></i>
@@ -854,7 +857,7 @@
               </div>
               <div class="wk-lay wk-before">
                 <picture>
-                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v-960.webp" width="960" height="1200">
+                  <source media="(max-width:809px)" srcset="/assets/img/casos/osmo-app-v2-960.webp" width="960" height="1200">
                   <img class="wk-ph" src="/assets/img/casos/osmo-app-1280.webp" srcset="/assets/img/casos/osmo-app-1280.webp 1280w, /assets/img/casos/osmo-app-2048.webp 2048w" sizes="(max-width:1099px) 100vw, 1320px" width="1280" height="720" alt="" loading="lazy" decoding="async">
                 </picture>
                 <i class="wk-scrim"></i>
@@ -1697,9 +1700,9 @@
             <div class="ft__col" data-reveal data-reveal-delay="80">
               <h3 class="ft__ct">Servicios</h3>
               <ul>
-                <li><a href="/#servicios">Pauta digital</a></li>
+                <li><a href="/pauta-digital">Pauta digital</a></li>
                 <li><a href="/filmmaker">AI Filmmaker</a></li>
-                <li><a href="/#automatizacion">Automatización</a></li>
+                <li><a href="/automatizacion">Automatización</a></li>
                 <li><a href="/SaaSystem">Stockly</a></li>
               </ul>
             </div>
@@ -1736,7 +1739,8 @@
         <div class="ft__legal">
           <span>© <span data-year>2026</span> Growco</span>
           <span>Hecho en El Salvador</span>
-          <!-- DATO REAL: enlaces a /privacidad y /terminos cuando existan esas páginas -->
+          <a class="ft__lg" href="/privacidad">Privacidad</a>
+          <a class="ft__lg" href="/privacidad#cookies" data-cookie-settings>Cookies</a>
           <span class="ft__made ft__time js-only"><i class="dot dot--live" aria-hidden="true"></i>Hora local <span data-clock="hm"></span> · El Salvador</span>
         </div>
       </div>

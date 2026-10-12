@@ -550,6 +550,55 @@
     });
   }
 
+  /* ------------------------------------------------------------------ cookie consent
+   * GA4 (Consent Mode v2) and the Meta Pixel start DENIED in every page <head>; a stored choice in localStorage
+   * ('gc-consent' = granted | denied) is applied there before the first hit. This banner asks once, applies the
+   * choice live (gtag consent update · fbq consent grant/revoke) and can be reopened from any [data-cookie-settings]. */
+  function setupConsent() {
+    const KEY = 'gc-consent';
+    const get = () => { try { return localStorage.getItem(KEY); } catch (_) { return null; } };
+    const set = v => { try { localStorage.setItem(KEY, v); } catch (_) { /* private mode: ask again next visit */ } };
+    const apply = v => {
+      const g = v === 'granted' ? 'granted' : 'denied';
+      try { if (typeof window.gtag === 'function') window.gtag('consent', 'update', { ad_storage: g, ad_user_data: g, ad_personalization: g, analytics_storage: g }); } catch (_) { /* noop */ }
+      try { if (typeof window.fbq === 'function') window.fbq('consent', g === 'granted' ? 'grant' : 'revoke'); } catch (_) { /* noop */ }
+    };
+    let el = null;
+    const hide = () => { if (!el) return; el.classList.remove('is-on'); setTimeout(() => { if (el && !el.classList.contains('is-on')) el.hidden = true; }, 450); };
+    const choose = v => { set(v); apply(v); hide(); };
+    const build = () => {
+      el = doc.createElement('section');
+      el.className = 'ck ctx-dark';
+      el.setAttribute('aria-labelledby', 'ck-t');
+      el.hidden = true;
+      el.innerHTML =
+        '<p class="ck__t" id="ck-t"><i aria-hidden="true"></i>Cookies</p>' +
+        '<p class="ck__d">Usamos cookies de Google Analytics y Meta para medir las visitas y mejorar nuestras campañas. Solo se activan si las aceptas. <a href="/privacidad#cookies">Política de privacidad</a></p>' +
+        '<div class="ck__b"><button type="button" class="ck__btn" data-ck="denied">Rechazar</button><button type="button" class="ck__btn ck__btn--ok" data-ck="granted">Aceptar</button></div>';
+      el.addEventListener('click', e => {
+        const b = e.target instanceof Element && e.target.closest('[data-ck]');
+        if (b) choose(b.getAttribute('data-ck'));
+      });
+      doc.body.appendChild(el);
+    };
+    const show = () => {
+      if (!el) build();
+      el.hidden = false;
+      requestAnimationFrame(() => requestAnimationFrame(() => el.classList.add('is-on')));
+    };
+    doc.addEventListener('click', e => {
+      const t = e.target instanceof Element && e.target.closest('[data-cookie-settings]');
+      if (!t) return;
+      e.preventDefault();
+      show();
+      const ok = el && el.querySelector('.ck__btn--ok');
+      if (ok) setTimeout(() => ok.focus({ preventScroll: true }), 60);
+    });
+    const v = get();
+    if (v === 'granted' || v === 'denied') return;
+    setTimeout(show, 900);
+  }
+
   safe('whatsapp', setupWhatsApp);
   safe('header', setupHeader);
   safe('drawer', setupDrawer);
@@ -559,6 +608,7 @@
   safe('clocks', setupClocks);
   safe('curtain', setupCurtain);
   safe('rings', setupRings);
+  safe('consent', setupConsent);
 
   window.GCSite = { CONFIG, track, trackLead, toast, openPlayer, preselect, refreshTheme: () => refreshTheme() };
 })();
