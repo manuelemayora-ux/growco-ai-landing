@@ -35,6 +35,14 @@
 - https://growcoai.com/automatizacion#faq
 - https://growcoai.com/SaaSystem#faq
 
+## Blog
+
+- Blog en español (Centroamérica): https://growcoai.com/blog
+- Blog in English (US): https://growcoai.com/en/blog
+- [Click-to-WhatsApp vs. formularios: qué convierte más para negocios en Centroamérica](https://growcoai.com/blog/click-to-whatsapp-vs-formularios) (es): Cuándo conviene una campaña Click-to-WhatsApp y cuándo un formulario de leads en Meta Ads, con criterios para elegir y cómo medir el CAC de cada una.
+- [¿Cuánto invertir en Meta Ads en Centroamérica? Cómo definir tu presupuesto por CAC](https://growcoai.com/blog/cuanto-invertir-en-meta-ads-centroamerica) (es): Cómo definir tu presupuesto de Meta Ads en El Salvador, Guatemala o Costa Rica a partir de tu CAC, tu ticket y tu margen, con un cálculo paso a paso.
+- [How to lower your customer acquisition cost (CAC) with paid social](https://growcoai.com/en/blog/lower-customer-acquisition-cost-paid-social) (en): A practical framework to lower customer acquisition cost on Meta and TikTok: fix measurement, creative, conversion speed and budget before raising spend.
+
 ## Legal
 
 - Política de privacidad y cookies: https://growcoai.com/privacidad
