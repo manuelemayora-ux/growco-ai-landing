@@ -301,16 +301,18 @@
         form.addEventListener('reset', () => requestAnimationFrame(fit));
         fit();
       });
+      const EN = document.documentElement.lang === 'en';
+      const T = (es, en) => (EN ? en : es);
       if (qs.get('enviado') === '1' && status) {
         status.className = status.className.replace(/\bis-err\b/, '').trim();
-        status.textContent = '¡Gracias! Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis.';
+        status.textContent = T('¡Gracias! Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis.', 'Thank you! We received your message. We will contact you soon to learn about your business and run the analysis.');
       }
       const fields = {
         nombre: $('[name="nombre"]', form),
         email: $('[name="email"]', form),
         servicio: $('[name="servicio"]', form),
       };
-      const MSG = { nombre: 'Escribe tu nombre.', email: 'Revisa tu correo.', servicio: 'Elige uno.' };
+      const MSG = EN ? { nombre: 'Enter your name.', email: 'Check your email.', servicio: 'Choose one.' } : { nombre: 'Escribe tu nombre.', email: 'Revisa tu correo.', servicio: 'Elige uno.' };
       const errEl = input => { const f = input && input.closest('.fld'); return f && $('.fld__err', f); };
       const setErr = (input, msg) => {
         if (!input) return;
@@ -341,8 +343,8 @@
         if (!btn) return;
         btn.disabled = busy;
         btn.setAttribute('aria-busy', String(busy));
-        lbls.forEach(l => { l.textContent = busy ? 'Enviando…' : btnText; });
-        if (!lbls.length) btn.textContent = busy ? 'Enviando…' : btnText;
+        lbls.forEach(l => { l.textContent = busy ? T('Enviando…', 'Sending…') : btnText; });
+        if (!lbls.length) btn.textContent = busy ? T('Enviando…', 'Sending…') : btnText;
       };
       const show = (msg, err) => {
         if (!status) return;
@@ -355,11 +357,11 @@
         tried = true;
         const okAll = ['nombre', 'email', 'servicio'].map(check);
         const firstBad = ['nombre', 'email', 'servicio'].find((k, i) => !okAll[i]);
-        if (firstBad) { fields[firstBad].focus(); show('Revisa los campos marcados.', true); return; }
+        if (firstBad) { fields[firstBad].focus(); show(T('Revisa los campos marcados.', 'Check the highlighted fields.'), true); return; }
         const data = Object.fromEntries(new FormData(form).entries());
         const svcKey = data.servicio || '';
         const svcName = CONFIG.SERVICES[svcKey] || svcKey;
-        if (data.botcheck) { form.reset(); show('¡Gracias! Recibimos tu mensaje.'); return; }
+        if (data.botcheck) { form.reset(); show(T('¡Gracias! Recibimos tu mensaje.', 'Thank you! We received your message.')); return; }
         const payload = {
           access_key: CONFIG.FORM_KEY,
           subject: 'Nueva solicitud de propuesta — ' + (form.getAttribute('data-page-name') || pageName),
@@ -374,7 +376,7 @@
           Origen: data.origen || '',
         };
         setBusy(true);
-        show('Enviando tu solicitud…');
+        show(T('Enviando tu solicitud…', 'Sending your request…'));
         try {
           const res = await fetch(CONFIG.FORM_ENDPOINT, {
             method: 'POST',
@@ -388,11 +390,13 @@
           form.reset();
           tried = false;
           form.classList.add('is-sent');
-          show('<strong>¡Listo' + (name ? ', ' + escapeHtml(name) : '') + '!</strong> Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis; con eso preparamos tu propuesta.');
+          show(EN
+            ? '<strong>Done' + (name ? ', ' + escapeHtml(name) : '') + '!</strong> We received your message. We will contact you soon to learn about your business and run the analysis; with that we prepare your proposal.'
+            : '<strong>¡Listo' + (name ? ', ' + escapeHtml(name) : '') + '!</strong> Recibimos tu mensaje. Te contactaremos pronto para conocer tu negocio y hacer el análisis; con eso preparamos tu propuesta.');
           if (status) { status.tabIndex = -1; status.focus({ preventScroll: true }); }
           trackLead(formId, svcKey || 'general');
         } catch (err) {
-          show('No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a <a href="mailto:' + CONFIG.EMAIL + '">' + CONFIG.EMAIL + '</a>.', true);
+          show(T('No pudimos enviar tu mensaje. Inténtalo de nuevo o escríbenos a', 'We could not send your message. Try again or write to us at') + ' <a href="mailto:' + CONFIG.EMAIL + '">' + CONFIG.EMAIL + '</a>.', true);
           if (status) { status.tabIndex = -1; status.focus({ preventScroll: true }); }
           track('form_error', { form: formId, message: String(err && err.message || err).slice(0, 80) });
         } finally {

@@ -16,6 +16,20 @@
 - [Automatización](https://growcoai.com/automatizacion): chatbots y flujos en WhatsApp, Instagram y web que atienden, califican, agendan y envían cada lead al CRM.
 - [Stockly](https://growcoai.com/SaaSystem): sistema web de inventario y ventas para PyMEs, implementado por Growco (importación desde Excel, punto de venta con IVA, alertas de stock y reportes, desde PC o celular).
 
+## Pauta digital por país
+
+- [Guatemala](https://growcoai.com/pauta-digital-guatemala): agencia de pauta digital en Guatemala; campañas por zona, Click-to-WhatsApp y metas de CAC.
+- [Costa Rica](https://growcoai.com/pauta-digital-costa-rica): pauta digital en Costa Rica; búsqueda y redes medidas por costo de adquisición.
+- [Honduras](https://growcoai.com/pauta-digital-honduras): pauta digital en Honduras; Tegucigalpa, San Pedro Sula y pruebas de 4 a 8 semanas.
+- [Panamá](https://growcoai.com/pauta-digital-panama): pauta digital en Panamá; mercado dolarizado, público local e internacional, seguimiento en CRM.
+- [El Salvador](https://growcoai.com/pauta-digital-el-salvador): agencia de pauta digital en El Salvador, sede de Growco.
+- Rangos orientativos de las campañas de Growco en la región (varían según rubro, ticket y país): CPM en Meta Ads $0.30–$3; conversación de Click-to-WhatsApp $0.50–$3.
+
+## English
+
+- [Growco in English](https://growcoai.com/en): nearshore AI growth marketing team in Central America for US brands and the US Hispanic market.
+- [Paid media](https://growcoai.com/en/paid-media): paid media on Meta, Google, TikTok and DV360, planned with the client's finance team and measured in CAC, RGU and ARPU.
+
 ## Casos publicados
 
 - OSMO (fintech; Guatemala, Costa Rica y México; desde octubre de 2025): CTR ×3.2 y costo por clic −46% frente a los 6 meses previos; cuentas nuevas al mes ×2 entre marzo y septiembre de 2026; CAC −16% con UGC hecho con IA frente al resto de creativos.
@@ -39,6 +53,8 @@
 
 - Blog en español (Centroamérica): https://growcoai.com/blog
 - Blog in English (US): https://growcoai.com/en/blog
+- [Chatbot de WhatsApp para ventas en Guatemala: cómo calificar leads y medirlos hasta el cierre](https://growcoai.com/blog/chatbot-de-whatsapp-para-ventas-guatemala) (es): Cómo usar un chatbot de WhatsApp para vender en Guatemala: qué automatizar, cómo calificar leads, conectarlo al CRM y medir el CAC hasta el cierre.
+- [Google Ads o Meta Ads en Costa Rica: qué conviene y cómo repartir el presupuesto](https://growcoai.com/blog/google-ads-o-meta-ads-costa-rica) (es): Google Ads captura demanda que ya existe; Meta Ads la crea. Cómo elegir y repartir tu presupuesto de pauta en Costa Rica según el CAC de cada canal.
 - [Click-to-WhatsApp vs. formularios: qué convierte más para negocios en Centroamérica](https://growcoai.com/blog/click-to-whatsapp-vs-formularios) (es): Cuándo conviene una campaña Click-to-WhatsApp y cuándo un formulario de leads en Meta Ads, con criterios para elegir y cómo medir el CAC de cada una.
 - [¿Cuánto invertir en Meta Ads en Centroamérica? Cómo definir tu presupuesto por CAC](https://growcoai.com/blog/cuanto-invertir-en-meta-ads-centroamerica) (es): Cómo definir tu presupuesto de Meta Ads en El Salvador, Guatemala o Costa Rica a partir de tu CAC, tu ticket y tu margen, con un cálculo paso a paso.
 - [How to lower your customer acquisition cost (CAC) with paid social](https://growcoai.com/en/blog/lower-customer-acquisition-cost-paid-social) (en): A practical framework to lower customer acquisition cost on Meta and TikTok: fix measurement, creative, conversion speed and budget before raising spend.
