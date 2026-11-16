@@ -17,12 +17,13 @@
  *  - Analytics helpers: GCSite.track(event, params) + delegated [data-track] clicks.
  *  - Clocks [data-clock] (El Salvador time, data-clock="hms|hm"), [data-year], toast, curtain footer
  *    ([data-curtain]), closing-CTA rings centred on [data-rings-anchor].
- *  - WhatsApp: links [data-whatsapp] stay hidden while CONFIG.WHATSAPP_NUMBER is empty.
+ *  - WhatsApp: links [data-whatsapp] stay hidden while CONFIG.WHATSAPP_NUMBER is empty; with a number, a floating
+ *    .wa-fab is added on every page. All WhatsApp links fire GA4 whatsapp_click (key event).
  */
 (() => {
   'use strict';
   const CONFIG = {
-    WHATSAPP_NUMBER: '', // e.g. '503XXXXXXXX' — empty keeps every [data-whatsapp] hidden
+    WHATSAPP_NUMBER: '50372294586', // empty keeps every [data-whatsapp] hidden and removes the floating button
     FORM_ENDPOINT: 'https://api.web3forms.com/submit', // Web3Forms (FormSubmit delivered empty emails, 2026-10-12)
     FORM_KEY: '9cd72757-06b7-4cb0-8bfa-d7b1d658eda4', // Web3Forms access key (public by design; delivers to manuel@growcoai.com)
     EMAIL: 'manuel@growcoai.com',
@@ -72,14 +73,45 @@
   }
 
   /* ------------------------------------------------------------------ WhatsApp config */
+  /* Default prefilled message by page: service pages name their service, /en pages write in English. */
+  function waMessage() {
+    const p = location.pathname.toLowerCase();
+    const en = p === '/en' || p.startsWith('/en/');
+    const svc = /pauta-digital|paid-media/.test(p) ? (en ? 'paid media' : 'pauta digital')
+      : /filmmaker/.test(p) ? 'AI Filmmaker'
+      : /automatizacion/.test(p) ? (en ? 'automation' : 'automatización')
+      : /saasystem/.test(p) ? 'Stockly'
+      : (en ? 'your services' : 'sus servicios');
+    return en ? 'Hi Manuel, I saw your website and I would like info about ' + svc + '.'
+      : 'Hola Manuel, vi tu web y quiero info sobre ' + svc + '.';
+  }
   function setupWhatsApp() {
     const n = String(CONFIG.WHATSAPP_NUMBER || '').replace(/\D/g, '');
+    const def = waMessage();
     $$('[data-whatsapp]').forEach(a => {
       if (!n) { a.hidden = true; return; }
-      const txt = a.getAttribute('data-whatsapp') || '';
-      a.href = 'https://wa.me/' + n + (txt ? '?text=' + encodeURIComponent(txt) : '');
+      const txt = a.getAttribute('data-whatsapp') || def;
+      a.href = 'https://wa.me/' + n + '?text=' + encodeURIComponent(txt);
+      a.target = '_blank';
+      a.rel = 'noopener';
+      if (!a.hasAttribute('data-track')) a.setAttribute('data-track', 'whatsapp_click');
+      if (!a.hasAttribute('data-track-loc')) a.setAttribute('data-track-loc', a.closest('.drw') ? 'drawer' : 'inline');
       a.hidden = false;
     });
+    /* floating button (all pages) — GA4 key event whatsapp_click, location=flotante */
+    if (!n || $('.wa-fab')) return;
+    const en = /^\/en(\/|$)/i.test(location.pathname);
+    const fab = doc.createElement('a');
+    fab.className = 'wa-fab';
+    fab.href = 'https://wa.me/' + n + '?text=' + encodeURIComponent(def);
+    fab.target = '_blank';
+    fab.rel = 'noopener';
+    fab.setAttribute('data-track', 'whatsapp_click');
+    fab.setAttribute('data-track-loc', 'flotante');
+    fab.setAttribute('aria-label', en ? 'Chat on WhatsApp' : 'Escríbenos por WhatsApp');
+    fab.innerHTML = '<svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.62c-2.02 0-4-.54-5.72-1.57l-.41-.24-3.96 1.04 1.06-3.86-.27-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.63 10.64-10.63 5.86 0 10.62 4.77 10.62 10.63 0 5.87-4.76 10.62-10.62 10.62Zm5.83-7.96c-.32-.16-1.89-.93-2.18-1.04-.3-.1-.51-.16-.72.16-.21.32-.83 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.14 3.09 1.3 3.3.16.21 2.25 3.43 5.44 4.81.76.33 1.35.52 1.81.67.76.24 1.46.21 2.01.13.61-.09 1.89-.77 2.15-1.52.27-.75.27-1.39.19-1.52-.08-.13-.29-.21-.61-.37Z"/></svg>';
+    doc.body.appendChild(fab);
+    requestAnimationFrame(() => setTimeout(() => fab.classList.add('is-in'), 1200));
   }
 
   /* ------------------------------------------------------------------ header */
