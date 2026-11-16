@@ -694,3 +694,13 @@ html.js .nav.is-in .nav__in{opacity:1;translate:0 0}
   .ft__wm{translate:none!important;opacity:1!important}
   .um img,.um video{scale:1!important}
 }
+
+/* WhatsApp floating button (site.js setupWhatsApp) — below toast/cookie banner, above content */
+.wa-fab{position:fixed;z-index:900;right:24px;bottom:24px;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;text-decoration:none;box-shadow:0 10px 30px -8px rgba(0,0,0,.45),inset 0 0 0 1px rgba(255,255,255,.18);opacity:0;scale:.6;transition:opacity .4s ease,scale .5s var(--ease-snap,cubic-bezier(.2,.9,.3,1.2)),translate .3s ease}
+.wa-fab.is-in{opacity:1;scale:1}
+.wa-fab:hover{translate:0 -2px}
+.wa-fab:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+html:has(.drw.is-open) .wa-fab,html.is-drawer .wa-fab{opacity:0;pointer-events:none}
+@media (max-width:809px){.wa-fab{right:16px;bottom:16px;width:52px;height:52px}}
+@media (prefers-reduced-motion:reduce){.wa-fab{transition:opacity .2s ease;scale:1}}
+@media print{.wa-fab{display:none}}
