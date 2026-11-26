@@ -603,7 +603,7 @@ html.js .nav.is-in .nav__in{opacity:1;translate:0 0}
 .ft__logo:hover .lockup__sym{transform:translate(9%,-9%)}
 .ft__blurb{margin:0;font-size:17px;line-height:1.5;color:color-mix(in srgb,var(--ink) 72%,transparent)}
 .ft__ann{display:inline-flex;align-items:center;gap:10px;margin:0;padding:8px 14px 8px 12px;border-radius:999px;font-family:var(--font-m);font-size:11.5px;letter-spacing:.06em;color:var(--ink);background:color-mix(in srgb,var(--ink) 5%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)}
-.ft__cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.ft__cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
 .ft__ct{margin:0 0 18px;font-family:var(--font-m);font-size:11px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:color-mix(in srgb,var(--ink) 55%,transparent)}
 .ft__col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;line-height:1.3}
 .ft__col li{display:flex}
