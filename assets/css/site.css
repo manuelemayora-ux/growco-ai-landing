@@ -639,7 +639,7 @@ html.js .nav.is-in .nav__in{opacity:1;translate:0 0}
   .ft__top{gap:44px}
   .ft__cols{grid-template-columns:1fr 1fr;gap:36px 20px}
   .ft__col a{font-size:15px;overflow-wrap:anywhere}
-  .ft__col:last-child{grid-column:1/-1}
+  .ft__col:last-child{grid-column:auto}
   .ft__legal{flex-direction:column;align-items:flex-start;gap:12px}
   .ft__made{margin-left:0}
 }
