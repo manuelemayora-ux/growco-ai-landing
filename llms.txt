@@ -53,6 +53,7 @@
 
 - Blog en español (Centroamérica): https://growcoai.com/blog
 - Blog in English (US): https://growcoai.com/en/blog
+- [How to reach US Hispanic customers with Meta ads (and judge it by CAC)](https://growcoai.com/en/blog/us-hispanic-customers-meta-ads) (en): How to reach US Hispanic customers with Meta ads: why language targeting misleads, how to test Spanish vs English creative and how to judge it by CAC.
 - [Costo por lead en Centroamérica: cuánto pagar y cómo bajarlo sin perder clientes](https://growcoai.com/blog/costo-por-lead-centroamerica) (es): Costo por lead en Centroamérica: calcula tu CPL máximo desde el CAC y la tasa de cierre, y descompón el CPL en CPM, CTR y conversión para saber qué corregir.
 - [Meta Ads para clínicas estéticas en El Salvador: cuánto pagar por cada paciente](https://growcoai.com/blog/meta-ads-para-clinicas-esteticas-el-salvador) (es): Meta Ads para clínicas estéticas: mide el costo por paciente atendido, no por mensaje. Fórmula del CAC por tratamiento, embudo de citas y errores comunes.
 - [Agencia de pauta digital en El Salvador o freelancer: cómo elegir sin adivinar](https://growcoai.com/blog/agencia-de-pauta-digital-el-salvador-o-freelancer) (es): ¿Agencia de pauta digital en El Salvador o freelancer? Compara por costo por cliente nuevo, no por honorario: fórmula de punto de equilibrio y criterios.
